@@ -17,7 +17,7 @@
 			</div>
 			<div class="footer-copyright">
 	            <div class="container">
-	            © 2018 create by Cezary Bubieniec.
+	            © 2018 created by Cezary Bubieniec.
             </div>
           </div>
 		</footer>

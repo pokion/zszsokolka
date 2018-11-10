@@ -1,0 +1,17 @@
+.container.body{
+	height: 100%;
+}
+.formP{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px !important;
+}
+textarea{
+	height: 200px;
+	outline: none !important;
+	transition: 0.5s  all;
+}
+textarea:focus{
+	outline: none !important;
+	border: 2px solid #4db6ac;
+	transition: 0.2s ease-out all;
+}
