@@ -6,12 +6,15 @@
 	font-size: 30px !important;
 }
 textarea{
-	height: 200px;
+	min-height: 400px;
 	outline: none !important;
-	transition: 0.5s  all;
+	transition: 0.5s  border;
 }
 textarea:focus{
 	outline: none !important;
 	border: 2px solid #4db6ac;
-	transition: 0.2s ease-out all;
+	transition: 0.2s ease-out border;
+}
+footer{
+
 }

@@ -16,7 +16,7 @@
 	?>
 
 	<div class="container body">
-		<form action="/strona/php/createPost.php" method="post">
+
 			<p class="formP">Tytuł</p>
 			<input type="text" autocomplete="off" name="title">
 			<p class="formP">Treść</p>
@@ -26,12 +26,13 @@
 			<button class="btn waves-effect waves-light" type="submit" name="action">wyślij
 		    	<i class="material-icons right">send</i>
 			</button>
-		</form>
+
 	</div>
 	<br>
 	<br>
 	<?php
 		include_once('includes/footer.php');
 	?>
+	<script type="text/javascript" src="../js/creator.js"></script>
 </body>
 </html>
