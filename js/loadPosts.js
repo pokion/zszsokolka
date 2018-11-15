@@ -25,6 +25,7 @@ let curData = null;
 
 		
 		$('.container>.row.content').append(loadButton);
+		addDot();
 	}
 
 	function loadPost(){

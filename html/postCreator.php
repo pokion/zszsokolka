@@ -21,15 +21,26 @@
 			<input type="text" autocomplete="off" name="title">
 			<p class="formP">Treść</p>
 			<br>
-			<a id="preview" href="#modal1" class="modal-trigger btn-floating btn-large waves-effect waves-light red"><i class="material-icons">search</i></a>
-			<br>
-			<br>
 			<textarea name="body"></textarea> 
 			<br>
-			<br>
+
 			<button class="btn waves-effect waves-light" type="submit" name="action">wyślij
 		    	<i class="material-icons right">send</i>
 			</button>
+			<div class="actionButtons">
+				<a id="preview" href="#modal1" class="modal-trigger btn-floating btn-large waves-effect waves-light"><i class="material-icons">search</i></a>
+
+				<input name="uploadImage" type="file" multiple class="hide" accept='image/*' />
+				<a id="upload" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">file_upload</i></a>
+			</div>
+			
+
+			<div id="imagesBox">
+				<div class="row center-align">
+					
+				</div>
+			</div>
+				
 
 			<!-- modal -->
 				<div class="modal modal-fixed-footer" id="modal1">
@@ -40,6 +51,7 @@
 								<p class="right-align replace"></p>
 	
 								<h5 class="letterSpac border replace"></h5>
+								<div class="replace"></div>
 							</div>
 		        		</div>
 					</div>
@@ -50,8 +62,6 @@
 		</div>
 			<!-- end modal -->
 
-
-	</div>
 	<br>
 	<br>
 	<?php

@@ -15,6 +15,30 @@ textarea:focus{
 	border: 2px solid #4db6ac;
 	transition: 0.2s ease-out border;
 }
-footer{
-
+.actionButtons{
+	float: right;
+	display: inline;
+	margin-bottom: 20px;
 }
+button{
+	margin-top: 15px;
+}
+#imagesBox{
+	margin-top: 25px;
+}
+#imagesBox .card>img{
+	height: 150px;
+	display: inline-block;
+	padding: 10px;
+	max-width: 400px;
+}
+#imagesBox .card{
+	display: inline-block;
+	margin-right: 20px;
+	max-width: 400px;
+}
+.card-panel{
+	margin-bottom: 0px;
+	padding: 10px;
+}
+
