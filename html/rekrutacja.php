@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="PL">
 <head>
 	<title>Rekrutacja</title>
 

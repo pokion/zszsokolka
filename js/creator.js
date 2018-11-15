@@ -8,9 +8,22 @@ $(document).ready(function(){
 				body: bod
 			},
 			function(data,status){
-				M.toast({html: data})
+				M.toast({html: data});
 			}
 		);
+	})
+
+
+	$('#preview').click(()=>{
+
+		let title = $('input[name=title]').val();
+		let body = $('textarea[name=body]').val();
+
+		$('h3.replace').replaceWith('<h3 class="letterSpac replace">'+ title +'</h3>');
+		$('p.replace').replaceWith('<p class="right-align replace">aktualna data</p>');
+		$('h5.replace').replaceWith('<h5 class="letterSpac border replace">'+ body +'</h5>');
+
+		addDot();
 	})
 
 })

@@ -15,6 +15,10 @@ td{
 	border-left-color: rgba(0,0,0,0.87);
 	border-width: 1px; 
 }
+ul{
+	list-style-type: circle !important;
+	margin-left: 10px;
+}
 .listStyle>li{
 	list-style-type: disc !important;
 	margin-left: 40px;
