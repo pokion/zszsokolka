@@ -41,4 +41,11 @@ button{
 	margin-bottom: 0px;
 	padding: 10px;
 }
-
+.card{
+	position: relative;
+}
+.rem{
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}

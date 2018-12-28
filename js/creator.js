@@ -5,23 +5,33 @@ function readURL(input) {
 			var reader = new FileReader();
 
 		    reader.onload = function(e) {
-		    	console.log(e);
 		    	let imageRep = $(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`);
 		    	let $img = $(`<div class="card">
 								<img src="${e.target.result}">
 								<div class="card-panel grey lighten-5 z-depth-1 center-align">
 									<p class="truncate">${input.target.files[i].name}</p>
 								</div>
+								<a class="btn-floating btn-small waves-effect waves-light rem red"><i class="material-icons">remove_circle_outline</i></a>
 							</div>
 						`);
+		    	
 		    	$('#imagesBox .row').append($img);
 		    	$('div .replace').append(imageRep);
+				/*remove img*/
+		    	
+				/*remove img*/
 			}
 
 		    reader.readAsDataURL(input.target.files[i]);
 		}
 	}
 }
+
+	$('.rem').click((e)=>{
+		$(this).parent('.card').remove();
+	})
+
+
 
 $(document).ready(function(){
 	$('button').click(function(){
