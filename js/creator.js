@@ -1,5 +1,5 @@
+let imgUpl = new FormData();
 function readURL(input) {
-	console.log(input.target.files)
 	if (input.target.files && input.target.files[0]) {
 		for(let i=0;i<input.target.files.length;i++){
 			var reader = new FileReader();
@@ -18,18 +18,27 @@ function readURL(input) {
 		    	$('#imagesBox .row').append($img);
 		    	$('div .replace').append(imageRep);
 				/*remove img*/
-		    	
+		    		jQuery('.rem').click((e)=>{
+						$(this).remove();
+						console.log('no chyba działa');
+						console.log(input.target.files)
+					})
 				/*remove img*/
+				imgUpl.append('image','tutaj ma być blob uzyskany z events lub imput',input.target.files[i].name)
+				console.log(imgUpl)
 			}
 
 		    reader.readAsDataURL(input.target.files[i]);
+		    
+
 		}
+
 	}
+
+
 }
 
-	$('.rem').click((e)=>{
-		$(this).parent('.card').remove();
-	})
+	
 
 
 
@@ -37,7 +46,7 @@ $(document).ready(function(){
 	$('button').click(function(){
 		let tit = $('input[name=title]').val();
 		let bod = $('textarea[name=body]').val();
-		$.post('/strona/php/createPost.php',
+		$.post('/php/createPost.php',
 			{
 				title: tit,
 				body: bod

@@ -30,7 +30,7 @@ let curData = null;
 
 	function loadPost(){
 		$('button').remove();
-		$.post('/strona/php/loadPosts.php',
+		$.post('/php/loadPosts.php',
 				{
 					date: curData
 				},
@@ -47,7 +47,7 @@ let curData = null;
 	}
 
 $(document).ready(function(){
-	$.post('/strona/php/loadPosts.php',
+	$.post('/php/loadPosts.php',
 			{
 
 			},
