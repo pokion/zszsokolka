@@ -97,14 +97,14 @@ ul{
 	z-index: 100;
 }
 .carousel{
-	position: relative;
-	top: -70px;
 	height: 550px;
+	box-sizing: unset;
+	position: relative;
+	bottom: 150px;
 }
 .podpis{
 	display: block;
 	text-align: center;
 	background: #222;
-	margin: 0;
 	padding:5px;
 }
