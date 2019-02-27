@@ -1,0 +1,110 @@
+*{
+	font-size: 17px;
+	font-family: 'Roboto', sans-serif;
+}
+h3{
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+h5{
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.9rem;
+}
+td{
+	border-left-color: rgba(0,0,0,0.87);
+	border-width: 1px;
+}
+ul{
+	list-style-type: circle !important;
+	margin-left: 10px;
+}
+.listStyle>li{
+	list-style-type: disc !important;
+	margin-left: 40px;
+}
+.centerFlex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-title{
+	font-family: 'Oswald', sans-serif;
+}
+.cardClear{
+	margin: 0px;
+	padding: 0px;
+}
+.imageModal{
+	max-height: 60%;
+	width: 100%
+}
+.back{
+	background-image: url(rodo.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.marginClear{
+	margin-bottom: 0px;
+}
+.letterSpac{
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+.border{
+	border-top: solid 1px grey;
+	padding-top: 30px;
+}
+.glass{
+	background-color: rgb(255,255,255,0.5);
+}
+.bg2{
+	background-color: #E1F9F7;
+}
+.bg3{
+	background-color: #A4EDE6;
+}
+.bg4{
+	background-color: #53DCD0;
+}
+.bg5{
+	background-color: #02CCBA;
+}
+.imageStyle img{
+	height: 100px;
+	border-radius: 5px;
+	border: transparent 2px solid;
+    box-sizing:border-box;
+    transition:border 0.2s;
+}
+.imageStyle img:hover{
+	transition:border 0.5s;
+	box-sizing:border-box;
+	border: 2px #02CCBA solid
+}
+.tableFont{
+	font-size: 1.3rem;
+}
+.auto{
+	margin: auto;
+}
+.clear{
+	clear: both;
+}
+.glass{
+	height: 100%;
+	position: relative;
+	z-index: 100;
+}
+.carousel{
+	position: relative;
+	top: -70px;
+	height: 550px;
+}
+.podpis{
+	display: block;
+	text-align: center;
+	background: #222;
+	margin: 0;
+	padding:5px;
+}
