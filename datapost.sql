@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Lis 2018, 07:40
--- Wersja serwera: 10.1.36-MariaDB
--- Wersja PHP: 7.2.11
+-- Czas generowania: 27 Lut 2019, 22:12
+-- Wersja serwera: 10.1.35-MariaDB
+-- Wersja PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -48,6 +48,181 @@ INSERT INTO `posts` (`post_id`, `post_data`, `title`, `body`) VALUES
 (15, '2018-12-13 12:47:46', 'sdffffffffffffffffffffff', 'sdfsdf'),
 (18, '2018-11-12 21:26:39', 'asddsa', 'asdasd');
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `pracownicy`
+--
+
+CREATE TABLE `pracownicy` (
+  `PracownikID` int(11) NOT NULL,
+  `Imie` varchar(255) COLLATE utf16_polish_ci NOT NULL,
+  `Nazwisko` varchar(255) COLLATE utf16_polish_ci NOT NULL,
+  `Wyksztalcenie` varchar(255) COLLATE utf16_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+
+--
+-- Zrzut danych tabeli `pracownicy`
+--
+
+INSERT INTO `pracownicy` (`PracownikID`, `Imie`, `Nazwisko`, `Wyksztalcenie`) VALUES
+(1, 'Grzegorz', 'Zalewski', 'mgr'),
+(2, 'Lech ', 'Czarnowicz', 'mgr'),
+(3, 'Mirosław Wojciech', 'Osial', 'mgr inż.'),
+(4, 'Iwona', 'Mackiewicz-Kowalczuk', 'mgr'),
+(5, 'Anna', 'Tolko', 'mgr'),
+(6, 'Klaudia', 'Kmon-Ciuruk', 'mgr'),
+(7, 'Renata', 'Maliszewska', 'mgr'),
+(8, 'Aneta', 'Tymińska', 'mgr'),
+(9, 'Sylwester Leon', 'Pakuła', 'mgr'),
+(10, 'Krystyna', 'Grygiewicz', 'mgr'),
+(11, 'Piotr', 'Dziakowski', 'mgr inż.'),
+(12, 'Elwira', 'Zabłocka', 'mgr'),
+(13, 'Maria', 'Sobolewska', 'mgr'),
+(14, 'Jolanta', 'Lech', 'mgr'),
+(15, 'Tomasz', 'Potapczyk', 'mgr'),
+(16, 'Marek', 'Mozyrski', 'mgr inż.'),
+(17, 'Karolina', 'Roszkowska', NULL),
+(18, 'Jerzy', 'Szymaniuk', 'mgr inż.'),
+(19, 'Dariusz', 'Ciostek', NULL),
+(20, 'Bernard', 'Jasielczuk', 'mgr'),
+(21, 'Justyn', 'Jaroszuk', 'ks. mgr '),
+(22, 'Tomasz', 'Łapiak', 'ks. mgr'),
+(23, 'Jolanta Stanisława', 'Siemieniako', 'mgr'),
+(24, 'Izabela', 'Garkowska', 'mgr'),
+(25, 'Iwona', 'Sarosiek', 'mgr'),
+(26, 'Lucyna', 'Bakun', NULL),
+(27, 'Elwira', 'Zabłocka', 'mgr'),
+(28, 'Elżbieta', 'Komła', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `stanowiska`
+--
+
+CREATE TABLE `stanowiska` (
+  `StanowiskoID` int(11) NOT NULL,
+  `nazwa` varchar(255) COLLATE utf16_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+
+--
+-- Zrzut danych tabeli `stanowiska`
+--
+
+INSERT INTO `stanowiska` (`StanowiskoID`, `nazwa`) VALUES
+(1, 'Dyrektor'),
+(2, 'Wicedyrektor'),
+(3, 'Kierownik Pracowni Ćwiczeń Technicznych'),
+(4, 'Język polski'),
+(5, 'Język angielski'),
+(6, 'Język rosyjski'),
+(7, 'Historia'),
+(8, 'Wiedza o Społeczeństwie'),
+(9, 'Matematyka'),
+(10, 'Fizyka'),
+(11, 'Chemia'),
+(12, 'Biologia'),
+(13, 'Przedmioty zawodowe'),
+(14, 'Geografia'),
+(15, 'Podstawy przedsiębiorczości'),
+(16, 'Wychowanie fizyczne'),
+(17, 'Edukacja dla bezpieczeństwa'),
+(18, 'Praktyczna nauka zawodu'),
+(19, 'Katecheza'),
+(20, 'Biblioteka'),
+(21, 'Pedagog szkolny'),
+(22, 'Sekretariat'),
+(23, 'Księgowość'),
+(24, 'Woźna'),
+(26, 'Wiedza o Kulturze');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `stanowiska_pracownikow`
+--
+
+CREATE TABLE `stanowiska_pracownikow` (
+  `id` int(11) NOT NULL,
+  `PracownikID` int(11) DEFAULT NULL,
+  `StanowiskoID` int(11) DEFAULT NULL,
+  `rok` year(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+
+--
+-- Zrzut danych tabeli `stanowiska_pracownikow`
+--
+
+INSERT INTO `stanowiska_pracownikow` (`id`, `PracownikID`, `StanowiskoID`, `rok`) VALUES
+(6, 5, 4, 2018),
+(7, 6, 5, 2018),
+(8, 7, 6, 2018),
+(9, 8, 5, 2018),
+(10, 9, 7, 2018),
+(11, 9, 8, 2018),
+(12, 4, 26, 2018),
+(13, 10, 9, 2018),
+(14, 2, 9, 2018),
+(15, 11, 10, 2018),
+(16, 12, 11, 2018),
+(17, 13, 14, 0000),
+(18, 12, 12, 2018),
+(19, 13, 15, 2018),
+(20, 14, 17, 2018),
+(21, 15, 16, 2018),
+(22, 14, 16, 2018),
+(23, 2, 13, 2018),
+(24, 11, 13, 2018),
+(25, 16, 13, 2018),
+(26, 17, 13, 2018),
+(27, 18, 13, 2018),
+(28, 12, 13, 2018),
+(29, 1, 13, 2018),
+(30, 19, 18, 2018),
+(31, 20, 18, 2018),
+(33, 21, 19, 2018),
+(34, 22, 19, 2018),
+(35, 23, 20, 2018),
+(36, 24, 21, 2018),
+(37, 25, 22, 2018),
+(38, 26, 23, 2018),
+(39, 27, 23, 0000),
+(40, 2, 2, 2018),
+(41, 3, 3, 2018),
+(42, 4, 4, 2018),
+(43, 5, 4, 2018),
+(44, 6, 5, 2018),
+(45, 7, 6, 2018),
+(46, 8, 5, 2018),
+(47, 9, 7, 2018),
+(48, 9, 8, 2018),
+(50, 10, 9, 2018),
+(52, 11, 10, 2018),
+(53, 12, 11, 2018),
+(54, 13, 14, 2018),
+(55, 12, 12, 2018),
+(56, 13, 15, 2018),
+(57, 14, 17, 2018),
+(58, 15, 16, 2018),
+(59, 14, 16, 2018),
+(61, 11, 13, 2018),
+(62, 16, 13, 2018),
+(63, 17, 13, 2018),
+(64, 18, 13, 2018),
+(65, 12, 13, 2018),
+(66, 1, 13, 2018),
+(67, 19, 18, 2018),
+(68, 20, 18, 2018),
+(69, 3, 13, 2018),
+(70, 21, 19, 2018),
+(71, 22, 19, 2018),
+(72, 23, 20, 2018),
+(73, 24, 21, 2018),
+(74, 25, 22, 2018),
+(75, 26, 23, 2018),
+(76, 27, 23, 2018);
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -59,6 +234,26 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`post_id`);
 
 --
+-- Indeksy dla tabeli `pracownicy`
+--
+ALTER TABLE `pracownicy`
+  ADD PRIMARY KEY (`PracownikID`);
+
+--
+-- Indeksy dla tabeli `stanowiska`
+--
+ALTER TABLE `stanowiska`
+  ADD PRIMARY KEY (`StanowiskoID`);
+
+--
+-- Indeksy dla tabeli `stanowiska_pracownikow`
+--
+ALTER TABLE `stanowiska_pracownikow`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `PracownikID` (`PracownikID`),
+  ADD KEY `StanowiskoID` (`StanowiskoID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -67,6 +262,35 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `posts`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT dla tabeli `pracownicy`
+--
+ALTER TABLE `pracownicy`
+  MODIFY `PracownikID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT dla tabeli `stanowiska`
+--
+ALTER TABLE `stanowiska`
+  MODIFY `StanowiskoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT dla tabeli `stanowiska_pracownikow`
+--
+ALTER TABLE `stanowiska_pracownikow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+
+--
+-- Ograniczenia dla zrzutów tabel
+--
+
+--
+-- Ograniczenia dla tabeli `stanowiska_pracownikow`
+--
+ALTER TABLE `stanowiska_pracownikow`
+  ADD CONSTRAINT `stanowiska_pracownikow_ibfk_1` FOREIGN KEY (`PracownikID`) REFERENCES `pracownicy` (`PracownikID`),
+  ADD CONSTRAINT `stanowiska_pracownikow_ibfk_2` FOREIGN KEY (`StanowiskoID`) REFERENCES `stanowiska` (`StanowiskoID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
