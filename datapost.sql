@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 28 Lut 2019, 13:15
--- Wersja serwera: 10.1.38-MariaDB
--- Wersja PHP: 7.3.2
+-- Czas generowania: 28 Lut 2019, 20:46
+-- Wersja serwera: 10.1.35-MariaDB
+-- Wersja PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -144,60 +144,55 @@ INSERT INTO `stanowiska` (`StanowiskoID`, `nazwa`) VALUES
 --
 
 CREATE TABLE `stanowiska_pracownikow` (
-  `id` int(11) NOT NULL,
-  `PracownikID` int(11) DEFAULT NULL,
-  `StanowiskoID` int(11) DEFAULT NULL,
-  `rok` varchar(10) COLLATE utf16_polish_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+  `PracownikID` int(11) NOT NULL,
+  `StanowiskoID` int(11) NOT NULL,
+  `rok` varchar(10) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `zdjecie` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_polish_ci;
 
 --
 -- Zrzut danych tabeli `stanowiska_pracownikow`
 --
 
-INSERT INTO `stanowiska_pracownikow` (`id`, `PracownikID`, `StanowiskoID`, `rok`) VALUES
-(6, 5, 4, '2018/2019'),
-(9, 8, 5, '2018/2019'),
-(10, 9, 7, '2018/2019'),
-(12, 4, 26, '2018/2019'),
-(13, 10, 9, '2018/2019'),
-(14, 2, 9, '2018/2019'),
-(15, 11, 10, '2018/2019'),
-(16, 12, 11, '2018/2019'),
-(17, 13, 14, '2018/2019'),
-(18, 12, 12, '2018/2019'),
-(19, 13, 15, '2018/2019'),
-(22, 14, 16, '2018/2019'),
-(23, 2, 13, '2018/2019'),
-(24, 11, 13, '2018/2019'),
-(26, 17, 13, '2018/2019'),
-(27, 18, 13, '2018/2019'),
-(28, 12, 13, '2018/2019'),
-(29, 1, 13, '2018/2019'),
-(30, 19, 18, '2018/2019'),
-(33, 21, 19, '2018/2019'),
-(34, 22, 19, '2018/2019'),
-(36, 24, 21, '2018/2019'),
-(40, 2, 2, '2018/2019'),
-(41, 3, 3, '2018/2019'),
-(42, 4, 4, '2018/2019'),
-(44, 6, 5, '2018/2019'),
-(45, 7, 6, '2018/2019'),
-(48, 9, 8, '2018/2019'),
-(52, 11, 10, '2018/2019'),
-(53, 12, 11, '2018/2019'),
-(55, 12, 12, '2018/2019'),
-(57, 14, 17, '2018/2019'),
-(58, 15, 16, '2018/2019'),
-(61, 11, 13, '2018/2019'),
-(62, 16, 13, '2018/2019'),
-(65, 12, 13, '2018/2019'),
-(68, 20, 18, '2018/2019'),
-(69, 3, 13, '2018/2019'),
-(72, 23, 20, '2018/2019'),
-(74, 25, 22, '2018/2019'),
-(75, 26, 23, '2018/2019'),
-(76, 27, 23, '2018/2019'),
-(77, 1, 1, '2018/2019');
+INSERT INTO `stanowiska_pracownikow` (`PracownikID`, `StanowiskoID`, `rok`, `zdjecie`) VALUES
+(1, 1, '2018/2019', 'gz.jpg'),
+(1, 13, '2018/2019', 'gz.jpg'),
+(2, 2, '2018/2019', 'lc.jpg'),
+(2, 9, '2018/2019', 'lc.jpg'),
+(2, 13, '2018/2019', 'lc.jpg'),
+(3, 3, '2018/2019', 'mwo.jpg'),
+(4, 4, '2018/2019', 'imk.jpg'),
+(4, 22, '2018/2019', 'is.jpg'),
+(4, 26, '2018/2019', 'imk.jpg'),
+(5, 4, '2018/2019', 'at.jpg'),
+(6, 5, '2018/2019', 'kkc.jpg'),
+(7, 6, '2018/2019', 'rm.jpg'),
+(8, 5, '2018/2019', 'ta.jpg'),
+(9, 7, '2018/2019', 'slp.jpg'),
+(9, 8, '2018/2019', 'slp.jpg'),
+(10, 9, '2018/2019', 'kg.jpg'),
+(11, 10, '2018/2019', 'pd.jpg'),
+(11, 13, '2018/2019', 'pd.jpg'),
+(12, 11, '2018/2019', 'ze.jpg'),
+(12, 12, '2018/2019', 'ze.jpg'),
+(12, 13, '2018/2019', 'ze.jpg'),
+(13, 14, '2018/2019', 'ms.jpg'),
+(13, 15, '2018/2019', 'ms.jpg'),
+(14, 16, '2018/2019', 'jl.jpg'),
+(14, 17, '2018/2019', 'jl.jpg'),
+(15, 16, '2018/2019', 'tp.jpg'),
+(16, 13, '2018/2019', 'mm.jpg'),
+(17, 13, '2018/2019', 'kr.jpg'),
+(18, 13, '2018/2019', 'js.jpg'),
+(19, 18, '2018/2019', 'mCiostekD.jpg'),
+(20, 18, '2018/2019', 'bj.jpg'),
+(21, 19, '2018/2019', 'jaroszuk.jpg'),
+(22, 19, '2018/2019', 'tl.jpg'),
+(23, 20, '2018/2019', 'jss.jpg'),
+(24, 21, '2018/2019', 'ig.jpg'),
+(26, 23, '2018/2019', 'lb.jpg'),
+(27, 23, '2018/2019', 'ez.jpg'),
+(28, 24, '2018/2019', 'ek.jpg');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -225,8 +220,7 @@ ALTER TABLE `stanowiska`
 -- Indeksy dla tabeli `stanowiska_pracownikow`
 --
 ALTER TABLE `stanowiska_pracownikow`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `PracownikID` (`PracownikID`),
+  ADD PRIMARY KEY (`PracownikID`,`StanowiskoID`),
   ADD KEY `StanowiskoID` (`StanowiskoID`);
 
 --
@@ -250,12 +244,6 @@ ALTER TABLE `pracownicy`
 --
 ALTER TABLE `stanowiska`
   MODIFY `StanowiskoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
---
--- AUTO_INCREMENT dla tabeli `stanowiska_pracownikow`
---
-ALTER TABLE `stanowiska_pracownikow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- Ograniczenia dla zrzutów tabel
