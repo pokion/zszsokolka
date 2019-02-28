@@ -24,7 +24,7 @@
               <div class="carousel">
                  <a class="carousel-item" href="#one!"><span class="podpis">Dyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/gz.jpg"><span class="podpis">Grzegorz Zalewski</span></a>
                  <a class="carousel-item" href="#two!"><span class="podpis">Vicedyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/lc.jpg"><span class="podpis">mgr Czarnowicz Lech</span></a>
-
+                 
                  <a class="carousel-item"  href="#three!"><span class="podpis">Kierownik pracowni</span><img src="../img/pracownicy/mwo.jpg"><span class="podpis">mgr inż. Mirosław Wojciech Osial</span></a>
 
                  <a class="carousel-item" href="#four!"><span class="podpis">język polski</span><img src="../img/pracownicy/imk.jpg"><span class="podpis">mgr Iwona Mackiewicz-Kowalczuk</span></a>
