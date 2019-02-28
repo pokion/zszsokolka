@@ -14,9 +14,13 @@ $(document).ready(function(){
 	$('.carousel').each(function (index,element){
 		instances.push(M.Carousel.getInstance(element));
 	})
-	instances.forEach((elem,index)=>{
-		$('a[click=to]').click(()=>{
-			elem.set(7)
+
+var n = $('button[click=to]').val();
+console.log(n);
+
+	instances.forEach((elem,index, n)=>{
+		$('button[click=to]').click(()=>{
+			elem.set(n)
 		})
 		console.log(index+' gotowy')
 	})

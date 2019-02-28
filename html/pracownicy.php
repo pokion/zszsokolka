@@ -14,10 +14,42 @@
   	<?php
   		include_once('includes/nav.php');
   	?>
+		<?php
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "datapost";
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+			 die("Connection failed: " . $conn->connect_error);
+		}
+		/* change character set to utf8 */
+		if (!$conn->set_charset("utf8")) {
+				printf("Error loading character set utf8: %s\n", $conn->error);
+				exit();
+		} else {
+				printf("");
+		}
+		$buttons = "SELECT StanowiskoID, nazwa FROM `stanowiska`";
+		$result = $conn->query($buttons);
+
+		if ($result->num_rows > 0) {
+			 // output data of each row
+			 while($row = $result->fetch_assoc()) {
+				 echo "<button class=\"waves-effect waves-light btn\" click=\"to\" value=". $row["StanowiskoID"]. ">" . $row["nazwa"] . "</button>";
+			 }
+		} else {
+			 echo "0 results";
+		}
+		$result->close();
+		$conn->close();
+		?>
   <div class="container">
     <div class="row">
 			<div class="col s12">
-				<a class="waves-effect waves-light btn" click="to">Nauczyciele matmy</a>
 				<h3 class="center-align">Nauczyciele i pracownicy
 						Zespołu Szkół Zawodowych w Sokółce
 						w roku szkolnym 2018/2019</h3>
@@ -65,13 +97,13 @@
 							//     pracownicy ON stanowiska_pracownikow2.PracownikID = pracownicy.PracownikID
 							//             INNER JOIN
 							//     stanowiska ON stanowiska_pracownikow2.StanowiskoID = stanowiska.StanowiskoID;
-						$sql = "SELECT wyksztalcenie, imie, nazwisko, nazwa, zdjecie, rok
+						$carousel = "SELECT wyksztalcenie, imie, nazwisko, nazwa, zdjecie, rok
 						 FROM stanowiska_pracownikow
 					   INNER JOIN pracownicy ON stanowiska_pracownikow.PracownikID = pracownicy.PracownikID
 					   INNER JOIN stanowiska ON stanowiska_pracownikow.StanowiskoID = stanowiska.StanowiskoID;";
-						$result = $conn->query($sql);
+						$result = $conn->query($carousel);
 
-						$nazwisko = "SELECT * from stanowiska_pracownikow
+						$whatRepeats = "SELECT * from stanowiska_pracownikow
     				group by PracownikID having count(*) > 1";
 
 
