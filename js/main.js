@@ -5,10 +5,12 @@ $(document).ready(function(){
 	$('.collapsible').collapsible();
 	$('.modal').modal();
 	$('.materialboxed').materialbox();
-
+	$('.carousel').carousel({
+		numVisible: 20
+	});
 
 	let instances = [];
-	
+
 	$('.carousel').each(function (index,element){
 		instances.push(M.Carousel.getInstance(element));
 	})
@@ -18,7 +20,7 @@ $(document).ready(function(){
 		})
 		console.log(index+' gotowy')
 	})
-	
+
 
 	addDot();
 })

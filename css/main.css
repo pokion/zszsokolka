@@ -101,10 +101,18 @@ ul{
 	box-sizing: unset;
 	position: relative;
 	bottom: 150px;
+	padding-bottom: 20px;
 }
 .podpis{
 	display: block;
 	text-align: center;
 	background: #222;
 	padding:5px;
+}
+.carousel img{
+  display: block;
+	height: auto;
+	line-height: 200px;
+	text-align: center;
+	background: #cfd8dc;
 }

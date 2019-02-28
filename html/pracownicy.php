@@ -22,42 +22,73 @@
 						Zespołu Szkół Zawodowych w Sokółce
 						w roku szkolnym 2018/2019</h3>
               <div class="carousel">
-                 <a class="carousel-item" href="#one!"><span class="podpis">Dyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/gz.jpg"><span class="podpis">Grzegorz Zalewski</span></a>
-                 <a class="carousel-item" href="#two!"><span class="podpis">Vicedyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/lc.jpg"><span class="podpis">mgr Czarnowicz Lech</span></a>
-                 
-                 <a class="carousel-item"  href="#three!"><span class="podpis">Kierownik pracowni</span><img src="../img/pracownicy/mwo.jpg"><span class="podpis">mgr inż. Mirosław Wojciech Osial</span></a>
+				<?php
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$dbname = "datapost";
 
-                 <a class="carousel-item" href="#four!"><span class="podpis">język polski</span><img src="../img/pracownicy/imk.jpg"><span class="podpis">mgr Iwona Mackiewicz-Kowalczuk</span></a>
-								 <a class="carousel-item" href="#four!"><span class="podpis">język polski</span><img src="../img/pracownicy/at.jpg"><span class="podpis">mgr Anna Tolko</span></a>
+						// Create connection
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						// Check connection
+						if ($conn->connect_error) {
+							 die("Connection failed: " . $conn->connect_error);
+						}
+						printf("Initial character set: %s\n", $conn->character_set_name());
 
-                 <a class="carousel-item"><span class="podpis">Języki obce</span><img src="../img/pracownicy/kkc.jpg"><span class="podpis">mgr Klaudia Kmon-Ciuruk</span></a>
-								 <a class="carousel-item"><span class="podpis">Języki obce</span><img src="../img/pracownicy/rm.jpg"><span class="podpis">mgr Renata Maliszewska</span></a>
-								 <a class="carousel-item"><span class="podpis">Języki obce</span><img src="../img/pracownicy/ta.jpg"><span class="podpis">mgr Aneta Tymińska</span></a>
+						/* change character set to utf8 */
+						if (!$conn->set_charset("utf8")) {
+						    printf("Error loading character set utf8: %s\n", $conn->error);
+						    exit();
+						} else {
+						    printf("Current character set: %s\n", $conn->character_set_name());
+						}
 
-								 <a class="carousel-item"><span class="podpis">Historia, <br> WoS</span><img src="../img/pracownicy/slp.jpg"><span class="podpis">mgr Sylwester Leon Pakuła</span></a>
-								 <a class="carousel-item" id="matma"><span class="podpis">Matematyka</span><img src="../img/pracownicy/kg.jpg"><span class="podpis">mgr Krystyna Grygiewicz</span></a>
-								 <a class="carousel-item"><span class="podpis">Fizyka</span><img src="../img/pracownicy/pd.jpg"><span class="podpis">mgr inż. Piotr Dziakowski</span></a>
-								 <a class="carousel-item"><span class="podpis">Chemia <br> Biologia <br> Przedmioty zawodowe</span><img src="../img/pracownicy/ze.jpg"><span class="podpis">mgr Elwira Zabłocka</span></a>
-								 <a class="carousel-item"><span class="podpis">Geografia <br> Podstawy przediębiorczości</span><img src="../img/pracownicy/ms.jpg"><span class="podpis">mgr Maria Sobolewska</span></a>
+							// SELECT title,GROUP_CONCAT(mood_name SEPARATOR ' ') AS moods
+							// FROM films
+							// JOIN films_moods ON films.id=films_moods.film_id
+							// JOIN moods ON films_moods.mood_id=moods.id
+							// //
+							// SELECT
+							// *
+							// FROM
+							//  stanowiska_pracownikow2
+							//  INNER JOIN
+							//  stanowiska_pracownikow2 ON stanowiska_pracownikow2.PracownikID = pracownicy.PracownikID
+							//  INNER JOIN
+							//  stanowiska_pracownikow2 ON stanowiska_pracownikow2.stanowiskoID = stanowiska.StanowiskoID;
+							// SELECT
+							//    *
+							// FROM
+							//     stanowiska_pracownikow2
+							//         INNER JOIN
+							//     pracownicy ON stanowiska_pracownikow2.PracownikID = pracownicy.PracownikID
+							//             INNER JOIN
+							//     stanowiska ON stanowiska_pracownikow2.StanowiskoID = stanowiska.StanowiskoID;
+						$sql = "SELECT wyksztalcenie, imie, nazwisko, nazwa, zdjecie, rok
+						 FROM stanowiska_pracownikow
+					   INNER JOIN pracownicy ON stanowiska_pracownikow.PracownikID = pracownicy.PracownikID
+					   INNER JOIN stanowiska ON stanowiska_pracownikow.StanowiskoID = stanowiska.StanowiskoID;";
+						$result = $conn->query($sql);
 
-								 <a class="carousel-item"><span class="podpis">Wychowanie fizyczne <br> EDB</span><img src="../img/pracownicy/jl.jpg"><span class="podpis">mgr Jolanta Lech</span></a>
-								 <a class="carousel-item"><span class="podpis">Przedmioty zawodowe</span><img src="../img/pracownicy/mm.jpg"><span class="podpis">mgr inż. Marek Mozyrski</span></a>
-								 <a class="carousel-item"><span class="podpis">Przedmioty zawodowe</span><img src="../img/pracownicy/kr.jpg"><span class="podpis">Karolina Roszkowska</span></a>
-								 <a class="carousel-item"><span class="podpis">Przedmioty zawodowe</span><img src="../img/pracownicy/js.jpg"><span class="podpis">mgr inż. Jerzy Szymaniuk</span></a>
-
-								 <a class="carousel-item"><span class="podpis">Praktyczna nauka zawodu</span><img src="../img/pracownicy/mCiostekD.jpg"><span class="podpis">Dariusz Ciostek</span></a>
-								 <a class="carousel-item"><span class="podpis">Praktyczna nauka zawodu</span><img src="../img/pracownicy/bj.jpg"><span class="podpis">mgr Bernard Jasielczuk</span></a>
-
-								 <a class="carousel-item"><span class="podpis">Katecheza</span><img src="../img/pracownicy/tl.jpg"><span class="podpis">ks. mgr Tomasz Łapiak</span></a>
-								 <a class="carousel-item"><span class="podpis">Biblioteka</span><img src="../img/pracownicy/jss.jpg"><span class="podpis">mgr Jolanta Stanisława Siemieniako</span></a>
-								 <a class="carousel-item"><span class="podpis">Pedagog szkolny</span><img src="../img/pracownicy/ig.jpg"><span class="podpis">mgr Izabela Garkowska</span></a>
-								 <a class="carousel-item"><span class="podpis">Sekretariat</span><img src="../img/pracownicy/is.jpg"><span class="podpis">mgr Iwona Sarosiek</span></a>
-								 <a class="carousel-item"><span class="podpis">Księgowość</span><img src="../img/pracownicy/lb.jpg"><span class="podpis">Lucyna Bakun</span></a>
-								 <a class="carousel-item"><span class="podpis">Księgowość</span><img src="../img/pracownicy/ez.jpg"><span class="podpis">mgr Elwira Zalewska</span></a>
-								 <a class="carousel-item"><span class="podpis">Woźna</span><img src="../img/pracownicy/ek.jpg"><span class="podpis">Elżbieta Komła</span></a>
+						$nazwisko = "SELECT * from stanowiska_pracownikow
+    				group by PracownikID having count(*) > 1";
 
 
-
+						if ($result->num_rows > 0) {
+							 // output data of each row
+							 while($row = $result->fetch_assoc()) {
+								 // if ($nazwisko > 1){
+									//   echo "<a class=\"carousel-item\" href=\"#one!\"><span class=\"podpis\">" . $row["nazwa"]. $row["nazwa"] . "<br> Przedmioty zawodowe</span><img src=../img/pracownicy/" . substr($row["rok"], 0, 4)."/". $row["zdjecie"]. " ". "alt=\"brak zdjęcia :(\"><span class=\"podpis\">" . $row["wyksztalcenie"]. " ". $row["imie"]. " ". $row["nazwisko"]."</span></a>";
+									// } else
+								 echo "<a class=\"carousel-item\" href=\"#one!\"><span class=\"podpis\">" . $row["nazwa"] . "<br></span><img src=../img/pracownicy/" . substr($row["rok"], 0, 4)."/". $row["zdjecie"]. " ". "alt=\"brak zdjęcia :(\"><span class=\"podpis\">" . $row["wyksztalcenie"]. " ". $row["imie"]. " ". $row["nazwisko"]."</span></a>";
+							 }
+						} else {
+							 echo "0 results";
+						}
+						$result->close();
+						$conn->close();
+				?>
             	</div>
       </div>
 		</div>
@@ -67,7 +98,7 @@
 						Zespołu Szkół Zawodowych w Sokółce
 						w roku szkolnym 2017/2018</h3>
 							<div class="carousel">
-								 <a class="carousel-item" href="#one!"><span class="podpis">Dyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/gz.jpg"><span class="podpis">Grzegorz Zalewski</span></a>
+								 <a class="carousel-item" href="#one!"><span class="podpis">Dyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/2018/gz.jpg"><span class="podpis">Grzegorz Zalewski</span></a>
 								 <a class="carousel-item" href="#two!"><span class="podpis">Vicedyrektor <br> Przedmioty zawodowe</span><img src="../img/pracownicy/lc.jpg"><span class="podpis">mgr Czarnowicz Lech</span></a>
 
 								 <a class="carousel-item"  href="#three!"><span class="podpis">Kierownik pracowni</span><img src="../img/pracownicy/mwo.jpg"><span class="podpis">mgr inż. Mirosław Wojciech Osial</span></a>
