@@ -6,6 +6,20 @@ $(document).ready(function(){
 	$('.modal').modal();
 	$('.materialboxed').materialbox();
 
+
+	let instances = [];
+	
+	$('.carousel').each(function (index,element){
+		instances.push(M.Carousel.getInstance(element));
+	})
+	instances.forEach((elem,index)=>{
+		$('a[click=to]').click(()=>{
+			elem.set(7)
+		})
+		console.log(index+' gotowy')
+	})
+	
+
 	addDot();
 })
 function addDot(){

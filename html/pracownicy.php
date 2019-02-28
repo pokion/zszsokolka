@@ -17,7 +17,7 @@
   <div class="container">
     <div class="row">
 			<div class="col s12">
-				<a class="waves-effect waves-light btn" href="#matma">Nauczyciele matmy</a>
+				<a class="waves-effect waves-light btn" click="to">Nauczyciele matmy</a>
 				<h3 class="center-align">Nauczyciele i pracownicy
 						Zespołu Szkół Zawodowych w Sokółce
 						w roku szkolnym 2018/2019</h3>
