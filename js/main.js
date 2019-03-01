@@ -9,21 +9,18 @@ $(document).ready(function(){
 		numVisible: 20
 	});
 
-	let instances = [];
+	let init = M.Carousel.getInstance($('.carousel')[0]);
 
-	$('.carousel').each(function (index,element){
-		instances.push(M.Carousel.getInstance(element));
-	})
-
-var n = $('button[click=to]').val();
-console.log(n);
-
-	instances.forEach((elem,index, n)=>{
-		$('button[click=to]').click(()=>{
-			elem.set(n)
+	$('button[click=to]').each((index,elem)=>{
+			
+		$(elem).click(()=>{
+			let val = $(this.activeElement).val();
+			console.log(val)
+			init.set(val)
 		})
-		console.log(index+' gotowy')
 	})
+
+	
 
 
 	addDot();

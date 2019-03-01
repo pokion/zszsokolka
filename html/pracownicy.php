@@ -105,7 +105,7 @@
 
 						$whatRepeats = "SELECT * from stanowiska_pracownikow
     				group by PracownikID having count(*) > 1";
-
+    				$tablePracownicy = [];
 
 						if ($result->num_rows > 0) {
 							 // output data of each row
