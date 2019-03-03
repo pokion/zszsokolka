@@ -39,8 +39,14 @@
 						// Wypisuje nauczycieli z danego rocznika
 						$carousel = "SELECT * FROM positions natural join emploees where rok='2018/2019'";
 
+<<<<<<< HEAD
 
 						$result = $conn->query($carousel);
+=======
+						$whatRepeats = "SELECT * from stanowiska_pracownikow
+    				group by PracownikID having count(*) > 1";
+    				$tablePracownicy = [];
+>>>>>>> 09fbe8c375591f5a7635d2a3eb2f0364b55a75e5
 
 						if ($result->num_rows > 0) {
 				       while($row = $result->fetch_assoc()) {
