@@ -1,6 +1,6 @@
 <?php
-	$server = 'localhost';
-	$login = 'root';
+	$servername = 'localhost';
+	$username = 'root';
 	$password = '';
-	$database = 'datapost';
+	$dbname = 'datapost';
 ?>

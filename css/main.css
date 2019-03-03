@@ -97,11 +97,11 @@ ul{
 	z-index: 100;
 }
 .carousel{
-	height: 550px;
+	height: 590px;
 	box-sizing: unset;
 	position: relative;
 	bottom: 150px;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 }
 .podpis{
 	display: block;
@@ -115,4 +115,9 @@ ul{
 	line-height: 200px;
 	text-align: center;
 	background: #cfd8dc;
+}
+.error{
+	background-color: #fff59d;
+	position: relative;
+	top: 150px;
 }

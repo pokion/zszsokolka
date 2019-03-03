@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 28 Lut 2019, 20:46
+-- Czas generowania: 03 Mar 2019, 19:39
 -- Wersja serwera: 10.1.35-MariaDB
 -- Wersja PHP: 7.2.9
 
@@ -25,236 +25,214 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `posts`
+-- Struktura tabeli dla tabeli `emploees`
 --
 
-CREATE TABLE `posts` (
-  `post_id` int(11) NOT NULL,
-  `post_data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `title` text COLLATE utf16_polish_ci,
-  `body` text COLLATE utf16_polish_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+CREATE TABLE `emploees` (
+  `teacherID` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `degree` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
--- Zrzut danych tabeli `posts`
+-- Zrzut danych tabeli `emploees`
 --
 
-INSERT INTO `posts` (`post_id`, `post_data`, `title`, `body`) VALUES
-(10, '2018-11-01 11:16:30', 'Spotkanie z rodzicami uczestników projektu \"Staze zagraniczne szansa na lepsze jutro\"', 'Przygotowania uczniów Zespolu Szkól Zawodowych w Sokólce do wyjazdu na staze, które odbeda na Malcie w ramach projektu \"Ponadnarodowa mobilnosc uczniów i absolwentów oraz kadry ksztalcenia zawodowego\", Program Operacyjny Wiedza Edukacja Rozwój 2014-2020 wspólfinansowany z Europejskiego Funduszu Spolecznego, \"Staze zagraniczne szansa na lepsze jutro\", nabieraja tempa. Podczas spotkania uczestników projektu wraz z rodzicami koordynatorzy przekazali informacje na temat projektu. Omówiono równiez sprawy podrózy i pobytu na Malcie. Na zakonczenie spotkania uczestnicy podpisali umowy przystapienia do projektu.'),
-(11, '2018-11-12 11:17:01', 'Ogloszenie o naborze kandydatów na zajecia dodatkowe podnoszace kompetencje kluczowe oraz dodatkowe zajecia wyrównawcze z przedmiotów ogólnoksztalcacych i zawodowych w ramach projektu  				pn. „Kompetentni i wykwalifikowani” – II edycja', 'zajecia dodatkowe podnoszace kompetencje kluczowe z jezyka angielskiego,\n				zajecia dodatkowe podnoszace kompetencje kluczowe w zakresie narzedzi technologii informacyjno – komunikacyjnych (ICT),\n				dodatkowe zajecia wyrównawcze z przedmiotów ogólnoksztalcacych,\n				dodatkowe zajecia wyrównawcze z  przedmiotów zawodowych.\n				W naborze moga wziac udzial uczniowie szkól i placówek systemu oswiaty, dla których organem prowadzacym jest Powiat Sokólski, prowadzace ksztalcenie zawodowe,  tj. Zespól Szkól Zawodowych im. Elizy Orzeszkowej w Sokólce, Zespól Szkól Rolniczych im. mjr Henryka Dobrzanskiego – Hubala w Sokólce, Zespól Szkól w Dabrowie Bialostockiej, Zespól Szkól w Suchowoli oraz Specjalny Osrodek Szkolno – Wychowawczy im. Janusza Korczaka w Sokólce, spelniajacy warunki udzialu w projekcie okreslone Regulaminem rekrutacji i uczestnictwa w projekcie, stanowiacym zalacznik do uchwaly Nr 444/2018 Zarzadu Powiatu Sokólskiego z dnia 19 stycznia 2018 r. w sprawie przyjecia Regulaminu rekrutacji i uczestnictwa w projekcie pn. „Kompetentni i wykwalifikowani” wspólfinansowanego ze srodków Europejskiego Funduszu Spolecznego w ramach Regionalnego Programu Operacyjnego Województwa Podlaskiego  na lata 2014 – 2020, Os priorytetowa III Kompetencje i Kwalifikacje, Dzialanie 3.3 Ksztalcenie zawodowe mlodziezy na rzecz konkurencyjnosci podlaskiej gospodarki, Poddzialanie 3.3.1 Ksztalcenie zawodowe mlodziezy na rzecz konkurencyjnosci podlaskiej gospodarki – poza ZIT BOF, zmienionym uchwala Nr 459/2018 Zarzadu Powiatu Sokólskiego z dnia 21 lutego 2018 r. oraz uchwala Nr 528/2018 Zarzadu Powiatu Sokólskiego z dnia 29 sierpnia 2018 r.'),
-(12, '2018-11-17 11:17:45', 'Ogloszenie o naborze kandydatów na zajecia dodatkowe podnoszace kompetencje kluczowe oraz dodatkowe zajecia wyrównawcze z przedmiotów ogólnoksztalcacych i zawodowych w ramach projektu  				pn. „Kompetentni i wykwalifikowani” – II edycja', 'W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii, przyjrzał się uważniej jednemu z najbardziej niejasnych słów w Lorem Ipsum – consectetur – i po wielu poszukiwaniach odnalazł niezaprzeczalne źródło: Lorem Ipsum pochodzi z fragmentów (1.10.32 i 1.10.33) „de Finibus Bonorum et Malorum”, czyli „O granicy dobra i zła”, napisanej właśnie w 45 p.n.e. przez Cycerona. Jest to bardzo popularna w czasach renesansu rozprawa na temat etyki. Pierwszy wiersz Lorem Ipsum, „Lorem ipsum dolor sit amet...” pochodzi właśnie z sekcji 1.10.32.'),
-(13, '2019-10-10 11:47:43', '<h3>sdffffffffffffffffffffff', '<h1>dfsdf</h1>'),
-(14, '2018-11-12 12:47:45', 'sdffffffffffffffffffffff', 'sdfsdf'),
-(15, '2018-12-13 12:47:46', 'sdffffffffffffffffffffff', 'sdfsdf'),
-(18, '2018-11-12 21:26:39', 'asddsa', 'asdasd');
+INSERT INTO `emploees` (`teacherID`, `name`, `degree`) VALUES
+(1, 'Grzegorz Zalewski', 'mgr'),
+(2, 'Lech Czarnowicz', 'mgr'),
+(3, 'Mirosław Wojciech Osial', 'mgr inż.'),
+(4, 'Iwona Mackiewicz-Kowalczuk', 'mgr'),
+(5, 'Anna Tolko', 'mgr '),
+(6, 'Klaudia Kmon-Ciuruk', 'mgr '),
+(7, 'Renata Maliszewska', 'mgr '),
+(8, 'Aneta Tymińska', 'mgr '),
+(9, 'Sylwester Leon Pakuła', 'mgr '),
+(10, 'Krystyna Grygiewicz', 'mgr '),
+(11, 'Piotr Dziakowski', 'mgr inż.'),
+(12, 'Elwira Zabłocka', 'mgr '),
+(13, 'Maria Sobolewska', 'mgr inż.'),
+(14, 'Jolanta Lech', 'mgr '),
+(15, 'Tomasz Potapczyk', 'mgr '),
+(16, 'Marek Mozyrski', 'mgr inż.'),
+(17, 'Karolina Roszkowska', ''),
+(18, 'Jerzy Szymaniuk', 'mgr inż.'),
+(19, 'Dariusz Ciostek', ''),
+(20, 'Bernard Jasielczuk', 'mgr '),
+(21, 'Justyn Jaroszuk', 'ks. mgr'),
+(22, 'Tomasz Łapiak', 'ks. mgr'),
+(23, 'Jolanta Stanisława Siemieniako', 'mgr '),
+(24, 'Izabela Garkowska', 'mgr '),
+(25, 'Iwona Sarosiek', 'mgr '),
+(26, 'Lucyna Bakun', ''),
+(27, 'Elwira Zalewska', 'mgr '),
+(28, 'Elżbieta Komła', ''),
+(29, 'Andrzej Zajczyk', 'mgr '),
+(30, 'Edyta Jelska', 'mgr'),
+(31, 'Tomasz Miłkowski', 'mgr '),
+(32, 'Andrzej Kułak', 'mgr '),
+(33, 'Józef Żak', 'mgr '),
+(34, 'Barbara Żamojtuk', NULL),
+(35, 'Jan Zabłudowski ', 'mgr inż.'),
+(36, 'Wacław Rećko ', 'mgr '),
+(37, 'Jolanta Kaźmierowicz ', 'mgr '),
+(38, ' Klaudia Adrianna Kmon ', 'mgr '),
+(39, 'Małgorzata Anna Krawiel ', 'mgr '),
+(40, 'Krystyna Kowalczuk ', 'mgr '),
+(41, ' Elżbieta Zofia Mazur ', 'mgr '),
+(42, 'Ewa Mozerska ', 'mgr '),
+(43, 'Bartosz Wojciechowski ', 'mgr '),
+(44, 'Katarzyna Szoka ', 'mgr '),
+(45, 'Anna Bogdan ', 'mgr '),
+(46, 'Jolanta Modzelewska ', 'mgr '),
+(47, 'Grażyna Małachwiej ', 'mgr '),
+(48, 'Stanisław Sawoń ', 'mgr '),
+(49, 'Anna Bogdan ', 'mgr '),
+(50, ' Mirosław Kałuski ', 'mgr '),
+(51, ' Barbara Czechowicz ', ''),
+(52, 'Piotr Jarosław Jarek ', 'mgr '),
+(53, 'Iwona Skowrońska-Klimowicz ', 'mgr '),
+(54, 'Marian Sobolewski ', 'mgr inż.'),
+(55, 'Teresa Wojdołowicz-Michalak ', 'inż.'),
+(56, 'Krystyna Jaźwińska ', ''),
+(57, 'Romuald Klimuszko ', ''),
+(58, 'Michał Parfieniuk ', ''),
+(59, 'Stanisław Szumiński ', 'lic.'),
+(60, 'Alfred Świetlicki ', ''),
+(61, ' Leszek Bogdan Giemza ', 'ks. mgr'),
+(62, 'Jarosław Grygiewicz', 'ks. lic.'),
+(63, 'Mariusz Zabłocki ', 'ks. mgr');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `pracownicy`
+-- Struktura tabeli dla tabeli `positions`
 --
 
-CREATE TABLE `pracownicy` (
-  `PracownikID` int(11) NOT NULL,
-  `Imie` varchar(255) COLLATE utf16_polish_ci NOT NULL,
-  `Nazwisko` varchar(255) COLLATE utf16_polish_ci NOT NULL,
-  `Wyksztalcenie` varchar(255) COLLATE utf16_polish_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
+CREATE TABLE `positions` (
+  `positionID` int(11) NOT NULL,
+  `position` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `position2` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `position3` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `photo_path` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `rok` varchar(255) COLLATE utf8_polish_ci DEFAULT NULL,
+  `teacherID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
--- Zrzut danych tabeli `pracownicy`
+-- Zrzut danych tabeli `positions`
 --
 
-INSERT INTO `pracownicy` (`PracownikID`, `Imie`, `Nazwisko`, `Wyksztalcenie`) VALUES
-(1, 'Grzegorz', 'Zalewski', 'mgr'),
-(2, 'Lech ', 'Czarnowicz', 'mgr'),
-(3, 'Mirosław Wojciech', 'Osial', 'mgr inż.'),
-(4, 'Iwona', 'Mackiewicz-Kowalczuk', 'mgr'),
-(5, 'Anna', 'Tolko', 'mgr'),
-(6, 'Klaudia', 'Kmon-Ciuruk', 'mgr'),
-(7, 'Renata', 'Maliszewska', 'mgr'),
-(8, 'Aneta', 'Tymińska', 'mgr'),
-(9, 'Sylwester Leon', 'Pakuła', 'mgr'),
-(10, 'Krystyna', 'Grygiewicz', 'mgr'),
-(11, 'Piotr', 'Dziakowski', 'mgr inż.'),
-(12, 'Elwira', 'Zabłocka', 'mgr'),
-(13, 'Maria', 'Sobolewska', 'mgr'),
-(14, 'Jolanta', 'Lech', 'mgr'),
-(15, 'Tomasz', 'Potapczyk', 'mgr'),
-(16, 'Marek', 'Mozyrski', 'mgr inż.'),
-(17, 'Karolina', 'Roszkowska', NULL),
-(18, 'Jerzy', 'Szymaniuk', 'mgr inż.'),
-(19, 'Dariusz', 'Ciostek', NULL),
-(20, 'Bernard', 'Jasielczuk', 'mgr'),
-(21, 'Justyn', 'Jaroszuk', 'ks. mgr '),
-(22, 'Tomasz', 'Łapiak', 'ks. mgr'),
-(23, 'Jolanta Stanisława', 'Siemieniako', 'mgr'),
-(24, 'Izabela', 'Garkowska', 'mgr'),
-(25, 'Iwona', 'Sarosiek', 'mgr'),
-(26, 'Lucyna', 'Bakun', NULL),
-(27, 'Elwira', 'Zabłocka', 'mgr'),
-(28, 'Elżbieta', 'Komła', '');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `stanowiska`
---
-
-CREATE TABLE `stanowiska` (
-  `StanowiskoID` int(11) NOT NULL,
-  `nazwa` varchar(255) COLLATE utf16_polish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_polish_ci;
-
---
--- Zrzut danych tabeli `stanowiska`
---
-
-INSERT INTO `stanowiska` (`StanowiskoID`, `nazwa`) VALUES
-(1, 'Dyrektor'),
-(2, 'Wicedyrektor'),
-(3, 'Kierownik Pracowni Ćwiczeń Technicznych'),
-(4, 'Język polski'),
-(5, 'Język angielski'),
-(6, 'Język rosyjski'),
-(7, 'Historia'),
-(8, 'Wiedza o Społeczeństwie'),
-(9, 'Matematyka'),
-(10, 'Fizyka'),
-(11, 'Chemia'),
-(12, 'Biologia'),
-(13, 'Przedmioty zawodowe'),
-(14, 'Geografia'),
-(15, 'Podstawy przedsiębiorczości'),
-(16, 'Wychowanie fizyczne'),
-(17, 'Edukacja dla bezpieczeństwa'),
-(18, 'Praktyczna nauka zawodu'),
-(19, 'Katecheza'),
-(20, 'Biblioteka'),
-(21, 'Pedagog szkolny'),
-(22, 'Sekretariat'),
-(23, 'Księgowość'),
-(24, 'Woźna'),
-(26, 'Wiedza o Kulturze');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `stanowiska_pracownikow`
---
-
-CREATE TABLE `stanowiska_pracownikow` (
-  `PracownikID` int(11) NOT NULL,
-  `StanowiskoID` int(11) NOT NULL,
-  `rok` varchar(10) COLLATE ucs2_polish_ci DEFAULT NULL,
-  `zdjecie` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_polish_ci;
-
---
--- Zrzut danych tabeli `stanowiska_pracownikow`
---
-
-INSERT INTO `stanowiska_pracownikow` (`PracownikID`, `StanowiskoID`, `rok`, `zdjecie`) VALUES
-(1, 1, '2018/2019', 'gz.jpg'),
-(1, 13, '2018/2019', 'gz.jpg'),
-(2, 2, '2018/2019', 'lc.jpg'),
-(2, 9, '2018/2019', 'lc.jpg'),
-(2, 13, '2018/2019', 'lc.jpg'),
-(3, 3, '2018/2019', 'mwo.jpg'),
-(4, 4, '2018/2019', 'imk.jpg'),
-(4, 22, '2018/2019', 'is.jpg'),
-(4, 26, '2018/2019', 'imk.jpg'),
-(5, 4, '2018/2019', 'at.jpg'),
-(6, 5, '2018/2019', 'kkc.jpg'),
-(7, 6, '2018/2019', 'rm.jpg'),
-(8, 5, '2018/2019', 'ta.jpg'),
-(9, 7, '2018/2019', 'slp.jpg'),
-(9, 8, '2018/2019', 'slp.jpg'),
-(10, 9, '2018/2019', 'kg.jpg'),
-(11, 10, '2018/2019', 'pd.jpg'),
-(11, 13, '2018/2019', 'pd.jpg'),
-(12, 11, '2018/2019', 'ze.jpg'),
-(12, 12, '2018/2019', 'ze.jpg'),
-(12, 13, '2018/2019', 'ze.jpg'),
-(13, 14, '2018/2019', 'ms.jpg'),
-(13, 15, '2018/2019', 'ms.jpg'),
-(14, 16, '2018/2019', 'jl.jpg'),
-(14, 17, '2018/2019', 'jl.jpg'),
-(15, 16, '2018/2019', 'tp.jpg'),
-(16, 13, '2018/2019', 'mm.jpg'),
-(17, 13, '2018/2019', 'kr.jpg'),
-(18, 13, '2018/2019', 'js.jpg'),
-(19, 18, '2018/2019', 'mCiostekD.jpg'),
-(20, 18, '2018/2019', 'bj.jpg'),
-(21, 19, '2018/2019', 'jaroszuk.jpg'),
-(22, 19, '2018/2019', 'tl.jpg'),
-(23, 20, '2018/2019', 'jss.jpg'),
-(24, 21, '2018/2019', 'ig.jpg'),
-(26, 23, '2018/2019', 'lb.jpg'),
-(27, 23, '2018/2019', 'ez.jpg'),
-(28, 24, '2018/2019', 'ek.jpg');
+INSERT INTO `positions` (`positionID`, `position`, `position2`, `position3`, `photo_path`, `rok`, `teacherID`) VALUES
+(1, 'Dyrektor', 'Przedmioty Zawodowe', NULL, '../img/pracownicy/2018/gz.jpg', '2018/2019', 1),
+(2, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2018/lc.jpg', '2018/2019', 2),
+(3, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Praktyczna nauka zawodu', NULL, '../img/pracownicy/2018/mwo.jpg', '2018/2019', 3),
+(4, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2018/imk.jpg', '2018/2019', 4),
+(5, 'Język polski', NULL, NULL, '../img/pracownicy/2018/at.jpg', '2018/2019', 5),
+(6, 'Język angielski', NULL, NULL, '../img/pracownicy/2018/kkc.jpg', '2018/2019', 6),
+(7, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2018/rm.jpg', '2018/2019', 7),
+(8, 'Język angielski', NULL, NULL, '../img/pracownicy/2018/ta.jpg', '2018/2019', 8),
+(9, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2018/slp.jpg', '2018/2019', 9),
+(10, 'Matematyka', NULL, NULL, '../img/pracownicy/2018/kg.jpg', '2018/2019', 10),
+(11, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2018/pd.jpg', '2018/2019', 11),
+(12, 'Chemia', 'Biologia', 'Przedmioty zawodowe', '../img/pracownicy/2018/ze.jpg', '2018/2019', 12),
+(13, 'Geografia', 'Podstawy przediębiorczości', NULL, '../img/pracownicy/2018/ms.jpg', '2018/2019', 13),
+(14, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne', NULL, '../img/pracownicy/2018/jl.jpg', '2018/2019', 14),
+(15, 'Wychowanie fizyczne', '', NULL, '../img/pracownicy/2018/tp.jpg', '2018/2019', 15),
+(16, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/mm.jpg', '2018/2019', 16),
+(17, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/kr.jpg', '2018/2019', 17),
+(18, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/js.jpg', '2018/2019', 18),
+(19, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2018/mCiostekD.jpg', '2018/2019', 19),
+(20, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2018/bj.jpg', '2018/2019', 20),
+(21, 'Katecheza', NULL, NULL, '../img/pracownicy/2018/Jaroszuk.jpg', '2018/2019', 21),
+(22, 'Katecheza', NULL, NULL, '../img/pracownicy/2018/tl.jpg', '2018/2019', 22),
+(23, 'Biblioteka', NULL, NULL, '../img/pracownicy/2018/jss.jpg', '2018/2019', 23),
+(24, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2018/ig.jpg', '2018/2019', 24),
+(25, 'Sekretariat', NULL, NULL, '../img/pracownicy/2018/is.jpg', '2018/2019', 25),
+(26, 'Księgowość', NULL, NULL, '../img/pracownicy/2018/lb.jpg', '2018/2019', 26),
+(27, 'Księgowość', NULL, NULL, '../img/pracownicy/2018/ez.jpg', '2018/2019', 27),
+(28, 'Woźna', NULL, NULL, '../img/pracownicy/2018/ek.jpg', '2018/2019', 28),
+(30, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2018/gz.jpg', '2017/2018', 1),
+(31, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2018/lc.jpg', '2017/2018', 2),
+(32, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Praktyczna nauka zawodu', NULL, '../img/pracownicy/2018/mwo.jpg', '2017/2018', 3),
+(33, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2018/imk.jpg', '2017/2018', 4),
+(34, 'Język polski', NULL, NULL, '../img/pracownicy/2018/at.jpg', '2017/2018', 5),
+(35, 'Język angielski', NULL, NULL, '../img/pracownicy/2018/kkc.jpg', '2017/2018', 6),
+(36, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2018/rm.jpg', '2017/2018', 7),
+(37, 'Język angielski', NULL, NULL, '../img/pracownicy/2018/at.jpg', '2017/2018', 8),
+(38, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2018/slp.jpg', '2017/2018', 9),
+(39, 'Matematyka', NULL, NULL, '../img/pracownicy/2018/kg.jpg', '2017/2018', 10),
+(40, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2018/pd.jpg', '2017/2018', 11),
+(41, 'Chemia', 'Biologia', 'Przedmioty zawodowe', '../img/pracownicy/2018/ze.jpg', '2017/2018', 12),
+(42, 'Geografia', 'Podstawy przedsiębiorczości', NULL, '../img/pracownicy/2018/ms.jpg', '2017/2018', 13),
+(43, 'Edukacja dla bezpieczeństwa', 'Praktyczna nauka zawodu', NULL, '../img/pracownicy/2018/az.jpg', '2017/2018', 29),
+(44, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2018/jl.jpg', '2017/2018', 14),
+(45, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2018/tp.jpg', '2017/2018', 15),
+(46, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/ej.jpg', '2017/2018', 30),
+(47, 'Przedmioty zawodowe', NULL, NULL, 'brak', '2017/2018', 31),
+(48, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/js.jpg', '2017/2018', 18),
+(49, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/ak.jpg', '2017/2018', 32),
+(50, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2018/jz.jpg', '2017/2018', 33),
+(51, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2018/bj.jpg', '2017/2018', 20),
+(52, 'Katecheza', NULL, NULL, '../img/pracownicy/2018/Jaroszuk.jpg', '2017/2018', 21),
+(53, 'Katecheza', NULL, NULL, '../img/pracownicy/2018/tl.jpg', '2017/2018', 22),
+(54, 'Biblioteka', NULL, NULL, '../img/pracownicy/2018/jss.jpg', '2017/2018', 23),
+(55, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2018/ig.jpg', '2017/2018', 24),
+(56, 'Sekretariat', NULL, NULL, '../img/pracownicy/2018/is.jpg', '2017/2018', 25),
+(57, 'Sekretariat', NULL, NULL, '../img/pracownicy/2018/ez.jpg', '2017/2018', 27),
+(58, 'Księgowość', NULL, NULL, '../img/pracownicy/2018/lb.jpg', '2017/2018', 26),
+(59, 'Księgowość', NULL, NULL, '../img/pracownicy/2018/bz.jpg', '2017/2018', 34),
+(60, 'Woźna', NULL, NULL, '../img/pracownicy/2018/ek.jpg', '2017/2018', 28),
+(61, 'Dyrektor', 'Przedmioty zawodowe', NULL, NULL, '2005/2006', 35),
+(62, 'Wicedyrektor', 'Przedmioty zawodowe', NULL, NULL, '2005/2006', 36),
+(63, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', NULL, NULL, '2005/2006', 3),
+(64, 'Język polski', NULL, NULL, NULL, '2005/2006', 37),
+(65, 'Język polski', NULL, NULL, NULL, '2005/2006', 4),
+(66, 'Język polski', 'Biblioteka', NULL, NULL, '2005/2006', 23),
+(67, 'Język polski', '', NULL, NULL, '2005/2006', 5);
 
 --
 -- Indeksy dla zrzutów tabel
 --
 
 --
--- Indeksy dla tabeli `posts`
+-- Indeksy dla tabeli `emploees`
 --
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`);
+ALTER TABLE `emploees`
+  ADD PRIMARY KEY (`teacherID`);
 
 --
--- Indeksy dla tabeli `pracownicy`
+-- Indeksy dla tabeli `positions`
 --
-ALTER TABLE `pracownicy`
-  ADD PRIMARY KEY (`PracownikID`);
-
---
--- Indeksy dla tabeli `stanowiska`
---
-ALTER TABLE `stanowiska`
-  ADD PRIMARY KEY (`StanowiskoID`);
-
---
--- Indeksy dla tabeli `stanowiska_pracownikow`
---
-ALTER TABLE `stanowiska_pracownikow`
-  ADD PRIMARY KEY (`PracownikID`,`StanowiskoID`),
-  ADD KEY `StanowiskoID` (`StanowiskoID`);
+ALTER TABLE `positions`
+  ADD PRIMARY KEY (`positionID`),
+  ADD KEY `teacherID` (`teacherID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `posts`
+-- AUTO_INCREMENT dla tabeli `emploees`
 --
-ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+ALTER TABLE `emploees`
+  MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT dla tabeli `pracownicy`
+-- AUTO_INCREMENT dla tabeli `positions`
 --
-ALTER TABLE `pracownicy`
-  MODIFY `PracownikID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
--- AUTO_INCREMENT dla tabeli `stanowiska`
---
-ALTER TABLE `stanowiska`
-  MODIFY `StanowiskoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+ALTER TABLE `positions`
+  MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- Ograniczenia dla zrzutów tabel
 --
 
 --
--- Ograniczenia dla tabeli `stanowiska_pracownikow`
+-- Ograniczenia dla tabeli `positions`
 --
-ALTER TABLE `stanowiska_pracownikow`
-  ADD CONSTRAINT `stanowiska_pracownikow_ibfk_1` FOREIGN KEY (`PracownikID`) REFERENCES `pracownicy` (`PracownikID`),
-  ADD CONSTRAINT `stanowiska_pracownikow_ibfk_2` FOREIGN KEY (`StanowiskoID`) REFERENCES `stanowiska` (`StanowiskoID`);
+ALTER TABLE `positions`
+  ADD CONSTRAINT `positions_ibfk_1` FOREIGN KEY (`teacherID`) REFERENCES `emploees` (`teacherID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

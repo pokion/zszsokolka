@@ -1,0 +1,63 @@
+create table Employee(
+	teacherID int AUTO_INCREMENT PRIMARY key,
+    name varchar(255),
+    degree varchar(255)
+)
+create table Positions(
+	positionID int AUTO_INCREMENT PRIMARY key,
+    position varchar(255),
+    teacherID int,
+    FOREIGN key (teacherID) REFERENCES emploees(teacherID)
+)
+select degree, name, position from positions
+INNER JOIN emploees ON positions.teacherID = emploees.teacherID
+// to samo ładniej
+select degree, name, position from positions NATURAL JOIN emploees
+
+SELECT title,GROUP_CONCAT(mood_name SEPARATOR ' ') AS moods
+FROM films
+JOIN films_moods ON films.id=films_moods.film_id
+JOIN moods ON films_moods.mood_id=moods.id
+
+SELECT *FROM
+  stanowiska_pracownikow2
+  INNER JOIN
+  stanowiska_pracownikow2 ON stanowiska_pracownikow2.PracownikID = pracownicy.PracownikID
+  INNER JOIN
+  stanowiska_pracownikow2 ON stanowiska_pracownikow2.stanowiskoID = stanowiska.StanowiskoID;
+SELECT  * FROM
+
+     stanowiska_pracownikow2
+        INNER JOIN
+    pracownicy ON stanowiska_pracownikow2.PracownikID = pracownicy.PracownikID
+             INNER JOIN
+    stanowiska ON stanowiska_pracownikow2.StanowiskoID = stanowiska.StanowiskoID;
+
+    SELECT COUNT(*) as repeats, name, teacherID
+    FROM positions NATURAL join emploees
+    GROUP by teacherID, name
+    HAVING repeats>1;
+
+    SELECT degree, name, position from positions
+    INNER JOIN emploees ON positions.teacherID = emploees.teacherID;
+
+
+
+
+SELECT COUNT(*) as repeats, teacherID FROM positions natural join emploees GROUP by teacherID HAVING repeats>1
+SELECT repeats, name FROM ( SELECT COUNT(*) as repeats, teacherID FROM positions GROUP by teacherID HAVING repeats>1 ) as kik natural join emploees
+SELECT position, repeats, name, degree FROM ( SELECT position, COUNT(*) as repeats, teacherID FROM positions GROUP by teacherID HAVING repeats>1 ) as kik natural join emploees
+
+// walidacja zredukowana do jednej linii. Jeśli jest NULL to go wypisuje, ale go nie widać. Efekt różni się tym, że jeśli jest pracownik ma jedno possition to pod spodem jest pusta linie (2x <br>)
+if(is_null($row["position3"])){
+	 echo "Pracownicy: " . $row["degree"]. " "  . $row["name"]. " " . $row["position"]. " ". $row["position2"]. "<br>";
+} elseif (is_null($row["position2"])) {
+ echo "Pracownicy: " . $row["degree"]. " "  . $row["name"]. " " . $row["position"].  "<br>";
+}else
+echo "Pracownicy: " . $row["degree"]. " "  . $row["name"]. " " . $row["position"]. " ". $row["position2"]." ".  $row["position3"]. "<br>";
+
+
+
+// rozbudowa bazy o nowe kolumny
+alter table positions add column photo_path varchar(255) after position3
+// do kolumny ze zdjeciami wprowadzamy całą ścieżkę, bo zdjęcia nie były aktualziowane każdego roku, przez co do wypisywania  ich z uporządkowanych folderów nie można zastosować prostego wyrażenia regularnego.
