@@ -10,7 +10,6 @@ function readURL(input) {
 		    	console.log(e)
 		    	images.push({name: input.target.files[i].name,
 		    				 data: e.target.result});
-		    	let imageRep = $(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`);
 		    	let $img = $(`<div class="card">
 								<img src="${e.target.result}">
 								<div class="card-panel grey lighten-5 z-depth-1 center-align">
@@ -21,15 +20,16 @@ function readURL(input) {
 						`);
 		    	
 		    	$('#imagesBox .row').append($img);
-		    	$('div .replace').append(imageRep);
 				/*remove img*/
 		    		jQuery('.rem').click((e)=>{
-						/*$(e.currentTarget).parent().remove();*/
-						console.log('no chyba działa');
 						let nameImg = $(e.currentTarget).attr('image');
 						images.forEach((elem,index)=>{
-							if(elem.name == nameImg) console.log(elem, index)
+							if(elem.name == nameImg){
+								images.splice(index,1);
+								return false;
+							}
 						})
+						$(e.currentTarget).parent().remove();
 					})
 				/*remove img*/
 			}
@@ -45,7 +45,7 @@ $(document).ready(function(){
 	$('button').click(function(){
 		let tit = $('input[name=title]').val();
 		let bod = $('textarea[name=body]').val();
-		$.post('/php/createPost.php',
+		$.post(createPosts,
 			{
 				title: tit,
 				body: bod
@@ -54,6 +54,16 @@ $(document).ready(function(){
 				M.toast({html: data});
 			}
 		);
+	$.post(saveImages,
+		{
+			img: images	
+		},
+		function(data,status){
+			/*M.toast({html: data});*/
+			console.log(data,status)
+		}
+	)
+
 	})
 
 	/*preview the allpost*/
@@ -65,6 +75,9 @@ $(document).ready(function(){
 		$('h3.replace').replaceWith('<h3 class="letterSpac replace">'+ title +'</h3>');
 		$('p.replace').replaceWith('<p class="right-align replace">aktualna data</p>');
 		$('h5.replace').replaceWith('<h5 class="letterSpac border replace">'+ body +'</h5>');
+		images.forEach((elem)=>{
+			$('h5.replace').append($(`<a href="${elem.data}" data-lightbox="roadtrip" class="imageStyle"><img src="${elem.data}" /></a>`))
+		})
 	})
 
 	/*upload images*/
