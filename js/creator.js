@@ -1,4 +1,4 @@
-let images = [];
+let images = new FormData();
 
 function readURL(input) {
 	console.log($('input[type=file]').prop('files'),input.target.files);
@@ -8,8 +8,7 @@ function readURL(input) {
 
 		    reader.onload = function(e) {
 		    	console.log(e)
-		    	images.push({name: input.target.files[i].name,
-		    				 data: e.target.result});
+		    	images.append('file',input);
 		    	let $img = $(`<div class="card">
 								<img src="${e.target.result}">
 								<div class="card-panel grey lighten-5 z-depth-1 center-align">
@@ -54,15 +53,23 @@ $(document).ready(function(){
 				M.toast({html: data});
 			}
 		);
-	$.post(saveImages,
-		{
-			img: images	
-		},
-		function(data,status){
-			/*M.toast({html: data});*/
-			console.log(data,status)
-		}
-	)
+		$.ajax({
+			url: saveImages,
+			method:'POST',
+			data: images,
+			contentType: false,
+			cache: false,
+			processData: false,
+			succes: function(data){
+				console.log(data,'succ')
+			},
+			fail: function(data){
+				console.log(data,'fail')
+			},
+			done: function(){
+				console.log('dson')
+			}
+		})
 
 	})
 
