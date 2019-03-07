@@ -14,6 +14,7 @@
 	<?php
 		include_once('includes/nav.php');
 	?>
+ 
 
 	<div class="container body">
 
@@ -30,7 +31,7 @@
 			<div class="actionButtons">
 				<a id="preview" href="#modal1" class="modal-trigger btn-floating btn-large waves-effect waves-light"><i class="material-icons">search</i></a>
 
-				<input name="uploadImage" type="file" multiple class="hide" accept='image/*' />
+				<input name="file[]" type="file" multiple class="hide" accept='image/*' />
 				<a id="upload" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">file_upload</i></a>
 			</div>
 			
