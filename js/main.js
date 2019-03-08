@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$('.collapsible').collapsible();
 	$('.modal').modal();
 	$('.materialboxed').materialbox();
+
 	$('.carousel').carousel({
 		numVisible: 20
 	});
