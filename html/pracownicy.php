@@ -5,7 +5,7 @@
 
 	<?php
 		include_once('includes/header.php');
-		include_once('../php/config.php');
+				require_once('../php/baza.php');
 		$inc = 'pracownicy';
 	?>
 
@@ -23,8 +23,6 @@
 						w roku szkolnym 2018/2019</h3>
               <div class="carousel">
 				<?php
-						// Łączenie
-						$conn = new mysqli($servername, $username, $password, $dbname);
 						// Sprawdzanie
 						if ($conn->connect_error) {
 							 die("<h1>Jeśli widzisz ten komunikat to wołaj CZARKA, bo KTOŚ tu coś naklikał: (•̀o•́)ง(•̀o•́)ง(•̀o•́)ง</h1><br><h2>" . $conn->connect_error)."</h2> ";
@@ -39,14 +37,12 @@
 						// Wypisuje nauczycieli z danego rocznika
 						$carousel = "SELECT * FROM positions natural join emploees where rok='2018/2019'";
 
-<<<<<<< HEAD
 
 						$result = $conn->query($carousel);
-=======
+
 						$whatRepeats = "SELECT * from stanowiska_pracownikow
     				group by PracownikID having count(*) > 1";
-    				$tablePracownicy = [];
->>>>>>> 09fbe8c375591f5a7635d2a3eb2f0364b55a75e5
+
 
 						if ($result->num_rows > 0) {
 				       while($row = $result->fetch_assoc()) {
