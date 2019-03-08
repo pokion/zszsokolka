@@ -4,10 +4,10 @@ $(document).ready(function(){
 	$('.sidenav').sidenav();
 	$('.collapsible').collapsible();
 	$('.modal').modal();
+	$('select').formSelect();
 	$('.materialboxed').materialbox();
-
 	$('.carousel').carousel({
-		numVisible: 20
+		numVisible: 16
 	});
 
 
