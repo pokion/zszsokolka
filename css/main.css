@@ -100,7 +100,6 @@ ul{
 	height: 590px;
 	box-sizing: unset;
 	position: relative;
-	bottom: 150px;
 	padding-bottom: 40px;
 }
 .podpis{
@@ -121,7 +120,3 @@ ul{
 	position: relative;
 	top: 150px;
 }
-/* .years{
-	display: block;
-	box-sizing: unset;
-} */
