@@ -99,14 +99,12 @@ ul{
 .carousel{
 	height: 590px;
 	box-sizing: unset;
-	position: relative;
-	padding-bottom: 40px;
 }
 .podpis{
 	display: block;
 	text-align: center;
 	background: #222;
-	padding:5px;
+	padding:7px;
 }
 .carousel img{
   display: block;
@@ -119,4 +117,17 @@ ul{
 	background-color: #fff59d;
 	position: relative;
 	top: 150px;
+}
+.bg5{
+	background: #393939 ;
+}
+.select-dropdown{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+.placeholder{
+	position: relative;
+	bottom: 150px;
 }

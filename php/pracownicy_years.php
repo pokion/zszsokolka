@@ -3,7 +3,7 @@
 require_once('../php/baza.php');
 
 //query
-$sql = "SELECT DISTINCT rok  FROM positions";
+$sql = "SELECT DISTINCT rok  FROM positions  ORDER BY  rok DESC";
 
 $result = $conn->query($sql);
 

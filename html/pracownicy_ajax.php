@@ -14,20 +14,20 @@
   	<?php
   		include_once('includes/nav.php');
   	?>
-  	<select name="year" class="years">
-					<?php
-						include_once('../php/pracownicy_years.php');
-					 ?>
-	        </select>
-					<h3 class="center-align">Nauczyciele i pracownicy
-							Zespołu Szkół Zawodowych w Sokółce
-							w roku szkolnym <span class="rok"></span></h3>
-  <div class="container">
-    <div class="row">
+		<div class="container">
+			<h3>Wybierz rok szkolny:</h3>
+		<select name="year" class="years">
+			<?php
+					include_once('../php/pracownicy_years.php');
+			?>
+		</select>
+		<h3 class="center-align">Nauczyciele i pracownicy
+		Zespołu Szkół Zawodowych w Sokółce
+		w roku szkolnym <span class="rok"></span></h3>
 			<div class="col s12 placeholder">
 
 		 </div>
-	</div>
+</div>
   <?php
     include_once('includes/footer.php');
   ?>

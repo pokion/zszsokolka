@@ -5,13 +5,6 @@ $(document).ready(function(){
 	$('.modal').modal();
 	$('select').formSelect();
 	$('.materialboxed').materialbox();
-	$('.carousel').carousel({
-		numVisible: 16
-	});
-	$('.carousel.carousel-slider').carousel({
-		fullWidth: true,
-		indicators: true
-	});
 
 	addDot();
 })
