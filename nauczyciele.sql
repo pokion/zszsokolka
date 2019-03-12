@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Mar 2019, 19:39
--- Wersja serwera: 10.1.35-MariaDB
--- Wersja PHP: 7.2.9
+-- Czas generowania: 12 Mar 2019, 22:58
+-- Wersja serwera: 10.1.36-MariaDB
+-- Wersja PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `datapost`
+-- Baza danych: `dataposts`
 --
 
 -- --------------------------------------------------------
