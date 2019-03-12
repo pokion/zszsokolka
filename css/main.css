@@ -68,7 +68,7 @@ ul{
 	background-color: #53DCD0;
 }
 .bg5{
-	background-color: #02CCBA;
+	background: #393939 ;
 }
 .imageStyle img{
 	height: 100px;
@@ -95,4 +95,36 @@ ul{
 	height: 100%;
 	position: relative;
 	z-index: 100;
+}
+.carousel{
+	height: 590px;
+	box-sizing: unset;
+}
+.podpis{
+	display: block;
+	text-align: center;
+	background: #222;
+	padding:7px;
+}
+.carousel img{
+  display: block;
+	height: auto;
+	line-height: 200px;
+	text-align: center;
+	background: #cfd8dc;
+}
+.error{
+	background-color: #fff59d;
+	position: relative;
+	top: 150px;
+}
+.select-dropdown{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+.placeholder{
+	position: relative;
+	bottom: 150px;
 }
