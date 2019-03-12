@@ -14,7 +14,6 @@
 	<?php
 		include_once('includes/nav.php');
 	?>
- 
 
 	<div class="container body">
 
@@ -22,7 +21,7 @@
 			<input type="text" autocomplete="off" name="title">
 			<p class="formP">Treść</p>
 			<br>
-			<textarea name="body"></textarea> 
+			<textarea name="body"></textarea>
 			<br>
 
 			<button class="btn waves-effect waves-light" type="submit" name="action">wyślij
@@ -34,14 +33,14 @@
 				<input name="file[]" type="file" multiple class="hide" accept='image/*' />
 				<a id="upload" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">file_upload</i></a>
 			</div>
-			
+
 
 			<div id="imagesBox">
 				<div class="row center-align">
-					
+
 				</div>
 			</div>
-				
+
 
 			<!-- modal -->
 				<div class="modal modal-fixed-footer" id="modal1">
@@ -50,7 +49,7 @@
 		        			<div class="col s12 card">
 								<h3 class="letterSpac replace"></h3>
 								<p class="right-align replace"></p>
-	
+
 								<h5 class="letterSpac border replace"></h5>
 								<div class="replace"></div>
 							</div>

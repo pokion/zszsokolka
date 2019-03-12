@@ -1,0 +1,15 @@
+html,body{
+  height: 100%;
+}
+.carousel-slider{
+  height: 100%;
+  background: black;
+}
+.carousel img{
+  height: 100%;
+  opacity: 0.5;
+  filter: blur(8px);
+}
+h1{
+  z-index: 99999;
+}

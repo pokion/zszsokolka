@@ -24,7 +24,7 @@
 						<li><a href="https://uonetplus.vulcan.net.pl/powiatsokolski">E-dziennik</a></li>
 						<li<?php if($inc==='klasy'){} ?>><a href="#">Klasy</a></li>
 						<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a href="rekrutacja.php">Rekrutacja</a></li>
-						<li<?php if($inc==='pracownicy'){} ?>><a href="#">Pracownicy</a></li>
+						<li<?php if($inc==='pracownicy'){ ?> class="active" <?php }  ?> ><a href="pracownicy_ajax.php">Pracownicy</a></li>
 						<li<?php if($inc==='podreczniki'){} ?>><a href="#">Podręczniki</a></li>
 			    	</ul>
 				</div>

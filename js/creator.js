@@ -28,7 +28,7 @@ function imagesCard(input,addImage){
 					  			 `);
 					$('#imagesBox .row').append($imageCard);
 				}
-				
+
 
 					$('h5.replace').append($(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`));
 
@@ -45,7 +45,7 @@ function imagesCard(input,addImage){
 			}
 			reader.readAsDataURL(input[i]);
 	}
-	
+
 }
 
 

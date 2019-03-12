@@ -23,7 +23,7 @@ let curData = null;
 		/*console.log(this.onlyDiv)
 		console.log(this.err);*/
 
-		
+
 		$('.container>.row.content').append(loadButton);
 		addDot();
 	}
