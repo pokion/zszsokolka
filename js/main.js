@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	M.AutoInit();
-
 	$('.sidenav').sidenav();
 	$('.collapsible').collapsible();
 	$('.modal').modal();
@@ -9,7 +8,10 @@ $(document).ready(function(){
 	$('.carousel').carousel({
 		numVisible: 16
 	});
-
+	$('.carousel.carousel-slider').carousel({
+		fullWidth: true,
+		indicators: true
+	});
 
 	addDot();
 })

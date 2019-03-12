@@ -17,20 +17,21 @@ $(document).ready(function()	{
 				},
 				dataType : "json",
 				success: function(data){
-					let placeholder = $('.placeholder');
-					let content = "<div class=\"carousel\"><a class=\"carousel-item\"><span class=\"podpis\">";
+					let placeholder = $('#placeholder');
+					let content = "<div class=\"carousel\">";
 
 					$.each(data, function(index, element){
+						content += "<a class=\"carousel-item\"><span class=\"podpis\">";
 						content += data[index].position + "<br> ";
 						content += data[index].position2 + "<br> ";
 						content += data[index].position3 + "</span><img src=";
 						content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\"><span class=\"podpis\">";
 						content += data[index].degree + " ";
-						content += data[index].name;
+						content += data[index].name += "</span></a>";;
 					})
-					content += "</span></a></div>";
-					console.log(content);
+					content += '</div>';
 					placeholder.innerHTML = content;
+					console.log(content);
 				}
 })
 			.fail(function() {
