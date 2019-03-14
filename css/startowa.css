@@ -3,9 +3,9 @@ html,body{
 }
 .carousel-slider{
   height: 100%;
-  background: black;
-  text-align: center;
-  background-position: center;
+  width: 100%;
+  background: #111;
+  display: relative;
 }
 .carousel img{
   opacity: 0.7;
@@ -15,13 +15,13 @@ html,body{
   -webkit-filter: blur(8px); */
 }
 h1{
-  z-index: 99999;
+  z-index: 3;
 }
 .slider{
   position: relative;
 }
 .title{
-	z-index: 999;
+	z-index: 3;
   position: absolute;
   bottom: 50px;
   left: 30px;
@@ -35,15 +35,40 @@ h4{
   color: #fff;
 }
 .logo{
-  z-index: 999;
+  z-index: 4;
   position: absolute;
   bottom: 80px;
   left: 30px;
   /* filter: invert(100%); UŻYĆ W PRZYPADKU WOJNY NUKLEARNEJ*/
 }
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
+  .carousel-slider{
+    display: relative;
+  }
   .carousel img{
-      position: absolute;
-      top: 0;
+    position: absolute;
+    height: 100%;
+    top: 56px;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+  }
+  .title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .startowa{
+  	height: 200px;
+    z-index: 3;
+    bottom: 0;
+    position: relative;
+  }
+  .logo{
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    /* filter: invert(100%); UŻYĆ W PRZYPADKU WOJNY NUKLEARNEJ*/
   }
 }
