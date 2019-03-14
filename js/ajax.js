@@ -48,7 +48,7 @@ function loadCarousel(){
 				content += "</div>";
 				placeholder.html(content);
 				$('.carousel').carousel({
-					numVisible : 20
+					numVisible : 10
 				});
 
 				firstTime = false;

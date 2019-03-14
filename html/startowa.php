@@ -5,23 +5,72 @@
 
 	<?php
 		include_once('includes/header.php');
+		$inc = 'index';
 	?>
 	<link rel="stylesheet" href="/css/startowa.css">
 </head>
 <body>
+	<?php
+		include_once('includes/nav.php');
+	?>
+	<div class="startowa">
+	<img src="../img/static/logo.png" height="200px" class="logo">
 	<div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!">
-			<img src="https://advantis.world/wp-content/uploads/2015/11/Logistics-Sri-Lanka-News.jpg">Technik Logistyk</a>
-    <a class="carousel-item" href="#two!">
-			<img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NyjYWBnugijqylcxa/professional-car-mechanics-checking-under-hood-in-auto-repair-service-timelapse-hyperlapse-blue-car-on-the-lift-and-red-tool-box-near-it_buaikd7il_thumbnail-full01.png"></a>
-    <a class="carousel-item" href="#three!">
-			<img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Hmj4Aoc6gj1dxvp7o/videoblocks-professional-hairdresser-stylist-curling-up-teen-girl-hair_bd2dlnim_thumbnail-full01.png"></a>
-    <a class="carousel-item" href="#four!">
-			<img src="https://lorempixel.com/800/400/food/4"></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7864/33430882078_0de77e1d5f_c.jpg" class="slider">
+			<div class="title"><h4> Wizyta jakiejś szkoły</h4></div></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7926/46325367225_94b12170b3_c.jpg" class="slider">
+			<div class="title"><h4>Wizyta jakiejś innej szkoły</h4></div></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7814/46325131775_8bd8edf03b_c.jpg" class="slider">
+			<div class="title"><h4> Wizyta szkoły w budzie</h4></div></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7814/32242288507_d40c3b9a01_c.jpg" class="slider">
+			<div class="title"><h4> Wizyta wi-zy-ta</h4></div></a>
   </div>
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+</div>
+	<div class="container">
+		<br>
+		<br>
+		<div class="row content">
+			<!-- rodo -->
+			<a href="#modal1" class="modal-trigger">
+				<div class="card hoverable small">
+					<div class="card-image">
+						<img src="../img/rodo.jpg">
+						<span class="card-title">KLAUZULA INFORMACYJNA RODO</span>
+					</div>
+					<div class="card-content black-text white">
+						<p>W związku z realizacją wymogów Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych:</p>
+					</div>
+					<div class="card-action black-text">Rozwiń</div>
+				</div>
+			</a>
+				<!-- end rodo  -->
+				<div class="modal modal-fixed-footer" id="modal1">
+					<div class="modal-content">
+						<p>W związku z realizacją wymogów Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych "RODO"), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących Pani/Panu prawach z tym związanych:</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Zamknij</a>
+					</div>
+				</div>
+		</div>
+		<br>
+		<!-- end rodo -->
+
+
+
+	</div>
+	<!-- end container -->
+	<?php
+		include_once('includes/footer.php');
+	?>
+	<script type="text/javascript" src="../js/loadPosts.js"></script>
 </body>
 </html>

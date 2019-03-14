@@ -5,12 +5,21 @@ $(document).ready(function(){
 	$('.modal').modal();
 	$('select').formSelect();
 	$('.materialboxed').materialbox();
+	$('.carousel-slider').carousel({
+		shift : 400
+	});
 
 	addDot();
+	autoplay();
 })
 function addDot(){
 		let ul = jQuery('.card ul').addClass(()=>{
 			return 'browser-default';
 		});
 
+	}
+
+	function autoplay() {
+	    $('.carousel-slider').carousel('next');
+	    setTimeout(autoplay, 6000);
 	}

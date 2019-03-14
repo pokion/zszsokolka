@@ -4,12 +4,46 @@ html,body{
 .carousel-slider{
   height: 100%;
   background: black;
+  text-align: center;
+  background-position: center;
 }
 .carousel img{
-  height: 100%;
-  opacity: 0.5;
-  filter: blur(8px);
+  opacity: 0.7;
+  position: absolute;
+  top: -200px;
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
 }
 h1{
   z-index: 99999;
+}
+.slider{
+  position: relative;
+}
+.title{
+	z-index: 999;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+.startowa{
+	height: 300px;
+  z-index: 8888;
+  position: relative;
+}
+h4{
+  color: #fff;
+}
+.logo{
+  z-index: 999;
+  position: absolute;
+  bottom: 80px;
+  left: 30px;
+  /* filter: invert(100%); UŻYĆ W PRZYPADKU WOJNY NUKLEARNEJ*/
+}
+@media (max-width: 400px) {
+  .carousel img{
+      position: absolute;
+      top: 0;
+  }
 }

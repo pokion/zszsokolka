@@ -1,0 +1,31 @@
+html,body{
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+}
+.back{
+  padding: 10px;
+}
+.login{
+  height: 100%;
+}
+form{
+  margin-left: auto;
+  margin-right: auto;
+  color: #ddd;
+  padding: 0 30px;
+  border-radius: 15px;
+  background: #222;
+}
+h4{
+  padding-top: 20px;
+}
+.btn{
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+@media (max-width: 400px) {
+  form{
+
+  }
+}

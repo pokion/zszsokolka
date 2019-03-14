@@ -4,7 +4,7 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'dataposts';
+$dbname = 'datapost';
 
 /*Połączenie z bazą*/
 $conn = new mysqli($servername, $username, $password, $dbname);
