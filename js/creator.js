@@ -49,6 +49,9 @@ function imagesCard(input,addImage){
 }
 
 function uploadImages(id){
+	if(id && images.length == 0){
+		M.toast({html: 'Post został dodany bez zdjęć'})
+	}
 	for(let i=0;i<images.length;i++){
 			let file = images[i];
 			let reader = new FileReader();
@@ -81,13 +84,14 @@ function uploadImages(id){
 				console.log(data);
 				let myJsonString = JSON.parse(data);
 				console.log(myJsonString);
-				if(myJsonString.status === 'New record created successfully'){
+				if(myJsonString.status === true){
 					uploadImages(myJsonString.Id);
+					console.log('cos nie tak')
 				}
 				if(myJsonString.error){
 					M.toast({html: myJsonString.error});
 				}else{
-					M.toast({html: myJsonString.status});
+					M.toast({html: myJsonString.text});
 				}
 			}
 		);
