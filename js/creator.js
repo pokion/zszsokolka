@@ -48,29 +48,30 @@ function imagesCard(input,addImage){
 
 }
 
-
+function uploadImages(id){
+	for(let i=0;i<images.length;i++){
+			let file = images[i];
+			let reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = function(e){
+				let result = e.target.result;
+				let fileName = images[i].name;
+				$.post(saveImages,{
+					data: result,
+					name: fileName,
+					idPost: id
+				},
+				function(d,s){
+					console.log(d,s)
+				});
+			}
+		}
+}
 
 	$('button').click(function(){
-		let formData = new FormData();
-		formData.append('file',images)
 		let tit = $('input[name=title]').val();
 		let bod = $('textarea[name=body]').val();
-		$.ajax({
-			url: saveImages,
-			type: 'POST',
-			xhr: function(){
-				let myXhr = $.ajaxSettings.xhr();
-				return myXhr;
-			},
-			success: function(data){
-				console.log('Data uploaded: '+data)
-			},
-			data: formData,
-			cache: false,
-			contentType: false,
-			processData: false,
-			enctype: "multipart/form-data"
-		});
+		
 		$.post(createPosts,
 			{
 				title: tit,
@@ -78,6 +79,11 @@ function imagesCard(input,addImage){
 			},
 			function(data,status){
 				M.toast({html: data});
+				let myJsonString = JSON.parse(data);
+				console.log(myJsonString)
+				if(myJsonString.status === 'New record created successfully'){
+					uploadImages(myJsonString.Id);
+				}
 			}
 		);
 	});

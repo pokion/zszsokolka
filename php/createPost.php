@@ -15,7 +15,9 @@
 				VALUES('$title','$body')";
 
 				if ($conn->query($sql) === TRUE) {
-				    echo "New record created successfully";
+				    
+				    $data = ['status'=>"New record created successfully",'Id'=>mysqli_insert_id($conn)];
+				    echo json_encode($data);
 				} else {
 				    echo "Error: " . $sql . "<br>" . $conn->error;
 				}
