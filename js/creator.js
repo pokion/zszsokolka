@@ -78,11 +78,16 @@ function uploadImages(id){
 				body: bod
 			},
 			function(data,status){
-				M.toast({html: data});
+				console.log(data);
 				let myJsonString = JSON.parse(data);
-				console.log(myJsonString)
+				console.log(myJsonString);
 				if(myJsonString.status === 'New record created successfully'){
 					uploadImages(myJsonString.Id);
+				}
+				if(myJsonString.error){
+					M.toast({html: myJsonString.error});
+				}else{
+					M.toast({html: myJsonString.status});
 				}
 			}
 		);

@@ -19,12 +19,14 @@
 				    $data = ['status'=>"New record created successfully",'Id'=>mysqli_insert_id($conn)];
 				    echo json_encode($data);
 				} else {
-				    echo "Error: " . $sql . "<br>" . $conn->error;
+				    $data = ['error'=>"Error: " . $sql . "<br>" . $conn->error];
+				    echo json_encode($data);
 				}
 
 		$conn->close();
 	}else{
-		echo "Pola są puste.";
+		$data = ['error'=>'Pola są puste.'];
+		echo json_encode($data);
 	}
 
 	
