@@ -86,7 +86,6 @@ function uploadImages(id){
 				console.log(myJsonString);
 				if(myJsonString.status === true){
 					uploadImages(myJsonString.Id);
-					console.log('cos nie tak')
 				}
 				if(myJsonString.error){
 					M.toast({html: myJsonString.error});
