@@ -32,10 +32,10 @@ function loadCarousel(){
 
 				$.each(data, function(index, element){
 					content +=  "<a class=\"carousel-item\"><span class=\"podpis\">"+data[index].position + "<br> ";
-					if (data[index].position2 == !null){
+					if (data[index].position2 != null){
 						content += data[index].position2 + "<br> ";
 					}
-					if (data[index].position3 == !null) {
+					if (data[index].position3 != null) {
 						content += data[index].position3 + "</span><img src=";
 					}else{
 						content +=  "</span><img src=";
