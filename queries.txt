@@ -61,3 +61,10 @@ echo "Pracownicy: " . $row["degree"]. " "  . $row["name"]. " " . $row["position"
 // rozbudowa bazy o nowe kolumny
 alter table positions add column photo_path varchar(255) after position3
 // do kolumny ze zdjeciami wprowadzamy całą ścieżkę, bo zdjęcia nie były aktualziowane każdego roku, przez co do wypisywania  ich z uporządkowanych folderów nie można zastosować prostego wyrażenia regularnego.
+
+
+sql dla saveImages.php
+$sql = "SELECT * FROM posts WHERE post_id = $_POST['id']";
+$sql = "UPDATE posts SET images = $id WHERE post_id = 12";
+$sql = "INSERT INTO images(photoName)
+        VALUES($fileName)";

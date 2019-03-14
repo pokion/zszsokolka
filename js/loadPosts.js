@@ -1,31 +1,12 @@
 let curData = null;
-	// **/* to jest punkt kontrolny żeby wykryć gdzie jest data
-	// &/^ to jest punkt kontrolny żeby wykryć w ostatnim split w którym dokładnie miejscy w tablicy this.onlyDiv jest data
 	function addDiv(data){
+		console.log(data);
 		let loadButton = '<button onclick="loadPost()" if="loadButton" class="btn waves-effect waves-light">Load<i class="material-icons">autorenew</i></button>';
-
-		let err = data.split("<br>");
-		this.onlyDiv = err[1].split("**/*");
-		console.log(this.onlyDiv[1].indexOf('&/^'))
-		console.log(this.onlyDiv[0].indexOf('&/^'))
-
-		for(let i=0;i<this.onlyDiv.length;i++){
-			if(this.onlyDiv[i].indexOf('&/^')> -1){
-				let betaData = this.onlyDiv[i].split('&/^');
-				let dataWitchoutTime = betaData[0].split(' ')
-				curData = dataWitchoutTime[0];
-				console.log(curData);
-			}else{
-				$('.container>.row.content').append(this.onlyDiv[i]);
-			}
-		}
-
-		/*console.log(this.onlyDiv)
-		console.log(this.err);*/
+		let json = JSON.parse(data)
+		console.log(json)
 
 
 		$('.container>.row.content').append(loadButton);
-		addDot();
 	}
 
 	function loadPost(){
