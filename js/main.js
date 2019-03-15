@@ -6,7 +6,8 @@ $(document).ready(function(){
 	$('select').formSelect();
 	$('.materialboxed').materialbox();
 	$('.carousel-slider').carousel({
-		shift : 400
+		shift : 380,
+		duration : 150
 	});
 
 	addDot();

@@ -2,21 +2,40 @@
 <html lang="PL">
 <head>
 	<title>strona</title>
-	
-	<?php 
+
+	<?php
 		include_once('includes/header.php');
 		$inc = 'index';
 	?>
-
+	<link rel="stylesheet" href="/css/startowa.css">
 </head>
 <body>
-
 	<?php
 		include_once('includes/nav.php');
 	?>
+	<div class="startowa">
+		<img src="../img/static/logo2.gif" height="200px" class="logo">
+	<div class="carousel carousel-slider">
 
+    	<a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7864/33430882078_0de77e1d5f_c.jpg">
+			<div class="title"><h4>Wizyta uczniów Szkoły Podstawowej Nr 3 w Sokółce</h4></div></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7926/46325367225_94b12170b3_c.jpg">
+			<div class="title"><h4>III Konkurs Wiedzy o Prawie Wyborczym "Wybieram Wybory"</h4></div></a>
+
+    <a class="carousel-item">
+			<img src="https://farm8.staticflickr.com/7814/46325131775_8bd8edf03b_c.jpg">
+			<div class="title"><h4>Wizyta uczniów Szkoły Podstawowej z Babik</h4></div></a>
+
+    <a class="carousel-item" href="http://zszsokolka.pl/">
+			<img src="https://farm8.staticflickr.com/7814/32242288507_d40c3b9a01_c.jpg">
+			<div class="title"><h4>Szkolenie pracowników szkoły z pierwszej pomocy</h4></div></a>
+		</div>
+  </div>
 	<div class="container">
-		<br>
+		<div class="title"></div>
 		<br>
 		<div class="row content">
 			<!-- rodo -->
