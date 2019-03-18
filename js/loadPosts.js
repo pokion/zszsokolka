@@ -13,12 +13,16 @@ let curData = null;
 							<h3 class="letterSpac">${json.title}</h3>
 							<p class="right-align">${json.data}</p>
 						
-							<h5 class="letterSpac border">${json.body}</h5>
+							<h5 class="letterSpac border" postid="${json.postID}">${json.body}</h5>
 						</div>
 					</div>
 				`);
 				$('.content').append(div);
-				curData = json.data.split(' ')
+				curData = json.data.split(' ');
+				if(json.images){
+					loadImage(json.images.split(','),json.postID);
+				}
+				
 			}
 		})
 

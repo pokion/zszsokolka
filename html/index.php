@@ -71,6 +71,8 @@
 	<?php
 		include_once('includes/footer.php');
 	?>
+	<script type="text/javascript" src="../js/loadImages.js"></script>
 	<script type="text/javascript" src="../js/loadPosts.js"></script>
+	
 </body>
 </html>
