@@ -1,4 +1,4 @@
-<!-- footer -->
+	<!-- footer -->
 		<footer class="page-footer bg5">
 			<div class="container">
 				<div class="row marginClear">

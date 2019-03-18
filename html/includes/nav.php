@@ -6,7 +6,8 @@
 				<div class="nav-wrapper  container">
 			    	<a href="#" class="brand-logo">Logo</a>
 			    	<ul id="nav-mobile" class="right hide-on-med-and-down">
-			    		<li>Panel sterowania</li>
+			    		<li><a href="../html/index.php">Strona Główna</a></li>
+							<li><a href="../php/logout.php">Wyloguj</a></li>
 			    	</ul>
 				</div>
 			</nav>

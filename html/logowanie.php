@@ -31,7 +31,7 @@ if (isset($_POST['loguj']))
 			header('Location: http://localhost/html/postCreator.php');
 
 	 }
-	 else echo "Wpisano złe dane.";
+	 else echo  '<span class="zleDane">Złe dane</span>';
 }
 $conn->close();
 ?>
@@ -54,11 +54,11 @@ $conn->close();
       <h4>Logowanie</h4>
       <div class="row">
         <div class="input-field col s12">
-          <input id="login" type="text" class="validate" name="login">
-          <label for="email">Email</label>
+          <input required id="login" type="text" class="validate" name="login">
+          <label for="email">Login</label>
         </div>
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate" name="haslo">
+          <input required id="password" type="password" class="validate" name="haslo">
           <label for="Hasło">Hasło</label>
         </div>
       </div>
