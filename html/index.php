@@ -7,7 +7,7 @@
 		include_once('includes/header.php');
 		$inc = 'index';
 	?>
-	<link rel="stylesheet" href="/css/startowa.css">
+	<link rel="stylesheet" href="../css/startowa.css">
 </head>
 <body>
 	<?php

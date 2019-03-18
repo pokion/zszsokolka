@@ -1,9 +1,26 @@
 let curData = null;
 	function addDiv(data){
-		console.log(data);
 		let loadButton = '<button onclick="loadPost()" if="loadButton" class="btn waves-effect waves-light">Load<i class="material-icons">autorenew</i></button>';
-		let json = JSON.parse(data)
-		console.log(json)
+		let allJson = data.split('|');
+
+		allJson.forEach((elem)=>{
+			if(elem){
+				let json = JSON.parse(elem);
+				let div = $(
+				`
+					<div class="row">
+						<div class="col s12 card">
+							<h3 class="letterSpac">${json.title}</h3>
+							<p class="right-align">${json.data}</p>
+						
+							<h5 class="letterSpac border">${json.body}</h5>
+						</div>
+					</div>
+				`);
+				$('.content').append(div);
+				curData = json.data.split(' ')
+			}
+		})
 
 
 		$('.container>.row.content').append(loadButton);
@@ -13,12 +30,10 @@ let curData = null;
 		$('button').remove();
 		$.post(loadPosts,
 				{
-					date: curData
+					date: curData[0]
 				},
 				function(data,status){
 					if(status==='success'){
-						//console.log(data)
-						console.log('powinno załadować')
 							addDiv(data);
 						}else{
 							console.log(status);
