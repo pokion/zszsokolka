@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+   header("Location: http://localhost/html/logowanie.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="PL">
 <head>
