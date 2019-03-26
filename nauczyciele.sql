@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 12 Mar 2019, 22:58
--- Wersja serwera: 10.1.36-MariaDB
--- Wersja PHP: 7.2.11
+-- Czas generowania: 26 Mar 2019, 10:27
+-- Wersja serwera: 10.1.37-MariaDB
+-- Wersja PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `dataposts`
+-- Baza danych: `datapost`
 --
 
 -- --------------------------------------------------------
@@ -101,7 +101,14 @@ INSERT INTO `emploees` (`teacherID`, `name`, `degree`) VALUES
 (60, 'Alfred Świetlicki ', ''),
 (61, ' Leszek Bogdan Giemza ', 'ks. mgr'),
 (62, 'Jarosław Grygiewicz', 'ks. lic.'),
-(63, 'Mariusz Zabłocki ', 'ks. mgr');
+(63, 'Mariusz Zabłocki ', 'ks. mgr'),
+(64, 'Filip Zdrodowski', 'ks. mgr'),
+(65, 'Tomasz Leszkowicz', 'mgr'),
+(66, 'Bożena Marcińczyk', 'mgr'),
+(67, 'Piotr Żywno', 'ks. mgr'),
+(68, 'Grzegorz Zubiel', 'mgr'),
+(69, 'Małgorzata Anna Krawiel', 'mgr'),
+(70, 'Ryszard Kozioł', 'ks. mgr');
 
 -- --------------------------------------------------------
 
@@ -189,7 +196,124 @@ INSERT INTO `positions` (`positionID`, `position`, `position2`, `position3`, `ph
 (64, 'Język polski', NULL, NULL, NULL, '2005/2006', 37),
 (65, 'Język polski', NULL, NULL, NULL, '2005/2006', 4),
 (66, 'Język polski', 'Biblioteka', NULL, NULL, '2005/2006', 23),
-(67, 'Język polski', '', NULL, NULL, '2005/2006', 5);
+(67, 'Język polski', '', NULL, NULL, '2005/2006', 5),
+(69, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2016/Nauczyciel6.jpg', '2016/2017', 1),
+(70, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2016/Nauczyciel14.jpg', '2016/2017', 2),
+(71, 'Kierownik Pracowni Ćwiczeń Technicznych', NULL, NULL, '../img/pracownicy/2016/mMirek.jpg', '2016/2017', 3),
+(72, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2016/Nauczyciel3.jpg', '2016/2017', 4),
+(73, 'Język polski', NULL, NULL, '../img/pracownicy/2016/Nauczyciel1.jpg', '2016/2017', 5),
+(74, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2016/RenatkaM.jpg', '2016/2017', 7),
+(75, 'Język angielski', NULL, NULL, '../img/pracownicy/2016/Nauczyciel4.jpg', '2016/2017', 8),
+(76, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2016/Ja.jpg', '2016/2017', 9),
+(77, 'Matematyka', NULL, NULL, '../img/pracownicy/2016/Nauczyciel5.jpg', '2016/2017', 10),
+(78, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2016/Nauczyciel12.jpg', '2016/2017', 11),
+(79, 'Chemia', 'Biologia', 'Przedmioty zawodowe', '../img/pracownicy/2016/Nauczyciel11.jpg', '2016/2017', 12),
+(80, 'Geografia', 'Podstawy przedsiębiorczości', NULL, '../img/pracownicy/2016/mMariaS.jpg', '2016/2017', 13),
+(81, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne', NULL, '../img/pracownicy/2016/lech.jpg', '2016/2017', 14),
+(82, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2016/Nauczyciel9.jpg', '2016/2017', 15),
+(83, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/Nauczyciel8.jpg', '2016/2017', 30),
+(84, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/mMarek_M14.jpg', '2016/2017', 16),
+(85, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/JurekSz.jpg', '2016/2017', 18),
+(86, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2016/BenekJ.jpg', '2016/2017', 20),
+(92, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2016/mAZajczyk.jpg', '2016/2017', 29),
+(93, 'Katecheza', NULL, NULL, '../img/pracownicy/2016/jaroszuk.jpg', '2016/2017', 21),
+(94, 'Katecheza', NULL, NULL, '../img/pracownicy/2016/zdrodowski.jpg', '2016/2017', 64),
+(95, 'Biblioteka', NULL, NULL, '../img/pracownicy/2016/Nauczyciel2.jpg', '2016/2017', 23),
+(96, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2016/Nauczyciel13.jpg', '2016/2017', 24),
+(97, 'Sekretariat', NULL, NULL, '../img/pracownicy/2016/IwonaS.jpg', '2016/2017', 25),
+(98, 'Sekretariat', NULL, NULL, '../img/pracownicy/2016/ElwiraZalewska.jpg', '2016/2017', 27),
+(99, 'Księgowość', NULL, NULL, '../img/pracownicy/2016/Lucyna.jpg', '2016/2017', 26),
+(100, 'Księgowość', NULL, NULL, '../img/pracownicy/2016/Basia.jpg', '2016/2017', 34),
+(101, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2016/Nauczyciel6.jpg', '2015/2016', 1),
+(102, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2016/Nauczyciel14.jpg', '2015/2016', 2),
+(103, 'Kierownik Pracowni Ćwiczeń Technicznych', NULL, NULL, '../img/pracownicy/2016/mMirek.jpg', '2015/2016', 3),
+(104, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2016/Nauczyciel3.jpg', '2015/2016', 4),
+(105, 'Język polski', NULL, NULL, '../img/pracownicy/2016/Nauczyciel1.jpg', '2015/2016', 5),
+(106, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2016/RenatkaM.jpg', '2015/2016', 7),
+(107, 'Język angielski', NULL, NULL, '../img/pracownicy/2016/Nauczyciel4.jpg', '2015/2016', 8),
+(108, 'Język angielski', NULL, NULL, '../img/pracownicy/2016/mKlaudia.jpg', '2015/2016', 38),
+(109, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2016/Ja.jpg', '2015/2016', 9),
+(110, 'Matematyka', NULL, NULL, '../img/pracownicy/2016/Nauczyciel5.jpg', '2015/2016', 10),
+(111, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2016/Nauczyciel12.jpg', '2015/2016', 11),
+(112, 'Chemia', 'Biologia', 'Przedmioty zawodowe', '../img/pracownicy/2016/Nauczyciel11.jpg', '2015/2016', 12),
+(113, 'Geografia', NULL, NULL, '../img/pracownicy/2016/mMariaS.jpg', '2015/2016', 13),
+(114, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2016/Nauczyciel9.jpg', '2015/2016', 15),
+(115, 'Edukacja dla bezpieczeństwa', NULL, NULL, '../img/pracownicy/2016/Nauczyciel15.jpg', '2015/2016', 66),
+(116, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2016/Nauczyciel10.jpg', '2015/2016', 65),
+(117, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/Nauczyciel6.jpg', '2015/2016', 30),
+(118, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/Nauczyciel7.jpg', '2015/2016', 31),
+(119, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2016/JurekSz.jpg', '2015/2016', 18),
+(121, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2016/mAZajczyk.jpg', '2015/2016', 29),
+(123, 'Katecheza', NULL, NULL, '../img/pracownicy/2016/jaroszuk.jpg', '2015/2016', 21),
+(124, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2016/BenekJ.jpg', '2015/2016', 20),
+(125, 'Katecheza', NULL, NULL, '../img/pracownicy/2016/zywno.jpg', '2015/2016', 67),
+(126, 'Biblioteka', NULL, NULL, '../img/pracownicy/2016/Nauczyciel2.jpg', '2015/2016', 23),
+(127, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2016/Nauczyciel13.jpg', '2015/2016', 24),
+(128, 'Sekretariat', NULL, NULL, '../img/pracownicy/2016/IwonaS.jpg', '2015/2016', 25),
+(129, 'Sekretariat', NULL, NULL, '../img/pracownicy/2016/ElwiraZalewska.jpg', '2015/2016', 27),
+(130, 'Księgowość', NULL, NULL, '../img/pracownicy/2016/Lucyna.jpg', '2015/2016', 26),
+(131, 'Księgowość', NULL, NULL, '../img/pracownicy/2016/Basia.jpg', '2015/2016', 34),
+(132, 'Dyrektor', 'Historia', NULL, '../img/pracownicy/2015/GrzesiekZ.jpg', '2014/2015', 1),
+(133, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2015/LechCz.jpg', '2014/2015', 2),
+(134, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2015/mMirek.jpg', '2014/2015', 3),
+(135, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2015/IwonaMK.jpg', '2014/2015', 4),
+(136, 'Język polski', 'Biblioteka', NULL, '../img/pracownicy/2015/mJolaS.jpg', '2014/2015', 23),
+(137, 'Język polski', NULL, NULL, '../img/pracownicy/2015/AniaT.jpg', '2014/2015', 5),
+(138, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2015/RenatkaM.jpg', '2014/2015', 7),
+(139, 'Język angielski', NULL, NULL, '../img/pracownicy/2015/mAneta.jpg', '2014/2015', 8),
+(140, 'Język angielski', NULL, NULL, '../img/pracownicy/2015/mKlaudia.jpg', '2014/2015', 38),
+(141, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2015/Ja.jpg', '2014/2015', 9),
+(142, 'Matematyka', NULL, NULL, '../img/pracownicy/2015/KrysiaG.jpg', '2014/2015', 10),
+(143, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2015/mPiotrekDz.jpg', '2014/2015', 11),
+(144, 'Chemia', 'Biologia', NULL, '../img/pracownicy/2015/ElwiraZ.jpg', '2014/2015', 12),
+(145, 'Geografia', NULL, NULL, '../img/pracownicy/2015/mMariaS.jpg', '2014/2015', 13),
+(146, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne', NULL, '../img/pracownicy/2015/lech.jpg', '2014/2015', 14),
+(147, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2015/TomekP.jpg', '2014/2015', 15),
+(148, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2015/mZubiel1.jpg', '2014/2015', 68),
+(149, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2015/mMarek_M14.jpg', '2014/2015', 16),
+(150, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2015/mJelska.jpg', '2014/2015', 30),
+(151, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2015/JurekSz.jpg', '2014/2015', 18),
+(152, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2015/BenekJ.jpg', '2014/2015', 20),
+(153, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2015/mAZajczyk.jpg', '2014/2015', 29),
+(154, 'Katecheza', NULL, NULL, '../img/pracownicy/2015/jaroszuk.jpg', '2014/2015', 21),
+(155, 'Katecheza', NULL, NULL, '../img/pracownicy/2015/zywno.jpg', '2014/2015', 67),
+(156, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2015/IzaG.jpg', '2014/2015', 24),
+(157, 'Sekretariat', NULL, NULL, '../img/pracownicy/2015/IwonaS.jpg', '2014/2015', 25),
+(158, 'Sekretariat', NULL, NULL, '../img/pracownicy/2015/ElwiraZalewska.jpg', '2014/2015', 27),
+(159, 'Księgowość', NULL, NULL, '../img/pracownicy/2015/Lucyna.jpg', '2014/2015', 26),
+(160, 'Księgowość', NULL, NULL, '../img/pracownicy/2015/Basia.jpg', '2014/2015', 34),
+(161, 'Dyrektor', 'Historia', NULL, '../img/pracownicy/2014/GrzesiekZ.jpg', '2013/2014', 1),
+(162, 'Wicedyrektor', 'Matematyka', 'Przedmioty zawodowe', '../img/pracownicy/2014/LechCz.jpg', '2013/2014', 2),
+(163, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2014/mMirek.jpg', '2013/2014', 3),
+(164, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2014/IwonaMK.jpg', '2013/2014', 4),
+(165, 'Język polski', 'Biblioteka', NULL, '../img/pracownicy/2014/mJolaS.jpg', '2013/2014', 23),
+(166, 'Język polski', NULL, NULL, '../img/pracownicy/2014/AniaT.jpg', '2013/2014', 5),
+(167, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2014/mGosiaK.jpg', '2013/2014', 69),
+(168, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2014/RenatkaM.jpg', '2013/2014', 7),
+(169, 'Język angielski', NULL, NULL, '../img/pracownicy/2014/mAneta.jpg', '2013/2014', 8),
+(170, 'Język angielski', NULL, NULL, '../img/pracownicy/2014/mKlaudia.jpg', '2013/2014', 38),
+(171, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2014/Ja.jpg', '2013/2014', 9),
+(172, 'Matematyka', NULL, NULL, '../img/pracownicy/2014/KrysiaG.jpg', '2013/2014', 10),
+(173, 'Fizyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2014/mPiotrekDz.jpg', '2013/2014', 11),
+(174, 'Chemia', 'Biologia', NULL, '../img/pracownicy/2014/ElwiraZ.jpg', '2013/2014', 12),
+(175, 'Geografia', NULL, NULL, '../img/pracownicy/2014/mMariaS.jpg', '2013/2014', 13),
+(176, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne', NULL, '../img/pracownicy/2014/lech.jpg', '2013/2014', 14),
+(177, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2014/TomekP.jpg', '2013/2014', 15),
+(178, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2014/mZubiel1.jpg', '2013/2014', 68),
+(179, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2014/MarekM.jpg', '2013/2014', 16),
+(180, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2014/mJelska.jpg', '2013/2014', 30),
+(181, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2014/JurekSz.jpg', '2013/2014', 18),
+(182, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2014/mCiostekD.jpg', '2013/2014', 19),
+(183, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2014/BenekJ.jpg', '2013/2014', 20),
+(184, 'Praktyczna nauka zawodu', NULL, NULL, '../img/pracownicy/2014/mAZajczyk.jpg', '2013/2014', 29),
+(185, 'Katecheza', NULL, NULL, '../img/pracownicy/2014/jaroszuk.jpg', '2013/2014', 21),
+(186, 'Katecheza', NULL, NULL, '../img/pracownicy/2014/koziol.jpg', '2013/2014', 70),
+(187, 'Katecheza', NULL, NULL, '../img/pracownicy/2014/zywno.jpg', '2013/2014', 67),
+(188, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2014/IzaG.jpg', '2013/2014', 24),
+(189, 'Sekretariat', NULL, NULL, '../img/pracownicy/2014/IwonaS.jpg', '2013/2014', 25),
+(190, 'Sekretariat', NULL, NULL, '../img/pracownicy/2014/ElwiraZalewska.jpg', '2013/2014', 27),
+(191, 'Księgowość', NULL, NULL, '../img/pracownicy/2014/Lucyna.jpg', '2013/2014', 26),
+(192, 'Księgowość', NULL, NULL, '../img/pracownicy/2014/Basia.jpg', '2013/2014', 34);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -216,13 +340,13 @@ ALTER TABLE `positions`
 -- AUTO_INCREMENT dla tabeli `emploees`
 --
 ALTER TABLE `emploees`
-  MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT dla tabeli `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 
 --
 -- Ograniczenia dla zrzutów tabel
