@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['login'])){
-   header("Location: http://localhost/html/logowanie.php");
+   header("Location: http://localhost/strona/html/logowanie.php");
 }
 ?>
 <!DOCTYPE html>

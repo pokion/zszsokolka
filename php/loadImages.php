@@ -7,15 +7,18 @@
 	} 
 	$conn->set_charset("utf8");
 
-	if(empty($_POST['idImage'])){
-		echo "nie ma idImage";
+	if(empty($_POST['postId'])){
+		echo "wartość $_post jest pusta.";
 	}else{
-		$sql = "SELECT `photoName` FROM `images` WHERE id = ".$_POST['idImage'];
+		$imagesArray = [];
+		$postId = $_POST['postId'];
+		$sql = "SELECT * FROM `images` WHERE post_id = $postId";
 		$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) > 0) {
 		    while($row = mysqli_fetch_assoc($result)) {
-		        echo $row['photoName'];
+		        array_push($imagesArray, $row['imageName']);
 		    }
+		    echo json_encode($imagesArray);
 		} else {
 		    echo "0 results";
 		}

@@ -1,4 +1,4 @@
-create table Employee(
+﻿create table Employee(
 	teacherID int AUTO_INCREMENT PRIMARY key,
     name varchar(255),
     degree varchar(255)
@@ -68,3 +68,21 @@ $sql = "SELECT * FROM posts WHERE post_id = $_POST['id']";
 $sql = "UPDATE posts SET images = $id WHERE post_id = 12";
 $sql = "INSERT INTO images(photoName)
         VALUES($fileName)";
+
+
+
+
+
+//zapytania sql do zrobienia czystej tabeli
+CREATE TABLE posts(
+	post_id int PRIMARY KEY AUTO_INCREMENT,
+    title text NOT null,
+    body text not null,
+    post_data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+
+//zapytanie od php 
+
+INSERT INTO images (imageName,post_id) VALUES
+    ( imageName, post_id )
