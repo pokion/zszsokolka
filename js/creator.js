@@ -30,8 +30,8 @@ function imagesCard(input,addImage){
 				}
 
 
-					$('h5.replace').append($(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`));
-
+					$('.collapsible-header').append($(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`));
+					hideImages('h5.replace');
 				jQuery('.rem').click((e)=>{
 					let nameImg = $(e.currentTarget).attr('image');
 					images.forEach((elem,index)=>{
@@ -102,10 +102,18 @@ function uploadImages(id){
 		let title = $('input[name=title]').val();
 		let body = $('textarea[name=body]').val();
 
+		let $img = $(`
+			<ul class="collapsible">
+				<li>
+					<div class="collapsible-header"></div>
+					<div class="collapsible-body"></div>
+				</li>
+			</ul>`)
 		$('h3.replace').replaceWith('<h3 class="letterSpac replace">'+ title +'</h3>');
 		$('p.replace').replaceWith('<p class="right-align replace">aktualna data</p>');
 		$('h5.replace').replaceWith('<h5 class="letterSpac border replace">'+ body +'</h5>');
-		imagesCard(images,'h5.replace',true)
+		$('h5.replace').append($img)
+		imagesCard(images,true)
 	})
 
 	/*upload images*/
