@@ -6,14 +6,17 @@ function loadImage(id){
 				postId: id
 			},
 			function(data,status){
-				let JSONimages = JSON.parse(data);
-				JSONimages.forEach((elem)=>{
-					let appendDiv = `
-							<a href="/StronaxDszko-y/images/${elem}" data-lightbox="${id}" class="imageStyle">
-								<img  src="/StronaxDszko-y/images/${elem}">
-							</a>
-						`;
-						div.append(appendDiv);
-				})
+				if(data){
+					let JSONimages = JSON.parse(data);
+					JSONimages.forEach((elem)=>{
+						let appendDiv = `
+								<a href="/StronaxDszko-y/images/${elem}" data-lightbox="${id}" class="imageStyle">
+									<img  src="/StronaxDszko-y/images/${elem}">
+								</a>
+							`;
+							div.append(appendDiv);
+					})
+				}
+				
 			})
 }

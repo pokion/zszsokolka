@@ -1,6 +1,7 @@
 *{
 	font-size: 17px;
 	font-family: 'Roboto', sans-serif;
+	z-index: 1
 }
 h3{
 	font-family: 'Oswald', sans-serif;
@@ -131,3 +132,22 @@ h3{
 nav{
 	z-index: 999;
 }
+.post{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+	opacity: 0.5;
+	filter: blur(5px);
+	filter: contrast(80%);
+}
+.kuba:nth-child(odd){
+	background: #311b92;
+}
+.kuba:nth-child(even){
+	background: #424242;
+}
+

@@ -46,7 +46,7 @@
 		if (mysqli_num_rows($result) > 0) {
 	    // output data of each row
 		    while($row = mysqli_fetch_assoc($result)) {
-		       	$data = ['data' => $row['post_data'],'title' => $row['title'], 'body' => $row['body'], 'images' => $row['images'], 'postID' => $row['post_id']];
+		       	$data = ['data' => $row['post_data'],'title' => $row['title'], 'body' => $row['body'],  'postID' => $row['post_id']];
 		        echo json_encode($data, JSON_UNESCAPED_UNICODE);
 		        echo "|";
 		    }

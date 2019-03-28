@@ -20,7 +20,7 @@
 		    }
 		    echo json_encode($imagesArray);
 		} else {
-		    echo "0 results";
+			return false;
 		}
 	}
 
