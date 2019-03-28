@@ -51,6 +51,8 @@ function loadCarousel(){
 					numVisible : 10
 				});
 
+				$('.carousel').hide().fadeIn("slow")
+
 				firstTime = false;
 			})
 

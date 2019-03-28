@@ -9,8 +9,8 @@ function loadImage(id){
 				let JSONimages = JSON.parse(data);
 				JSONimages.forEach((elem)=>{
 					let appendDiv = `
-							<a href="/strona/images/${elem}" data-lightbox="${id}" class="imageStyle">
-								<img  src="/strona/images/${elem}">
+							<a href="/StronaxDszko-y/images/${elem}" data-lightbox="${id}" class="imageStyle">
+								<img  src="/StronaxDszko-y/images/${elem}">
 							</a>
 						`;
 						div.append(appendDiv);
