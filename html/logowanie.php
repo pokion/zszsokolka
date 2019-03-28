@@ -23,7 +23,7 @@ if (isset($_POST['loguj']))
 	 if (mysqli_num_rows(mysqli_query($conn, "SELECT login, haslo FROM uzytkownicy WHERE login = '".$login."' AND haslo = '".$haslo."';")) > 0)
 	 {
 			// uaktualniamy date logowania oraz ip
-			mysqli_query($conn, "UPDATE `uzytkownicy` SET (`logowanie` = '".time().", `ip` = '".$ip."'') WHERE login = '".$login."';");
+			mysqli_query($conn, "UPDATE `uzytkownicy` SET (`logowanie` = " .time(). ", `ip` = '".$ip."') WHERE login = '".$login."';");
 
 			$_SESSION['zalogowany'] = true;
 			$_SESSION['login'] = $login;
@@ -31,7 +31,7 @@ if (isset($_POST['loguj']))
 			header('Location: http://localhost/html/postCreator.php');
 
 	 }
-	 else echo  '<span class="zleDane">Złe dane</span>';
+	 else echo  '<script> alert("Nieprawidłowe dane. Spróbuj ponownie");</script>';
 }
 $conn->close();
 ?>
