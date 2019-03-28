@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['login'])){
-   header("Location: http://localhost/html/logowanie.php");
+   header("Location: http://localhost/strona/html/logowanie.php");
 }
 ?>
 <!DOCTYPE html>
@@ -56,8 +56,9 @@ if(!isset($_SESSION['login'])){
 								<h3 class="letterSpac replace"></h3>
 								<p class="right-align replace"></p>
 
-								<h5 class="letterSpac border replace"></h5>
-								<div class="replace"></div>
+								<h5 class="letterSpac border replace">
+									
+								</h5>
 							</div>
 		        		</div>
 					</div>
@@ -74,5 +75,6 @@ if(!isset($_SESSION['login'])){
 		include_once('includes/footer.php');
 	?>
 	<script type="text/javascript" src="../js/creator.js"></script>
+	<script type="text/javascript" src="../js/hideImages.js"></script>
 </body>
 </html>

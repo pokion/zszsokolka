@@ -28,7 +28,7 @@ if (isset($_POST['loguj']))
 			$_SESSION['zalogowany'] = true;
 			$_SESSION['login'] = $login;
 
-			header('Location: http://localhost/html/postCreator.php');
+			header('Location: http://localhost/strona/html/postCreator.php');
 
 	 }
 	 else echo  '<script> alert("Nieprawidłowe dane. Spróbuj ponownie");</script>';
@@ -43,7 +43,7 @@ $conn->close();
 		include_once('includes/header.php');
 
 	?>
-<link rel="stylesheet" href="/css/logowanie.css">
+<link rel="stylesheet" href="../css/logowanie.css">
 </head>
 <body>
   <div class="back">
@@ -69,8 +69,9 @@ $conn->close();
 
 	</div>
 	<!-- scripts -->
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-	<script type="text/javascript" src="../js/loadPosts.js"></script>
+	<!-- <script type="text/javascript" src="../js/loadPosts.js"></script> -->
 </body>
 </html>

@@ -1,27 +1,22 @@
-function loadImage(images,id){
+function loadImage(id){
 	let div = $('h5[postid="'+id+'"]');
 
-	images.forEach(elem =>{
-		if(elem){
-			$.post(loadImages,
+	$.post(loadImages,
 			{
-				idImage: elem
+				postId: id
 			},
-				function(data,status){
-					if(status==='success'){
+			function(data,status){
+				if(data){
+					let JSONimages = JSON.parse(data);
+					JSONimages.forEach((elem)=>{
 						let appendDiv = `
-							<a href="/strona/images/${data}" data-lightbox="${id}" class="imageStyle">
-								<img  src="/strona/images/${data}">
-							</a>
-						`;
-						div.append(appendDiv);
-						console.log(appendDiv,div.prevObject)
-					}else{
-						console.log(status);
-					}
+								<a href="/StronaxDszko-y/images/${elem}" data-lightbox="${id}" class="imageStyle">
+									<img  src="/StronaxDszko-y/images/${elem}">
+								</a>
+							`;
+							div.append(appendDiv);
+					})
 				}
-			);
-
-		}//if end
-	})
+				
+			})
 }

@@ -1,62 +1,43 @@
 <?php
-
+	//sprawdzanie czy ajax wszystko wysłał
 	if(isset($_POST['data']) && isset($_POST['name']) && isset($_POST['idPost'])){
 		$data = $_POST['data'];
-		$fileName = time().$_POST['name'];
+		//robienie nowej nazwy
+		$fileName = time().'_'.$_POST['name'];
 		list(, $data) = explode(',', $data);
 		$data = base64_decode($data);
 
 		file_put_contents($fileName, $data);
 
-		include '../php/config.php';
+		//test czy plik został zapisany
+		$test = file_exists($fileName);
+		if($test){
 
-		$conn = new mysqli($server,$login,$password,$database);
+			include '../php/config.php';
 
-		if ($conn->connect_error) {
-	  		die("Connection failed: " . $conn->connect_error);
-		} 
+			$conn = new mysqli($server,$login,$password,$database);
 
-		$conn->set_charset("utf8");
-		$sql = "INSERT INTO images(photoName)
-				VALUES('$fileName')";
+			if ($conn->connect_error) {
+		  		die("Connection failed: " . $conn->connect_error);
+			} 
 
-		if ($conn->query($sql) === TRUE) {
-			echo  'wszystko spoko';
-		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-		$id = mysqli_insert_id($conn);
+			$conn->set_charset("utf8");
+			$sql = "INSERT INTO images (imageName,post_id) VALUES
+						( '$fileName',". $_POST['idPost']." )";
 
-		$sql = "SELECT * FROM posts WHERE post_id = ".$_POST['idPost'];
+			if ($conn->query($sql) === TRUE) {
+				echo  'wszystko spoko';
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
 
-		if ($conn->query($sql) === TRUE) {
-			echo 'wszystko spoko';
-	
-		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-		$images = '';
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) > 0) {
-		    while($row = mysqli_fetch_assoc($result)) {
-		       if(!empty($row['images'])){
-		       	$images = $row['images'].',';
-		       }
-		    }
-		} else {
-		    echo "0 results";
-		}
-		$data = $images . $id;
-		$sql = "UPDATE posts SET images = '$data' WHERE post_id =".$_POST['idPost'];
-		if ($conn->query($sql) === TRUE) {
-			echo'wszystko spoko';
-	
-		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
 			
-		$conn->close();
+				
+			$conn->close();
+		}else{
+			echo "Zdjęcie się nie zapisało.";
+			echo "File name: ".$fileName;
+		}
 	}else{
 		echo "Something wrong in save images";
 	}

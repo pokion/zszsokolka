@@ -1,0 +1,3 @@
+function hideImages(div){
+		
+}
