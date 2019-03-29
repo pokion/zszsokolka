@@ -20,16 +20,30 @@ if(!isset($_SESSION['login'])){
 	<?php
 		include_once('includes/nav.php');
 	?>
+  <div class="slider">
+  <a class="btn-floating btn-large waves-effect waves-light positionButton top"><i class="material-icons">arrow_upward</i></a><br>
+  <a class="btn-floating btn-large waves-effect waves-light positionButton center"><i class="material-icons">code</i></a><br>
+  <a class="btn-floating btn-large waves-effect waves-light positionButton bottom"><i class="material-icons">arrow_downward</i></a>
+     <ul class="slides">
+       <div class="caption">
+         <h3 class="tytul">This is our big Tagline!</h3>
+         <h5 class="light grey-text text-lighten-3 tresc">Here's our small slogan.</h5>
+       </div>
+      <a class="btn-floating btn-large waves-effect waves-light slideAdd"><i class="material-icons">add</i></a>
+       <li>
+         <img class="sliderCreator" src="https://farm8.staticflickr.com/7871/46565470735_978b5348d6_c.jpg"> <!-- random image -->
 
+       </li>
+     </ul>
+   </div>
 	<div class="container body">
 
-			<p class="formP">Tytuł</p>
-			<input type="text" autocomplete="off" name="title">
-			<p class="formP">Treść</p>
-			<br>
-			<textarea name="body"></textarea>
-			<br>
-
+    <p class="formP">Tytuł</p>
+  			<input type="text" autocomplete="off" name="title">
+  			<p class="formP">Treść</p>
+  			<br>
+  			<textarea name="body"></textarea>
+        <br>
 			<button class="btn waves-effect waves-light" type="submit" name="action">wyślij
 		    	<i class="material-icons right">send</i>
 			</button>
@@ -57,7 +71,7 @@ if(!isset($_SESSION['login'])){
 								<p class="right-align replace"></p>
 
 								<h5 class="letterSpac border replace">
-									
+
 								</h5>
 							</div>
 		        		</div>

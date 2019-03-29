@@ -1,7 +1,9 @@
 <?php
 	session_start();
 	include_once('../php/baza.php');
-
+	if(isset($_SESSION['login'])){
+	   header("Location: http://localhost/html/postCreator.php");
+	}
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 function filtruj($zmienna)

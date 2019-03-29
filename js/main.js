@@ -4,15 +4,30 @@ $(document).ready(function(){
 	$('.collapsible').collapsible();
 	$('.modal').modal();
 	$('select').formSelect();
-	$('.slider').slider({
-		height: 400
-	});
+	$('.slider').slider();
+	$('.slider').slider();
 	$('.materialboxed').materialbox();
 	$('.carousel-slider').carousel({
 		shift : 380,
 		duration : 150
 	});
+  $(".top").click(function(){
+    $(".sliderCreator").css({"background-position": "top"});
+  });
+	$(".center").click(function(){
+		$(".sliderCreator").css({"background-position": "center"});
+	});
+	$(".bottom").click(function(){
+		$(".sliderCreator").css({"background-position": "bottom"});
+	});
 
+	$('textarea[name=body]').keyup(function () {
+	  $('.tresc').text($(this).val());
+	});
+
+	$('input[name=title]').keyup(function () {
+		$('.tytul').text($(this).val());
+	});
 	addDot();
 	autoplay();
 })
