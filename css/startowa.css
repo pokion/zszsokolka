@@ -39,9 +39,30 @@ h4{
   z-index: 100;
   text-align: right;
 }
-.slides li{
-  text-align: left;
+.slider .slides li .caption{
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  left: 0;
 }
-.caption{
-text-align: left;
+
+@media only screen and (max-width: 450px) {
+  .slider{
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .full{
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 100px;
+  left: 50%;
+  text-align: justify;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .carousel-item > img{
+    bottom: 10%;
+  }
 }

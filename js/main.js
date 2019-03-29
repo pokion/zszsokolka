@@ -4,6 +4,9 @@ $(document).ready(function(){
 	$('.collapsible').collapsible();
 	$('.modal').modal();
 	$('select').formSelect();
+	$('.slider').slider({
+		height: 400
+	});
 	$('.materialboxed').materialbox();
 	$('.carousel-slider').carousel({
 		shift : 380,
