@@ -159,15 +159,22 @@ nav{
 .positionButton{
 	z-index: 999;
 }
+.tresc{
+	max-width: 60vw;
+}
+.tytul{
+	text-align: left;
+	text-transform: uppercase;
+}
 .caption{
 	position: absolute;
 	left: 0;
 	z-index: 999;
-	bottom: 30px;
+	bottom: 40px;
 	background: #7b1fa2;
 	text-align: left;
 	display: inline-block;
 	padding: 0;
 	margin: 0;
-	padding-left: 10px;
+	padding: 0 20px;
 }

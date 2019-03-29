@@ -14,37 +14,16 @@
 		include_once('includes/nav.php');
 	?>
 	<div class="slider">
-     <ul class="slides">
-       <li>
-         <img src="https://farm8.staticflickr.com/7824/47480642111_2b3c6ef9f4_c.jpg"> <!-- random image -->
-         <div class="caption">
-           <h3>This is our big Tagline!</h3>
-           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-         </div>
-       </li>
-       <li>
-         <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
-         <div class="caption">
-           <h3>Left Aligned Caption</h3>
-           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-         </div>
-       </li>
-       <li>
-         <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
-         <div class="caption">
-           <h3>Right Aligned Caption</h3>
-           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-         </div>
-       </li>
-       <li>
-         <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-         <div class="caption">
-           <h3>This is our big Tagline!</h3>
-           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-         </div>
-       </li>
-     </ul>
-   </div>
+		<ul class="slides">
+			<div class="caption">
+				<h3 class="tytul">This is our big Tagline!</h3>
+				<h5 class="light grey-text text-lighten-3 tresc">Here's our small slogan.</h5>
+			</div>
+			<li>
+				<img class="sliderCreator" src="https://farm8.staticflickr.com/7871/46565470735_978b5348d6_c.jpg"> <!-- random image -->
+			</li>
+		</ul>
+	</div>
 	<div class="container">
 		<div class="row full">
 			<div class="col s12 card white-text kuba">
@@ -55,7 +34,7 @@
 
 Celem projektu jest podniesienie kwalifikacji zawodowych 70 uczestników poprzez zdobycie dodatkowych kompetencji oraz nowego doświadczenia warsztatowego za granicą. Równie ważny jest rozwój osobisty uczestników, poszerzenie horyzontów światopoglądowych, poznanie kultury pracy w Niemczech, jak też poznanie przez młodzież niemieckiego języka zawodowego. Uczniowie odbywają praktyki na nowocześnie wyposażonych warsztatach w małych grupach pod okiem doświadczonych instruktorów zgodnie z metodologią niemiecką, co zapewni w rezultacie wysoki poziom zdobytej wiedzy i umiejętności, potwierdzone certyfikatem organizacji goszczącej BWF oraz dokumentem Europass-Mobility.
 
-Gabriela uczestniczyła w stażu dzięki współpracy Zespołu Szkół Zawodowych w Sokółce z Ośrodkiem Szkolenia i Wychowania OHP w Wasilkowie.</h5>
+Gabriela uczestniczyła w stażu dzięki współpracy Zespołu Szkół Zawodowych w Sokółce z Ośrodkiem Szkolenia i Wychowania OHP w Wasilkowie.
 			</div>
 			<div class="col s12 card white-text kuba">
 				<img src="https://farm8.staticflickr.com/7920/47480641671_dc6395b781_s.jpg" class="post">

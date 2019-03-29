@@ -60,6 +60,9 @@ h4{
   left: 50%;
   text-align: justify;
   }
+  .tresc{
+  	max-width: 100%;
+  }
 }
 @media only screen and (max-width: 900px) {
   .carousel-item > img{

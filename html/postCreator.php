@@ -21,21 +21,21 @@ if(!isset($_SESSION['login'])){
 		include_once('includes/nav.php');
 	?>
   <div class="slider">
-  <a class="btn-floating btn-large waves-effect waves-light positionButton top"><i class="material-icons">arrow_upward</i></a><br>
-  <a class="btn-floating btn-large waves-effect waves-light positionButton center"><i class="material-icons">code</i></a><br>
-  <a class="btn-floating btn-large waves-effect waves-light positionButton bottom"><i class="material-icons">arrow_downward</i></a>
      <ul class="slides">
+       <a class="btn-floating btn-large waves-effect waves-light positionButton top"><i class="material-icons">arrow_upward</i></a><br>
+       <a class="btn-floating btn-large waves-effect waves-light positionButton center"><i class="material-icons">code</i></a><br>
+       <a class="btn-floating btn-large waves-effect waves-light positionButton bottom"><i class="material-icons">arrow_downward</i></a>
        <div class="caption">
-         <h3 class="tytul">This is our big Tagline!</h3>
-         <h5 class="light grey-text text-lighten-3 tresc">Here's our small slogan.</h5>
+         <h3 class="tytul grey-text text-lighten-3">This is our big Tagline!</h3>
+         <h5 class="light grey-text text-lighten-3 tresc truncate">Here's our small slogan.</h5>
        </div>
       <a class="btn-floating btn-large waves-effect waves-light slideAdd"><i class="material-icons">add</i></a>
        <li>
-         <img class="sliderCreator" src="https://farm8.staticflickr.com/7871/46565470735_978b5348d6_c.jpg"> <!-- random image -->
-
+         <img class="sliderCreator" src="../img/gos.jpg"> <!-- random image -->
        </li>
      </ul>
    </div>
+
 	<div class="container body">
 
     <p class="formP">Tytuł</p>
