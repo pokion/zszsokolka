@@ -66,3 +66,9 @@ function addDot(){
 	//// nastepny element karuzeli
 		//do napisania arrow
 
+	let date = new Date();
+	let month = date.getMonth();
+	let day = date.getDate();
+	if(month == 3 && day == 1){
+		$('body').css({'transform':'rotate(45deg)'})
+	}
