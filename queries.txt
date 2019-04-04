@@ -74,15 +74,25 @@ $sql = "INSERT INTO images(photoName)
 
 
 //zapytania sql do zrobienia czystej tabeli
-CREATE TABLE posts(
-	post_id int PRIMARY KEY AUTO_INCREMENT,
-    title text NOT null,
+create table posts(
+	postID int PRIMARY key AUTO_INCREMENT,
+    title text not null,
     body text not null,
-    post_data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+    postData timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    tag int,
+    FOREIGN key(tag) REFERENCES tags(id)
 )
-
-
-//zapytanie od php 
-
-INSERT INTO images (imageName,post_id) VALUES
-    ( imageName, post_id )
+/// tabela tags
+create table tags(
+	id int PRIMARY key AUTO_INCREMENT,
+    tagName text
+)
+// tabela images
+create table images(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    imageName text,
+    postID int,
+    mainIMG bit,
+    FOREIGN KEY(postID) REFERENCES posts(postID)
+    
+)

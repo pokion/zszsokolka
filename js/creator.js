@@ -1,8 +1,9 @@
 $(document).ready(function(){
 let images = [];
+let mainImage = [];
 
 function readURL(input) {
-	let $inputImages = $('input[type=file]');
+	let $inputImages = $('#images');
 	for(let i=0 ;i<$inputImages[0].files.length;i++){
 		images.push($inputImages[0].files[i]);
 	}
@@ -13,7 +14,6 @@ function readURL(input) {
 function imagesCard(input,addImage){
 	for(let i=0;i<input.length;i++){
 		let reader = new FileReader();
-		console.log('asd')
 			reader.onload = function(e){
 
 				if(addImage == true){
@@ -30,8 +30,7 @@ function imagesCard(input,addImage){
 				}
 
 
-					$('.collapsible-header').append($(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`));
-					hideImages('h5.replace');
+					$('h5.replace').append($(`<a href="${e.target.result}" data-lightbox="roadtrip" class="imageStyle"><img src="${e.target.result}" /></a>`));
 				jQuery('.rem').click((e)=>{
 					let nameImg = $(e.currentTarget).attr('image');
 					images.forEach((elem,index)=>{
@@ -44,6 +43,28 @@ function imagesCard(input,addImage){
 				})
 			}
 			reader.readAsDataURL(input[i]);
+	}
+
+}
+
+function mainImg(input){
+	let $inputImages = $('#slideadd');
+	if(mainImage.length>0){
+		mainImage.pop()
+	}
+
+	for(let i=0 ;i<$inputImages[0].files.length;i++){
+		mainImage.push($inputImages[0].files[i]);
+	}
+	
+	for(let i=0;i<mainImage.length;i++){
+		let reader = new FileReader();
+
+			reader.onload = function(e){
+
+				$('.sliderCreator').css('background-image','url("'+ e.target.result +'")')
+			}
+			reader.readAsDataURL(mainImage[i]);
 	}
 
 }
@@ -105,15 +126,21 @@ function uploadImages(id){
 		$('h3.replace').replaceWith('<h3 class="letterSpac replace">'+ title +'</h3>');
 		$('p.replace').replaceWith('<p class="right-align replace">aktualna data</p>');
 		$('h5.replace').replaceWith('<h5 class="letterSpac border replace">'+ body +'</h5>');
-		imagesCard(images,true)
+		imagesCard(images,false)
 	})
 
 	/*upload images*/
 	$('#upload').click(()=>{
-		$('input[type=file]').click();
+		$('#images').click();
 	});
-	$('input[type=file]').change((e)=>{
+	$('#images').change((e)=>{
 		readURL(e);
 	});
+	$('.slideAdd').click(()=>{
+		$('#slideadd').click();
+	})
+	$('#slideadd').change((e)=>{
+		mainImg(e);
+	})
 
 });

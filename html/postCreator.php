@@ -30,6 +30,7 @@ if(!isset($_SESSION['login'])){
          <h5 class="light grey-text text-lighten-3 tresc truncate">Here's our small slogan.</h5>
        </div>
       <a class="btn-floating btn-large waves-effect waves-light slideAdd"><i class="material-icons">add</i></a>
+      <input name="file[]" type="file" multiple class="hide" id="slideadd" accept='image/*' />
        <li>
          <img class="sliderCreator" src="../img/gos.jpg"> <!-- random image -->
        </li>
@@ -37,6 +38,9 @@ if(!isset($_SESSION['login'])){
    </div>
 
 	<div class="container body">
+		<p class="formP">Tag</p>
+		<div class="chips chips-autocomplete"></div>
+
 
     <p class="formP">Tytuł</p>
   			<input type="text" autocomplete="off" name="title">
@@ -50,7 +54,7 @@ if(!isset($_SESSION['login'])){
 			<div class="actionButtons">
 				<a id="preview" href="#modal1" class="modal-trigger btn-floating btn-large waves-effect waves-light"><i class="material-icons">search</i></a>
 
-				<input name="file[]" type="file" multiple class="hide" accept='image/*' />
+				<input name="file[]" type="file" multiple class="hide" id="images" accept='image/*' />
 				<a id="upload" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">file_upload</i></a>
 			</div>
 
@@ -90,5 +94,25 @@ if(!isset($_SESSION['login'])){
 	?>
 	<script type="text/javascript" src="../js/creator.js"></script>
 	<script type="text/javascript" src="../js/hideImages.js"></script>
+	<script type="text/javascript">
+		$.post(saveImages,{
+					data: result,
+					name: fileName,
+					idPost: id
+				},
+				function(d,s){
+					console.log(d,s)
+				});
+		$('.chips').chips();
+		$('.chips-autocomplete').chips({
+		    autocompleteOptions: {
+		    	data: {
+		    		
+		      },
+		    	limit: Infinity,
+		    	minLength: 1
+		    }
+ 		});
+	</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 	//sprawdzanie czy ajax wszystko wysłał
-	if(isset($_POST['data']) && isset($_POST['name']) && isset($_POST['idPost'])){
+	if(isset($_POST['data']) && isset($_POST['name']) && isset($_POST['idPost']) && isset($_POST['mainimg'])){
 		$data = $_POST['data'];
 		//robienie nowej nazwy
 		$fileName = time().'_'.$_POST['name'];
