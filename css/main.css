@@ -119,8 +119,9 @@ ul{
 	position: relative;
 	top: 150px;
 }
-.select-dropdown{
+.select-dropdown,.select-wrapper{
 	text-align: center;
+	z-index: 999;
 }
 h3{
 	text-align: center;
