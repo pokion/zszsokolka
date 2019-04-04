@@ -36,13 +36,13 @@
 						<div style="background-image: url(../img/gos.jpg); height: 250px; background-position: center;background-size: cover;"></div>
 					</div>
 					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">
+						<span class="card-title activator grey-text text-darrken-4">
 							Wizyta uczniów Szkoły Podstawowej z Szudziałowa.
 						</span>
 						<p>22 marca 2019 roku Zespół Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce odwiedziła młodzież ze Szkoły Podstawowej im. Bohaterów Powstań Narodowych i Gimnazjum im. Powstańców Styczniowych w Szudziałowie. Pan dyrektor Grzegorz Zalewski wraz z wicedyrektorem Lechem Czarnowiczem...</p>
 					</div>
 					<div class="card-action">
-						<a href="#">Czytaj dalej.</a>
+						<a href="#">Czytaj dalej</a>
 					</div>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 						<span class="card-title activator grey-text text-darken-4">
 							Wizyta uczniów Szkoły Podstawowej z Szudziałowa.
 						</span>
-						<p>22 marca 2019 roku Zespół Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce odwiedziła młodzież ze Szkoły Podstawowej im. Bohaterów Powstań Narodowych i Gimnazjum im. Powstańców Styczniowych w Szudziałowie. Pan dyrektor Grzegorz Zalewski wraz z wicedyrektorem Lechem Czarnowiczem...</p>
+						<p class="">22 marca 2019 roku Zespół Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce odwiedziła młodzież ze Szkoły Podstawowej im. Bohaterów Powstań Narodowych i Gimnazjum im. Powstańców Styczniowych w Szudziałowie. Pan dyrektor Grzegorz Zalewski wraz z wicedyrektorem Lechem Czarnowiczem...</p>
 					</div>
 					<div class="card-action">
 						<a href="#">Czytaj dalej.</a>

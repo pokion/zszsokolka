@@ -102,17 +102,9 @@ function uploadImages(id){
 		let title = $('input[name=title]').val();
 		let body = $('textarea[name=body]').val();
 
-		let $img = $(`
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header"></div>
-					<div class="collapsible-body"></div>
-				</li>
-			</ul>`)
 		$('h3.replace').replaceWith('<h3 class="letterSpac replace">'+ title +'</h3>');
 		$('p.replace').replaceWith('<p class="right-align replace">aktualna data</p>');
 		$('h5.replace').replaceWith('<h5 class="letterSpac border replace">'+ body +'</h5>');
-		$('h5.replace').append($img)
 		imagesCard(images,true)
 	})
 
