@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Kwi 2019, 12:35
+-- Czas generowania: 11 Kwi 2019, 10:58
 -- Wersja serwera: 10.1.38-MariaDB
 -- Wersja PHP: 7.3.2
 
@@ -127,61 +127,10 @@ INSERT INTO `emploees` (`teacherID`, `name`, `degree`) VALUES
 (86, 'Barbara Czechowicz', 'mgr '),
 (87, 'Iwona Skowrońska-Klimowicz', 'mgr'),
 (88, 'Urszula Turowska', ''),
-(89, 'Stanisław Jakubowicz', 'ks. mgr');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `images`
---
-
-CREATE TABLE `images` (
-  `id` int(11) NOT NULL,
-  `imageName` text COLLATE utf8mb4_polish_ci,
-  `post_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
-
---
--- Zrzut danych tabeli `images`
---
-
-INSERT INTO `images` (`id`, `imageName`, `post_id`) VALUES
-(6, '1553619571_Capture.PNG', 7),
-(7, '1553619571_pasy.jpg', 7),
-(8, '1553619764_33545915708_1a5cccf860_c.jpg', 8),
-(9, '1553619764_46506568775_89f00d282d_c.jpg', 8),
-(10, '1553619764_33545915408_e1babf3c7b_c.jpg', 8),
-(11, '1553619764_46506569775_bb919bd7e5_c.jpg', 8),
-(12, '1553619764_46506569905_48c0929e3d_c.jpg', 8),
-(13, '1553619764_46506569945_c095e0ef6f_c.jpg', 8),
-(14, '1553619764_46506569985_c5025ff3e3_c.jpg', 8),
-(15, '1553619764_46506570025_90e41ebbed_c.jpg', 8),
-(16, '1553619764_46506570035_ca28df56b0_c.jpg', 8),
-(17, '1553619764_46506570115_00a4344853_c.jpg', 8),
-(18, '1553619764_46506570195_36b6c152e2_c.jpg', 8),
-(19, '1553619764_46506570215_72e5dc7d31_c.jpg', 8),
-(20, '1553619764_46506570325_29dd021be3_c.jpg', 8),
-(21, '1553619764_46506570355_69c9754b77_c.jpg', 8),
-(22, '1553619764_46506570555_96abf6e71b_c.jpg', 8),
-(23, '1553619764_46506570625_9151b1bc43_c.jpg', 8),
-(24, '1553619764_46506570715_dc0dbca9f4_c.jpg', 8),
-(25, '1553619764_46506570825_5c44e008a5_c.jpg', 8),
-(26, '1553619764_46698668714_5fe72a9b68_c.jpg', 8),
-(27, '1553619764_46506570915_2b6583312a_c.jpg', 8),
-(28, '1553619764_46698668824_7baa0345ba_c.jpg', 8),
-(29, '1553619765_46698668944_0982c9503d_c.jpg', 8),
-(30, '1553619765_46698669094_ba2f591f14_c.jpg', 8),
-(31, '1553619765_46698669034_d9596d5b62_c.jpg', 8),
-(32, '1553619765_47421832011_dbf9b49353_c.jpg', 8),
-(33, '1553619765_47421831981_ecedcbaaf1_c.jpg', 8),
-(34, '1553619765_47421832071_e87ba46483_c.jpg', 8),
-(35, '1553619765_47421832221_4e236bde38_c.jpg', 8),
-(36, '1553619765_47421833141_bd10cf9276_c.jpg', 8),
-(37, '1553619765_47421833251_69b504dcdb_c.jpg', 8),
-(38, '1553619765_47421833391_041401036e_c.jpg', 8),
-(39, '1553619765_47421833521_bea94f4ae7_c.jpg', 8),
-(40, '1553619765_47421833591_7edc6fede1_c.jpg', 8),
-(41, '1553619765_47421833661_d5e3b440b1_c.jpg', 8);
+(89, 'Stanisław Jakubowicz', 'ks. mgr'),
+(90, 'Małgorzata Dziewiątkowska', 'mgr'),
+(91, 'Paweł Piotr Zalewski', 'ks. mgr'),
+(92, 'Marlena Muszyńska', 'lic.');
 
 -- --------------------------------------------------------
 
@@ -530,7 +479,7 @@ INSERT INTO `positions` (`positionID`, `position`, `position2`, `position3`, `ph
 (365, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2009/zabludowski.jpg', '2008/2009', 35),
 (366, 'Wicedyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2009/recko.jpg', '2008/2009', 73),
 (367, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2009/osial.jpg', '2008/2009', 3),
-(368, 'Język polski', '', NULL, '../img/pracownicy/2009/kazmierowicz.jpg', '2008/2009', 37),
+(368, 'Język polski', NULL, NULL, '../img/pracownicy/2009/kazmierowicz.jpg', '2008/2009', 37),
 (369, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2009/mackiewicz.jpg', '2008/2009', 4),
 (370, 'Język polski', 'Biblioteka', NULL, '../img/pracownicy/2009/siemieniako.jpg', '2008/2009', 23),
 (371, 'Język polski', NULL, NULL, '../img/pracownicy/2009/tolko.jpg', '2008/2009', 5),
@@ -567,28 +516,87 @@ INSERT INTO `positions` (`positionID`, `position`, `position2`, `position3`, `ph
 (402, 'Sekretariat', NULL, NULL, '../img/pracownicy/2009/turowskacz.jpg', '2008/2009', 76),
 (403, 'Sekretariat', NULL, NULL, '../img/pracownicy/2009/turowskau.jpg', '2008/2009', 88),
 (404, 'Księgowość', NULL, NULL, '../img/pracownicy/2009/bakun.jpg', '2008/2009', 26),
-(405, 'Księgowość', NULL, NULL, '../img/pracownicy/2009/zamojtuk.jpg', '2008/2009', 34);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `posts`
---
-
-CREATE TABLE `posts` (
-  `post_id` int(11) NOT NULL,
-  `title` text COLLATE utf8mb4_polish_ci NOT NULL,
-  `body` text COLLATE utf8mb4_polish_ci NOT NULL,
-  `post_data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
-
---
--- Zrzut danych tabeli `posts`
---
-
-INSERT INTO `posts` (`post_id`, `title`, `body`, `post_data`) VALUES
-(7, 'III Liga Futsalu', '<p>W dniu 15 marca 2019 roku w Wysokim Mazowieckim odbyła się czwarta kolejka III Ligi Futsalu Szkół Ponadgimnazjalnych Województwa Podlaskiego. Zespół Szkół Zawodowych w Sokółce w pierwszym pojedynku zmierzył się z gospodarzem turnieju, Centrum Kształcenia Zawodowego Wysokie Mazowieckie. Mecz rozpoczął się od ataków gospodarzy, ale to ZSZ w Sokółce strzelił pierwszego gola, aby po niespełna 6 minutach gry prowadzić już różnicą dwóch bramek. Nasi zawodnicy wiedzieli, że taki wynik to jeszcze nie wygrana, więc musieliśmy się skupić zarówno na ofensywie jak i defensywie. Pierwsza połowa zakończyła się wynikiem 3:1 dla naszego zespołu. Druga połowa również była bardzo emocjonująca i walki w niej nie mogło zabraknąć. Gospodarze zachęceni oklaskami swoich kibiców zdołali doprowadzić do remisu. Na 4 minuty przed zakończeniem spotkania został wzięty \"czas\", aby uspokoić grę. Opłaciło się to, bo w końcowych minutach zdołaliśmy strzelić jeszcze 2 gole i mecz zakończył się wynikiem 5:3 dla naszej drużyny. W drugim spotkaniu przyszło nam się zmierzyć z faworytami ligi, zespołem ZS Centrum Kształcenia Rolniczego Sejny. Niestety wyrównana walka toczyła się jedynie przez pierwsze 15 minut gry. Doświadczenie drużyny z Sejn, gdzie zawodnicy grają na co dzień w profesjonalnych zespołach była zbyt duża, aby nawiązać wyrównana grę. Tym razem musieliśmy uznać gorycz porażki, ulegając renomowanemu rywalowi.</p><br/>\n\n<p>Rafał Kozłowski, Omar Szczęsnowicz (obaj IV Tfi), Marek Łowczecki (IV Tm), Szymon Wąsowicz (III Tm), Dariusz Łowczecki, Kamil Maksimczyk (obaj II Tm), Sebastian Krempa (II wz), Mateusz Bartulewicz, Daniel Maksimczyk (obaj I T), Hubert Kazarez (I wz).</p>', '2019-03-26 16:59:31'),
-(8, 'Wizyta uczniów klasy VIII D Szkoły Podstawowej nr 1 w Sokółce', '15 marca 2019 roku Zespół Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce odwiedzili uczniowie klasy VIII D ze Szkoły Podstawowej Nr 1 w Sokółce wraz z doradcą zawodowym, panią Martą Doroszkiewicz. Pan dyrektor Grzegorz Zalewski wraz z kierownikiem Pracowni Ćwiczeń Technicznych Panem Mirosławem Osialem przedstawili uczniom ofertę edukacyjną szkoły, realizowane projekty praktyk zagranicznych na Malcie i praktyk krajowych w ramach programu \"Kompetentni i wykwalifikowani\".</br>\n\nUczniowie zwiedzili pracownie przedmiotowe i zawodowe oraz powstającą pracownię obrabiarek sterowanych numerycznie (CNC), gdzie pan Jerzy Szymaniuk przeprowadził krótkie warsztaty komputerowego rysunku i modelowania. Z wielkim zaangażowaniem uczniowie, szczególnie dziewczyny uczestniczyli w warsztatach tworzenia kul do kąpieli. Chętne osoby mogły skorzystać z wybranych zabiegów fryzjerskich, korzystając z uprzejmości naszych dziewczyn z klas fryzjerskich i nauczycielek przedmiotów zawodowych kierunku technik usług fryzjerskich: pań Elwiry Zabłockiej i Karoliny Roszkowskiej. Bardzo dziękujemy uczniom klasy VIII D i pani Marcie Doroszkiewicz za przybycie do naszej szkoły i zapoznanie się z jej ofertą.</br>', '2019-03-26 17:02:44');
+(405, 'Księgowość', NULL, NULL, '../img/pracownicy/2009/zamojtuk.jpg', '2008/2009', 34),
+(406, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2008/zabludowski.jpg', '2007/2008', 35),
+(407, 'Wicedyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2008/recko.jpg', '2007/2008', 73),
+(408, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2008/osial.jpg', '2007/2008', 3),
+(409, 'Język polski', NULL, NULL, '../img/pracownicy/2008/kazmierowicz.jpg', '2007/2008', 37),
+(410, 'Język polski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2008/mackiewicz.jpg', '2007/2008', 4),
+(411, 'Język polski', 'Biblioteka', NULL, '../img/pracownicy/2008/siemieniako.jpg', '2007/2008', 23),
+(412, 'Język polski', NULL, NULL, '../img/pracownicy/2008/tolko.jpg', '2007/2008', 5),
+(413, 'Język angielski', NULL, NULL, '../img/pracownicy/2008/dziewiatkowska.jpg', '2007/2008', 90),
+(414, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2008/jakimiec.jpg', '2007/2008', 80),
+(415, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2008/krawiel.jpg', '2007/2008', 69),
+(416, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2008/maliszewska.jpg', '2007/2008', 7),
+(417, 'Język niemiecki', NULL, NULL, '../img/pracownicy/2008/mazur.jpg', '2007/2008', 81),
+(418, 'Język angielski', NULL, NULL, '../img/pracownicy/2008/tyminska.jpg', '2007/2008', 8),
+(419, 'Historia', 'Wiedza o Społeczeństwie', NULL, '../img/pracownicy/2008/pakula.jpg', '2007/2008', 9),
+(420, 'Historia', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2008/zalewski.jpg', '2007/2008', 1),
+(421, 'Wiedza o Społeczeństwie', 'Biblioteka', NULL, '../img/pracownicy/2008/szoka.jpg', '2007/2008', 74),
+(422, 'Matematyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2008/bogdan.jpg', '2007/2008', 85),
+(423, 'Matematyka', NULL, NULL, '../img/pracownicy/2008/czarnowicz.jpg', '2007/2008', 2),
+(424, 'Matematyka', NULL, NULL, '../img/pracownicy/2008/grygiewicz.jpg', '2007/2008', 10),
+(425, 'Fizyka', NULL, NULL, '../img/pracownicy/2008/dziakowski.jpg', '2007/2008', 11),
+(426, 'Chemia', NULL, NULL, '../img/pracownicy/2008/malachwiej.jpg', '2007/2008', 83),
+(427, 'Biologia', NULL, NULL, '../img/pracownicy/2008/grzesik.jpg', '2007/2008', 84),
+(428, 'Geografia', NULL, NULL, '../img/pracownicy/2008/sobolewska.jpg', '2007/2008', 13),
+(429, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne', NULL, '../img/pracownicy/2008/lech.jpg', '2007/2008', 14),
+(430, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2008/potapczyk.jpg', '2007/2008', 15),
+(431, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2008/zubiel.jpg', '2007/2008', 68),
+(432, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2008/mozyrski.jpg', '2007/2008', 16),
+(433, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2008/czechowicz.jpg', '2007/2008', 86),
+(434, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2008/skowronska.jpg', '2007/2008', 87),
+(435, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2008/sobolewski.jpg', '2007/2008', 54),
+(436, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2008/szymaniuk.jpg', '2007/2008', 18),
+(437, 'Katecheza', NULL, NULL, '../img/pracownicy/2008/grygiewiczx.jpg', '2007/2008', 62),
+(438, 'Katecheza', NULL, NULL, '../img/pracownicy/2008/zalewskix.jpg', '2007/2008', 91),
+(439, 'Katecheza', NULL, NULL, '../img/pracownicy/2008/zywno.jpg', '2007/2008', 67),
+(440, 'Pedagog szkolny', NULL, NULL, '../img/pracownicy/2008/garkowska.jpg', '2007/2008', 24),
+(441, 'Sekretariat', NULL, NULL, '../img/pracownicy/2008/turowskacz.jpg', '2007/2008', 76),
+(442, 'Sekretariat', NULL, NULL, '../img/pracownicy/2008/turowskau.jpg', '2007/2008', 88),
+(443, 'Księgowość', NULL, NULL, '../img/pracownicy/2008/bakun.jpg', '2007/2008', 26),
+(444, 'Księgowość', NULL, NULL, '../img/pracownicy/2008/sarosiek.jpg', '2007/2008', 25),
+(445, 'Księgowość', NULL, NULL, '../img/pracownicy/2008/zamojtuk.jpg', '2007/2008', 34),
+(446, 'Dyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2007/zabludowski.jpg', '2006/2007', 35),
+(447, 'Wicedyrektor', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2007/recko.jpg', '2006/2007', 73),
+(448, 'Kierownik Pracowni Ćwiczeń Technicznych', 'Przedmioty zawodowe', '', '../img/pracownicy/2007/osial.jpg', '2006/2007', 3),
+(449, 'Język polski', NULL, NULL, '../img/pracownicy/2007/kazmierowicz.jpg', '2006/2007', 37),
+(450, 'Język polski', NULL, NULL, '../img/pracownicy/2007/mackiewicz.jpg', '2006/2007', 4),
+(451, 'Język polski', 'Biblioteka', NULL, '../img/pracownicy/2007/siemieniako.jpg', '2006/2007', 23),
+(452, 'Język polski', NULL, NULL, '../img/pracownicy/2007/tolko.jpg', '2006/2007', 5),
+(453, 'Język angielski', NULL, NULL, '../img/pracownicy/2007/kmon.jpg', '2006/2007', 6),
+(454, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2007/krawiel.jpg', '2006/2007', 69),
+(455, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2007/maliszewska.jpg', '2006/2007', 7),
+(456, 'Język rosyjski', NULL, NULL, '../img/pracownicy/2007/muszynska.jpg', '2006/2007', 92),
+(457, 'Język niemiecki', NULL, NULL, '../img/pracownicy/2007/mazur.jpg', '2006/2007', 81),
+(458, 'Język rosyjski', 'Wiedza o Kulturze', NULL, '../img/pracownicy/2007/mozerska.jpg', '2006/2007', 42),
+(459, 'Historia', 'Wiedza o społeczeństwie', NULL, '../img/pracownicy/2007/pakula.jpg', '2006/2007', 9),
+(460, 'Historia', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2007/zalewski.jpg', '2006/2007', 1),
+(461, 'Wiedza o Społeczeństwie', 'Biblioteka', NULL, '../img/pracownicy/2007/szoka.jpg', '2006/2007', 74),
+(462, 'Matematyka', 'Przedmioty zawodowe', NULL, '../img/pracownicy/2007/bogdan.jpg', '2006/2007', 85),
+(463, 'Matematyka', NULL, NULL, '../img/pracownicy/2007/czarnowicz.jpg', '2006/2007', 2),
+(464, 'Matematyka', NULL, NULL, '../img/pracownicy/2007/grygiewicz.jpg', '2006/2007', 10),
+(465, 'Fizyka', NULL, NULL, '../img/pracownicy/2007/dziakowski.jpg', '2006/2007', 11),
+(466, 'Chemia', NULL, NULL, '../img/pracownicy/2007/malachwiej.jpg', '2006/2007', 83),
+(467, 'Biologia', NULL, NULL, '../img/pracownicy/2007/grzesik.jpg', '2006/2007', 78),
+(468, 'Geografia', NULL, NULL, '../img/pracownicy/2007/sobolewska.jpg', '2006/2007', 13),
+(469, 'Edukacja dla bezpieczeństwa', 'Wychowanie fizyczne\r\n', NULL, '../img/pracownicy/2007/lech.jpg', '2006/2007', 14),
+(470, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2007/potapczyk.jpg', '2006/2007', 15),
+(471, 'Wychowanie fizyczne', NULL, NULL, '../img/pracownicy/2007/zubiel.jpg', '2006/2007', 68),
+(472, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2007/mozyrski.jpg', '2006/2007', 16),
+(473, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2007/czechowicz.jpg', '2006/2007', 86),
+(474, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2007/skowronska.jpg', '2006/2007', 87),
+(475, 'Przedmioty zawodowe', 'Praktyczna nauka zawodu', NULL, '../img/pracownicy/2007/sobolewski.jpg', '2006/2007', 54),
+(476, 'Przedmioty zawodowe', NULL, NULL, '../img/pracownicy/2007/szymaniuk.jpg', '2006/2007', 18),
+(477, 'Katecheza', NULL, NULL, '../img/pracownicy/2007/giemza.jpg', '2006/2007', 61),
+(478, 'Katecheza', NULL, NULL, '../img/pracownicy/2007/grygiewiczx.jpg', '2006/2007', 62),
+(479, 'Katecheza', NULL, NULL, '../img/pracownicy/2007/zalewskix.jpg', '2006/2007', 91),
+(480, 'Pedagog szkolny\r\n', NULL, NULL, '../img/pracownicy/2007/garkowska.jpg', '2006/2007', 24),
+(481, 'Sekretariat', NULL, NULL, '../img/pracownicy/2007/turowskacz.jpg', '2006/2007', 76),
+(482, 'Sekretariat', NULL, NULL, '../img/pracownicy/2007/turowskau.jpg', '2006/2007', 88),
+(483, 'Księgowość', NULL, NULL, '../img/pracownicy/2007/bakun.jpg', '2006/2007', 26),
+(484, 'Księgowość', NULL, NULL, '../img/pracownicy/2007/zamojtuk.jpg', '2006/2007', 34),
+(485, 'Księgowość', NULL, NULL, '../img/pracownicy/2007/sarosiek.jpg', '2006/2007', 25);
 
 -- --------------------------------------------------------
 
@@ -624,24 +632,11 @@ ALTER TABLE `emploees`
   ADD PRIMARY KEY (`teacherID`);
 
 --
--- Indeksy dla tabeli `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `post_id` (`post_id`);
-
---
 -- Indeksy dla tabeli `positions`
 --
 ALTER TABLE `positions`
   ADD PRIMARY KEY (`positionID`),
   ADD KEY `teacherID` (`teacherID`);
-
---
--- Indeksy dla tabeli `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -657,25 +652,13 @@ ALTER TABLE `uzytkownicy`
 -- AUTO_INCREMENT dla tabeli `emploees`
 --
 ALTER TABLE `emploees`
-  MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
-
---
--- AUTO_INCREMENT dla tabeli `images`
---
-ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT dla tabeli `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
-
---
--- AUTO_INCREMENT dla tabeli `posts`
---
-ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=486;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
@@ -686,12 +669,6 @@ ALTER TABLE `uzytkownicy`
 --
 -- Ograniczenia dla zrzutów tabel
 --
-
---
--- Ograniczenia dla tabeli `images`
---
-ALTER TABLE `images`
-  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`);
 
 --
 -- Ograniczenia dla tabeli `positions`
