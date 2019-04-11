@@ -69,7 +69,7 @@ ul{
 	background-color: #53DCD0;
 }
 .bg5{
-	background: #393939 ;
+	background: green ;
 }
 .imageStyle img{
 	height: 100px;
@@ -180,4 +180,7 @@ nav{
 	margin: 0;
 	opacity: 0.85;
 	padding: 0 20px;
+}
+body{
+	background-color: 
 }
