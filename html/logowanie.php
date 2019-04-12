@@ -14,15 +14,19 @@ function filtruj($zmienna)
 	 // usuwamy spacje, tagi html oraz niebezpieczne znaki
 		return mysqli_real_escape_string($conn, htmlspecialchars(trim($zmienna)));
 }
-
 if (isset($_POST['loguj']))
 {
 	 $login = $_POST['login'];
 	 $haslo = $_POST['haslo'];
 	 $ip = $_SERVER['REMOTE_ADDR'];
+	 //pobieranie hasha
+	 $sql = "SELECT haslo FROM uzytkownicy WHERE login = '$login' limit 1";
+	 $result = mysqli_query($conn, $sql) or die('CZY TO BŁAD? :: '.mysqli_error($conn));
+	 $row = mysqli_fetch_assoc($result);
+	 $hash = $row['haslo'];
 
 	 // sprawdzamy czy login i hasło są dobre
-	 if (mysqli_num_rows(mysqli_query($conn, "SELECT login, haslo FROM uzytkownicy WHERE login = '".$login."' AND haslo = '".$haslo."';")) > 0)
+	 if (password_verify($haslo, $hash))
 	 {
 			// uaktualniamy date logowania oraz ip
 			mysqli_query($conn, "UPDATE `uzytkownicy` SET (`logowanie` = " .time(). ", `ip` = '".$ip."') WHERE login = '".$login."';");
@@ -31,7 +35,6 @@ if (isset($_POST['loguj']))
 			$_SESSION['login'] = $login;
 
 			header('Location: http://localhost/strona/html/postCreator.php');
-
 	 }
 	 else echo  '<script> alert("Nieprawidłowe dane. Spróbuj ponownie");</script>';
 }
