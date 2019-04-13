@@ -1,9 +1,9 @@
 <?php
 	//sprawdzanie czy ajax wszystko wysłał
-	if(isset($_POST['data']) && isset($_POST['name']) && isset($_POST['idPost']) && isset($_POST['mainimg'])){
-		$data = $_POST['data'];
+	if(isset($_POST['result'])&&isset($_POST['name'])){
+		$data = $_POST['result'];
 		//robienie nowej nazwy
-		$fileName = time().'_'.$_POST['name'];
+		$fileName = time() .'_'. $_POST['name'];
 		list(, $data) = explode(',', $data);
 		$data = base64_decode($data);
 
@@ -22,15 +22,41 @@
 			} 
 
 			$conn->set_charset("utf8");
-			$sql = "INSERT INTO images (imageName,post_id) VALUES
-						( '$fileName',". $_POST['idPost']." )";
+			if(isset($_POST['mainImage'])&&isset($_POST['position'])){
+				$sql = "INSERT INTO images (image_name,main_image,position) VALUES
+						( '$fileName',1,". $_POST['position']." )";
+			}elseif(empty($_POST['mainImage'])){
+				$sql = "INSERT INTO images (image_name,main_image) VALUES
+						( '$fileName',0)";
+			}else{
+				echo "32 linijka jaiś błąd";
+			}
+			
 
 			if ($conn->query($sql) === TRUE) {
-				echo  'wszystko spoko';
+
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
 
+			$sql = "SELECT * from `images` WHERE image_name='$fileName'";
+
+			if ($conn->connect_error) {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+
+			$result = mysqli_query($conn, $sql);
+
+			if (mysqli_num_rows($result) > 0) {
+	    	// output data of each row
+			    while($row = mysqli_fetch_assoc($result)) {
+			        $data = ['id' => $row['image_id'], 'name' => $row['image_name']];
+			        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+			    }
+		    
+			} else {
+			    echo "";
+			}
 			
 				
 			$conn->close();

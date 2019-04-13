@@ -95,24 +95,33 @@ if(!isset($_SESSION['login'])){
 	<script type="text/javascript" src="../js/creator.js"></script>
 	<script type="text/javascript" src="../js/hideImages.js"></script>
 	<script type="text/javascript">
-		$.post(saveImages,{
-					data: result,
-					name: fileName,
-					idPost: id
-				},
-				function(d,s){
-					console.log(d,s)
-				});
-		$('.chips').chips();
-		$('.chips-autocomplete').chips({
-		    autocompleteOptions: {
-		    	data: {
-		    		
-		      },
-		    	limit: Infinity,
-		    	minLength: 1
-		    }
- 		});
+		
+		$.post(tagLoad,
+			{
+				load:true	
+			},function(data,status){
+				/*console.log(data)*/
+				let tagJSON = JSON.parse(data);
+				let tag = "{";
+				for(let i=0;i<tagJSON.length;i++){
+					tag+= '"'+tagJSON[i].tag+'"'+':null';
+					if(i!==tagJSON.length-1){
+						tag+=',';
+					}
+				}
+				tag+="}";
+				/*console.log(tag)
+				console.log(JSON.parse(tag))*/
+				$('.chips').chips();
+				$('.chips-autocomplete').chips({
+				    autocompleteOptions: {
+				    	data: JSON.parse(tag),
+				    	limit: Infinity,
+				    	minLength: 1
+				    }
+		 		});
+			})
+		
 	</script>
 </body>
 </html>

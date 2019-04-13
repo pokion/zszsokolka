@@ -75,24 +75,37 @@ $sql = "INSERT INTO images(photoName)
 
 //zapytania sql do zrobienia czystej tabeli
 create table posts(
-	postID int PRIMARY key AUTO_INCREMENT,
+  post_id int PRIMARY KEY AUTO_INCREMENT,
     title text not null,
     body text not null,
-    postData timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    tag int,
-    FOREIGN key(tag) REFERENCES tags(id)
+    post_data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 )
 /// tabela tags
-create table tags(
-	id int PRIMARY key AUTO_INCREMENT,
-    tagName text
+CREATE TABLE tags(
+  tag_id int AUTO_INCREMENT PRIMARY KEY,
+    teag_name char(100) not null
 )
 // tabela images
 create table images(
-	id int PRIMARY KEY AUTO_INCREMENT,
-    imageName text,
-    postID int,
-    mainIMG bit,
-    FOREIGN KEY(postID) REFERENCES posts(postID)
-    
+  image_id int AUTO_INCREMENT PRIMARY KEY,
+    image_name text not null,
+    main_image bit not null,
+    position char(50)
+)
+//group images
+create table imagegroup(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    id_group int,
+    id_image int not null,
+    FOREIGN KEY(id_image) REFERENCES images(image_id)
+)
+// connnection
+CREATE TABLE conn(
+  id int PRIMARY KEY AUTO_INCREMENT,
+    id_post int not null,
+    id_group int not null,
+    id_tag int not null,
+    FOREIGN KEY(id_post) REFERENCES posts(post_id),
+    FOREIGN KEY(id_group) REFERENCES imagegroup(id_group),
+    FOREIGN KEY(id_tag) REFERENCES tags(tag_id)
 )

@@ -26,6 +26,7 @@ if (isset($_POST['loguj']))
 	 $hash = $row['haslo'];
 
 	 // sprawdzamy czy login i hasło są dobre
+	 //jbc to zmienić na to password_verify($haslo, $hash)
 	 if (password_verify($haslo, $hash))
 	 {
 			// uaktualniamy date logowania oraz ip
