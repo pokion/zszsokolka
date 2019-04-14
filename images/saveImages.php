@@ -23,8 +23,10 @@
 
 			$conn->set_charset("utf8");
 			if(isset($_POST['mainImage'])&&isset($_POST['position'])){
+				//usuwamy poprzednie zdjęćie jeśli jest
+
 				$sql = "INSERT INTO images (image_name,main_image,position) VALUES
-						( '$fileName',1,". $_POST['position']." )";
+						( '$fileName',1,'". $_POST['position']."' )";
 			}elseif(empty($_POST['mainImage'])){
 				$sql = "INSERT INTO images (image_name,main_image) VALUES
 						( '$fileName',0)";
@@ -64,6 +66,46 @@
 			echo "Zdjęcie się nie zapisało.";
 			echo "File name: ".$fileName;
 		}
+	}elseif(isset($_POST['remove'])&&isset($_POST['id'])) {
+		//usuwanie zdjęć z bazy
+		$id = $_POST['id'];
+
+		include '../php/config.php';
+
+		$conn = new mysqli($server,$login,$password,$database);
+
+		if ($conn->connect_error) {
+		  	die("Connection failed: " . $conn->connect_error);
+		}
+
+		$sql = "SELECT * FROM `images` WHERE image_id = $id";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+	    	// output data of each row
+			while($row = mysqli_fetch_assoc($result)) {
+
+				$sql = "DELETE FROM images WHERE image_id = $id";
+
+				mysqli_query($conn,$sql);
+
+			    $name = $row['image_name'];
+
+			    unlink($name);
+			    $test = file_exists($name);
+
+			    if(!$test){
+			    	echo "zdjecie: ".$name." zostało usunięte";
+			    }
+
+			}
+		    
+		} else {
+			 echo "";
+		}
+
+		$conn->close();
 	}else{
 		echo "Something wrong in save images";
 	}
