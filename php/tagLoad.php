@@ -3,8 +3,8 @@
 		include 'config.php';
 		$conn = new mysqli($server,$login,$password,$database);
 		if ($conn->connect_error) {
-		  		die("Connection failed: " . $conn->connect_error);
-			} 
+				die("Connection failed: " . $conn->connect_error);
+			}
 
 		$sql = "SELECT * from `tags`";
 			if ($conn->connect_error) {

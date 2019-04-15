@@ -32,7 +32,7 @@ if(!isset($_SESSION['login'])){
       <a class="btn-floating btn-large waves-effect waves-light slideAdd"><i class="material-icons">add</i></a>
       <input name="file[]" type="file" multiple class="hide" id="slideadd" accept='image/*' />
        <li>
-         <img class="sliderCreator" src="../img/gos.jpg"> <!-- random image -->
+         <img class="sliderCreator" image="false" src="../img/gos.jpg"> <!-- random image -->
        </li>
      </ul>
    </div>
@@ -69,16 +69,19 @@ if(!isset($_SESSION['login'])){
 			<!-- modal -->
 				<div class="modal modal-fixed-footer" id="modal1">
 					<div class="modal-content">
-						<div class="row">
-		        			<div class="col s12 card">
-								<h3 class="letterSpac replace"></h3>
-								<p class="right-align replace"></p>
-
-								<h5 class="letterSpac border replace">
+		        				<div class="parallax-container">
+		        					<div class="parallax">
+		        						<img class="mainimg" src="#">
+		        					</div>
+		        				</div>
+		        				<div class="section white">
+		        					<div class="row container">
+		        						<h2 class="header replace"></h2>
+		        						<p class="grey-text text-darken-3 lighten-3 replace"></p>
+		        					</div>
+		        				</div>
 
 								</h5>
-							</div>
-		        		</div>
 					</div>
 					<div class="modal-footer">
 						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Zamknij</a>
@@ -95,7 +98,11 @@ if(!isset($_SESSION['login'])){
 	<script type="text/javascript" src="../js/creator.js"></script>
 	<script type="text/javascript" src="../js/hideImages.js"></script>
 	<script type="text/javascript">
-		
+		$(document).ready(function(){
+			$('.parallax').parallax();
+		});
+
+
 		$.post(tagLoad,
 			{
 				load:true	

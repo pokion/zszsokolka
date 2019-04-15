@@ -3,7 +3,7 @@
 	if(isset($_POST['result'])&&isset($_POST['name'])){
 		$data = $_POST['result'];
 		//robienie nowej nazwy
-		$fileName = time() .'_'. $_POST['name'];
+		$fileName = uniqid() .'_'. $_POST['name'];
 		list(, $data) = explode(',', $data);
 		$data = base64_decode($data);
 
@@ -24,6 +24,12 @@
 			$conn->set_charset("utf8");
 			if(isset($_POST['mainImage'])&&isset($_POST['position'])){
 				//usuwamy poprzednie zdjęćie jeśli jest
+				if($_POST['id']!=false){
+					$sql = "DELETE FROM images WHERE image_id =" . $_POST['id'];
+
+					mysqli_query($conn,$sql);
+				}
+				
 
 				$sql = "INSERT INTO images (image_name,main_image,position) VALUES
 						( '$fileName',1,'". $_POST['position']."' )";
