@@ -24,6 +24,13 @@
 		$idGroup = abs( crc32( uniqid() ) );
 
 		foreach ($images as &$img) {
+			if($img['main'] == true){
+				$sql = "UPDATE images set position = '".$img['position']."' WHERE image_id = ".$img['id'];
+
+				mysqli_query($conn,$sql);
+			}
+
+
 			$sql = "INSERT INTO imagegroup(id_group,id_image)
 									values('$idGroup',".$img['id'].")";
 			if ($conn->query($sql) === TRUE) {

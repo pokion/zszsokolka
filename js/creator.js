@@ -45,7 +45,7 @@ let allImages = [];
 									</div>
 					  			 `);
 								$('#imagesBox .row').append($imageCard);
-								allImages.push({name:imageJSON.name,id:imageJSON.id,main:false});
+								allImages.push({name:imageJSON.name,id:imageJSON.id,main:false,position:null});
 							})
 				}
 			reader.readAsDataURL($inputImages[0].files[i])
@@ -72,7 +72,7 @@ let allImages = [];
 								let imageJSON = JSON.parse(data);
 								$('.sliderCreator').attr('image',imageJSON.id);
 								$('.sliderCreator').css('background-image','url(../images/'+imageJSON.name+')');
-								allImages.push({name:imageJSON.name,id:imageJSON.id,main:true});
+								allImages.push({name:imageJSON.name,id:imageJSON.id,main:true,position:null});
 
 								allImages.forEach((elem,index)=>{
 									if(elem.id == imageId){
@@ -119,6 +119,15 @@ let allImages = [];
 			console.log(tag)
 			tags.push({tg:tag.data});
 		});
+
+		allImages.forEach((elem)=>{
+			if(elem.main === true){
+				let pos = $('.sliderCreator').css('background-position');
+
+				elem.position = pos
+			}
+		})
+
 		title = $('input[name="title"]').val();
 		body = $('textarea[name="body"]').val();
 		console.log(JSON.stringify(tags))
