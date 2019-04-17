@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$('select').formSelect();
 	$('.slider').slider();
 	$('.slider').slider();
+	$('.parallax').parallax();
 	$('.materialboxed').materialbox();
 	$('.carousel-slider').carousel({
 		shift : 380,

@@ -12,6 +12,10 @@ h5{
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.9rem;
 }
+h6{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+}
 td{
 	border-left-color: rgba(0,0,0,0.87);
 	border-width: 1px;
@@ -182,5 +186,21 @@ nav{
 	padding: 0 20px;
 }
 body{
-	background-color: 
+	background-color:
+}
+.podpis-admina{
+	text-align: right;
+}
+.parallax-container{
+	height: 300px;
+	background-color: black;
+	position: relative;
+}
+.parallax {
+	opacity: 0.5;
+}
+.naglowek{
+	position: absolute;
+	bottom:0;
+	left: 20px;
 }

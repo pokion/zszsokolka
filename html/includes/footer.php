@@ -7,10 +7,10 @@
 						<p>doloro sit amet, consectetur adipiscing elit.</p>
 					</div>
 					<div class="col 14 offset-12 s6 center-align">
-						<h5 class="white-text">Links</h5>
+						<h6 class="white-text">Przydatne linki:</h6>
                 		<ul>
-	                  		<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-	                  		<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+	                  		<li><a class="grey-text text-lighten-3" href="rodo.php">Klauzula RODO</a></li>
+												<li><a class="grey-text text-lighten-3" href="kontakt.php">Kontakt</a></li>
                			 </ul>
 					</div>
 				</div>

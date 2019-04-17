@@ -26,7 +26,7 @@
 						<li<?php if($inc==='klasy'){} ?>><a href="#">Klasy</a></li>
 						<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a href="rekrutacja.php">Rekrutacja</a></li>
 						<li<?php if($inc==='pracownicy'){ ?> class="active" <?php }  ?> ><a href="pracownicy_ajax.php">Pracownicy</a></li>
-						<li<?php if($inc==='podreczniki'){} ?>><a href="#">Podręczniki</a></li>
+						<li<?php if($inc==='podreczniki'){} ?>><a href="podreczniki.php">Podręczniki</a></li>
 			    	</ul>
 				</div>
 			</nav>
