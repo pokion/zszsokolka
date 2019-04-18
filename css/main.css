@@ -208,3 +208,6 @@ body{
 .browser-default li {
 	list-style-type: square;
 }
+.materialboxed{
+	z-index: -1
+}
