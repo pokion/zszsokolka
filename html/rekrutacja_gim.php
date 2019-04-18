@@ -3,7 +3,7 @@
 <head>
 	<title>Rekrutacja</title>
 
-	<?php 
+	<?php
 		include_once('includes/header.php');
 		$inc = 'rekrutacja';
 	?>
@@ -14,7 +14,7 @@
 	<?php
 		include_once('includes/nav.php');
 	?>
-	
+
 
 	<div class="container">
 		<br><br>
@@ -28,48 +28,40 @@
 				<table class="card">
 					<thead>
 						<tr>
-							<th colspan="5"><h3 class="center-align">Nabór na rok szkolny 2018/2019</h3></th>
+							<th colspan="5"><h3 class="center-align">Nabór na rok szkolny 2019/2020</h3></th>
 						</tr>
 						<tr>
 							<th><h3 class="center-align">Typ Szkoły (cykl nauczania)</h3></th>
 							<th><h3 class="center-align">Profil kształcenia (numer zawodu)</h3></th>
-							<th><h3 class="center-align">Liczba oddziałów</h3></th>
-							<th><h3 class="center-align">Liczba uczniów</h3></th>
+							<th><h3 class="center-align">Symbol kierunku</h3></th>
+							<th><h3 class="center-align">Specjalność</h3></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td rowspan="4"><h5 class="tableFont center-align">4-letnie Technikum</h5></td>
+							<td rowspan="5"><h5 class="tableFont center-align">4-letnie Technikum</h5></td>
 						</tr>
 						<tr>
 							<td><h5 class="tableFont center-align">Technik mechanik</h5></td>
-							<td><h5 class="tableFont center-align">1</h5></td>
-							<td><h5 class="tableFont center-align">24</h5></td>
+							<td><h5 class="tableFont center-align">311504</h5></td>
+							<td><h5 class="tableFont center-align">operator obrabiarek skrawających (CNC)</h5></td>
 						</tr>
 						<tr>
-							<td><h5 class="tableFont center-align">Technik usług fryzjerskich<br>specjalność: kosmetyka pielęgnacyjna i upiększająca</h5></td>
-							<td rowspan="2"><h5 class="tableFont center-align">1</h5></td>
-							<td><h5 class="tableFont center-align">15</h5></td>
+							<td><h5 class="tableFont center-align">Technik usług fryzjerskich</h5></td>
+							<td><h5 class="tableFont center-align">514105</h5></td>
+							<td><h5 class="tableFont center-align">kosmetyka pielęgnacyjna i upiększająca</h5></td>
 						</tr>
 						<tr>
 							<td><h5 class="tableFont center-align">Technik informatyk</h5></td>
-							<td><h5 class="tableFont center-align">15</h5></td>
+							<td><h5 class="tableFont center-align">351203</h5></td>
+						</tr>
+						<tr>
+							<td><h5 class="tableFont center-align">Technik logistyk</h5></td>
+							<td><h5 class="tableFont center-align">333107</h5></td>
 						</tr>
 						<tr>
 							<td rowspan="2"><h5 class="tableFont center-align">3-letnia Branżowa Szkoła I stopnia</h5></td>
 							<td><h5 class="tableFont center-align">Oddział wielozawodowy</h5></td>
-							<td><h5 class="tableFont center-align">1</h5></td>
-							<td><h5 class="tableFont center-align">25</h5></td>
-						</tr>
-						<tr>
-							<td><h5 class="tableFont center-align">Ślusarz</h5></td>
-							<td><h5 class="tableFont center-align">1</h5></td>
-							<td><h5 class="tableFont center-align">16</h5></td>
-						</tr>
-						<tr>
-							<td colspan="2"><h3 class="center-align tableFont">Ogółem</h3></td>
-							<td><h3 class="center-align tableFont">4</h3></td>
-							<td><h3 class="center-align tableFont">94</h3></td>
 						</tr>
 					</tbody>
 				</table>
@@ -82,11 +74,11 @@
 		<br>
 		<div class="row">
 			<div class="col s12 centerFlex">
-				
+
 				<img class="center-align materialboxed" width="300" src="../img/ulotka2.jpg">
 				<img class="center-align materialboxed" width="300" src="../img/ulotka1.jpg">
 				<img class="center-align materialboxed" width="300" src="../img/ulotka3.jpg">
-				
+
 			</div>
 		</div>
 		<br>

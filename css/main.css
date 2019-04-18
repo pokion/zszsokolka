@@ -190,6 +190,7 @@ body{
 }
 .podpis-admina{
 	text-align: right;
+	font-style: italic;
 }
 .parallax-container{
 	height: 300px;

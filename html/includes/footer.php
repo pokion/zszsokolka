@@ -8,9 +8,9 @@
 					</div>
 					<div class="col l4 offset-12 s6 left-align">
 						<h6 class="white-text">Przydatne linki:</h6>
-                		<ul>
+                		<ul class="browser-default">
 	                  		<li><a class="grey-text text-lighten-3" href="rodo.php">Klauzula RODO</a></li>
-												<li><a class="grey-text text-lighten-3" href="kontakt">Kontakt</a></li>
+												<li><a class="grey-text text-lighten-3" href="kontakt.php">Kontakt</a></li>
                			 </ul>
 					</div>
 				</div>
