@@ -24,87 +24,62 @@
 
     <div class="row container">
 
-        <h2>Technikum</h2>
+        <h3>Technikum</h3>
 
-      <ol>
+        <h4>Technik mechanik</h4>
 
-        <li><big>Technik mechanik</big></li>
+      <ul class="browser-default">
+        <li><a target="_blank" href="../download/wykaz_podr_2018/wykaz_1TM.pdf">Klasa I
+      (symbol 311504 | rok 2018/2019)</a></li>
 
-      </ol>
+        <li><a href="../download/wykaz_podr_2018/wykaz_2TM.pdf" target="_blank">Klasa II (symbol 311504 | rok 2018/2019)</a></li>
 
-      <ul>
+        <li><a href="../download/wykaz_podr_2018/wykaz_3TM.pdf" target="_blank">Klasa III (symbol 311504 | rok 2018/2019)</a></li>
 
-        <li><a target="_blank" href="pliki/wykaz_podr_2018/wykaz_1TM.pdf"><span>technik mechanik
-      symbol 311504 (dla klasy I w roku szkolnym 2018/2019)</span></a></li>
-
-        <li style="font-weight: bold;">&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_2TM.pdf" target="_blank">technik mechanik;&nbsp;
-      symbol&nbsp; 311504&nbsp; (dla klasy II w roku szkolnym 2018/2019)</a></li>
-
-        <li style="font-weight: bold;">&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_3TM.pdf" target="_blank">technik
-      mechanik;&nbsp; symbol&nbsp; 311504&nbsp; (dla klasy
-      III w roku szkolnym 2018/2019)</a></li>
-
-        <li style="font-weight: bold;">&nbsp;<a target="_blank" href="pliki/wykaz_podr_2018/wykaz_4TM.pdf">technik
-      mechanik;&nbsp; symbol&nbsp; 311504&nbsp; (dla klasy
-      IV w roku szkolnym 2018/2019)</a></li>
-
+        <li><a target="_blank" href="../download/wykaz_podr_2018/wykaz_4TM.pdf">Klasa IV (symbol 311504 | rok 2018/2019)</a></li>
       </ul>
 
-      <ol start="2" style="text-align: left; font-weight: bold;">
+        <h4>Technik informatyk</h4>
 
-        <li><big>Technik informatyk</big></li>
+      <ul class="browser-default">
 
-      </ol>
-
-      <ul style="text-align: left;">
-
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_1TI.pdf" target="_blank"><span style="font-weight: bold;">technik informatyk;&nbsp;
-      symbol&nbsp; 351203 &nbsp;(dla klasy I w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_2TI.pdf" target="_blank"><span style="font-weight: bold;">technik informatyk;&nbsp;
-      symbol&nbsp; 351203 &nbsp;(dla klasy II w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_3TI.pdf" target="_blank"><span style="font-weight: bold;">technik informatyk;&nbsp;
-      symbol&nbsp; 351203 &nbsp;(dla klasy III w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_4TI.pdf" target="_blank"><span style="font-weight: bold;">technik informatyk;&nbsp;
-      symbol&nbsp; 351203 &nbsp;(dla klasy IV w roku szkolnym 2018/2019)</span></a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_1TI.pdf" target="_blank">Klasa I
+      (symbol 351203 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_2TI.pdf" target="_blank">Klasa II
+      (symbol 351203 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_3TI.pdf" target="_blank">Klasa III
+      (symbol 351203 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_4TI.pdf" target="_blank">Klasa IV
+      (symbol 351203 | rok 2018/2019)</a></li>
       </ul>
 
-      <ol start="3" style="text-align: left; font-weight: bold;">
+        <h4>Technik usług fryzjerskich</h4>
 
-        <li><big>Technik usług fryzjerskich</big></li>
+      <ul class="browser-default">
 
-      </ol>
-
-      <ul style="text-align: left;">
-
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_1TF.pdf" target="_blank"><span style="font-weight: bold;">technik
-      usług fryzjerskich;&nbsp; symbol&nbsp; 514105 &nbsp;(dla
-      klasy I w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_2TF.pdf" target="_blank"><span style="font-weight: bold;">technik
-      usług fryzjerskich;&nbsp; symbol&nbsp; 514105 &nbsp;(dla
-      klasy II w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_3TF.pdf" target="_blank"><span style="font-weight: bold;">technik
-      usług fryzjerskich;&nbsp; symbol&nbsp; 514105 &nbsp;(dla
-      klasy III w roku szkolnym 2018/2019)</span></a></li>
-        <li>&nbsp;<a href="pliki/wykaz_podr_2018/wykaz_4TF.pdf" target="_blank"><span style="font-weight: bold;">technik
-      usług fryzjerskich;&nbsp; symbol&nbsp; 514105 &nbsp;(dla
-      klasy IV w roku szkolnym 2018/2019)</span></a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_1TF.pdf" target="_blank">Klasa I
+      (symbol 514105 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_2TF.pdf" target="_blank">Klasa II
+      (symbol 514105 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_3TF.pdf" target="_blank">Klasa III
+      (symbol 514105 | rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_4TF.pdf" target="_blank">Klasa IV
+      (symbol 514105 | rok 2018/2019)</a></li>
       </ul>
 
-      <div style="text-align: left;">
-      <ol start="2" style="list-style-type: upper-roman; font-weight: bold; text-decoration: underline;">
 
-        <li><big><big>Branżowa Szkoła I stopnia</big></big></li>
+			<h3>Branżowa Szkoła I stopnia</h3>
 
-      </ol>
+			<h4>Wielozawodowa</h4>
 
-      <ul>
-        <li style="font-weight: bold;"><a href="pliki/wykaz_podr_2018/wykaz_1wieloZAW.pdf" target="_blank">wielozawodowa
-      &nbsp;(dla klasy I w roku szkolnym 2018/2019)</a></li>
-        <li style="font-weight: bold;"><a href="pliki/wykaz_podr_2018/wykaz_2wieloZAW.pdf" target="_blank">wielozawodowa
-      &nbsp;(dla klasy II w roku szkolnym 2018/2019)</a></li>
+
+      <ul class="browser-default">
+        <li><a href="../download/wykaz_podr_2018/wykaz_1wieloZAW.pdf" target="_blank">Klasa I
+      (rok 2018/2019)</a></li>
+        <li><a href="../download/wykaz_podr_2018/wykaz_2wieloZAW.pdf" target="_blank">Klasa II
+      (rok 2018/2019)</a></li>
       </ul>
   </div>
-</div>
 	<!-- end container -->
 	<?php
 		include_once('includes/footer.php');

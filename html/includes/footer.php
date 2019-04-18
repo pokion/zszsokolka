@@ -2,15 +2,15 @@
 		<footer class="page-footer bg5">
 			<div class="container">
 				<div class="row marginClear">
-					<div class="col 16 s6">
+					<div class="col l8 s6">
 						<h5>Lorem ipsum</h5>
 						<p>doloro sit amet, consectetur adipiscing elit.</p>
 					</div>
-					<div class="col 14 offset-12 s6 center-align">
+					<div class="col l4 offset-12 s6 left-align">
 						<h6 class="white-text">Przydatne linki:</h6>
                 		<ul>
 	                  		<li><a class="grey-text text-lighten-3" href="rodo.php">Klauzula RODO</a></li>
-												<li><a class="grey-text text-lighten-3" href="kontakt.php">Kontakt</a></li>
+												<li><a class="grey-text text-lighten-3" href="kontakt">Kontakt</a></li>
                			 </ul>
 					</div>
 				</div>
