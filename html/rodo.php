@@ -13,7 +13,7 @@
 		include_once('includes/nav.php');
 	?>
 	<div class="parallax-container">
-		<div class="parallax"><img src="../img/rodo.jpg"></div>
+		<div class="parallax"><img src="../img/static/rodo.jpg"></div>
 		<div class="naglowek">
 			<h1 class=" white-text overlay">
 				KLAUZULA RODO
@@ -43,7 +43,7 @@
               <li>prawo dostępu do danych osobowych (w tym do uzyskania kopii tych danych);</li>
               <li>prawo do żądania sprostowania (poprawiania) danych osobowych - w przypadku gdy dane są nieprawidłowe lub niekompletne;</li>
               <li>prawo do żądania usunięcia danych osobowych, w przypadku, gdy:</li>
-          	<ul>
+          	<ul class="browser-default">
                   <li>dane nie są już niezbędne do celów, dla których były zebrane lub w inny sposób przetwarzane,</li>
                   <li>osoba, której dane dotyczą, wniosła sprzeciw wobec przetwarzania danych osobowych,</li>
                   <li>osoba, której dane dotyczą wycofała zgodę na przetwarzanie danych osobowych, która jest podstawą przetwarzania danych i nie ma innej podstawy prawnej przetwarzania danych,</li>
@@ -51,19 +51,19 @@
                   <li>dane osobowe muszą być usunięte w celu wywiązania się z obowiązku wynikającego z przepisów prawa;</li>
           	</ul>
                   <li>prawo do żądania ograniczenia przetwarzania danych osobowych - w przypadku, gdy:</li>
-          	<ul>
+          	<ul class="browser-default">
                   <li>osoba, której dane dotyczą kwestionuje prawidłowość danych osobowych,</li>
                   <li>przetwarzanie danych jest niezgodne z prawem, a osoba, której dane dotyczą, sprzeciwia się usunięciu danych, żądając w zamian ich ograniczenia,</li>
                   <li>administrator nie potrzebuje już danych dla swoich celów, ale osoba, której dane dotyczą, potrzebuje ich do ustalenia, obrony lub dochodzenia roszczeń,</li>
                   <li>osoba, której dane dotyczą, wniosła sprzeciw wobec przetwarzania danych, do czasu ustalenia czy prawnie uzasadnione podstawy po stronie administratora są nadrzędne wobec podstawy sprzeciwu;</li>
               </ul>
           	<li>prawo do przenoszenia danych - w przypadku, gdy łącznie spełnione są następujące przesłanki:</li>
-          	<ul>
+          	<ul class="browser-default">
                   <li>przetwarzanie danych odbywa się na podstawie umowy zawartej z osobą, której dane dotyczą lub na podstawie zgody wyrażonej przez tą osobę;</li>
                   <li>przetwarzanie odbywa się w sposób zautomatyzowany;</li>
           	</ul>
               <li>prawo sprzeciwu wobec przetwarzania danych - w przypadku, gdy łącznie spełnione są następujące przesłanki:</li>
-          	<ul>
+          	<ul class="browser-default">
                   <li>zaistnieją przyczyny związane z Pani/Pana szczególną sytuacją, w przypadku przetwarzania danych na podstawie zadania realizowanego w interesie publicznym lub w ramach sprawowania władzy publicznej przez administratora;</li>
                   <li>przetwarzanie jest niezbędne do celów wynikających z prawnie uzasadnionych interesów realizowanych przez administratora lub przez stronę trzecią, z wyjątkiem sytuacji, w których nadrzędny charakter wobec tych interesów mają interesy lub podstawowe prawa i wolności osoby, której dane dotyczą, wymagające ochrony danych osobowych, w szczególności gdy osoba, której dane dotyczą jest dzieckiem;</li>
               </ul>
