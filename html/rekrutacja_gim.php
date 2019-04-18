@@ -17,53 +17,50 @@
 
 
 	<div class="container">
-		<br><br>
 		<!-- table -->
 		<div class="row">
 			<div class="col s12">
-				<h3 class="center-align">Plan naboru Zespołu Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce na rok szkolny 2018/2019</h3>
-				<br>
-				<br>
+				<h3 class="center-align">Plan naboru Zespołu Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce na rok szkolny 2019/2020</h3>
 
-				<table class="responsive-table">
+				<table class="centered responsive-table">
 					<h3>Nabór na rok szkolny 2019/2020</h3>
 					<thead>
 						<tr>
-							<th><h3 class="center-align">Typ Szkoły (cykl nauczania)</h3></th>
-							<th><h3 class="center-align">Profil kształcenia (numer zawodu)</h3></th>
-							<th><h3 class="center-align">Symbol kierunku</h3></th>
-							<th><h3 class="center-align">Specjalność</h3></th>
+							<th>Typ Szkoły (cykl nauczania)</th>
+							<th>Profil kształcenia</th>
+							<th>Symbol kierunku</th>
+							<th>Specjalność</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td rowspan="5"><h5 class="tableFont center-align">4-letnie Technikum</h5></td>
+							<td rowspan="5">4-letnie Technikum</td>
 						</tr>
 						<tr>
-							<td><h5 class="tableFont center-align">Technik mechanik</h5></td>
-							<td><h5 class="tableFont center-align">311504</h5></td>
-							<td><h5 class="tableFont center-align">operator obrabiarek skrawających (CNC)</h5></td>
+							<td><a href="mechanik.php">Technik mechanik</a></td>
+							<td>311504</td>
+							<td>operator obrabiarek skrawających (CNC)</td>
 						</tr>
 						<tr>
-							<td><h5 class="tableFont center-align">Technik usług fryzjerskich</h5></td>
-							<td><h5 class="tableFont center-align">514105</h5></td>
-							<td><h5 class="tableFont center-align">kosmetyka pielęgnacyjna i upiększająca</h5></td>
+							<td><a href="fryzjer.php">Technik usług fryzjerskich</a></h5></td>
+							<td>514105</td>
+							<td>kosmetyka pielęgnacyjna i upiększająca</td>
 						</tr>
 						<tr>
-							<td><h5 class="tableFont center-align">Technik informatyk</h5></td>
-							<td><h5 class="tableFont center-align">351203</h5></td>
-							<td><h5 class="tableFont center-align">x</h5></td>
+							<td><a href="informatyk.php">Technik informatyk</a></td>
+							<td>351203</td>
+							<td>x</td>
 						</tr>
 						<tr>
-							<td><h5 class="tableFont center-align">Technik logistyk</h5></td>
-							<td><h5 class="tableFont center-align">333107</h5></td>
-							<td><h5 class="tableFont center-align">x</h5></td>
+							<td><a href="logistyk.php">Technik logistyk</a></td>
+							<td>333107</td>
+							<td>x</td>
 						</tr>
 						<tr>
-							<td rowspan="2"><h5 class="tableFont center-align">3-letnia Branżowa Szkoła I stopnia</h5></td>
-							<td><h5 class="tableFont center-align">Oddział wielozawodowy</h5></td>
-							<td><h5 class="tableFont center-align">x</h5></td>
-							<td><h5 class="tableFont center-align">x</h5></td>
+							<td rowspan="2">3-letnia Branżowa Szkoła I stopnia</td>
+							<td>Oddział wielozawodowy</td>
+							<td>x</td>
+							<td>x</td>
 						</tr>
 					</tbody>
 				</table>
@@ -71,10 +68,9 @@
 		</div>
 		<!-- end table -->
 		<!-- plakat -->
-		<br><br>
-		<p><h3 class="center-align">Plakat i ulotka reklamowa</h3></p>
+		<p><h3 class="center-align hide-on-small-only">Plakat i ulotka reklamowa</h3></p>
 		<br>
-		<div class="row">
+		<div class="row hide-on-small-only">
 			<div class="col s12 valign-wrapper">
 
 				<img class="center-align materialboxed" width="100%" src="../img/ulotka2.jpg">
@@ -83,8 +79,6 @@
 
 			</div>
 		</div>
-		<br>
-		<br>
 		<!-- end plakat -->
 		<!-- filmiki -->
 		<div class="row center-align">
@@ -236,9 +230,13 @@
 			</ul>
 
 		<!-- end kryteria -->
-
+		<h3>Do pobrania: </h3>
+		<ul class="browser-default">
+			<li><a href="../download/podania/Podanie_zsz_19g.pdf">Podanie do klasy I (po gimnazjum)</a></li>
+		</ul>
 	</div>
 </div>
+
 </div>
 
 
