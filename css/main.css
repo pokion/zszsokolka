@@ -185,9 +185,6 @@ nav{
 	opacity: 0.85;
 	padding: 0 20px;
 }
-body{
-	background-color:
-}
 .podpis-admina{
 	text-align: right;
 	font-style: italic;
@@ -215,6 +212,8 @@ body{
 .dropdown-content li > a:hover{
 	background-color: #007300;
 }
-.dropdown-content li > a, .dropdown-content li > span{
-	top: 64
+.dropdown-content {
+  min-width: 200px;
+  max-height: auto;
+  white-space: nowrap;
 }
