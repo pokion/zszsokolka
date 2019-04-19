@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col s12">
 				<h3 class="center-align">Plan naboru Zespołu Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce na rok szkolny 2019/2020</h3>
-				<h4 class="center-align green-text">Dla absolwentów gimnazjum</h4>
+				<h4 class="center-align green-text">Dla absolwentów szkoły podstawowej</h4>
 				<table class="centered responsive-table">
 					<h3>Nabór na rok szkolny 2019/2020</h3>
 					<thead>
@@ -34,7 +34,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td rowspan="5">4-letnie Technikum</td>
+							<td rowspan="5">5-letnie Technikum</td>
 						</tr>
 						<tr>
 							<td><a href="mechanik.php">Technik mechanik</a></td>
@@ -69,14 +69,11 @@
 		<!-- end table -->
 		<!-- plakat -->
 		<p><h3 class="center-align hide-on-small-only">Plakat i ulotka reklamowa</h3></p>
-		<br>
 		<div class="row hide-on-small-only">
 			<div class="col s12 valign-wrapper">
-
-				<img class="center-align materialboxed" width="100%" src="../img/ulotka2.jpg">
-				<img class="center-align materialboxed" width="100%" src="../img/ulotka1.jpg">
-				<img class="center-align materialboxed" width="100%" src="../img/ulotka3.jpg">
-
+				<img class="materialboxed center-align" width="100%" src="../img/ulotka2.jpg">
+				<img class="materialboxed center-align" width="100%" src="../img/ulotka1.jpg">
+				<img class="materialboxed center-align" width="100%" src="../img/ulotka3.jpg">
 			</div>
 		</div>
 		<!-- end plakat -->
@@ -105,18 +102,18 @@
 		<!-- kryteria -->
 		<div class="row">
 			<div class="col s12 card">
-				<h3 class="center-align">KRYTERIA REKRUTACJI DO KLAS PIERWSZYCH (PO GIMNAZJUM):</h3>
+				<h3 class="center-align">KRYTERIA REKRUTACJI DO KLAS PIERWSZYCH (PO SZKOLE PODSTAWOWEJ):</h3>
 
-			<b>I. Terminy przeprowadzania postępowania rekrutacyjnego, w tym terminy składania dokumentów do klas I technikum 4-letniego oraz klas I branżowej szkoły I stopnia:</b>
+			<b>I. Terminy przeprowadzania postępowania rekrutacyjnego, w tym terminy składania dokumentów do klas I technikum 5-letniego oraz klas I branżowej szkoły I stopnia:</b>
 			<ul>
 			  <li>
-					złożenie wniosku o przyjęcie do szkoły ponadgimnazjalnej oraz do branżowej szkoły I stopnia wraz z dokumentami potwierdzającymi spełnianie przez kandydata warunków lub kryteriów branych pod uwagę w postępowaniu rekrutacyjnym <b>od 13 maja do 18 czerwca 2019 r. do godz. 16.00</b>
+					złożenie wniosku o przyjęcie do szkoły ponadpodstawowej  oraz do branżowej szkoły I stopnia wraz z dokumentami potwierdzającymi spełnianie przez kandydata warunków lub kryteriów branych pod uwagę w postępowaniu rekrutacyjnym <b>od 13 maja do 18 czerwca 2019 r. do godz. 16.00</b>
 				</li>
 			  <li>
-					uzupełnienie wniosku o przyjęcie do szkoły ponadgimnazjalnej oraz branżowej szkoły I stopnia o świadectwo ukończenia gimnazjum oraz o zaświadczenie o wynikach egzaminu gimnazjalnego  <b>od 21 do 25 czerwca 2019 r. do godz. 16.00</b>
+					uzupełnienie wniosku o przyjęcie do szkoły ponadpodstawowej  oraz branżowej szkoły I stopnia o świadectwo ukończenia ośmioletniej szkoły podstawowej oraz o zaświadczenie o wynikach egzaminu ósmoklasisty  <b>od 21 do 25 czerwca 2019 r. do godz. 16.00</b>
 				</li>
 			  <li>
-					weryfikacja przez komisję rekrutacyjną wniosków o przyjęcie do szkoły ponadgimnazjalnej i do branżowej szkoły I stopnia dokumentów potwierdzających spełnianie przez kandydata warunków lub kryteriów branych pod uwagę w postępowaniu rekrutacyjnym - <b>do 4 lipca 2019 r.</b>
+					weryfikacja przez komisję rekrutacyjną wniosków o przyjęcie do szkoły ponadpodstawowej  i do branżowej szkoły I stopnia dokumentów potwierdzających spełnianie przez kandydata warunków lub kryteriów branych pod uwagę w postępowaniu rekrutacyjnym - <b>do 4 lipca 2019 r.</b>
 				</li>
 
 			  <li>
@@ -126,20 +123,20 @@
 					wydanie przez szkołę prowadzącą kształcenie zawodowe skierowania na badanie lekarskie - <b>do 8 lipca 2019 r. do godz. 16.00</b>
 				</li>
 			  <li>
-					potwierdzenie przez rodzica kandydata albo kandydata pełnoletniego woli przyjęcia w postaci przedłożenia oryginału świadectwa ukończenia gimnazjum i oryginału zaświadczenia o wynikach egzaminu gimnazjalnego, o ile nie zostały one złożone w uzupełnieniu wniosku, a także zaświadczenia lekarskiego zawierającego orzeczenie o braku przeciwwskazań zdrowotnych do podjęcia praktycznej nauki zawodu - <b>do 10 lipca 2019 r. do godz. 16.00</b></li>
+					potwierdzenie przez rodzica kandydata albo kandydata pełnoletniego woli przyjęcia w postaci przedłożenia oryginału świadectwa ukończenia szkoły podstawowej i oryginału zaświadczenia o wynikach egzaminu ósmoklasisty, o ile nie zostały one złożone w uzupełnieniu wniosku, a także zaświadczenia lekarskiego zawierającego orzeczenie o braku przeciwwskazań zdrowotnych do podjęcia praktycznej nauki zawodu - <b>do 10 lipca 2019 r. do godz. 16.00</b></li>
 			  <li>
 					podanie do publicznej wiadomości przez komisję rekrutacyjną listy kandydatów przyjętych i kandydatów nieprzyjętych - <b>12 lipca 2019 r. o godz. 10.00</b></li>
 			  <li>
-					poinformowanie przez dyrektora szkoły ponadgimnazjalnej kuratora oświaty o liczbie wolnych miejsc w szkole - <b>12 lipca 2019 r. o godz. 14.30.</b>
+					poinformowanie przez dyrektora szkoły ponadpodstawowej  kuratora oświaty o liczbie wolnych miejsc w szkole - <b>12 lipca 2019 r. o godz. 14.30.</b>
 				</li>
 			</ul>
 
-			<b>II. Sposób przeliczania na punkty ocen z języka polskiego i trzech wybranych obowiązkowych zajęć edukacyjnych oraz wyników egzaminu przeprowadzonego w ostatnim roku nauki w gimnazjum, a także sposób punktowania innych osiągnięć kandydatów:</b><br>
+			<b>II. Sposób przeliczania na punkty ocen z języka polskiego, matematyki i dwóch wybranych przedmiotów ustalonych przez dyrektora szkoły przeprowadzającego rekrutację oraz wyników egzaminu przeprowadzonego w ostatnim roku nauki w szkole podstawowej, a także sposób punktowania innych osiągnięć kandydatów:</b><br>
 			<br>
 			<u>Maksymalna liczba punktów możliwych do uzyskania wynosi:</u>
 			<ol>
-			  <li>Za wyniki egzaminu w ostatnim roku nauki w gimnazjum - max. 100 pkt<br>(Uzyskane wyniki procentowe z każdej części egzaminu (zakresu: języka polskiego; historii i wiedzy o społeczeństwie; matematyki; przedmiotów przyrodniczych: biologii, geografii, fizyki i chemii; języka obcego nowożytnego na poziomie podstawowym) mnożone są przez przelicznik 0,2, np. 75% = 75 x 0,2 = 15 pkt. Maksymalna liczba punktów za 5 wyników procentowych wynosi 500% x 0,2 = 100).</li>
-			  <li>Za oceny z języka polskiego i trzech wybranych obowiązkowych zajęć edukacyjnych - max. 72 pkt:</li>
+			  <li>Za wyniki egzaminu w ostatnim roku nauki w szkole podstawowej - max. 100 pkt<br>(wyniki egzaminu ósmoklasisty są wyrażane w skali procentowej dla zadań z zakresu języka polskiego i matematyki mnoży się przez 0,35, zaś z języka obcego nowożytnego - są mnożone przez przelicznik 0,3. Maksymalna liczba punktów za 3 wyniki procentow3 wynosi 100).</li>
+			  <li>Za oceny z języka polskiego, matematyki i dwóch wybranych przedmiotów ustalonych przez dyrektora szkoły przeprowadzającego rekrutację - max. 72 pkt:</li>
 			  <ul>
 			    <li>ocena celująca - 18 pkt</li>
 			    <li>ocena bardzo dobra - 17 pkt</li>
@@ -151,19 +148,19 @@
 			<p>Punkty za oceny przyznawane są z czterech przedmiotów:<br>
 				W Technikum:</p>
 			<ul>
-			  <li>dla zawodu technik mechanik: język polski, język obcy obowiązkowy, matematyka, zajęcia techniczne</li>
+			  <li>dla zawodu technik mechanik: język polski, język obcy obowiązkowy, matematyka, technika</li>
 			  <li>dla zawodu technik informatyk: język polski, język obcy obowiązkowy, matematyka, informatyka</li>
 			  <li>dla zawodu technik usług fryzjerskich: język polski, język obcy obowiązkowy, matematyka, biologia</li>
 			  <li>dla zawodu technik logistyk: język polski, język obcy obowiązkowy, matematyka, geografia</li>
 			</ul>
 			<p>W Branżowej Szkole I stopnia:</p>
 			<ul>
-			    <li>dla oddziału wieolozawodowego: język polski, język obcy obowiązkowy, matematyka, geografia</li>
+			    <li>dla oddziału wieolozawodowego: język polski, język obcy obowiązkowy, matematyka, technika</li>
 			</ul>
 			<p>3. Inne osiągnięcia ucznia - max. 28 pkt (za konkursy wymienione w podpunktach b-f - 18 max. pkt):</p>
 			<ul>
 			  <ul>
-			    <li>ukończenie gimnazjum z wyróżnieniem - 7 pkt</li>
+			    <li>ukończenie szkoły podstawowej z wyróżnieniem - 7 pkt</li>
 			    <li>uzyskanie w zawodach wiedzy będących konkursem o zasięgu ponadwojewódzkim organizowanym przez kuratorów oświaty:</li>
 			    <ul>
 			      <li>tytułu finalisty konkursu przedmiotowego - 10 pkt</li>
@@ -223,8 +220,8 @@
 			<b>III. Kandydat do szkoły składa następujące dokumenty:</b>
 			<ul>
 			  <li>podanie o przyjęcie do szkoły z określeniem profilu lub zawodu (do pobrania w sekretariacie szkoły lub ze strony www)</li>
-			  <li>świadectwo ukończenia gimnazjum</li>
-			  <li>zaświadczenie o szczegółowych wynikach egzaminu gimnazjalnego</li>
+			  <li>świadectwo ukończenia szkoły podstawowej</li>
+			  <li>zaświadczenie o szczegółowych wynikach egzaminu ósmoklasisty</li>
 			  <li>2 zdjęcia</li>
 			  <li>zaświadczenie lekarskie o braku przeciwwskazań do kształcenia w określonym zawodzie (skierowanie na badania wydawane jest w sekretariacie szkoły po podaniu do publicznej wiadomości przez komisję rekrutacyjną listy kandydatów zakwalifikowanych i kandydatów niezakwalifikowanych)</li>
 			</ul>
@@ -232,7 +229,7 @@
 		<!-- end kryteria -->
 		<h3>Do pobrania: </h3>
 		<ul class="browser-default">
-			<li><a href="../download/podania/Podanie_zsz_19g.pdf">Podanie do klasy I (po gimnazjum)</a></li>
+			<li><a href="../download/podania/Podanie_zsz_19sp.pdf">Podanie do klasy I (po szkole podstawowej)</a></li>
 		</ul>
 	</div>
 </div>

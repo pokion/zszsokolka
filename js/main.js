@@ -12,6 +12,11 @@ $(document).ready(function(){
 		shift : 380,
 		duration : 150
 	});
+	$(".dropdown-trigger").dropdown({
+		hover: true
+	});
+
+
   $(".top").click(function(){
     $(".sliderCreator").css({"background-position": "top"});
   });
