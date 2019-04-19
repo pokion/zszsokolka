@@ -6,7 +6,7 @@
 	<?php
 		include_once('includes/header.php');
 				require_once('../php/baza.php');
-		$inc = 'pracownicy';
+		$inc = 'drop-szkola';
 	?>
 
 </head>

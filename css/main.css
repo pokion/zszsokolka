@@ -125,7 +125,7 @@ ul{
 }
 .select-dropdown,.select-wrapper{
 	text-align: center;
-	z-index: 999;
+	z-index: 10;
 }
 h3{
 	text-align: center;
@@ -208,12 +208,22 @@ nav{
 .dropdown-content li > a {
 	background-color: #008000;
 	color: #fff;
+	text-align: center;
 }
 .dropdown-content li > a:hover{
 	background-color: #007300;
 }
-.dropdown-content {
+.menu {
+	display: block;
+	overflow: hidden;
   min-width: 200px;
   max-height: auto;
   white-space: nowrap;
+}
+.dropdown-nested {
+	overflow-y: visible;
+}
+.dropdown-content .dropdown-content {
+	position: relative;
+	left: 200px;
 }

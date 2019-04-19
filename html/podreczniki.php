@@ -5,7 +5,7 @@
 
 	<?php
 		include_once('includes/header.php');
-		$inc = 'index';
+		$inc = 'drop-uczniowie';
 	?>
 </head>
 <body>

@@ -12,13 +12,14 @@ $(document).ready(function(){
 		shift : 380,
 		duration : 150
 	});
-	$(".dropdown-trigger").dropdown({
+	$(".nav").dropdown({
 		inDuration: 300,
     outDuration: 225,
     hover: true, // Activate on hover
 		coverTrigger: false,
     alignment: 'right' // Displays dropdown with edge aligned to the left of button
 	});
+
 
 
   $(".top").click(function(){
