@@ -21,12 +21,12 @@
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			    	<a href="#" class="brand-logo">Logo</a>
 
-						<ul id="drop-rekrutacja" class="dropdown-content menu">
+						<ul id="drop-rekrutacja" class="dropdown-content dropdown-nested">
 						  <li class="collection-item"><a href="rekrutacja_gim.php">Po gimnazjum</a></li>
 							<li class="divider"></li>
 						  <li class="collection-item"><a href="rekrutacja_sp.php">Po szkole podstawowej</a></li>
 							<li class="divider"></li>
-						  <li class="collection-item"><a class="dropdown-trigger nav" data-target="drop-kierunki">Kierunki<i class="material-icons right">arrow_drop_down</i></a></li>
+							<li class="collection-item"><a class="dropdown-trigger nav" data-target="drop-kierunki">Kierunki<i class="material-icons right">arrow_drop_down</i></a></li>
 						</ul>
 
 						<ul id="drop-szkola" class="dropdown-content menu">
@@ -44,7 +44,7 @@
 							<li class="divider"></li>
 							<li class="collection-item"><a href="#!">Samorząd</a></li>
 						</ul>
-						<ul id="drop-kierunki" class="dropdown-content dropdown-nested">
+						<ul id="drop-kierunki" class="dropdown-content menu ">
 							<li class="collection-item"><a href="informatyk.php">Technik informatyk</a></li>
 							<li class="divider"></li>
 							<li class="collection-item"><a href="fryzjer.php">Technik usług fryzjerskich</a></li>

@@ -214,16 +214,11 @@ nav{
 	background-color: #007300;
 }
 .menu {
-	display: block;
-	overflow: hidden;
-  min-width: 200px;
+  min-width: 205px;
   max-height: auto;
   white-space: nowrap;
+	overflow: hidden;
 }
 .dropdown-nested {
 	overflow-y: visible;
-}
-.dropdown-content .dropdown-content {
-	position: relative;
-	left: 200px;
 }
