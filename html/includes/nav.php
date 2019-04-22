@@ -40,7 +40,7 @@
 						<ul id="drop-uczniowie" class="dropdown-content menu">
 							<li class="collection-item"><a href="podreczniki.php">Podręczniki</a></li>
 							<li class="divider"></li>
-							<li class="collection-item"><a href="#!">Klasy</a></li>
+							<li class="collection-item"><a href="klasy_ajax.php">Klasy</a></li>
 							<li class="divider"></li>
 							<li class="collection-item"><a href="#!">Samorząd</a></li>
 						</ul>

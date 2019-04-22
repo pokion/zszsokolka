@@ -20,6 +20,10 @@ $(document).ready(function(){
     alignment: 'right' // Displays dropdown with edge aligned to the left of button
 	});
 
+	$('.carousel carousel-slider').carousel({
+		fullWidth: true,
+		indicators: false
+	});
 
 
   $(".top").click(function(){
@@ -40,7 +44,7 @@ $(document).ready(function(){
 		$('.tytul').text($(this).val());
 	});
 	addDot();
-	autoplay();
+	//autoplay();
 })
 function addDot(){
 		let ul = jQuery('.card ul').addClass(()=>{
@@ -48,8 +52,11 @@ function addDot(){
 		});
 
 	}
+// zmiana slajdow po okreslonym czasie
+	// function autoplay() {
+	//     $('.carousel-slider').carousel('next');
+	//     setTimeout(autoplay, 6000);
+	// }
 
-	function autoplay() {
-	    $('.carousel-slider').carousel('next');
-	    setTimeout(autoplay, 6000);
-	}
+//// nastepny element karuzeli
+	//do napisania arrow

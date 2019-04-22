@@ -109,3 +109,11 @@ CREATE TABLE conn(
     FOREIGN KEY(id_group) REFERENCES imagegroup(id_group),
     FOREIGN KEY(id_tag) REFERENCES tags(tag_id)
 )
+// klasy
+create table klasy(
+	id int AUTO_INCREMENT PRIMARY key,
+    kierunek varchar(255),
+    nazwa varchar(255) not null,
+    wychowawca varchar(255),
+    rok varchar(255)
+)

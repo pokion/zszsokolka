@@ -17,7 +17,7 @@ function loadCarousel(){
 				// ajax connection
 			}
 			$.ajax({
-		    		url : 'getyear.php',
+		    		url : 'klasy_getyear.php',
 		        method : "POST",
 		        data : {
 							year : rok
@@ -28,32 +28,25 @@ function loadCarousel(){
 			//Jeśli zadziała:
 			.done(function(data){
 				let placeholder = $('.placeholder');
-				let content = "<div class=\"carousel\">";
+				let content = "<div class=\"carousel carousel-slider klasy\">";
 
 				$.each(data, function(index, element){
-					content +=  "<a class=\"carousel-item\"><span class=\"podpis\">"+data[index].position + "<br> ";
-					if (data[index].position2 != null){
-						content += data[index].position2 + "<br> ";
-					}
-					if (data[index].position3 != null) {
-						content += data[index].position3 + "</span><img src=";
-					}else{
-						content +=  "</span><img src=";
-					}
-					content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\"><span class=\"podpis\">";
-					content += data[index].degree + " ";
-					content += data[index].name;
-					content += "</span></a>";
+					content +=  "<a class=\"carousel-item center-align\">"
+					content += "<img src=";
+					content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\">";
+					content += "Kierunek: " + data[index].kierunek + "<br>";
+					content += "Wychowawaca: " + data[index].wychowawca + "<br> ";
+					content += "Klasa: " + data[index].nazwa + "<br> ";
+					content += "</a>";
 				})
 				content += "</div>";
 				placeholder.html(content);
-				$('.carousel').carousel({
-					numVisible : 10
+				$('.carousel.carousel-slider').carousel({
+					fullWidth: true
 				});
-
-				$('.carousel').hide().fadeIn("slow")
-				firstTime = false;
-			})
+					$('.carousel').hide().fadeIn("slow")
+						firstTime = false;
+				})
 
 			//Jeśli nie zadziała
 			.fail(function() {
