@@ -3,6 +3,18 @@
 	font-family: 'Roboto', sans-serif;
 	z-index: 1
 }
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;  /* razem ze stylem footera trzymaja stópke na samym dole strony gdy contentu jest za mało*/
+}
+
+footer {
+    display: table-row; /*  nie usuwać, trzyma footer na dole strony gdy za malo contentu */
+    height: 0;
+}
+
 h3{
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.5rem;
@@ -221,4 +233,10 @@ nav{
 }
 .dropdown-nested {
 	overflow-y: visible;
+}
+footer {
+    clear: both;
+    position: relative;
+    height: 190px;
+    margin-top: -190px;
 }

@@ -17,7 +17,7 @@
 <!-- nav -->
 		<div class="navbar-fixed">
 			<nav class="bg5">
-				<div class="nav-wrapper  container">
+				<div class="nav-wrapper container">
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			    	<a href="#" class="brand-logo">Logo</a>
 
@@ -32,9 +32,9 @@
 						<ul id="drop-szkola" class="dropdown-content menu">
 						  <li class="collection-item"><a href="pracownicy_ajax.php">Pracownicy</a></li>
 							<li class="divider"></li>
-						  <li class="collection-item"><a href="#!">Patron</a></li>
+						  <li class="collection-item"><a href="patron.php">Patron</a></li>
 							<li class="divider"></li>
-							<li class="collection-item"><a href="#!">Historia</a></li>
+							<li class="collection-item"><a href="historia.php">Historia</a></li>
 						</ul>
 
 						<ul id="drop-uczniowie" class="dropdown-content menu">
@@ -69,10 +69,9 @@
 	<ul id="slide-out" class="sidenav">
 		<li<?php if($inc==='index'){ ?>class="active" <?php } ?> ><a href="index.php">Strona główna</a></li>
 		<li><a href="https://uonetplus.vulcan.net.pl/powiatsokolski">E-dziennik</a></li>
-		<li<?php if($inc==='klasy'){} ?>><a href="#">Klasy</a></li>
-		<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a href="rekrutacja.php">Rekrutacja</a></li>
-		<li<?php if($inc==='pracownicy'){} ?>><a href="#">Pracownicy</a></li>
-		<li<?php if($inc==='podreczniki'){} ?>><a href="#">Podręczniki</a></li>
+		<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-rekrutacja">Rekrutacja<i class="material-icons right">arrow_drop_down</i></a></li>
+		<li<?php if($inc==='drop-szkola'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-szkola">O szkole<i class="material-icons right">arrow_drop_down</i></a></li>
+		<li<?php if($inc==='drop-uczniowie'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-uczniowie">Uczniowie<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 	<!-- sidenav end -->
 <?php } ?>
