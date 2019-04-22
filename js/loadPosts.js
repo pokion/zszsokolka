@@ -1,50 +1,50 @@
 let curData = null;
-	function addDiv(data){
-		let loadButton = '<button onclick="loadPost()" if="loadButton" class="btn waves-effect waves-light">Load<i class="material-icons">autorenew</i></button>';
-		if(data){
-			let allJson = data.split('|');
-			console.log(allJson)
-			allJson.forEach((elem)=>{
-				if(elem){
-					let json = JSON.parse(elem);
-					let div = $(
-					`
 
-							<div class="col s12 m6 l6 xl4 card">
-								<h3 class="letterSpac">${json.title}</h3>
-								<h5 class="letterSpac truncate">${json.body}</h5>
-							</div>
-
-					`);
-					$('.content>.row').append(div);
-					curData = json.data.split(' ');
-					if(json.postID){
-						loadImage(json.postID);
-					}
-					
-				}
-			})
-		}
+	function loadImg(json,onlyMain){
+		let JSONPost = JSON.parse(json);
 		
-
-
-		$('.container>.row.content').append(loadButton);
+		JSONPost.forEach((data,index)=>{
+			$.post(loadImages,
+				{
+					groupImg:data.imgGroup,
+					onlyMainImg:onlyMain
+				},
+				function(data){
+					loadPost(data,JSONPost[index],onlyMain)
+				})
+		})
 	}
 
-	function loadPost(){
-		$('button').remove();
-		$.post(loadPosts,
-				{
-					date: curData[0]
-				},
-				function(data,status){
-					if(status==='success'){
-							addDiv(data);
-						}else{
-							console.log(status);
-						}
-				}
-			);
+	function loadPost(images,jsOn,main){
+
+		if(main){
+
+		}else{
+			console.log(jsOn)
+			let bd = jsOn.body.substring(0,270);
+			console.log(bd)
+
+			let div = $(`
+					<div class="col s12 m12 6 l12 xl6">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<div style="background-image: url(../images/${images}); height: 250px; background-position: center;background-size: cover;"></div>
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">
+									${jsOn.title}
+								</span>
+								<p>${bd}...</p>
+							</div>
+							<div class="card-action">
+								<a href="#">Czytaj dalej</a>
+							</div>
+						</div>
+					</div>
+						`);
+
+			$('#main').append(div)
+		}
 	}
 
 $(document).ready(function(){
@@ -54,11 +54,10 @@ $(document).ready(function(){
 			},
 			function(data,status){
 				if(status==='success'){
-					//console.log(data)
-						/*addDiv(data);*/
-					}else{
-						console.log(status);
-					}
+					loadImg(data,false)
+				}else{
+					console.log(status);
+				}
 			}
 		);
 })
