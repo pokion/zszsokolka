@@ -28,10 +28,10 @@ function loadCarousel(){
 			//Jeśli zadziała:
 			.done(function(data){
 				let placeholder = $('.placeholder');
-				let content = "<div class=\"carousel carousel-slider klasy\">";
+				let content = "<div class=\"carousel carousel-slider klasy center-align\">";
 
 				$.each(data, function(index, element){
-					content +=  "<a class=\"carousel-item center-align\">"
+					content +=  "<a class=\"carousel-item \">"
 					content += "<img src=";
 					content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\">";
 					content += "Kierunek: " + data[index].kierunek + "<br>";

@@ -117,3 +117,6 @@ create table klasy(
     wychowawca varchar(255),
     rok varchar(255)
 )
+// rozbudowa o zdjecia i opis bo oczywiście o czymś musiałem zapomnieć
+alter table klasy add column opis varchar(255) after photo_path
+alter table klasy add column photo_path varchar(255) after wychowawca

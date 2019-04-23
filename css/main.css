@@ -148,6 +148,9 @@ h3{
 }
 .klasy{
 	margin-top: 150px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .carousel{
 	min-height: 650px;
