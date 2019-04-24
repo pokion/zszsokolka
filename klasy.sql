@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Kwi 2019, 22:32
+-- Czas generowania: 24 Kwi 2019, 16:38
 -- Wersja serwera: 10.1.35-MariaDB
 -- Wersja PHP: 7.2.9
 
@@ -159,7 +159,80 @@ INSERT INTO `klasy` (`id`, `kierunek`, `nazwa`, `wychowawca`, `photo_path`, `opi
 (114, 'Mechaniczny i Wielozawodowy', 'II wz', 'Małgorzata Krawiel', '../img/static/klasy/2012/IIwz.jpg', NULL, '2011/2012'),
 (115, 'Technik Technologii Drewna', 'IV Td', 'Krystyna Grygiewicz', '../img/static/klasy/2012/IIITd.jpg', NULL, '2011/2012'),
 (116, 'Zarządzanie Informacją', 'II Lpi', 'Jolanta Lech', '../img/static/klasy/2012/IILpi.jpg', NULL, '2011/2012'),
-(117, 'Zarządzanie Informacją', 'III Lpi', 'Aneta Tymińska', '../img/static/klasy/2012/IIILpi.jpg', NULL, '2011/2012');
+(117, 'Zarządzanie Informacją', 'III Lpi', 'Aneta Tymińska', '../img/static/klasy/2012/IIILpi.jpg', NULL, '2011/2012'),
+(118, 'Technik Mechanik', 'I Tm', 'Piotr Dziakowski', '../img/static/klasy/2013/1TM.jpg', 'tak', '2012/2013'),
+(119, 'Technik Mechanik', 'II Tm', 'Renata Maliszewska', '../img/static/klasy/2013/2TM.jpg', NULL, '2012/2013'),
+(120, 'Technik Mechanik', 'III Tm', 'Sylwester Pakuła', '../img/static/klasy/2013/3TM.jpg', 'tak', '2012/2013'),
+(121, 'Technik Mechanik', 'IV Tma', 'Jerzy Szymaniuk', '../img/static/klasy/2013/4TMa.jpg', 'tak', '2012/2013'),
+(122, 'Technik Mechanik', 'IV Tmb', 'Tomasz Potapczyk', '../img/static/klasy/2013/4TMb.jpg', 'tak', '2012/2013'),
+(123, 'Mechaniczny i Wielozawodowy', 'II m', 'Grzegorz Zubiel', '../img/static/klasy/2013/Im.jpg', NULL, '2012/2013'),
+(124, 'Mechaniczny i Wielozawodowy', 'I wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2013/1WZ.jpg', 'tak', '2012/2013'),
+(125, 'Mechaniczny i Wielozawodowy', 'III wz', 'Małgorzata Krawiel', '../img/static/klasy/2013/IIwz.jpg', NULL, '2012/2013'),
+(126, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Marek Mozyrski', '../img/static/klasy/2013/1TFI.jpg', 'tak', '2012/2013'),
+(127, 'Zarządzanie Informacją', 'III Lpi', 'Jolanta Lech', '../img/static/klasy/2013/3LPi.jpg', 'tak', '2012/2013'),
+(128, 'Technik Mechanik', 'I Tm', 'Anna Tolko', '../img/static/klasy/2014/ITm.jpg', 'tak', '2013/2014'),
+(129, 'Technik Mechanik', 'II Tm', 'Piotr Dziakowski\r\n', 'NIE MA', NULL, '2013/2014'),
+(130, 'Technik Mechanik', 'III Tm', 'Renata Maliszewska', '../img/static/klasy/2014/IIITm.jpg', 'tak', '2013/2014'),
+(131, 'Technik Mechanik', 'IV Tm', 'Sylwester Pakuła', '../img/static/klasy/2014/IVTm.jpg', 'tak', '2013/2014'),
+(132, 'Mechaniczny i Wielozawodowy', 'III m', 'Grzegorz Zubiel', '../img/static/klasy/2014/Im.jpg', NULL, '2013/2014'),
+(133, 'Mechaniczny i Wielozawodowy', 'I wz', 'Klaudia Kmon - Ciuruk\r\n', '../img/static/klasy/2014/Iwz.jpg', 'tak', '2013/2014'),
+(134, 'Mechaniczny i Wielozawodowy', 'II wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2014/IIwz.jpg', NULL, '2013/2014'),
+(135, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Małgorzata Krawiel', '../img/static/klasy/2014/ITfi.jpg', 'tak', '2013/2014'),
+(136, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Marek Mozyrski', '../img/static/klasy/2014/IITfi.jpg', 'tak', '2013/2014'),
+(137, 'Technik Mechanik', 'I Tm', 'Jerzy Szymaniuk', 'NIE MA', NULL, '2014/2015'),
+(138, 'Technik Mechanik', 'II Tm', 'Anna Tolko', '../img/static/klasy/2015/ITm.jpg', 'tak', '2014/2015'),
+(139, 'Technik Mechanik', 'III Tm', 'Piotr Dziakowski\r\n', '../img/static/klasy/2015/IIITm.jpg', NULL, '2014/2015'),
+(140, 'Technik Mechanik', 'IV Tm', ' Renata Maliszewska', '../img/static/klasy/2015/IVTm.jpg', NULL, '2014/2015'),
+(141, 'Mechaniczny i Wielozawodowy', 'I wz', 'Krystyna Grygiewicz', '../img/static/klasy/2015/Iwz.jpg', NULL, '2014/2015'),
+(142, 'Mechaniczny i Wielozawodowy', 'II wz', 'Klaudia Kmon - Ciuruk\r\n', '../img/static/klasy/2015/IIwz.jpg', NULL, '2014/2015'),
+(143, 'Mechaniczny i Wielozawodowy', 'III wz', 'Iwona Mackiewicz-Kowalczuk', 'NIE MA', NULL, '2014/2015'),
+(144, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Sylwester Pakuła', 'NIE MA', NULL, '2014/2015'),
+(145, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Aneta Tymińska', '../img/static/klasy/2015/IITfi.jpg', NULL, '2014/2015'),
+(146, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Marek Mozyrski', '../img/static/klasy/2015/IIITi.jpg', NULL, '2014/2015'),
+(147, 'Wielozawodowa', 'I wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2016/I_wz.jpg', NULL, '2015/2016'),
+(148, 'Wielozawodowa', 'II wz', 'Krystyna Grygiewicz', '../img/static/klasy/2016/II_wz.jpg', NULL, '2015/2016'),
+(149, 'Wielozawodowa', 'III wz', 'Klaudia Kmon-Ciuruk / Izabela Garkowska', '../img/static/klasy/2016/III_wz.jpg', NULL, '2015/2016'),
+(150, 'Technik Mechanik', 'I Tm', 'Renata Maliszewska', '../img/static/klasy/2016/I_Tm.jpg', NULL, '2015/2016'),
+(151, 'Technik Mechanik', 'II Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2016/II_Tm.jpg', NULL, '2015/2016'),
+(152, 'Technik Mechanik', 'III Tm', 'Anna Tolko', '../img/static/klasy/2016/III_Tm.jpg', NULL, '2015/2016'),
+(153, 'Technik Mechanik', 'IV Tm', 'Piotr Dziakowski', '../img/static/klasy/2016/IV_Tm.jpg', NULL, '2015/2016'),
+(154, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Edyta Jelska', '../img/static/klasy/2016/I_Tfi.jpg', NULL, '2015/2016'),
+(155, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Sylwester Pakuła', '../img/static/klasy/2016/II_Tfi.jpg', NULL, '2015/2016'),
+(156, 'Technik Usług Fryzjerskich i Technik InformatykTechnik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Aneta Tymińska', '../img/static/klasy/2016/III_Tfi.jpg', NULL, '2015/2016'),
+(157, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Elwira Zabłocka', '../img/static/klasy/2016/IV_Tfi.jpg', NULL, '2015/2016'),
+(158, 'Wielozawodowa', 'I wz', 'Jolanta Lech', '../img/static/klasy/2017/1_WZ.jpg', 'tak', '2016/2017'),
+(159, 'Wielozawodowa', 'II wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2017/2_WZ.jpg', 'tak', '2016/2017'),
+(160, 'Wielozawodowa', 'III wz', 'Krystyna Grygiewicz', '../img/static/klasy/2017/3_WZ.jpg', 'tak', '2016/2017'),
+(161, 'Technik Mechanik', 'I Tm', 'Piotr Dziakowski', '../img/static/klasy/2017/1_TM.jpg', 'tak', '2016/2017'),
+(162, 'Technik Mechanik', 'II Tm', 'Renata Maliszewska', '../img/static/klasy/2017/2_TM.jpg', 'tak', '2016/2017'),
+(163, 'Technik Mechanik', 'III Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2017/3_TM.jpg', 'tak', '2016/2017'),
+(164, 'Technik Mechanik', 'IV Tm', 'Anna Tolko', '../img/static/klasy/2017/4_TM.jpg', 'tak', '2016/2017'),
+(165, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Marek Mozyrski', '../img/static/klasy/2017/1_TFI.jpg', 'tak', '2016/2017'),
+(166, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Edyta Jelska', '../img/static/klasy/2017/2_TFI.jpg', 'tak', '2016/2017'),
+(167, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Sylwester Pakuła', '../img/static/klasy/2017/3_TFI.jpg', 'tak', '2016/2017'),
+(168, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Aneta Tymińska', '../img/static/klasy/2017/4_TFI.jpg', 'tak', '2016/2017'),
+(169, 'BARDZO', 'GRUPOWA', 'FOTKA', '../img/static/klasy/2017/ZSZ_all.jpg', 'tak', '2016/2017'),
+(170, 'Klasa Wielozawodowa', 'I wz', 'Aneta Tymińska', '../img/static/klasy/2018/1_WZ.jpg', NULL, '2017/2018'),
+(171, 'Klasa Wielozawodowa', 'II wz', 'Jolanta Lech', '../img/static/klasy/2018/2_WZ.jpg', NULL, '2017/2018'),
+(172, 'Klasa Wielozawodowa', 'III wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2018/3_WZ.jpg', NULL, '2017/2018'),
+(173, 'Technik Mechanik', 'I Tm', 'Anna Tolko', '../img/static/klasy/2018/1_TM.jpg', NULL, '2017/2018'),
+(174, 'Technik Mechanik', 'II Tm', 'Piotr Dziakowski', '../img/static/klasy/2018/2_TM.jpg', NULL, '2017/2018'),
+(175, 'Technik Mechanik', 'III Tm', 'Renata Maliszewska', '../img/static/klasy/2018/3_TM.jpg', NULL, '2017/2018'),
+(176, 'Technik Mechanik', 'IV Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2018/4_TM.jpg', NULL, '2017/2018'),
+(177, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Klaudia Kmon-Ciuruk', '../img/static/klasy/2018/1_Tfi.jpg', NULL, '2017/2018'),
+(178, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Jolanta Siemieniako', '../img/static/klasy/2018/2_Tfi.jpg', NULL, '2017/2018'),
+(179, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Edyta Jelska', '../img/static/klasy/2018/3_Tfi.jpg', NULL, '2017/2018'),
+(180, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Sylwester Pakuła', '../img/static/klasy/2018/4_Tfi.jpg', NULL, '2017/2018'),
+(181, 'Wielozawodowa', 'I wz', 'Krystyna Grygiewicz', '../img/static/klasy/2019/1_WZ.jpg', 'tak', '2018/2019'),
+(182, 'Wielozawodowa', 'II wz', 'Aneta Tymińska', '../img/static/klasy/2019/2_WZ.jpg', 'tak', '2018/2019'),
+(183, 'Wielozawodowa', 'III wz', 'Jolanta Lech', 'NIE MA', 'tak', '2018/2019'),
+(184, 'Technik Usług Fryzjerskich, Technik Informatyk i Technik Mechanik', 'I T', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2019/1_T.jpg', 'tak', '2018/2019'),
+(185, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Klaudia Kmon-Ciuruk', '../img/static/klasy/2019/2_Tfi.jpg', 'tak', '2018/2019'),
+(186, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Marek Mozyrski', '../img/static/klasy/2019/3_Tfi.jpg', 'tak', '2018/2019'),
+(187, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Elwira Zabłocka', '../img/static/klasy/2019/4_Tfi.jpg', 'tak', '2018/2019'),
+(188, 'Technik Mechanik', 'II Tm', 'Anna Tolko', '../img/static/klasy/2019/2_Tm.jpg', 'tak', '2018/2019'),
+(189, 'Technik Mechanik', 'III Tm', 'Piotr Dziakowski', 'NIE MA', 'tak', '2018/2019'),
+(190, 'Technik Mechanik', 'IV Tm', 'Renata Maliszewska', 'NIE MA', 'tak', '2018/2019');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -179,7 +252,7 @@ ALTER TABLE `klasy`
 -- AUTO_INCREMENT dla tabeli `klasy`
 --
 ALTER TABLE `klasy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
