@@ -257,6 +257,17 @@ footer {
 	background: black;
 	opacity: 0.6;
 }
+#title{
+	max-height: 32px;
+	min-height: 32px;
+}
+#body{
+	max-height: 150px;
+	min-height: 150px;
+}
+.minInput{
+	width: 50px;
+}
 /* Mobilki Mobilki jak mnie widzicie? */
 @media only screen and (max-width: 500px) {
 .klasy-carousel{
