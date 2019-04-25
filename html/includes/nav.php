@@ -42,7 +42,7 @@
 							<li class="divider"></li>
 							<li class="collection-item"><a href="klasy_ajax.php">Klasy</a></li>
 							<li class="divider"></li>
-							<li class="collection-item"><a href="#!">Samorząd</a></li>
+							<li class="collection-item"><a href="samorzad_ajax.php">Samorząd</a></li>
 						</ul>
 						<ul id="drop-kierunki" class="dropdown-content menu ">
 							<li class="collection-item"><a href="informatyk.php">Technik informatyk</a></li>
