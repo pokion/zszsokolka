@@ -8,6 +8,7 @@ $(document).ready(function(){
 	$('.slider').slider();
 	$('.parallax').parallax();
 	$('.materialboxed').materialbox();
+	$(".dropdown-trigger").dropdown();
 	$('.carousel-slider').carousel({
 		shift : 380,
 		duration : 150
@@ -20,9 +21,10 @@ $(document).ready(function(){
     alignment: 'right' // Displays dropdown with edge aligned to the left of button
 	});
 
-	$('.carousel carousel-slider').carousel({
-		fullWidth: true,
-		indicators: false
+	$('.klasy-carousel').carousel({
+		fullWidth: false,
+		numVisible: 5,
+		indicators: true
 	});
 
 
@@ -45,12 +47,13 @@ $(document).ready(function(){
 	});
 	addDot();
 	//autoplay();
-})
+
+});
+
 function addDot(){
 		let ul = jQuery('.card ul').addClass(()=>{
 			return 'browser-default';
 		});
-
 	}
 // zmiana slajdow po okreslonym czasie
 	// function autoplay() {

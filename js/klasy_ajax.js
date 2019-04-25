@@ -28,23 +28,29 @@ function loadCarousel(){
 			//Jeśli zadziała:
 			.done(function(data){
 				let placeholder = $('.placeholder');
-				let content = "<div class=\"carousel carousel-slider klasy center-align\">";
+				let content = "<div class=\"carousel carousel-slider klasy-carousel center-align\">";
 
 				$.each(data, function(index, element){
-					content +=  "<a class=\"carousel-item \">"
+					content +=  "<a class=\"carousel-item valign-wrapper\">"
 					content += "<img src=";
 					content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\">";
-					content += "Kierunek: " + data[index].kierunek + "<br>";
-					content += "Wychowawaca: " + data[index].wychowawca + "<br> ";
-					content += "Klasa: " + data[index].nazwa + "<br> ";
-					content += "</a>";
+					if (data[index].opis == null){
+						content += "<div class=\"opis-klasy\">"
+						content += "Kierunek: " + data[index].kierunek + "<br>";
+						content += "Wychowawaca: " + data[index].wychowawca + "<br> ";
+						content += "Klasa: " + data[index].nazwa + "<br> ";
+						content += "</div>"
+					}else{
+						content += "<a class=\"btn-flat slide-up hide-on-small-only\">^</a></a>";
+					}
 				})
 				content += "</div>";
 				placeholder.html(content);
-				$('.carousel.carousel-slider').carousel({
-					fullWidth: true
+				$('.klasy-carousel').carousel({
+					fullWidth: true,
+					indicators: true
 				});
-					$('.carousel').hide().fadeIn("slow")
+					$('.klasy-carousel').hide().fadeIn("slow")
 						firstTime = false;
 				})
 
