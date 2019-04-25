@@ -20,21 +20,30 @@ let curData = null;
 		if(main){
 
 		}else{
+			let bd;
 			console.log(jsOn)
-			let bd = jsOn.body.substring(0,270);
+			if(jsOn.body.length>270){
+				bd = jsOn.body.substring(0,270)+'...';
+			}else{
+				bd = jsOn.body;
+			}
 			console.log(bd)
+
+			let img = images || 'brakZdj.jpg';
 
 			let div = $(`
 					<div class="col s12 m12 6 l12 xl6">
 						<div class="card">
 							<div class="card-image waves-effect waves-block waves-light">
-								<div style="background-image: url(../images/${images}); height: 250px; background-position: center;background-size: cover;"></div>
+								<div style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
 							</div>
 							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">
+								<span id="title" class="truncate card-title activator grey-text text-darken-4">
 									${jsOn.title}
 								</span>
-								<p>${bd}...</p>
+								<div  id="body">
+									<p">${bd}</p>
+								</div>
 							</div>
 							<div class="card-action">
 								<a href="#">Czytaj dalej</a>
