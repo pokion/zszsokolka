@@ -14,45 +14,53 @@ let curData = null;
 				})
 		})
 	}
-
+let controlValue = null;
 	function loadPost(images,jsOn,main){
 
 		if(main){
 
 		}else{
 			let bd;
-			console.log(jsOn)
-			if(jsOn.body.length>270){
-				bd = jsOn.body.substring(0,270)+'...';
+			if(controlValue == jsOn.imgGroup){
+
 			}else{
-				bd = jsOn.body;
-			}
-			console.log(bd)
+				
+				if(jsOn.body.length>270){
+					bd = jsOn.body.substring(0,270)+'...';
+				}else{
+					bd = jsOn.body;
+				}
+				console.log(bd)
 
-			let img = images || 'brakZdj.jpg';
+				let img = images || 'brakZdj.jpg';
 
-			let div = $(`
-					<div class="col s12 m12 6 l12 xl6">
-						<div class="card">
-							<div class="card-image waves-effect waves-block waves-light">
-								<div style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
-							</div>
-							<div class="card-content">
-								<span id="title" class="truncate card-title activator grey-text text-darken-4">
-									${jsOn.title}
-								</span>
-								<div  id="body">
-									<p">${bd}</p>
+				let div = $(`
+						<div class="col s12 m12 6 l12 xl6">
+							<div class="card">
+								<div class="card-image waves-effect waves-block waves-light">
+									<div style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
+								</div>
+								<div class="card-content">
+									<span id="title" class="truncate card-title activator grey-text text-darken-4">
+										${jsOn.title}
+									</span>
+									<div  id="body">
+										<p">${bd}</p>
+									</div>
+								</div>
+								<div class="card-action">
+									<a href="#">Czytaj dalej</a>
 								</div>
 							</div>
-							<div class="card-action">
-								<a href="#">Czytaj dalej</a>
-							</div>
 						</div>
-					</div>
-						`);
-
-			$('#main').append(div)
+							`);
+				controlValue = jsOn.imgGroup;
+				$('#main').append(div)
+				
+				console.log(jsOn)
+			}
+			
+			
 		}
 	}
 
