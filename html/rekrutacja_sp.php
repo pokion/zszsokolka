@@ -22,7 +22,7 @@
 			<div class="col s12">
 				<h3 class="center-align">Plan naboru Zespołu Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce na rok szkolny 2019/2020</h3>
 				<h4 class="center-align green-text">Dla absolwentów szkoły podstawowej</h4>
-				<table class="centered responsive-table">
+				<table class="centered">
 					<h3>Nabór na rok szkolny 2019/2020</h3>
 					<thead>
 						<tr>

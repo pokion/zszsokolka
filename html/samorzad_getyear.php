@@ -6,7 +6,7 @@ require_once('../php/baza.php');
 $year = $_POST['year'];
 
 //query
-$sql = "SELECT * FROM samorzad where rok='$year' ORDER BY `id` ASC";
+$sql = "SELECT * FROM samorzad natural join stanowiska where rok='$year'  ORDER BY `id` ASC";
 
 $result = $conn->query($sql);
   /*Przygotowanie tablicy, która będzie przechowywać dane z bazy*/

@@ -67,12 +67,58 @@
 	<!-- end nav -->
 	<!-- sidenav -->
 	<ul id="slide-out" class="sidenav">
-		<li<?php if($inc==='index'){ ?>class="active" <?php } ?> ><a href="index.php">Strona główna</a></li>
+		<li><a href="index.php">Strona główna</a></li>
 		<li><a href="https://uonetplus.vulcan.net.pl/powiatsokolski">E-dziennik</a></li>
-		<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-rekrutacja">Rekrutacja<i class="material-icons right">arrow_drop_down</i></a></li>
-		<li<?php if($inc==='drop-szkola'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-szkola">O szkole<i class="material-icons right">arrow_drop_down</i></a></li>
-		<li<?php if($inc==='drop-uczniowie'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger" data-target="drop-uczniowie">Uczniowie<i class="material-icons right">arrow_drop_down</i></a></li>
-	</ul>
+		 <li class="no-padding">
+			 <ul class="collapsible collapsible-accordion">
+				 <li>
+					 <a class="collapsible-header">Rekrutacja<i class="material-icons">arrow_drop_down</i></a>
+					 <div class="collapsible-body">
+						 <ul>
+							 <li><a href="rekrutacja_gim.php">Po gimnazjum</a></li>
+							 <li><a href="rekrutacja_sp.php">Po szkole podstawowej</a></li>
+						 </ul>
+					 </div>
+				 </li>
+			 </ul>
+			 <ul class="collapsible collapsible-accordion">
+				 <li>
+					 <a class="collapsible-header">Kierunki<i class="material-icons">arrow_drop_down</i></a>
+					 <div class="collapsible-body">
+						 <ul>
+							 <li><a href="informatyk.php">Technik informatyk</a></li>
+							 <li><a href="fryzjer.php">Technik usług fryzjerskich</a></li>
+							 <li><a href="logistyk.php">Technik logistyk</a></li>
+							 <li><a href="mechanik.php">Technik mechanik</a></li>
+						 </ul>
+					 </div>
+				 </li>
+			 </ul>
+			 <ul class="collapsible collapsible-accordion">
+				 <li>
+					 <a class="collapsible-header">O szkole<i class="material-icons">arrow_drop_down</i></a>
+					 <div class="collapsible-body">
+						 <ul>
+							 <li class="collection-item"><a href="pracownicy_ajax.php">Pracownicy</a></li>
+ 						  <li class="collection-item"><a href="patron.php">Patron</a></li>
+ 							<li class="collection-item"><a href="historia.php">Historia</a></li>
+						 </ul>
+					 </div>
+				 </li>
+			 </ul>
+			 <ul class="collapsible collapsible-accordion">
+				 <li>
+					 <a class="collapsible-header">Uczniowie<i class="material-icons">arrow_drop_down</i></a>
+					 <div class="collapsible-body">
+						 <ul>
+							<li class="collection-item"><a href="podreczniki.php">Podręczniki</a></li>
+ 							<li class="collection-item"><a href="klasy_ajax.php">Klasy</a></li>
+ 							<li class="collection-item"><a href="samorzad_ajax.php">Samorząd</a></li>
+						 </ul>
+					 </div>
+				 </li>
+			 </ul>
+	 </ul>
 	<!-- sidenav end -->
 <?php } ?>
 	<!-- jakby nawigacja się posypała to sprawdź czy jest odstęp przed class

@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$('.parallax').parallax();
 	$('.materialboxed').materialbox();
 	$(".dropdown-trigger").dropdown();
+	$('.sidenav').sidenav();
 	$('.carousel-slider').carousel({
 		shift : 380,
 		duration : 150

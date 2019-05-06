@@ -120,3 +120,17 @@ create table klasy(
 // rozbudowa o zdjecia i opis bo oczywiście o czymś musiałem zapomnieć
 alter table klasy add column opis varchar(255) after photo_path
 alter table klasy add column photo_path varchar(255) after wychowawca
+
+//samorzad
+create table stanowiska(
+	stanowiskoID int AUTO_INCREMENT PRIMARY KEY,
+    nazwa varchar(255)
+);
+create table samorzad(
+	id int AUTO_INCREMENT PRIMARY KEY,
+    imie varchar(255),
+    klasa varchar(10),
+		rok varchar(10),
+    stanowiskoID int,
+    FOREIGN key (stanowiskoID) REFERENCES stanowiska(stanowiskoID)
+)
