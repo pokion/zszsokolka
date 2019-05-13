@@ -9,7 +9,7 @@ let allImages = [];
 				allImages.splice(index,1)
 			}
 		})
-
+		console.log(imageId)
 		card.remove();
 
 		$.post(saveImages,
@@ -32,7 +32,7 @@ let allImages = [];
 								result: e.target.result,
 								name: $inputImages[0].files[i].name,
 							},(data,status)=>{
-								
+								console.log(data)
 								let imageJSON = JSON.parse(data);
 								
 								let $imageCard = $(`
@@ -109,15 +109,15 @@ let allImages = [];
 		
 	}
 
-	//wysyła do php wszystkie dane
-
 	function sendToPhp(){
 		let tags = [];
 		let title,body;
 		$('.chip').each((index,element)=>{
-			let tag = $(element)[0].childNodes[0];
-			console.log(tag)
-			tags.push({tg:tag.data});
+			if($(element).attr('val')==1){
+				let tag = $(element).attr('tagId')
+				
+				tags.push({tg:tag});
+			}
 		});
 
 		allImages.forEach((elem)=>{

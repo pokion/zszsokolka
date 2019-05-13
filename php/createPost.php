@@ -24,44 +24,29 @@
 		$idGroup = abs( crc32( uniqid() ) );
 
 		foreach ($images as &$img) {
-			if($img['main'] == true){
-				$sql = "UPDATE images set position = '".$img['position']."' WHERE image_id = ".$img['id'];
 
-				mysqli_query($conn,$sql);
-			}
+				$sql = "UPDATE images set id_posts = $postId WHERE id_image = ".$img['id'];
 
-
-			$sql = "INSERT INTO imagegroup(id_group,id_image)
-									values('$idGroup',".$img['id'].")";
-			if ($conn->query($sql) === TRUE) {
+				if ($conn->query($sql) === TRUE) {
 
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
+
 		}
 
-		foreach ($tags as &$tag) {
-			$sql = "SELECT * FROM tags WHERE teag_name ='".$tag['tg']."'";
-			$tagId;
-			$result = mysqli_query($conn,$sql);
-			if (mysqli_num_rows($result) > 0) {
-			    while($row = mysqli_fetch_assoc($result)) {
-			        $tagId = $row['tag_id'];
-			    }
-		    
-			} else {
-			    echo "";
-			}
+		$tagsId = '';
 
+		for ($i=0; $i < sizeof($tags); $i++) { 
+			$tagsId = $tagsId.','.$tags[$i]['tg'];
+		}
 
-			$sql = "INSERT INTO conn(id_post,id_group,id_tag)
-									values($postId,'$idGroup',$tagId)";
-			if ($conn->query($sql) === TRUE) {
+		$sql = "UPDATE posts set tags_id = '$tagsId' WHERE post_id = $postId";
+		if ($conn->query($sql) === TRUE) {
 
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
-		}
 
 		$conn->close();
 

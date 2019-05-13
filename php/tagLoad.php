@@ -16,7 +16,7 @@
 	    // output data of each row
 			$data = array();
 		    while($row = mysqli_fetch_assoc($result)) {
-		        array_push($data,array('tag'=>$row['teag_name']));
+		        array_push($data,array('tag'=>$row['tag_name'],'id'=>$row['tag_id']));
 		        
 		    }
 

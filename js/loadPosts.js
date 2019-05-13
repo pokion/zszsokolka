@@ -16,19 +16,17 @@ let curData = null;
 	}
 let controlValue = null;
 	function loadPost(images,jsOn,main){
-
+		console.log(jsOn)
 		if(main){
 
 		}else{
 			let bd;
-			if(controlValue == jsOn.imgGroup){
 
-			}else{
 				
-				if(jsOn.body.length>270){
-					bd = jsOn.body.substring(0,270)+'...';
+				if(jsOn.bod.length>270){
+					bd = jsOn.bod.substring(0,270)+'...';
 				}else{
-					bd = jsOn.body;
+					bd = jsOn.bod;
 				}
 				console.log(bd)
 
@@ -40,9 +38,10 @@ let controlValue = null;
 								<div class="card-image waves-effect waves-block waves-light">
 									<div style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
 								</div>
+								<div>${jsOn.tagsId}</div>
 								<div class="card-content">
 									<span id="title" class="truncate card-title activator grey-text text-darken-4">
-										${jsOn.title}
+										${jsOn.tit}
 									</span>
 									<div  id="body">
 										<p">${bd}</p>
@@ -58,7 +57,7 @@ let controlValue = null;
 				$('#main').append(div)
 				
 				console.log(jsOn)
-			}
+
 			
 			
 		}

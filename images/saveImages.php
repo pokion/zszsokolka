@@ -31,13 +31,13 @@
 				}
 				
 
-				$sql = "INSERT INTO images (image_name,main_image,position) VALUES
+				$sql = "INSERT INTO images (image_name,main_img,position) VALUES
 						( '$fileName',1,'". $_POST['position']."' )";
 			}elseif(empty($_POST['mainImage'])){
-				$sql = "INSERT INTO images (image_name,main_image) VALUES
+				$sql = "INSERT INTO images (image_name,main_img) VALUES
 						( '$fileName',0)";
 			}else{
-				echo "32 linijka jaiś błąd";
+				echo "Error code: #66a8x009";
 			}
 			
 
@@ -58,7 +58,7 @@
 			if (mysqli_num_rows($result) > 0) {
 	    	// output data of each row
 			    while($row = mysqli_fetch_assoc($result)) {
-			        $data = ['id' => $row['image_id'], 'name' => $row['image_name']];
+			        $data = ['id' => $row['id_image'], 'name' => $row['image_name']];
 			        echo json_encode($data, JSON_UNESCAPED_UNICODE);
 			    }
 		    
@@ -84,7 +84,7 @@
 		  	die("Connection failed: " . $conn->connect_error);
 		}
 
-		$sql = "SELECT * FROM `images` WHERE image_id = $id";
+		$sql = "SELECT * FROM `images` WHERE id_image = $id";
 
 		$result = mysqli_query($conn, $sql);
 
@@ -92,7 +92,7 @@
 	    	// output data of each row
 			while($row = mysqli_fetch_assoc($result)) {
 
-				$sql = "DELETE FROM images WHERE image_id = $id";
+				$sql = "DELETE FROM images WHERE id_image = $id";
 
 				mysqli_query($conn,$sql);
 

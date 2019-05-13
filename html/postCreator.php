@@ -14,6 +14,14 @@ if(!isset($_SESSION['login'])){
 		$inc = 'createPosts';
 	?>
 	<link rel="stylesheet" type="text/css" href="../css/createPost.css">
+	<style type="text/css">
+		.chip:hover{
+			cursor: pointer;
+		}
+		.chip{
+			font-size: 1.2rem
+		}
+	</style>
 
 </head>
 <body>
@@ -39,7 +47,10 @@ if(!isset($_SESSION['login'])){
 
 	<div class="container body">
 		<p class="formP">Tag</p>
-		<div class="chips chips-autocomplete"></div>
+
+		<div id="tags">
+			
+		</div>
 
 
     <p class="formP">Tytuł</p>
@@ -103,30 +114,39 @@ if(!isset($_SESSION['login'])){
 		});
 
 
+		$(document).on('click','.chip',function(){
+			/*$(this).css('background-color','#4db6ac')*/
+			let press = $(this).attr('val');
+			console.log(press)
+
+			if(press == 0){
+				$(this).css('background-color','#4db6ac');
+				$(this).attr({val: 1});
+			}else if(press == 1){
+				$(this).css('background-color','#e4e4e4');
+				$(this).attr('val', '0');
+			}
+		})
+
 		$.post(tagLoad,
 			{
 				load:true	
 			},function(data,status){
 				/*console.log(data)*/
 				let tagJSON = JSON.parse(data);
-				let tag = "{";
-				for(let i=0;i<tagJSON.length;i++){
-					tag+= '"'+tagJSON[i].tag+'"'+':null';
-					if(i!==tagJSON.length-1){
-						tag+=',';
-					}
-				}
-				tag+="}";
-				/*console.log(tag)
-				console.log(JSON.parse(tag))*/
-				$('.chips').chips();
-				$('.chips-autocomplete').chips({
-				    autocompleteOptions: {
-				    	data: JSON.parse(tag),
-				    	limit: Infinity,
-				    	minLength: 1
-				    }
-		 		});
+				console.log(tagJSON)
+
+				tagJSON.forEach((elem)=>{
+					console.log(elem)
+					let div = `
+						<div class="chip" val="0" tagId="${elem.id}">
+							${elem.tag}
+						</div>
+					`;
+
+					$('#tags').append($(div))
+				})
+
 			})
 		
 	</script>
