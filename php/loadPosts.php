@@ -9,7 +9,7 @@
 		} 
 
 		if(empty($_POST['date'])){
-			$sql = "SELECT * from `posts` order by post_data desc limit 3";
+			$sql = "SELECT * from `posts` order by post_data desc limit 4";
 
 			if ($conn->connect_error) {
 					echo "Error: " . $sql . "<br>" . $conn->error;

@@ -3,3 +3,4 @@ const loadPosts = '/strona/php/loadPosts.php';
 const saveImages = '/strona/images/saveImages.php';
 const loadImages = '/strona/php/loadImages.php';
 const tagLoad = '/strona/php/tagLoad.php';
+const searchImage = '/strona/php/searchImage.php';

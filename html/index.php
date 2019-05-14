@@ -43,6 +43,60 @@
 		include_once('includes/footer.php');
 	?>
 	<script type="text/javascript" src="../js/loadPosts.js"></script>
+	<script type="text/javascript">
+		function searchImg(){
+			$('div[postid]').each(function(index,elem){
+				let id = $(elem).attr('postid');
+				$.post(searchImage,{
+					postId: id
+				},function(data){
+					let JSONpar = JSON.parse(data)
+					if(JSONpar.length>0){
+						$('div[postid="'+JSONpar[0].id+'"]').css('background-image',`url(../images/${JSONpar[0].name})`);
+						$('div[postid="'+JSONpar[0].id+'"]').removeAttr('postid')
+					}
+				})
+			});
+		}		
+
+
+
+		$.post(loadPosts,{},function(data){
+			let JSONpar = JSON.parse(data);
+			let body;
+			let img = 'brakZdj.jpg';
+			console.log(JSONpar)
+			for(let i=0;i<JSONpar.length;i++){
+				if(JSONpar[i].bod.length>267){
+					body = JSONpar[i].bod.substring(0,267)+'...';
+				}else{
+					body = JSONpar[i].bod;
+				}
+				let div = `
+					<div class="col s12 m12 6 l12 xl6">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
+							</div>
+							<div>${JSONpar[i].tagsId}</div>
+								<div class="card-content">
+									<span id="title" class="truncate card-title activator grey-text text-darken-4">
+										${JSONpar[i].tit}
+									</span>
+									<div  id="body">
+										<p>${body}</p>
+									</div>
+								</div>
+								<div class="card-action">
+									<a href="#">Czytaj dalej</a>
+								</div>
+						</div>
+					</div>`;
+					$('#main').append($(div));
+			}
+			searchImg()
+		})
+	</script>
 
 </body>
 </html>
