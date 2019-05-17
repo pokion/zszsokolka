@@ -120,7 +120,7 @@
 									</div>
 								</div>
 								<div class="card-action">
-									<a href="#">Czytaj dalej</a>
+									<a href="szukaj.php?hide=true&id=${JSONpar[i].postId}">Czytaj dalej</a>
 								</div>
 						</div>
 					</div>`;
