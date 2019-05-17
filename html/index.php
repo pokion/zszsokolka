@@ -32,7 +32,7 @@
 				<h5 class="light grey-text text-lighten-3 tresc">Here's our small slogan.</h5>
 			</div>
 			<li>
-				<!-- czeba img wstawić -->
+				<img src="http://artbrut.lublin.pl/img/bydlinska/otwarteserce.jpg">
 			</li>
 			<li>
 				<!-- czeba img wstawić -->
