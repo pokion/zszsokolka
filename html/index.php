@@ -8,6 +8,18 @@
 		$inc = 'index';
 	?>
 	<link rel="stylesheet" href="../css/startowa.css">
+	<style type="text/css">
+		.tagi{
+			position: absolute;
+			display: inline-block;
+			bottom: 0px;
+			left: 0px;
+		}
+		.babyTag{
+			display: inline-block;
+
+		}
+	</style>
 </head>
 <body>
 	<?php
@@ -57,28 +69,48 @@
 					}
 				})
 			});
+		}
+
+
+		function searchTag(){
+			$.post(searchTags,{},function(data){
+				let JSONtags = JSON.parse(data);
+				$('.tagi').each(function(index,elem){
+					let tags = $(elem).html();
+					let arrTags = tags.split(',');
+					$(elem).html("");
+					for(let i=1;i<arrTags.length;i++){
+						let tagId = arrTags[i]
+
+						$(elem).append(`<div class="babyTag chip"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
+					}
+
+				})
+			})
 		}		
 
 
-
 		$.post(loadPosts,{},function(data){
+			let month = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
+
+
 			let JSONpar = JSON.parse(data);
 			let body;
 			let img = 'brakZdj.jpg';
-			console.log(JSONpar)
 			for(let i=0;i<JSONpar.length;i++){
 				if(JSONpar[i].bod.length>267){
 					body = JSONpar[i].bod.substring(0,267)+'...';
 				}else{
 					body = JSONpar[i].bod;
 				}
+				console.log(JSONpar)
 				let div = `
 					<div class="col s12 m12 6 l12 xl6">
 						<div class="card">
 							<div class="card-image waves-effect waves-block waves-light">
 								<div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
+								<div class="tagi">${JSONpar[i].tagsId}</div>
 							</div>
-							<div>${JSONpar[i].tagsId}</div>
 								<div class="card-content">
 									<span id="title" class="truncate card-title activator grey-text text-darken-4">
 										${JSONpar[i].tit}
@@ -95,6 +127,7 @@
 					$('#main').append($(div));
 			}
 			searchImg()
+			searchTag()
 		})
 	</script>
 
