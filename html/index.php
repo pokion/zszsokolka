@@ -17,7 +17,17 @@
 		}
 		.babyTag{
 			display: inline-block;
-
+			border-radius: 16px 16px 0 0;
+			margin-bottom: 0px;
+			background-color: white;
+		}
+		.data{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			padding: 10px;
+			border-radius: 0 0 0 5px;
+			background-color: white
 		}
 	</style>
 </head>
@@ -56,6 +66,7 @@
 	?>
 	<script type="text/javascript" src="../js/loadPosts.js"></script>
 	<script type="text/javascript">
+
 		function searchImg(){
 			$('div[postid]').each(function(index,elem){
 				let id = $(elem).attr('postid');
@@ -82,7 +93,7 @@
 					for(let i=1;i<arrTags.length;i++){
 						let tagId = arrTags[i]
 
-						$(elem).append(`<div class="babyTag chip"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
+						$(elem).append(`<div class="babyTag chip z-depth-2"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
 					}
 
 				})
@@ -91,7 +102,7 @@
 
 
 		$.post(loadPosts,{},function(data){
-			let month = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
+			let months = ["stycznia",'lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
 
 
 			let JSONpar = JSON.parse(data);
@@ -104,6 +115,10 @@
 					body = JSONpar[i].bod;
 				}
 				console.log(JSONpar)
+				let date = JSONpar[i].data.split(" ")
+				let dateWitchoutHour = date[0].split("-")
+				let day = dateWitchoutHour[1]
+				console.log(dateWitchoutHour)
 				let div = `
 					<div class="col s12 m12 6 l12 xl6">
 						<div class="card">
@@ -115,6 +130,7 @@
 									<span id="title" class="truncate card-title activator grey-text text-darken-4">
 										${JSONpar[i].tit}
 									</span>
+									<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
 									<div  id="body">
 										<p>${body}</p>
 									</div>
