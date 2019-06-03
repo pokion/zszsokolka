@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Maj 2019, 19:53
+-- Czas generowania: 03 Cze 2019, 23:43
 -- Wersja serwera: 10.1.36-MariaDB
 -- Wersja PHP: 7.2.11
 
@@ -55,7 +55,14 @@ INSERT INTO `images` (`id_image`, `image_name`, `id_posts`, `main_img`, `positio
 (32, '5cd9ac4291556_47578136961_752de03e63_c.jpg', 17, b'0', NULL),
 (33, '5cd9ac4297c4b_47578137021_c52efe96de_c.jpg', 17, b'0', NULL),
 (34, '5cd9ac4297b6f_47578136981_e483b9b184_c.jpg', 17, b'0', NULL),
-(35, '5cd9ac429ec94_47578137061_df4f683be4_c.jpg', 17, b'0', NULL);
+(35, '5cd9ac429ec94_47578137061_df4f683be4_c.jpg', 17, b'0', NULL),
+(36, '5cd9fcad5d0b5_47578137061_df4f683be4_c.jpg', 18, b'1', ''),
+(37, '5cd9fcb87339e_47525232622_cf5a9ec63d_c.jpg', 18, b'0', NULL),
+(38, '5cd9fcb877173_47525232772_61ac4da62b_c.jpg', 18, b'0', NULL),
+(39, '5cd9fcb87ec15_47525232732_83d857e173_c.jpg', 18, b'0', NULL),
+(40, '5cdf3f26ab73b_wizback.png', NULL, b'0', NULL),
+(41, '5cdf3f26ab7db_wizfront.png', NULL, b'0', NULL),
+(42, '5cdf3f26b187f_uloFront.png', NULL, b'0', NULL);
 
 -- --------------------------------------------------------
 
@@ -76,9 +83,10 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `title`, `body`, `tags_id`, `post_data`) VALUES
-(15, 'coś tam coś tam lotem ipsum doloro sit amet', 'coś tam coś tam lotem ipsum doloro sit amet', ',2,3', '2019-05-13 17:38:34'),
-(16, 'coś tam coś tam lotem ipsum doloro sit amet', 'coś tam coś tam lotem ipsum doloro sit amet', ',2,3', '2019-05-13 17:39:59'),
-(17, 'dawsdasdsadqwadfqw asd sad asd ', 'as dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv z', ',1,2,5', '2019-05-13 17:41:23');
+(15, ' 3 coś tam coś tam lotem ipsum doloro sit amet', 'coś tam coś tam lotem ipsum doloro sit amet', ',2,3', '2018-05-13 17:38:34'),
+(16, ' 2 coś tam coś tam lotem ipsum doloro sit amet', 'coś tam coś tam lotem ipsum doloro sit amet', ',2,3', '2016-06-13 17:39:59'),
+(17, ' 1 dawsdasdsadqwadfqw asd sad asd ', 'as dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv zas dsa dasd asd asd sad sad dsad fxvczv z', ',1,2,5', '2019-05-13 17:41:23'),
+(18, 'asdasd', 'asdsadasd asdasd', ',1,2,3,4,5', '2019-05-13 23:24:42');
 
 -- --------------------------------------------------------
 
@@ -133,13 +141,13 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT dla tabeli `images`
 --
 ALTER TABLE `images`
-  MODIFY `id_image` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_image` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT dla tabeli `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT dla tabeli `tags`
