@@ -17,7 +17,7 @@
   </div>
   <div class="section white">
     <div class="row container">
-      <h2 class="header">Spotkanie z Policją</h2>
+      <h5 class="header">Spotkanie z Policją</h5>
       <p class="grey-text text-darken-3 lighten-3">6 marca w klasach I T, I wz i III Tm Zespołu Szkół Zawodowych im. Elizy Orzeszkowej w Sokółce odbyły się zajęcia dotyczącą odpowiedzialności prawnej nieletnich i uzależnień. Zajęcia przeprowadziła pani Joanna Kłos - mł. asp. Zespołu ds. prewencji kryminalnej nieletnich i patologii. Uczniowie mogli porozmawiać o czynach karalnych, demoralizacji, konsekwencji brania używek i podejmowania niewłaściwych decyzji.</p>
     </div>
 

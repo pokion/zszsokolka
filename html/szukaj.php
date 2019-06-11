@@ -33,6 +33,9 @@
 			background-color: white;
 			
 		}
+		.container > p{
+			text-align: justify;
+		}
 		.input-field{
 			z-index: 2 !important;
 		}
@@ -73,7 +76,7 @@ footer {
 							</div>
 							<div class="section white">
 								<div class="row container">
-									<h2 class="header"></h2>
+									<h3 class="header"></h3>
 									<p class="grey-text text-darken-3 lighten-3"></p>
 								</div>
 							</div>
