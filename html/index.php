@@ -109,7 +109,7 @@
 			let body;
 			let img = 'brakZdj.jpg';
 			for(let i=0;i<JSONpar.length;i++){
-				if(JSONpar[i].bod.length>267){
+				if(JSONpar[i].bod.length>257){
 					body = JSONpar[i].bod.substring(0,267)+'...';
 				}else{
 					body = JSONpar[i].bod;
@@ -120,18 +120,18 @@
 				let day = dateWitchoutHour[1]
 				console.log(dateWitchoutHour)
 				let div = `
-					<div class="col s12 m12 6 l12 xl6">
+					<div class="col s12 m12 l12 xl6">
 						<div class="card">
 							<div class="card-image waves-effect waves-block waves-light">
 								<div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
 								<div class="tagi">${JSONpar[i].tagsId}</div>
 							</div>
 								<div class="card-content">
-									<span id="title" class="truncate card-title activator grey-text text-darken-4">
+									<h2 class="title card-title activator grey-text text-darken-4">
 										${JSONpar[i].tit}
-									</span>
+									</h2>
 									<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
-									<div  id="body">
+									<div  class="body">
 										<p>${body}</p>
 									</div>
 								</div>

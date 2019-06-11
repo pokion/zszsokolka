@@ -39,6 +39,18 @@
 		form{
 			margin-bottom: 150px;
 		}
+		html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /*display: initial;*/
+    display: table;
+}
+
+footer {
+    display: table-row;   /*nie usuwać, trzyma footer na dole strony gdy za malo contentu */
+    height: 0;
+}
 	</style>
 	<meta charset="utf-8">
 	<title>Szukaj</title>
@@ -56,8 +68,8 @@
 							<div class="parallax-container">
 								<div class="parallax">
 									<img src="">
-									<div class="tagi"></div>
 								</div>
+								<div class="tagi"></div>
 							</div>
 							<div class="section white">
 								<div class="row container">
@@ -68,14 +80,14 @@
 							<script type="text/javascript" src="../js/jquery.min.js"></script>
 							<script type="text/javascript">
 								let postid = '<?php echo $_GET['id']; ?>'
-								$.post('/strona/php/loadPosts.php',{id:postid},function(data){
+								$.post('/StronaxDszko-y/php/loadPosts.php',{id:postid},function(data){
 									let JSONpar = JSON.parse(data);
 									$('.header').html(JSONpar[0].tit);
 									$('.container>p').html(JSONpar[0].bod);
 									console.log(JSONpar[0]);
 									$('.tagi').html(JSONpar[0].tagsId);
 									//tutaj jest skrypt który szyka tagi
-										$.post('/strona/php/searchTag.php',{},function(data){
+										$.post('/StronaxDszko-y/php/searchTag.php',{},function(data){
 											let JSONtags = JSON.parse(data);
 											$('.tagi').each(function(index,elem){
 												let tags = $(elem).html();
@@ -90,7 +102,7 @@
 											})
 										})
 
-										$.post('/strona/php/searchImage.php',{postId:postid,main:1},function(data){
+										$.post('/StronaxDszko-y/php/searchImage.php',{postId:postid,main:1},function(data){
 											let JSONImg = JSON.parse(data);
 											JSONImg.forEach(function(elem){
 												if(elem.main == 0){
@@ -121,14 +133,14 @@
 			}else{
 				?>
 				<div class="container">
-					<form action="#" id="sendForm" method="get">
+					<form action="szukaj.php" id="sendForm" method="get">
 					<h2>Wyszukaj posty</h2>
 					<br>
 					<div class="row">
 						<div class="col s6">
 							<h3>Wybierz rok:</h3> 
 							<div class="input-field col s12">
-							    <select id="years">
+							    <select id="years" name="year">
 							      <option value="" disabled selected>Choose your option</option>
 							      <?php
 							      		include '../php/config.php';
@@ -144,7 +156,7 @@
 
 										if (mysqli_num_rows($result) > 0) {
 											while($row = mysqli_fetch_assoc($result)) {
-											    echo "<option name=\"rok\">".$row['year(post_data)']."</option>";
+											    echo "<option value=".$row['year(post_data)'].">".$row['year(post_data)']."</option>";
 											}
 										}
 							      ?>
@@ -154,20 +166,20 @@
 						<div class="col s6">
 							<h3>Wybierz miesiąc:</h3>
 							<div class="input-field col s12">
-							    <select id="months">
+							    <select id="months" name="month">
 							      <option value="" disabled selected>Choose your option</option>
-							      <option>01</option>
-							      <option>02</option>
-							      <option>03</option>
-							      <option>04</option>
-							      <option>05</option>
-							      <option>06</option>
-							      <option>07</option>
-							      <option>08</option>
-							      <option>09</option>
-							      <option>10</option>
-							      <option>11</option>
-							      <option>12</option>
+							      <option value="01">01</option>
+							      <option value="02">02</option>
+							      <option value="03">03</option>
+							      <option value="04">04</option>
+							      <option value="05">05</option>
+							      <option value="06">06</option>
+							      <option value="07">07</option>
+							      <option value="08">08</option>
+							      <option value="09">09</option>
+							      <option value="10">10</option>
+							      <option value="11">11</option>
+							      <option value="12">12</option>
 							    </select>
 							  </div>
 						</div>
@@ -238,7 +250,7 @@
 						<script type="text/javascript">
 
 							function searchTagInPost(){
-								$.post('/strona/php/searchTag.php',{},function(data){
+								$.post('/StronaxDszko-y/php/searchTag.php',{},function(data){
 									let JSONtags = JSON.parse(data);
 									$('.tagi').each(function(index,elem){
 										let tags = $(elem).html();
@@ -324,7 +336,7 @@
 	</script>
 
 	<script type="text/javascript">
-		$(document).on('click','#send',function(e){
+		/*$(document).on('click','#send',function(e){
 			e.preventDefault();
 			let year,month,tag;
 			let link = '/strona/html/szukaj.php?';
@@ -338,7 +350,7 @@
 			e.stopPropagation();
 			$('#sendForm').submit()
 
-		})
+		})*/
 	</script>
 </body>
 </html>

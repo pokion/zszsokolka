@@ -26,8 +26,9 @@ h4{
   z-index: 5;
   left: 30px; */
 
-  /* filter: invert(100%); UŻYĆ W PRZYPADKU WOJNY NUKLEARNEJ*/
-}.slider .indicators .indicator-item {
+  /* filter: invert(100%); UŻYĆ W PRZYPADKU WOJNY NUKLEARNEJ
+}*/
+.slider .indicators .indicator-item {
   background-color: #666666;
   border: 3px solid #ffffff;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -45,7 +46,14 @@ h4{
   bottom: 0;
   left: 0;
 }
-
+.card-content > h2{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body{
+  overflow: hidden;
+}
 @media only screen and (max-width: 450px) {
   .slider{
     display: none;

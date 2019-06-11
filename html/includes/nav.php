@@ -4,7 +4,7 @@
 		<div class="navbar-fixed">
 			<nav class="bg5">
 				<div class="nav-wrapper  container">
-			    	<a href="#" class="brand-logo">Logo</a>
+			    	<a href="#" class="brand-logo"><img height="100" src="../img/static/godlo_polski.svg.png"><img style="height: 100px" src="../img/static/logo.png"></a>
 			    	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			    		<li><a href="../html/index.php">Strona Główna</a></li>
 							<li><a href="../php/logout.php">Wyloguj</a></li>
@@ -19,7 +19,7 @@
 			<nav class="bg5">
 				<div class="nav-wrapper container">
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			    	<a href="#" class="brand-logo">Logo</a>
+			    	<a href="#" class="brand-logo"><img style="height: 100px" src="../img/static/logo.png"></a>
 
 						<ul id="drop-rekrutacja" class="dropdown-content dropdown-nested">
 						  <li class="collection-item"><a href="rekrutacja_gim.php">Po gimnazjum</a></li>

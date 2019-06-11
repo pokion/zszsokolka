@@ -7,11 +7,12 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    display: table;  /* razem ze stylem footera trzymaja stópke na samym dole strony gdy contentu jest za mało*/
+    display: initial;
+    /*display: table;   razem ze stylem footera trzymaja stópke na samym dole strony gdy contentu jest za mało*/
 }
 
 footer {
-    display: table-row; /*  nie usuwać, trzyma footer na dole strony gdy za malo contentu */
+    /*display: table-row;   nie usuwać, trzyma footer na dole strony gdy za malo contentu */
     height: 0;
 }
 
@@ -146,6 +147,7 @@ h3{
 	position: relative;
 	bottom: 150px;
 }
+
 .klasy{
 	margin-top: 150px;
 	width: 90%;
@@ -216,11 +218,7 @@ nav{
 }
 .parallax-container{
 	height: 300px;
-	background-color: black;
 	position: relative;
-}
-.parallax {
-	opacity: 0.5;
 }
 .naglowek{
 	position: absolute;
@@ -261,9 +259,10 @@ footer {
 	max-height: 32px;
 	min-height: 32px;
 }
-#body{
+.body{
 	max-height: 150px;
 	min-height: 150px;
+	overflow: hidden;
 }
 .minInput{
 	width: 50px;
