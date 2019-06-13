@@ -13,7 +13,7 @@
 		include_once('includes/nav.php');
 	?>
   <div class="parallax-container">
-    <div class="parallax">
+    <div class="parallax parallxZNapisem">
 			<img src='https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' width="100%">
   </div>
 	<div class="naglowek">

@@ -8,11 +8,11 @@ html, body {
     width: 100%;
     margin: 0;
     display: initial;
-    /*display: table;   razem ze stylem footera trzymaja stópke na samym dole strony gdy contentu jest za mało*/
+  display: table;    /* razem ze stylem footera trzymaja stópke na samym dole strony gdy contentu jest za mało*/
 }
 
 footer {
-    /*display: table-row;   nie usuwać, trzyma footer na dole strony gdy za malo contentu */
+    display: table-row;  /* nie usuwać, trzyma footer na dole strony gdy za malo contentu */
     height: 0;
 }
 
@@ -219,6 +219,10 @@ nav{
 .parallax-container{
 	height: 300px;
 	position: relative;
+	background-color: black;
+}
+.parallxZNapisem{
+	opacity: 0.5;
 }
 .naglowek{
 	position: absolute;
@@ -267,8 +271,31 @@ footer {
 .minInput{
 	width: 50px;
 }
+.tutajWstaw{
+	text-align: center;
+}
+.samoPhoto{
+	height: 150px;
+	border-radius: 100px;
+}
+.samoOsoba{
+	display: inline-block;
+	padding: 20px;
+}
+.samoImie{
+	text-align: center;
+}
+.brand-logo img{
+	padding: 5px;
+}
+
 /* Mobilki Mobilki jak mnie widzicie? */
 @media only screen and (max-width: 500px) {
+	.brand-logo img{
+		height: 60px !important;
+		padding: 2px;
+	}
+
 .klasy-carousel{
 	min-height: 300px;
 		max-height: 400px;
@@ -276,7 +303,6 @@ footer {
 	.indicators{
 		visibility: hidden;
 }
-
 }
 @media only screen and (min-width: 500px) {
 .klasy-carousel{

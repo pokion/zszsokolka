@@ -14,7 +14,6 @@
   	<?php
   		include_once('includes/nav.php');
   	?>
-		<div class="container">
 			<h3>Wybierz rok szkolny:</h3>
 		<select name="year" class="years">
 			<?php
@@ -27,7 +26,6 @@
 			<div class="col s12 placeholder">
 
 		 </div>
-</div>
   <?php
     include_once('includes/footer.php');
   ?>

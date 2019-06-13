@@ -31,21 +31,12 @@ function loadCarousel(){
 				let content = "<div class=\"carousel carousel-slider klasy-carousel center-align\">";
 
 				$.each(data, function(index, element){
-					content +=  "<a class=\"carousel-item valign-wrapper\">"
-					content += "<img src=";
-					content += data[index].photo_path + " alt=\"Brak zdjęcia :'(\">";
-					if (data[index].opis == null){
-						content += "<div class=\"opis-klasy\">"
-						content += "Kierunek: " + data[index].kierunek + "<br>";
-						content += "Wychowawaca: " + data[index].wychowawca + "<br> ";
-						content += "Klasa: " + data[index].nazwa + "<br> ";
-						content += "</div>"
-					}else{
-						content += "<a class=\"btn-flat slide-up hide-on-small-only\">^</a></a>";
-					}
+					content +=  `<a class="carousel-item valign-wrapper">
+					<img src="${data[index].photo_path}" class="tooltipped" alt="Brak zdjęcia :'(" data-position="right" data-tooltip="XDDD"></a>`
 				})
 				content += "</div>";
 				placeholder.html(content);
+
 				$('.klasy-carousel').carousel({
 					fullWidth: true,
 					indicators: true

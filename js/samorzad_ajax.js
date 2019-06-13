@@ -27,30 +27,17 @@ function loadCarousel(){
 
 			//Jeśli zadziała:
 			.done(function(data){
-				let placeholder = $('.tutajWstaw');
-				let content = "";
+				let content;
 
 				$.each(data, function(index, element){
-					if(data[index].stanowisko != data[index-1].stanowisko){  //intuicyjnie niedziałający kod :<
-						content +=  "<div class=\"data[index].stanowisko\">";
-						content += "Imie:";
-						content += data[index].name;
-						content += "<br>";
-						content += "Klasa:";
-						content += data[index].klasa;
-						content += "<br>";
-					}else{
-						content += "Imie:";
-						content += data[index].name;
-						content += "<br>";
-						content += "Klasa:";
-						content += data[index].klasa;
-						content += "<br>";
-					}
-
+						content = `<div class="samoOsoba">
+											<img class="tooltipped samoPhoto" data-position="top" data-tooltip="${data[index].nazwa}" src="${data[index].img}">
+											<p class="samoImie">${data[index].imie}<br>
+											${data[index].klasa}</p>
+										</div>`
+				$('.tutajWstaw').append($(content));
 				})
-				content += "</div></div>";
-				placeholder.html(content);
+				 $('.tooltipped').tooltip();
 				})
 
 			//Jeśli nie zadziała
