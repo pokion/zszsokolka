@@ -21,6 +21,9 @@ if(!isset($_SESSION['login'])){
 		.chip{
 			font-size: 1.2rem
 		}
+		.body{
+			max-height: 100%;
+		}
 	</style>
 
 </head>
@@ -77,6 +80,9 @@ if(!isset($_SESSION['login'])){
 			</div>
 
 
+		</div>
+	</div>
+
 			<!-- modal -->
 				<div class="modal modal-fixed-footer" id="modal1">
 					<div class="modal-content">
@@ -103,6 +109,7 @@ if(!isset($_SESSION['login'])){
 
 	<br>
 	<br>
+
 	<?php
 		include_once('includes/footer.php');
 	?>

@@ -83,14 +83,14 @@ footer {
 							<script type="text/javascript" src="../js/jquery.min.js"></script>
 							<script type="text/javascript">
 								let postid = '<?php echo $_GET['id']; ?>'
-								$.post('/StronaxDszko-y/php/loadPosts.php',{id:postid},function(data){
+								$.post('/strona/php/loadPosts.php',{id:postid},function(data){
 									let JSONpar = JSON.parse(data);
 									$('.header').html(JSONpar[0].tit);
 									$('.container>p').html(JSONpar[0].bod);
 									console.log(JSONpar[0]);
 									$('.tagi').html(JSONpar[0].tagsId);
 									//tutaj jest skrypt który szyka tagi
-										$.post('/StronaxDszko-y/php/searchTag.php',{},function(data){
+										$.post('/strona/php/searchTag.php',{},function(data){
 											let JSONtags = JSON.parse(data);
 											$('.tagi').each(function(index,elem){
 												let tags = $(elem).html();
@@ -105,7 +105,7 @@ footer {
 											})
 										})
 
-										$.post('/StronaxDszko-y/php/searchImage.php',{postId:postid,main:1},function(data){
+										$.post('/strona/php/searchImage.php',{postId:postid,main:1},function(data){
 											let JSONImg = JSON.parse(data);
 											JSONImg.forEach(function(elem){
 												if(elem.main == 0){
@@ -253,7 +253,7 @@ footer {
 						<script type="text/javascript">
 
 							function searchTagInPost(){
-								$.post('/StronaxDszko-y/php/searchTag.php',{},function(data){
+								$.post('/strona/php/searchTag.php',{},function(data){
 									let JSONtags = JSON.parse(data);
 									$('.tagi').each(function(index,elem){
 										let tags = $(elem).html();
