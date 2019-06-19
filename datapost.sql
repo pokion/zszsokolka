@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 11 Kwi 2019, 10:58
--- Wersja serwera: 10.1.38-MariaDB
--- Wersja PHP: 7.3.2
+-- Czas generowania: 19 Cze 2019, 16:36
+-- Wersja serwera: 10.1.35-MariaDB
+-- Wersja PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `datapost`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `conn`
+--
+
+CREATE TABLE `conn` (
+  `id` int(11) NOT NULL,
+  `id_post` int(11) NOT NULL,
+  `id_group` int(11) NOT NULL,
+  `id_tag` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 -- --------------------------------------------------------
 
@@ -131,6 +144,243 @@ INSERT INTO `emploees` (`teacherID`, `name`, `degree`) VALUES
 (90, 'Małgorzata Dziewiątkowska', 'mgr'),
 (91, 'Paweł Piotr Zalewski', 'ks. mgr'),
 (92, 'Marlena Muszyńska', 'lic.');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `imagegroup`
+--
+
+CREATE TABLE `imagegroup` (
+  `id` int(11) NOT NULL,
+  `id_group` int(11) DEFAULT NULL,
+  `id_image` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `images`
+--
+
+CREATE TABLE `images` (
+  `image_id` int(11) NOT NULL,
+  `image_name` text COLLATE utf8mb4_polish_ci NOT NULL,
+  `main_image` bit(1) NOT NULL,
+  `position` char(50) COLLATE utf8mb4_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `klasy`
+--
+
+CREATE TABLE `klasy` (
+  `id` int(11) NOT NULL,
+  `kierunek` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `nazwa` varchar(255) COLLATE ucs2_polish_ci NOT NULL,
+  `wychowawca` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `photo_path` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `opis` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `rok` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_polish_ci;
+
+--
+-- Zrzut danych tabeli `klasy`
+--
+
+INSERT INTO `klasy` (`id`, `kierunek`, `nazwa`, `wychowawca`, `photo_path`, `opis`, `rok`) VALUES
+(1, 'Technik Technologii Drewna', 'I Td', 'Jolanta Siemieniako', '../img/static/klasy/2006/ITd.jpg', NULL, '2005/2006'),
+(2, 'Technik Technologii Drewna', 'II Td', 'Marian Sobolewski', '../img/static/klasy/2006/IITd.jpg', NULL, '2005/2006'),
+(3, 'Technik Technologii Drewna', 'III Td', 'Grzegorz Zalewski', '../img/static/klasy/2006/IIITd.jpg', NULL, '2005/2006'),
+(4, 'Technik Technologii Drewna', 'IV Td', 'Wacław Rećko', '../img/static/klasy/2006/IVTd.jpg', NULL, '2005/2006'),
+(5, 'Technik Ekonomista', 'I Te', 'Bartosz Wojciechowski', '../img/static/klasy/2006/ITe.jpg', NULL, '2005/2006'),
+(6, 'Technik Ekonomista', 'II Te', 'Jolanta Modzelewska', '../img/static/klasy/2006/IITe.jpg', NULL, '2005/2006'),
+(7, 'Technik Ekonomista', 'III Te', 'Barbara Czechowicz', '../img/static/klasy/2006/IIITe.jpg', NULL, '2005/2006'),
+(8, 'Technik Technologii odzieży', 'IV To', 'Krystyna Grygiewicz', '../img/static/klasy/2006/IVTo.jpg', NULL, '2005/2006'),
+(9, 'Technik Mechanik', 'I Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2006/ITm.jpg', NULL, '2005/2006'),
+(10, 'Technik Mechanik', 'II Tma', 'Jolanta Kaźmierowicz', '../img/static/klasy/2006/IITma.jpg', NULL, '2005/2006'),
+(11, 'Technik Mechanik', 'II Tmb', 'Renata Maliszewska', '../img/static/klasy/2006/IITmb.jpg', NULL, '2005/2006'),
+(12, 'Technik Mechanik', 'III Tm', 'Sylwester Pakuła\r\n', '../img/static/klasy/2006/IIITm.jpg', NULL, '2005/2006'),
+(13, 'Technik Mechanik', 'IV Tma', 'Marek Mozyrski', '../img/static/klasy/2006/IVTma.jpg', NULL, '2005/2006'),
+(14, 'Technik Mechanik', 'IV Tmb', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2006/IVTmb.jpg', NULL, '2005/2006'),
+(15, 'Mechanik', 'III m', 'Teresa Wojdołowicz-Michalak\r\n', '', NULL, '2005/2006'),
+(16, 'Zarządzanie Informacją ', 'I Lpia', 'Anna Tolko', '../img/static/klasy/2006/ILpia.jpg', NULL, '2005/2006'),
+(17, 'Zarządzanie Informacją ', 'I Lpib', 'Piotr Dziakowski', '../img/static/klasy/2006/ILpib.jpg', NULL, '2005/2006'),
+(18, 'Zarządzanie Informacją ', 'II Lpia', 'Jolanta Lech', '../img/static/klasy/2006/IILpia.jpg', NULL, '2005/2006'),
+(19, 'Zarządzanie Informacją ', 'II Lpib', 'Lech Czarnowicz', '../img/static/klasy/2006/IILpib.jpg', NULL, '2005/2006'),
+(20, 'Zarządzanie Informacją ', 'III Lpia', 'Ewa Mozerska', '../img/static/klasy/2006/IIILpia.jpg', NULL, '2005/2006'),
+(21, 'Zarządzanie Informacją ', 'III Lpib', 'Grażyna Małachwiej', '../img/static/klasy/2006/IIILpib.jpg', NULL, '2005/2006'),
+(22, 'Leśnictwo', 'III Lpl', 'Maria Sobolewska', '../img/static/klasy/2006/IIILpl.jpg', NULL, '2005/2006'),
+(23, 'Technik Mechanik', 'I Tm', 'Marek Mozyrski', '../img/static/klasy/2007/ITm.jpg', NULL, '2006/2007'),
+(24, 'Technik Mechanik', 'II Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2007/IITm.jpg', NULL, '2006/2007'),
+(25, 'Technik Mechanik', 'III Tma', 'Jolanta Kaźmierowicz', '../img/static/klasy/2007/IIITma.jpg', NULL, '2006/2007'),
+(26, 'Technik Mechanik', 'III Tmb', 'Renata Maliszewska', '../img/static/klasy/2007/IIITmb.jpg', NULL, '2006/2007'),
+(27, 'Technik Mechanik', 'IV Tm', 'Sylwester Pakuła', '../img/static/klasy/2007/IVTm.jpg', NULL, '2006/2007'),
+(28, 'Wielozawodowy', 'I wz', 'Maria Sobolewska', '../img/static/klasy/2007/Iwz.jpg', NULL, '2006/2007'),
+(29, 'Technik Technologii Drewna', 'I Td', 'Ewa Mozerska', '../img/static/klasy/2007/ITd.jpg', NULL, '2006/2007'),
+(30, 'Technik Technologii Drewna', 'II Td', 'Jolanta Siemieniako', '../img/static/klasy/2007/IITd.jpg', NULL, '2006/2007'),
+(31, 'Technik Technologii Drewna', 'III Td', 'Marian Sobolewski', '../img/static/klasy/2007/IIITd.jpg', NULL, '2006/2007'),
+(32, 'Technik Technologii Drewna', 'IV Td', 'Grzegorz Zalewski', '../img/static/klasy/2007/IVTd.jpg', NULL, '2006/2007'),
+(33, 'Technik Ekonomista', 'I Te', 'Iwona Skowrońska-Klimowicz', '../img/static/klasy/2007/ITe.jpg', NULL, '2006/2007'),
+(34, 'Technik Ekonomista', 'II Te', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2007/IITe.jpg', NULL, '2006/2007'),
+(35, 'Technik Ekonomista', 'III Te', 'Krystyna Grygiewicz', '../img/static/klasy/2007/IIITe.jpg', NULL, '2006/2007'),
+(36, 'Technik Ekonomista', 'IV Te', 'Barbara Czechowicz', '../img/static/klasy/2007/IVTe.jpg', NULL, '2006/2007'),
+(37, 'Zarządzanie Informacją', 'I Lpi', 'Grażyna Małachwiej', '../img/static/klasy/2007/ILpi.jpg', NULL, '2006/2007'),
+(38, 'Zarządzanie Informacją', 'II Lpia\r\n', 'Anna Tolko\r\n', '../img/static/klasy/2007/IILpia.jpg', NULL, '2006/2007'),
+(39, 'Zarządzanie Informacją', 'II Lpib', ' Piotr Dziakowski', '../img/static/klasy/2007/IILpib.jpg', NULL, '2006/2007'),
+(40, 'Zarządzanie Informacją', 'III Lpia', 'Jolanta Lech', '../img/static/klasy/2007/IIILpia.jpg', NULL, '2006/2007'),
+(41, 'Zarządzanie Informacją', 'III Lpib', 'Lech Czarnowicz', '../img/static/klasy/2007/IIILpib.jpg', NULL, '2006/2007'),
+(42, 'Technik Mechanik', 'I Tm', 'Sylwester Pakuła', '../img/static/klasy/2008/ITm.jpg', NULL, '2007/2008'),
+(43, 'Technik Mechanik', 'II Tm', 'Marek Mozyrski', '../img/static/klasy/2008/IITm.jpg', NULL, '2007/2008'),
+(44, 'Technik Mechanik', 'III Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2008/IIITm.jpg', NULL, '2007/2008'),
+(45, 'Technik Mechanik', 'IV Tma', 'Jolanta Kaźmierowicz', '../img/static/klasy/2008/IVTma.jpg', NULL, '2007/2008'),
+(46, 'Technik Mechanik', 'IV Tmb', 'Renata Maliszewska', '../img/static/klasy/2008/IVTmb.jpg', NULL, '2007/2008'),
+(47, 'Wielozawodowa', 'I wz', 'Lech Czarnowicz', '../img/static/klasy/2008/Iwz.jpg', NULL, '2007/2008'),
+(48, 'Wielozawodowa', 'II wz', 'Maria Sobolewska', '../img/static/klasy/2008/IIwz.jpg', NULL, '2007/2008'),
+(49, 'Technik Technologii Drewna', 'I Td', 'Krystyna Grzesik', '../img/static/klasy/2008/ITd.jpg', NULL, '2007/2008'),
+(50, 'Technik Technologii Drewna', 'II Td', 'Grzegorz Zalewski', '../img/static/klasy/2008/IITd.jpg', NULL, '2007/2008'),
+(51, 'Technik Technologii Drewna', 'III Td', 'Jolanta Siemieniako', '../img/static/klasy/2008/IIItd.jpg', NULL, '2007/2008'),
+(52, 'Technik Technologii Drewna', 'IV Td', 'Marian Sobolewski', '../img/static/klasy/2008/IVtd.jpg', NULL, '2007/2008'),
+(53, 'Technik Ekonomista', 'I Te', 'Barbara Czechowicz', '../img/static/klasy/2008/ITe2.jpg', NULL, '2007/2008'),
+(54, 'Technik Ekonomista', 'II Te', 'Iwona Skowrońska-Klimowicz', '../img/static/klasy/2008/IITe.jpg', NULL, '2007/2008'),
+(55, 'Technik Ekonomista', 'III Te', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2008/IIITe.jpg', NULL, '2007/2008'),
+(56, 'Technik Ekonomista', 'IV Te', 'Krystyna Grygiewicz', '../img/static/klasy/2008/IVTe.jpg', NULL, '2007/2008'),
+(57, 'Zarządzanie Informacją', 'I Lpi', 'Małgorzata Krawiel', '../img/static/klasy/2008/ILpi.jpg', NULL, '2007/2008'),
+(58, 'Zarządzanie Informacją', 'II Lpi', 'Grażyna Małachwiej', '../img/static/klasy/2008/IILpi.jpg', NULL, '2007/2008'),
+(59, 'Zarządzanie Informacją', 'III Lpia', 'Anna Tolko', '../img/static/klasy/2008/IIILpia.jpg', NULL, '2007/2008'),
+(60, 'Zarządzanie Informacją', 'III Lpib', 'Piotr Dziakowski', '../img/static/klasy/2008/IIILpib.jpg', NULL, '2007/2008'),
+(61, 'Technik Mechanik', 'I Tm', 'Anna Tolko', '../img/static/klasy/2009/ITm.jpg', NULL, '2008/2009'),
+(62, 'Technik Mechanik', 'II Tm', 'Sylwester Pakuła', '../img/static/klasy/2009/IITm.jpg', NULL, '2008/2009'),
+(63, 'Technik Mechanik', 'III Tm', 'Marek Mozyrski', '../img/static/klasy/2009/IIITm.jpg', NULL, '2008/2009'),
+(64, 'Technik Mechanik', 'IV Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2009/IVTm.jpg', NULL, '2008/2009'),
+(65, 'Technik Mechanik', 'I wz', 'Piotr Dziakowski', '../img/static/klasy/2009/Iwz.jpg', NULL, '2008/2009'),
+(66, 'Wielozawodowa', 'II wz', 'Lech Czarnowicz', '../img/static/klasy/2009/IIwz.jpg', NULL, '2008/2009'),
+(67, 'Wielozawodowa', 'III wz', 'Maria Sobolewska', '../img/static/klasy/2009/IIIwz.jpg', NULL, '2008/2009'),
+(68, 'Technik Technologii Drewna', 'I Td', 'Krystyna Grygiewicz', '../img/static/klasy/2009/ITd.jpg', NULL, '2008/2009'),
+(69, 'Technik Technologii Drewna', 'II Td', 'Krystyna Grzesik', '../img/static/klasy/2009/IITd.jpg', NULL, '2008/2009'),
+(70, 'Technik Technologii Drewna', 'IIII Td', 'Grzegorz Zalewski', '../img/static/klasy/2009/IIITd.jpg', NULL, '2008/2009'),
+(71, 'Technik Technologii Drewna', 'IV Td', 'Jolanta Siemieniako', '../img/static/klasy/2009/IVTd.jpg', NULL, '2008/2009'),
+(72, 'Technik Ekonomista', 'II Te', 'Barbara Czechowicz', '../img/static/klasy/2009/IITe.jpg', NULL, '2008/2009'),
+(73, 'Technik Ekonomista', 'III Te', 'Iwona Skowrońska-Klimowicz', '../img/static/klasy/2009/IIITe.jpg', NULL, '2008/2009'),
+(74, 'Technik Ekonomista', 'IV Te', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2009/IVTe.jpg', NULL, '2008/2009'),
+(75, 'Zarządzanie Informacją', 'I Lpi', 'Renata Maliszewska', '../img/static/klasy/2009/ILpi.jpg', NULL, '2008/2009'),
+(76, 'Zarządzanie Informacją', 'II Lpi', 'Małgorzata Krawiel / Jolanta Lech', '../img/static/klasy/2009/IILpi.jpg', NULL, '2008/2009'),
+(77, 'Zarządzanie Informacją', 'III Lpi', 'Grażyna Małachwiej', '../img/static/klasy/2009/IILpi.jpg', NULL, '2008/2009'),
+(78, 'Technik Mechanik', 'I Tma', 'Jerzy Szymaniuk', '../img/static/klasy/2010/ITma.jpg', NULL, '2009/2010'),
+(79, 'Technik Mechanik', 'I Tmb', 'Tomasz Potapczyk', '../img/static/klasy/2010/ITmb.jpg', NULL, '2009/2010'),
+(80, 'Technik Mechanik', 'II Tm', 'Anna Tolko', '../img/static/klasy/2010/IITm.jpg', NULL, '2009/2010'),
+(81, 'Technik Mechanik', 'III Tm', 'Sylwester Pakuła', '../img/static/klasy/2010/IIITm.jpg', NULL, '2009/2010'),
+(82, 'Technik Mechanik', 'IV Tm', 'Marek Mozyrski', '../img/static/klasy/2010/IVTm.jpg', NULL, '2009/2010'),
+(83, 'Wielozawodowa', 'Iwz', 'Jolanta Siemieniako', '../img/static/klasy/2010/Iwz.jpg', NULL, '2009/2010'),
+(84, 'Wielozawodowa', 'IIwz', 'Piotr Dziakowski', '../img/static/klasy/2010/IIwz.jpg', NULL, '2009/2010'),
+(85, 'Wielozawodowa', 'IIIwz', 'Lech Czarnowicz', '../img/static/klasy/2010/IIIwz.jpg', NULL, '2009/2010'),
+(86, 'Technik Technologii Drewna', 'II Td', 'Krystyna Grygiewicz', '../img/static/klasy/2010/IITd.jpg', NULL, '2009/2010'),
+(87, 'Technik Technologii Drewna', 'III Td', 'Krystyna Grzesik', '../img/static/klasy/2010/IIITd.jpg', NULL, '2009/2010'),
+(88, 'Technik Technologii Drewna', 'IV Td', 'Grzegorz Zalewski', '../img/static/klasy/2010/IVTd.jpg', NULL, '2009/2010'),
+(89, 'Technik Ekonomista', 'III Te', 'Barbara Czechowicz', '../img/static/klasy/2010/IIITe.jpg', NULL, '2009/2010'),
+(90, 'Technik Ekonomista', 'IV Te', 'Iwona Skowrońska', '../img/static/klasy/2010/IVTe.jpg', NULL, '2009/2010'),
+(91, 'Zarządzanie Informacją', 'I Lpi', 'Aneta Tymińska', '../img/static/klasy/2010/ILpi.jpg', NULL, '2009/2010'),
+(92, 'Zarządzanie Informacją', 'II Lpi', 'Renata Maliszewska', '../img/static/klasy/2010/IILpi.jpg', NULL, '2009/2010'),
+(93, 'Zarządzanie Informacją', 'III Lpi', 'Małgorzata Krawiel', '../img/static/klasy/2010/IIILpi.jpg', NULL, '2009/2010'),
+(94, 'Technik Mechanik', 'I Tm', 'Maria Sobolewska', '../img/static/klasy/2011/ITm.jpg', NULL, '2010/2011'),
+(95, 'Technik Mechanik', 'II Tma', 'Jerzy Szymaniuk', '../img/static/klasy/2011/IITma.jpg', NULL, '2010/2011'),
+(96, 'Technik Mechanik', 'II Tmb', 'Tomasz Potapczyk', '../img/static/klasy/2011/IITmb.jpg', NULL, '2010/2011'),
+(97, 'Technik Mechanik', 'III Tm', 'Anna Tolko', '../img/static/klasy/2011/IIITm.jpg', NULL, '2010/2011'),
+(98, 'Technik Mechanik', 'IV Tm', 'Sylwester Pakuła', '../img/static/klasy/2011/IVTm.jpg', NULL, '2010/2011'),
+(99, 'Wielozawodowa', 'I wz', 'Lech Czarnowicz', '../img/static/klasy/2011/Iwz.jpg', NULL, '2010/2011'),
+(100, 'Wielozawodowa', 'II wz', 'Jolanta Siemieniako', '../img/static/klasy/2011/IIwz.jpg', NULL, '2010/2011'),
+(101, 'Wielozawodowa', 'III wz', 'Piotr Dziakowski', '../img/static/klasy/2011/IIIwz.jpg', NULL, '2010/2011'),
+(102, 'Technik Technologii Drewna', 'III Td', 'Krystyna Grygiewicz', '../img/static/klasy/2011/IIITd.jpg', NULL, '2010/2011'),
+(103, 'Technik Technologii Drewna', 'IV Td', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2011/IVTd.jpg', NULL, '2010/2011'),
+(104, 'Technik Ekonomista', 'IV Te', 'Barbara Czechowicz', '../img/static/klasy/2011/IVTe.jpg', NULL, '2010/2011'),
+(105, 'Zarządzanie Informacją', 'I Lpi', 'Jolanta Lech', '../img/static/klasy/2011/ILpi.jpg', NULL, '2010/2011'),
+(106, 'Zarządzanie Informacją', 'II Lpi', 'Aneta Tymińska', '../img/static/klasy/2011/IILpi.jpg', NULL, '2010/2011'),
+(107, 'Zarządzanie Informacją', 'III Lpi', 'Renata Maliszewska', '../img/static/klasy/2011/IIILpi.jpg', NULL, '2010/2011'),
+(108, 'Technik Mechanik', 'I Tm', 'Renata Maliszewska', '../img/static/klasy/2012/ITm.jpg', NULL, '2011/2012'),
+(109, 'Technik Mechanik', 'II Tm', 'Sylwester Pakuła', '../img/static/klasy/2012/IITm.jpg', NULL, '2011/2012'),
+(110, 'Technik Mechanik', 'III Tma', 'Jerzy Szymaniuk', '../img/static/klasy/2012/IIITma.jpg', NULL, '2011/2012'),
+(111, 'Technik Mechanik', 'III Tmb', 'Tomasz Potapczyk', '../img/static/klasy/2012/IIITmb.jpg', NULL, '2011/2012'),
+(112, 'Technik Mechanik', 'IV Tm', 'Anna Tolko', '../img/static/klasy/2012/IVTm.jpg', NULL, '2011/2012'),
+(113, 'Mechaniczny i Wielozawodowy', 'I m', 'Wacław Rećko', '../img/static/klasy/2012/Im.jpg', NULL, '2011/2012'),
+(114, 'Mechaniczny i Wielozawodowy', 'II wz', 'Małgorzata Krawiel', '../img/static/klasy/2012/IIwz.jpg', NULL, '2011/2012'),
+(115, 'Technik Technologii Drewna', 'IV Td', 'Krystyna Grygiewicz', '../img/static/klasy/2012/IIITd.jpg', NULL, '2011/2012'),
+(116, 'Zarządzanie Informacją', 'II Lpi', 'Jolanta Lech', '../img/static/klasy/2012/IILpi.jpg', NULL, '2011/2012'),
+(117, 'Zarządzanie Informacją', 'III Lpi', 'Aneta Tymińska', '../img/static/klasy/2012/IIILpi.jpg', NULL, '2011/2012'),
+(118, 'Technik Mechanik', 'I Tm', 'Piotr Dziakowski', '../img/static/klasy/2013/1TM.jpg', 'tak', '2012/2013'),
+(119, 'Technik Mechanik', 'II Tm', 'Renata Maliszewska', '../img/static/klasy/2013/2TM.jpg', NULL, '2012/2013'),
+(120, 'Technik Mechanik', 'III Tm', 'Sylwester Pakuła', '../img/static/klasy/2013/3TM.jpg', 'tak', '2012/2013'),
+(121, 'Technik Mechanik', 'IV Tma', 'Jerzy Szymaniuk', '../img/static/klasy/2013/4TMa.jpg', 'tak', '2012/2013'),
+(122, 'Technik Mechanik', 'IV Tmb', 'Tomasz Potapczyk', '../img/static/klasy/2013/4TMb.jpg', 'tak', '2012/2013'),
+(123, 'Mechaniczny i Wielozawodowy', 'II m', 'Grzegorz Zubiel', '../img/static/klasy/2013/Im.jpg', NULL, '2012/2013'),
+(124, 'Mechaniczny i Wielozawodowy', 'I wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2013/1WZ.jpg', 'tak', '2012/2013'),
+(125, 'Mechaniczny i Wielozawodowy', 'III wz', 'Małgorzata Krawiel', '../img/static/klasy/2013/IIwz.jpg', NULL, '2012/2013'),
+(126, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Marek Mozyrski', '../img/static/klasy/2013/1TFI.jpg', 'tak', '2012/2013'),
+(127, 'Zarządzanie Informacją', 'III Lpi', 'Jolanta Lech', '../img/static/klasy/2013/3LPi.jpg', 'tak', '2012/2013'),
+(128, 'Technik Mechanik', 'I Tm', 'Anna Tolko', '../img/static/klasy/2014/ITm.jpg', 'tak', '2013/2014'),
+(129, 'Technik Mechanik', 'II Tm', 'Piotr Dziakowski\r\n', 'NIE MA', NULL, '2013/2014'),
+(130, 'Technik Mechanik', 'III Tm', 'Renata Maliszewska', '../img/static/klasy/2014/IIITm.jpg', 'tak', '2013/2014'),
+(131, 'Technik Mechanik', 'IV Tm', 'Sylwester Pakuła', '../img/static/klasy/2014/IVTm.jpg', 'tak', '2013/2014'),
+(132, 'Mechaniczny i Wielozawodowy', 'III m', 'Grzegorz Zubiel', '../img/static/klasy/2014/Im.jpg', NULL, '2013/2014'),
+(133, 'Mechaniczny i Wielozawodowy', 'I wz', 'Klaudia Kmon - Ciuruk\r\n', '../img/static/klasy/2014/Iwz.jpg', 'tak', '2013/2014'),
+(134, 'Mechaniczny i Wielozawodowy', 'II wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2014/IIwz.jpg', NULL, '2013/2014'),
+(135, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Małgorzata Krawiel', '../img/static/klasy/2014/ITfi.jpg', 'tak', '2013/2014'),
+(136, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Marek Mozyrski', '../img/static/klasy/2014/IITfi.jpg', 'tak', '2013/2014'),
+(137, 'Technik Mechanik', 'I Tm', 'Jerzy Szymaniuk', 'NIE MA', NULL, '2014/2015'),
+(138, 'Technik Mechanik', 'II Tm', 'Anna Tolko', '../img/static/klasy/2015/ITm.jpg', 'tak', '2014/2015'),
+(139, 'Technik Mechanik', 'III Tm', 'Piotr Dziakowski\r\n', '../img/static/klasy/2015/IIITm.jpg', NULL, '2014/2015'),
+(140, 'Technik Mechanik', 'IV Tm', ' Renata Maliszewska', '../img/static/klasy/2015/IVTm.jpg', NULL, '2014/2015'),
+(141, 'Mechaniczny i Wielozawodowy', 'I wz', 'Krystyna Grygiewicz', '../img/static/klasy/2015/Iwz.jpg', NULL, '2014/2015'),
+(142, 'Mechaniczny i Wielozawodowy', 'II wz', 'Klaudia Kmon - Ciuruk\r\n', '../img/static/klasy/2015/IIwz.jpg', NULL, '2014/2015'),
+(143, 'Mechaniczny i Wielozawodowy', 'III wz', 'Iwona Mackiewicz-Kowalczuk', 'NIE MA', NULL, '2014/2015'),
+(144, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Sylwester Pakuła', 'NIE MA', NULL, '2014/2015'),
+(145, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Aneta Tymińska', '../img/static/klasy/2015/IITfi.jpg', NULL, '2014/2015'),
+(146, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Marek Mozyrski', '../img/static/klasy/2015/IIITi.jpg', NULL, '2014/2015'),
+(147, 'Wielozawodowa', 'I wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2016/I_wz.jpg', NULL, '2015/2016'),
+(148, 'Wielozawodowa', 'II wz', 'Krystyna Grygiewicz', '../img/static/klasy/2016/II_wz.jpg', NULL, '2015/2016'),
+(149, 'Wielozawodowa', 'III wz', 'Klaudia Kmon-Ciuruk / Izabela Garkowska', '../img/static/klasy/2016/III_wz.jpg', NULL, '2015/2016'),
+(150, 'Technik Mechanik', 'I Tm', 'Renata Maliszewska', '../img/static/klasy/2016/I_Tm.jpg', NULL, '2015/2016'),
+(151, 'Technik Mechanik', 'II Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2016/II_Tm.jpg', NULL, '2015/2016'),
+(152, 'Technik Mechanik', 'III Tm', 'Anna Tolko', '../img/static/klasy/2016/III_Tm.jpg', NULL, '2015/2016'),
+(153, 'Technik Mechanik', 'IV Tm', 'Piotr Dziakowski', '../img/static/klasy/2016/IV_Tm.jpg', NULL, '2015/2016'),
+(154, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Edyta Jelska', '../img/static/klasy/2016/I_Tfi.jpg', NULL, '2015/2016'),
+(155, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Sylwester Pakuła', '../img/static/klasy/2016/II_Tfi.jpg', NULL, '2015/2016'),
+(156, 'Technik Usług Fryzjerskich i Technik InformatykTechnik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Aneta Tymińska', '../img/static/klasy/2016/III_Tfi.jpg', NULL, '2015/2016'),
+(157, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Elwira Zabłocka', '../img/static/klasy/2016/IV_Tfi.jpg', NULL, '2015/2016'),
+(158, 'Wielozawodowa', 'I wz', 'Jolanta Lech', '../img/static/klasy/2017/1_WZ.jpg', 'tak', '2016/2017'),
+(159, 'Wielozawodowa', 'II wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2017/2_WZ.jpg', 'tak', '2016/2017'),
+(160, 'Wielozawodowa', 'III wz', 'Krystyna Grygiewicz', '../img/static/klasy/2017/3_WZ.jpg', 'tak', '2016/2017'),
+(161, 'Technik Mechanik', 'I Tm', 'Piotr Dziakowski', '../img/static/klasy/2017/1_TM.jpg', 'tak', '2016/2017'),
+(162, 'Technik Mechanik', 'II Tm', 'Renata Maliszewska', '../img/static/klasy/2017/2_TM.jpg', 'tak', '2016/2017'),
+(163, 'Technik Mechanik', 'III Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2017/3_TM.jpg', 'tak', '2016/2017'),
+(164, 'Technik Mechanik', 'IV Tm', 'Anna Tolko', '../img/static/klasy/2017/4_TM.jpg', 'tak', '2016/2017'),
+(165, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Marek Mozyrski', '../img/static/klasy/2017/1_TFI.jpg', 'tak', '2016/2017'),
+(166, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Edyta Jelska', '../img/static/klasy/2017/2_TFI.jpg', 'tak', '2016/2017'),
+(167, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Sylwester Pakuła', '../img/static/klasy/2017/3_TFI.jpg', 'tak', '2016/2017'),
+(168, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Aneta Tymińska', '../img/static/klasy/2017/4_TFI.jpg', 'tak', '2016/2017'),
+(169, 'BARDZO', 'GRUPOWA', 'FOTKA', '../img/static/klasy/2017/ZSZ_all.jpg', 'tak', '2016/2017'),
+(170, 'Klasa Wielozawodowa', 'I wz', 'Aneta Tymińska', '../img/static/klasy/2018/1_WZ.jpg', NULL, '2017/2018'),
+(171, 'Klasa Wielozawodowa', 'II wz', 'Jolanta Lech', '../img/static/klasy/2018/2_WZ.jpg', NULL, '2017/2018'),
+(172, 'Klasa Wielozawodowa', 'III wz', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2018/3_WZ.jpg', NULL, '2017/2018'),
+(173, 'Technik Mechanik', 'I Tm', 'Anna Tolko', '../img/static/klasy/2018/1_TM.jpg', NULL, '2017/2018'),
+(174, 'Technik Mechanik', 'II Tm', 'Piotr Dziakowski', '../img/static/klasy/2018/2_TM.jpg', NULL, '2017/2018'),
+(175, 'Technik Mechanik', 'III Tm', 'Renata Maliszewska', '../img/static/klasy/2018/3_TM.jpg', NULL, '2017/2018'),
+(176, 'Technik Mechanik', 'IV Tm', 'Jerzy Szymaniuk', '../img/static/klasy/2018/4_TM.jpg', NULL, '2017/2018'),
+(177, 'Technik Usług Fryzjerskich i Technik Informatyk', 'I Tfi', 'Klaudia Kmon-Ciuruk', '../img/static/klasy/2018/1_Tfi.jpg', NULL, '2017/2018'),
+(178, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Jolanta Siemieniako', '../img/static/klasy/2018/2_Tfi.jpg', NULL, '2017/2018'),
+(179, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Edyta Jelska', '../img/static/klasy/2018/3_Tfi.jpg', NULL, '2017/2018'),
+(180, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Sylwester Pakuła', '../img/static/klasy/2018/4_Tfi.jpg', NULL, '2017/2018'),
+(181, 'Wielozawodowa', 'I wz', 'Krystyna Grygiewicz', '../img/static/klasy/2019/1_WZ.jpg', 'tak', '2018/2019'),
+(182, 'Wielozawodowa', 'II wz', 'Aneta Tymińska', '../img/static/klasy/2019/2_WZ.jpg', 'tak', '2018/2019'),
+(183, 'Wielozawodowa', 'III wz', 'Jolanta Lech', 'NIE MA', 'tak', '2018/2019'),
+(184, 'Technik Usług Fryzjerskich, Technik Informatyk i Technik Mechanik', 'I T', 'Iwona Mackiewicz-Kowalczuk', '../img/static/klasy/2019/1_T.jpg', 'tak', '2018/2019'),
+(185, 'Technik Usług Fryzjerskich i Technik Informatyk', 'II Tfi', 'Klaudia Kmon-Ciuruk', '../img/static/klasy/2019/2_Tfi.jpg', 'tak', '2018/2019'),
+(186, 'Technik Usług Fryzjerskich i Technik Informatyk', 'III Tfi', 'Marek Mozyrski', '../img/static/klasy/2019/3_Tfi.jpg', 'tak', '2018/2019'),
+(187, 'Technik Usług Fryzjerskich i Technik Informatyk', 'IV Tfi', 'Elwira Zabłocka', '../img/static/klasy/2019/4_Tfi.jpg', 'tak', '2018/2019'),
+(188, 'Technik Mechanik', 'II Tm', 'Anna Tolko', '../img/static/klasy/2019/2_Tm.jpg', 'tak', '2018/2019'),
+(189, 'Technik Mechanik', 'III Tm', 'Piotr Dziakowski', 'NIE MA', 'tak', '2018/2019'),
+(190, 'Technik Mechanik', 'IV Tm', 'Renata Maliszewska', 'NIE MA', 'tak', '2018/2019');
 
 -- --------------------------------------------------------
 
@@ -601,6 +851,360 @@ INSERT INTO `positions` (`positionID`, `position`, `position2`, `position3`, `ph
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `posts`
+--
+
+CREATE TABLE `posts` (
+  `post_id` int(11) NOT NULL,
+  `title` text COLLATE utf8mb4_polish_ci NOT NULL,
+  `body` text COLLATE utf8mb4_polish_ci NOT NULL,
+  `post_data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+--
+-- Zrzut danych tabeli `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `title`, `body`, `post_data`) VALUES
+(2, 'nastepny posrt ', '16 kwietnia 2019 roku na hali przy Zespole Szkół w Sokółce odbyły się XX Mistrzostwa Szkół Ponadgimnazjalnych Powiatu Sokólskiego w Ortografii. W konkursie wzięło udział czworo uczniów Zespołu Szkół Zawodowych w Sokółce: Kamila Borys, Amelia Doroszkiewicz (obie I T), Klaudia Łysik i Marcin Strzałkowski (oboje II Tfi). Jak pozostałych 23 uczestników zmagali się z bardzo trudnym dyktandem pt. \"Sportowe igrzyska\", a na koniec wszyscy otrzymali dyplomy uczestnictwa.\r\n\r\nOpiekę nad uczniami sprawowała pani Jolanta Siemieniako.', '2019-04-22 15:16:35'),
+(3, 'HAHAHAH jezfasdf ', '16 kwietnia 2019 roku na hali przy Zespole Szkół w Sokółce odbyły się XX Mistrzostwa Szkół Ponadgimnazjalnych Powiatu Sokólskiego w Ortografii. W konkursie wzięło udział czworo uczniów Zespołu Szkół Zawodowych w Sokółce: Kamila Borys, Amelia Doroszkiewicz (obie I T), Klaudia Łysik i Marcin Strzałkowski (oboje II Tfi). Jak pozostałych 23 uczestników zmagali się z bardzo trudnym dyktandem pt. \"Sportowe igrzyska\", a na koniec wszyscy otrzymali dyplomy uczestnictwa.\r\n\r\nOpiekę nad uczniami sprawowała pani Jolanta Siemieniako.', '2019-04-22 15:16:44'),
+(5, 'HAHAHAH jezfasdf adsf21', '16 kwietnia 2019 roku na hali przy Zespole Szkół w Sokółce odbyły się XX Mistrzostwa Szkół Ponadgimnazjalnych Powiatu Sokólskiego w Ortografii. W konkursie wzięło udział czworo uczniów Zespołu Szkół Zawodowych w Sokółce: Kamila Borys, Amelia Doroszkiewicz (obie I T), Klaudia Łysik i Marcin Strzałkowski (oboje II Tfi). Jak pozostałych 23 uczestników zmagali się z bardzo trudnym dyktandem pt. \"Sportowe igrzyska\", a na koniec wszyscy otrzymali ', '2019-04-21 22:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `samorzad`
+--
+
+CREATE TABLE `samorzad` (
+  `id` int(11) NOT NULL,
+  `imie` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `klasa` varchar(10) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `rok` varchar(10) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `stanowiskoID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_polish_ci;
+
+--
+-- Zrzut danych tabeli `samorzad`
+--
+
+INSERT INTO `samorzad` (`id`, `imie`, `klasa`, `rok`, `stanowiskoID`) VALUES
+(1, 'Omar Szczęsnowicz', 'IV Tfi', '2018/2019', 1),
+(2, 'Paulina Żukiewicz', 'II Tfi', '2018/2019', 2),
+(3, 'Natalia Paszko', 'II wz', '2018/2019', 3),
+(4, 'Monika Nowik', 'IV Tfi', '2018/2019', 4),
+(5, 'Wiktoria Czepiel', 'I T', '2018/2019', 4),
+(6, 'Klaudia Łysik', 'II Tfi', '2018/2019', 5),
+(7, 'Klaudia Biziuk ', 'IV Tfi', '2018/2019', 5),
+(8, 'Magdalena Kunda', 'IV Tfi', '2018/2019', 5),
+(9, 'Klaudia Pawełko', 'IV Tfi', '2018/2019', 5),
+(10, 'Dominika Iwanowska', 'I T', '2018/2019', 5),
+(11, 'Kamila Cholewska', 'I T', '2018/2019', 5),
+(12, 'Wiktoria Czepiel', 'I T', '2018/2019', 5),
+(13, 'Kacper Babynko', 'IV Tm', '2018/2019', 6),
+(14, 'Mateusz Wiski', 'IV Tm', '2018/2019', 6),
+(15, 'Paweł Olechno', 'III Tm', '2018/2019', 6),
+(16, 'Patryk Rafalczuk', 'II Tfi', '2018/2019', 6),
+(17, 'Maciej Kiemiesz', 'II Tm', '2018/2019', 6),
+(18, 'Tomasz Paszko', 'III Tfi', '2018/2019', 7),
+(19, 'Piotr Jacewicz', 'III Tm', '2018/2019', 7),
+(20, 'Szymon Wąsowicz', 'III Tm', '2018/2019', 7),
+(21, 'Michał Gojko', 'III Tm', '2018/2019', 7),
+(22, 'Daniel Maksimczyk', 'II Tm', '2018/2019', 8),
+(23, 'Łukasz Czajkowski', 'I wz', '2018/2019', 8),
+(24, 'mgr Elwira Zabłocka', '', '2018/2019', 9),
+(25, 'mgr Renata Maliszewska', '', '2018/2019', 9),
+(26, 'Aneta Gojko ', 'IV Tfi', '2017/2018', 1),
+(27, 'Omar Szczęsnowicz', 'III Tfi', '2017/2018', 2),
+(28, 'Kamil Dutkiewicz', 'II wz', '2017/2018', 2),
+(29, 'Karolina Jurczenia', 'IV Tfi', '2017/2018', 3),
+(30, 'Monika Nowik', 'III Tfi', '2017/2018', 4),
+(31, 'Monika Nowik', 'III Tfi', '2017/2018', 5),
+(32, 'Klaudia Biziuk', 'III Tfi', '2017/2018', 5),
+(33, 'Magdalena Kunda', 'III Tfi', '2017/2018', 5),
+(34, 'Klaudia Pawełko', 'III Tfi', '2017/2018', 5),
+(35, 'Kacper Babynko', 'III Tm', '2017/2018', 6),
+(36, 'Mateusz Wiski', 'II Tm', '2017/2018', 6),
+(37, 'Paweł Olechno', 'I Tm', '2017/2018', 6),
+(38, 'Kamil Sołowiej', 'II Tfi', '2017/2018', 7),
+(39, 'Maciej Kułak', 'III Tfi', '2017/2018', 7),
+(40, 'Szymon Wąsowicz', 'II Tm', '2017/2018', 7),
+(41, 'Kamil Kirpsza', 'I Tm', '2017/2018', 7),
+(42, 'Maciej Kiemiesz', 'I Tm', '2017/2018', 7),
+(43, 'Michał Gojko', 'II Tm', '2017/2018', 7),
+(44, 'Paweł Borowik', 'IV Tm', '2017/2018', 8),
+(45, 'Patryk Bułatewicz', 'IV Tm', '2017/2018', 8),
+(46, 'mgr Renata Maliszewska', '', '2017/2018', 9),
+(47, 'mgr Elwira Zabłocka', '', '2017/2018', 9),
+(48, 'Aneta Gojko', 'III Tfi', '2016/2017', 1),
+(49, 'Marta Grynczel', 'IV Tfi', '2016/2017', 2),
+(50, 'Tomasz Paszko', 'I Tfi', '2016/2017', 3),
+(51, 'Patrycja Maliszewska', 'IV Tfi', '2016/2017', 4),
+(52, 'Monika Nowik', 'II Tfi', '2016/2017', 5),
+(53, 'Klaudia Biziuk', 'II Tfi', '2016/2017', 5),
+(54, 'Magdalena Kunda', 'II Tfi', '2016/2017', 5),
+(55, 'Kacper Babynko', 'II Tm', '2016/2017', 6),
+(56, 'Szymon Szlachta', 'II Tm', '2016/2017', 6),
+(57, 'Patryk Sawoń', 'II Tm', '2016/2017', 6),
+(58, 'Wojciech Chociej', 'I Tm', '2016/2017', 7),
+(59, 'Adrian Jakimik', 'I Tm', '2016/2017', 7),
+(60, 'Szymon Wąsowicz', 'I Tm', '2016/2017', 7),
+(61, 'Angelika Szulewska', 'III Tfi', '2016/2017', 8),
+(62, 'mgr Renata Maliszewska', '', '2016/2017', 9),
+(63, 'mgr Elwira Zabłocka', '', '2016/2017', 9),
+(64, 'Aneta Gojko', 'II Tfi', '2015/2016', 1),
+(65, 'Adrian Macutkiewicz', 'IV Tm', '2015/2016', 2),
+(66, 'Karolina Jurczenia', 'II Tfi', '2015/2016', 3),
+(67, 'Monika Nowik', 'I Tfi', '2015/2016', 4),
+(68, 'Angelika Szulewska', 'II Tfi', '2015/2016', 5),
+(69, 'Klaudia Biziuk', 'I Tfi', '2015/2016', 5),
+(70, 'Magdalena Kunda', 'I Tfi', '2015/2016', 5),
+(71, 'Dominika Beczyńska', 'V Tfi', '2015/2016', 5),
+(72, 'Dominika Pużuk', 'V Tfi', '2015/2016', 5),
+(73, 'Michał Kozłowski', 'I Tm', '2015/2016', 6),
+(74, 'Krystian Białous', 'I Tm', '2015/2016', 6),
+(75, 'Patycja Maliszewska', 'III Tfi', '2015/2016', 6),
+(76, 'Marcin Fiedorczyk', 'II Tfi', '2015/2016', 7),
+(77, 'Paweł Laskowski ', 'IV Tm', '2015/2016', 7),
+(78, 'Paweł Klimuk', 'IV Tm', '2015/2016', 7),
+(79, 'Gabriela Dowgiert', 'III Tfi', '2015/2016', 8),
+(80, 'Ewelina Zielenkiewicz', 'III Tfi', '2015/2016', 8),
+(81, 'mgr Renata Maliszewska', '', '2015/2016', 9),
+(82, 'mgr Elwira Zabłocka', '', '2015/2016', 9),
+(83, 'Julia Kułak', 'III Tfi', '2014/2015', 1),
+(84, 'Aneta Gojko', 'I Tf', '2014/2015', 2),
+(85, 'Dawid  Czajkowski', 'III Tm', '2014/2015', 3),
+(86, 'Edyta Aniśko', 'III Tfi', '2014/2015', 4),
+(87, 'Dominika Beczyńska', 'III Tfi', '2014/2015', 5),
+(88, 'Dominika Pużuk', 'III Tfi', '2014/2015', 5),
+(89, 'Edyta Kucharewicz ', 'III Tfi', '2014/2015', 5),
+(90, 'Paula Dziedzicka', 'III Tfi', '2014/2015', 5),
+(91, 'Joanna Narel', 'III Tfi', '2014/2015', 5),
+(92, 'Karolina Sieminiako', 'I Tfi', '2014/2015', 6),
+(93, 'Ewa Bondaryk', 'I wz', '2014/2015', 6),
+(94, 'Monika Wysocka', 'I wz', '2014/2015', 6),
+(95, 'Kamila Kisiel', 'II Tfi', '2014/2015', 6),
+(96, 'Gabriela Dowgiert', 'II Tfi', '2014/2015', 6),
+(97, 'Piotr Daszuta', 'II Tm', '2014/2015', 7),
+(98, 'Marek Klejbuk', 'IV Tm', '2014/2015', 7),
+(99, 'Łukasz Hołownia ', 'IV Tm', '2014/2015', 7),
+(100, 'Grzegorz Doroszkiewicz', 'IV Tm', '2014/2015', 7),
+(101, 'Patryk Gieniusz', 'IV Tm', '2014/2015', 7),
+(102, 'Paweł Laskowski', 'III Tm', '2014/2015', 8),
+(103, 'Paweł Klimiuk', 'III Tm', '2014/2015', 8),
+(104, 'mgr Renata Maliszewska', '', '2014/2015', 9),
+(105, 'mgr Aneta Tymińska', '', '2014/2015', 9),
+(106, 'Julia Kułak', 'II Tfi', '2013/2014', 1),
+(107, 'Dawid Czajkowski', 'I Tm', '2013/2014', 2),
+(108, 'Patryk Gieniusz ', 'III Tm', '2013/2014', 3),
+(109, 'Edyta Aniśko', 'II Tfi', '2013/2014', 4),
+(110, 'Dominika Beczyńska', 'II Tfi', '2013/2014', 5),
+(111, 'Karolina Krawczyk', 'II Tfi', '2013/2014', 5),
+(112, 'Marek Klejbuk', 'III Tm', '2013/2014', 5),
+(113, 'Grzegorz Doroszkiewicz', 'III Tm', '2013/2014', 5),
+(114, 'Iza Szamreto', 'II Tfi', '2013/2014', 5),
+(115, 'Patryk Gieniusz', 'III Tm', '2013/2014', 5),
+(116, 'Norman Hećman', 'I Tfi', '2013/2014', 7),
+(117, 'Kamil Iwaszkiewicz', 'I Tm', '2013/2014', 7),
+(118, 'Gabriela Dowgiert', 'I Tfi', '2013/2014', 6),
+(119, 'Tomasz Fiłonowicz', 'I Tm', '2013/2014', 6),
+(120, 'Rafał Andruszkiewicz', 'I Tm', '2013/2014', 6),
+(121, 'Maciej Burniewicz', 'III Tm', '2013/2014', 8),
+(122, 'mgr Renata Maliszewska', '', '2013/2014', 9),
+(123, 'mgr Aneta Tymińska', '', '2013/2014', 9),
+(124, 'Karolina Drożdżewicz', 'III Lpi', '2012/2013', 1),
+(125, 'Maciej Burniewicz ', 'II Tm', '2012/2013', 2),
+(126, 'Małgorzata Borys', 'III Lpi', '2012/2013', 3),
+(127, 'Monika Jacewicz', 'III Lpi', '2012/2013', 4),
+(128, 'Adrian Jopich', 'III Tm', '2012/2013', 4),
+(129, 'Patryk Gieniusz', 'II Tm', '2012/2013', 5),
+(130, 'Patryk Wojszel', 'II Tm', '2012/2013', 5),
+(131, 'Iwona Bućko', 'III Lpi', '2012/2013', 5),
+(132, 'Paulina Kondrat', 'III Lpi', '2012/2013', 5),
+(133, 'Mateusz Czepiel ', 'II Tm', '2012/2013', 5),
+(134, 'Mateusz Czepiel', 'II Tm', '2012/2013', 5),
+(135, 'Rafał Dzienis', 'IV Tma', '2012/2013', 7),
+(136, 'Emil Jackiewicz', 'IVTm', '2012/2013', 7),
+(137, 'Julia Kułak', 'I Tfi', '2012/2013', 7),
+(138, 'Edyta Aniśko', 'I Tfi', '2012/2013', 7),
+(139, 'Paweł Kilimuk', 'I Tm', '2012/2013', 6),
+(140, 'Paweł Kaskowski', 'I Tm', '2012/2013', 6),
+(141, 'Dawid Jurkowski', 'IV Tmb', '2012/2013', 6),
+(142, 'Rafał Orpik', 'III Tm', '2012/2013', 8),
+(143, 'mgr Renata Maliszewska', '', '2012/2013', 9),
+(144, 'mgr Aneta Tymińska', '', '2012/2013', 9),
+(145, 'Monika Damszel', 'III Lpi', '2011/2012', 1),
+(146, 'Paulina Kondrat ', 'II Lpi', '2011/2012', 2),
+(147, 'Marcin Górski', 'IV Tm', '2011/2012', 3),
+(148, '\r\nMarta Taudul', 'III Lpi', '2011/2012', 4),
+(149, 'Adrian Jopich', 'II Tm', '2011/2012', 4),
+(150, 'Paulina Gardziejczyk', 'III Lpi', '2011/2012', 5),
+(151, 'Urszula Dowgier', 'III Lpi', '2011/2012', 5),
+(152, 'Aniela Krawiel', 'III Lpi', '2011/2012', 5),
+(153, 'Karolina Drożdżewicz', 'III Lpi', '2011/2012', 5),
+(154, 'Dawid Kaźmierowicz', 'IV Tm', '2011/2012', 7),
+(155, 'Emil Jackiewicz', 'III Tm', '2011/2012', 7),
+(156, 'Marcin Woronowicz', 'IV Tm', '2011/2012', 7),
+(157, 'Rafał Dzienis', 'III Tma', '2011/2012', 7),
+(158, 'Paweł Wierzbicki', 'II Lpi', '2011/2012', 6),
+(159, 'Paulina Safarowicz', 'III Lpi', '2011/2012', 6),
+(160, 'Małgorzata Borys', 'II Lpi', '2011/2012', 6),
+(161, 'Ewelina Nowik', 'II Lpi', '2011/2012', 6),
+(162, 'Edyta Lingo', 'III Lpi', '2011/2012', 8),
+(163, 'Rafał Orpik', 'II Tm', '2011/2012', 8),
+(164, 'mgr Renata Maliszewska', '', '2011/2012', 9),
+(165, 'mgr Aneta Tymińska', '', '2011/2012', 9),
+(167, 'Magdalena Acewicz', 'III Lpi', '2010/2011', 1),
+(168, 'Monika Damszel', 'II Lpi', '2010/2011', 2),
+(169, 'Ewa Mozolewska', 'III Lpi', '2010/2011', 3),
+(170, 'Marta Taudul', 'II Lpi', '2010/2011', 4),
+(171, 'Dawid Birkos', 'II Lpi', '2010/2011', 4),
+(172, 'Marlena Pawełko', 'IV Te', '2010/2011', 5),
+(173, 'Marlena Aniśko', 'IV Te', '2010/2011', 5),
+(174, 'Magdalena Szydłowska', 'IV Te', '2010/2011', 5),
+(175, 'Paulina Gardziejczyk', 'II Lpi', '2010/2011', 5),
+(176, 'Edyta Lingo', 'II Lpi', '2010/2011', 5),
+(177, 'Karolina Drożdżewicz', 'I Lpi', '2010/2011', 5),
+(178, 'Paulina Kondrat', 'I Lpi', '2010/2011', 5),
+(179, 'Patryk Puziuk', 'IV Td', '2010/2011', 7),
+(180, 'Dawid Kaźmierowicz', 'III Tm', '2010/2011', 7),
+(181, 'Marcin Woronowicz', 'III Tm', '2010/2011', 7),
+(182, 'Rafał Dzienis', 'II Tma', '2010/2011', 7),
+(183, 'Katarzyna Kasiukiewicz', 'III Lpi', '2010/2011', 6),
+(184, 'Natalia Chwiedźko', 'III Lpi', '2010/2011', 6),
+(185, 'Gabriela Tomaszycka', 'III Lpi', '2010/2011', 6),
+(186, 'Piotr Czarnecki', 'IV Td', '2010/2011', 6),
+(187, 'Paulina Kisiel', 'II Lpi', '2010/2011', 6),
+(188, 'Paweł Skórski', 'IV Tm', '2010/2011', 8),
+(189, 'Adam Hrynkiewicz', 'IV Tm', '2010/2011', 8),
+(190, 'mgr Renata Maliszewska', '', '2010/2011', 9),
+(191, 'mgr Grzegorz Zalewski', '', '2010/2011', 9),
+(192, 'Bogusława Borys', 'IV Te', '2009/2010', 1),
+(193, 'Magdalena Acewicz', 'II Lpi', '2009/2010', 2),
+(194, 'Ewa Mozolewska', 'II Lpi', '2009/2010', 3),
+(195, 'Katarzyna Kasiukiewicz', 'II Lpi', '2009/2010', 4),
+(196, 'Natalia Chwiedźko', 'II Lpi', '2009/2010', 4),
+(197, 'Marlena Pawełko', 'III Te', '2009/2010', 5),
+(198, 'Monika Miltyk', 'III Te', '2009/2010', 5),
+(199, 'Marlena Aniśko', 'III Te', '2009/2010', 5),
+(200, 'Magdalena Szydłowska', 'III Te', '2009/2010', 5),
+(201, 'Paulina Gardziejczyk ', 'I Lpi', '2009/2010', 5),
+(202, 'Piotr Czarnecki', 'III Td', '2009/2010', 7),
+(203, 'Patryk Puziuk', 'III Td', '2009/2010', 7),
+(204, 'Maciej Puciłowski', 'III Td', '2009/2010', 7),
+(205, 'Dawid Kaźmierowicz', 'II Tm', '2009/2010', 7),
+(206, 'Marcin Woronowicz', 'II Tm', '2009/2010', 7),
+(207, 'Karol Pacuk', 'IV Tm', '2009/2010', 6),
+(208, 'Ewa Maciejczyk', 'III Lpi', '2009/2010', 6),
+(209, 'Gabriela Tomaszycka', 'II Lpi', '2009/2010', 6),
+(210, 'Monika Damszel', 'I Lpi', '2009/2010', 6),
+(211, 'Diana Murmyło', 'I Lpi', '2009/2010', 6),
+(212, 'Paulina Kisiel', 'II Lpi', '2009/2010', 6),
+(213, 'Kamil Woronowicz', 'II Lpi', '2009/2010', 6),
+(214, 'Paulina Szumowska', 'II Lpi', '2009/2010', 6),
+(215, 'Paweł Skórski ', 'III Tm', '2009/2010', 8),
+(216, 'Agnieszka Pul ', 'I Lpi', '2009/2010', 8),
+(217, 'mgr Iwona Skowrońska', '', '2009/2010', 9),
+(218, 'mgr Klaudia Adrianna Kmon-Ciuruk', '', '2009/2010', 9),
+(219, 'Bogusława Borys', 'III Te', '2008/2009', 1),
+(220, 'Dawid Kazimierowicz ', 'I Tm', '2008/2009', 2),
+(221, 'Martyna Śliż', 'III Te', '2008/2009', 4),
+(222, 'Damian Rygasiewicz', 'III Te', '2008/2009', 6),
+(223, 'Ewa Lingo', 'II Lpi', '2008/2009', 6),
+(224, 'Edyta Cilulko', 'III Lpi', '2008/2009', 6),
+(225, 'Radosław Dowgiert', 'II Td', '2008/2009', 7),
+(226, 'Piotr Józefowicz', 'II Td', '2008/2009', 7),
+(227, 'Maciej Puciłowski', 'II Td', '2008/2009', 7),
+(228, 'Ewelina Banaś', 'III Te', '2008/2009', 5),
+(229, 'Żaneta Gejdel ', 'III Te', '2008/2009', 5),
+(230, 'Bogusława Borys', 'III Te', '2008/2009', 5),
+(231, 'Martyna Śliż', 'III Te', '2008/2009', 5),
+(232, 'Magdalena Rećko ', 'III Te', '2008/2009', 5),
+(233, 'Monika Czaplińska', 'II Lpi', '2008/2009', 5),
+(234, 'Tomasz Olszewski', 'III Tm', '2008/2009', 10),
+(235, 'Łukasz Sokołowski ', 'I Lpi', '2008/2009', 10),
+(236, 'Mariusz Woronowicz', 'I Tm', '2008/2009', 10),
+(237, 'Piotr Sławiński', 'II Tm', '2008/2009', 10),
+(238, 'Paweł Skórski', 'II Tm', '2008/2009', 8),
+(239, 'Łukasz Bielecki', 'IV Te', '2008/2009', 8),
+(240, 'Małgorzata Woronowicz', 'III Lpi', '2008/2009', 8),
+(241, 'mgr Iwona Skowrońska-Klimowicz', '', '2008/2009', 9),
+(242, 'mgr Klaudia Adrianna Kmon-Ciuruk', '', '2008/2009', 9),
+(243, 'Beata Harasimowicz', 'IV Te', '2007/2008', 1),
+(244, 'Bogusława Borys', 'II Te', '2007/2008', 2),
+(245, 'Martyna Śliż', 'II Te', '2007/2008', 4),
+(246, 'Julita Błahuszewska ', 'I Te', '2007/2008', 3),
+(247, 'Paweł Glebowicz', 'III Td', '2007/2008', 6),
+(248, 'Tomasz Lis', 'II Tm', '2007/2008', 6),
+(249, 'Patrycja Sobolewska', 'III Lpia', '2007/2008', 5),
+(250, 'Natalia Małachwiej', 'III Lpia', '2007/2008', 5),
+(251, 'Ewa Lingo', 'I Lpi', '2007/2008', 5),
+(252, 'Monika Jaźwińska', 'I Te', '2007/2008', 5),
+(253, 'Agnieszka Bułkowska', 'IV Te', '2007/2008', 5),
+(254, 'Izabela Dźwil', 'IV Te', '2007/2008', 5),
+(255, 'Małgorzata Sujeta', 'III Lpib', '2007/2008', 5),
+(256, 'Karol Puszko', 'IV Te', '2007/2008', 11),
+(257, 'Agnieszka Czarnowicz', 'III Te', '2007/2008', 11),
+(258, 'Damian Rygasiewicz', 'II Te', '2007/2008', 7),
+(259, 'Paweł Zajczyk', 'III Td', '2007/2008', 7),
+(260, 'Łukasz Bielecki', 'III Te', '2007/2008', 8),
+(261, 'Małgorzata Woronowicz', 'II Lpi', '2007/2008', 8),
+(262, 'mgr Iwona Skowrońska-Klimowicz', '', '2007/2008', 9),
+(263, 'mgr Klaudia Kmon-Ciuruk', '', '2007/2008', 9),
+(264, ' mgr Małgorzata Krawiel', '', '2007/2008', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `stanowiska`
+--
+
+CREATE TABLE `stanowiska` (
+  `stanowiskoID` int(11) NOT NULL,
+  `nazwa` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL,
+  `img` varchar(255) COLLATE ucs2_polish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_polish_ci;
+
+--
+-- Zrzut danych tabeli `stanowiska`
+--
+
+INSERT INTO `stanowiska` (`stanowiskoID`, `nazwa`, `img`) VALUES
+(1, 'Przewodniczący', '../img/static/przewodniczacy.png'),
+(2, 'Wiceprzewodniczący', '../img/static/viceprzewodniczacy.png'),
+(3, 'Skarbnik', '../img/static/skarbnik.png'),
+(4, 'Protokolant/Sekretarz', '../img/static/protocol.png'),
+(5, 'Sekcja dekoracyjna', '../img/static/dekoracja.png'),
+(6, 'Sekcja kulturalno-rozrywkowa', '../img/static/kulturowa.jpg'),
+(7, 'Sekcja gospodarcza', '../img/static/gospodarcza.png'),
+(8, 'Sekcja skarg, wniosków i życzeń', '../img/static/skargi.png'),
+(9, 'Opiekun Samorządu Szkolnego', '../img/static/opiekun.png'),
+(10, 'Sekcja Techniczna', '../img/static/technik.jpg'),
+(11, 'Sekcja Naukowa', '../img/static/science.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `tags`
+--
+
+CREATE TABLE `tags` (
+  `tag_id` int(11) NOT NULL,
+  `teag_name` char(100) COLLATE utf8mb4_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+--
+-- Zrzut danych tabeli `tags`
+--
+
+INSERT INTO `tags` (`tag_id`, `teag_name`) VALUES
+(1, 'sport'),
+(2, 'wolontariat'),
+(3, 'konkurs');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
@@ -619,11 +1223,19 @@ CREATE TABLE `uzytkownicy` (
 --
 
 INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`, `email`, `rejestracja`, `logowanie`, `ip`) VALUES
-(1, 'admin', 'admin', 'admin@admin.pl', 1357063200, 1357063200, '127.0.0.1');
+(1, 'admin', '$2y$10$oNgMAUHvULz1Dq9Ptm/65.o0LpijUluJZT0OnIESLoV9HIkfHqnyK', 'admin@admin.pl', 1357063200, 1357063200, '127.0.0.1');
 
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `conn`
+--
+ALTER TABLE `conn`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_post` (`id_post`),
+  ADD KEY `id_tag` (`id_tag`);
 
 --
 -- Indeksy dla tabeli `emploees`
@@ -632,11 +1244,55 @@ ALTER TABLE `emploees`
   ADD PRIMARY KEY (`teacherID`);
 
 --
+-- Indeksy dla tabeli `imagegroup`
+--
+ALTER TABLE `imagegroup`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_image` (`id_image`);
+
+--
+-- Indeksy dla tabeli `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`image_id`);
+
+--
+-- Indeksy dla tabeli `klasy`
+--
+ALTER TABLE `klasy`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `positions`
 --
 ALTER TABLE `positions`
   ADD PRIMARY KEY (`positionID`),
   ADD KEY `teacherID` (`teacherID`);
+
+--
+-- Indeksy dla tabeli `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`post_id`);
+
+--
+-- Indeksy dla tabeli `samorzad`
+--
+ALTER TABLE `samorzad`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `stanowiskoID` (`stanowiskoID`);
+
+--
+-- Indeksy dla tabeli `stanowiska`
+--
+ALTER TABLE `stanowiska`
+  ADD PRIMARY KEY (`stanowiskoID`);
+
+--
+-- Indeksy dla tabeli `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`tag_id`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -649,16 +1305,64 @@ ALTER TABLE `uzytkownicy`
 --
 
 --
+-- AUTO_INCREMENT dla tabeli `conn`
+--
+ALTER TABLE `conn`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `emploees`
 --
 ALTER TABLE `emploees`
   MODIFY `teacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
+-- AUTO_INCREMENT dla tabeli `imagegroup`
+--
+ALTER TABLE `imagegroup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `images`
+--
+ALTER TABLE `images`
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `klasy`
+--
+ALTER TABLE `klasy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
+
+--
 -- AUTO_INCREMENT dla tabeli `positions`
 --
 ALTER TABLE `positions`
   MODIFY `positionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=486;
+
+--
+-- AUTO_INCREMENT dla tabeli `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT dla tabeli `samorzad`
+--
+ALTER TABLE `samorzad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=265;
+
+--
+-- AUTO_INCREMENT dla tabeli `stanowiska`
+--
+ALTER TABLE `stanowiska`
+  MODIFY `stanowiskoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT dla tabeli `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
@@ -671,10 +1375,29 @@ ALTER TABLE `uzytkownicy`
 --
 
 --
+-- Ograniczenia dla tabeli `conn`
+--
+ALTER TABLE `conn`
+  ADD CONSTRAINT `conn_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `posts` (`post_id`),
+  ADD CONSTRAINT `conn_ibfk_2` FOREIGN KEY (`id_tag`) REFERENCES `tags` (`tag_id`);
+
+--
+-- Ograniczenia dla tabeli `imagegroup`
+--
+ALTER TABLE `imagegroup`
+  ADD CONSTRAINT `imagegroup_ibfk_1` FOREIGN KEY (`id_image`) REFERENCES `images` (`image_id`);
+
+--
 -- Ograniczenia dla tabeli `positions`
 --
 ALTER TABLE `positions`
   ADD CONSTRAINT `positions_ibfk_1` FOREIGN KEY (`teacherID`) REFERENCES `emploees` (`teacherID`);
+
+--
+-- Ograniczenia dla tabeli `samorzad`
+--
+ALTER TABLE `samorzad`
+  ADD CONSTRAINT `samorzad_ibfk_1` FOREIGN KEY (`stanowiskoID`) REFERENCES `stanowiska` (`stanowiskoID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

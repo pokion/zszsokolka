@@ -276,7 +276,7 @@ footer {
 }
 .samoPhoto{
 	height: 150px;
-	border-radius: 100px;
+	/* border-radius: 100px; */
 }
 .samoOsoba{
 	display: inline-block;
