@@ -86,7 +86,7 @@
 		function searchTag(){
 			$.post(searchTags,{},function(data){
 				let JSONtags = JSON.parse(data);
-				$('.tagi').each(function(index,elem){
+				$('.aval').each(function(index,elem){
 					let tags = $(elem).html();
 					let arrTags = tags.split(',');
 					$(elem).html("");
@@ -95,6 +95,7 @@
 
 						$(elem).append(`<div class="babyTag chip z-depth-2"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
 					}
+					$(this).removeClass('aval')
 
 				})
 			})
@@ -105,7 +106,7 @@
 				$.post(loadPosts,dataposta,function(data){
 				let months = ["stycznia",'lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
 
-				console.log(data)
+				/*console.log(data)*/
 				let JSONpar = JSON.parse(data);
 				let body;
 				let img = 'brakZdj.jpg';
@@ -115,23 +116,23 @@
 					}else{
 						body = JSONpar[i].bod;
 					}
-					console.log(JSONpar)
+					/*console.log(JSONpar)*/
 					dataPost = JSONpar[i].data;
 					let date = JSONpar[i].data.split(" ")
 					let dateWitchoutHour = date[0].split("-")
 					let day = dateWitchoutHour[1]
-					console.log(dateWitchoutHour)
+					/*console.log(dateWitchoutHour)*/
 					let div = `
 						<div class="col s12 m12 l12 xl6">
 							<div class="card">
 								<div class="card-image waves-effect waves-block waves-light">
-									<div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div>
-									<div class="tagi">${JSONpar[i].tagsId}</div>
+									<a href="szukaj.php?hide=true&id=${JSONpar[i].postId}"><div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div></a>
+									<div class="tagi aval">${JSONpar[i].tagsId}</div>
 								</div>
 									<div class="card-content">
-										<h2 class="title card-title activator grey-text text-darken-4">
-											${JSONpar[i].tit}
-										</h2>
+										
+											<a class="title card-title activator grey-text text-darken-4 truncate" href="szukaj.php?hide=true&id=${JSONpar[i].postId}">${JSONpar[i].tit}</a>
+										
 										<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
 										<div  class="body">
 											<p>${body}</p>
