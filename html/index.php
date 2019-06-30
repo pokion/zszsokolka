@@ -53,7 +53,6 @@
 
 		<div class="row" id="main">
 			
-			
 
 		</div>
 
@@ -131,7 +130,7 @@
 								</div>
 									<div class="card-content">
 										
-											<a class="title card-title activator grey-text text-darken-4 truncate" href="szukaj.php?hide=true&id=${JSONpar[i].postId}">${JSONpar[i].tit}</a>
+											<a class="title card-title activator grey-text text-darken-4" href="szukaj.php?hide=true&id=${JSONpar[i].postId}">${JSONpar[i].tit}</a>
 										
 										<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
 										<div  class="body">
