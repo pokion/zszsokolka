@@ -12,8 +12,8 @@
 	<?php
 		include_once('includes/nav.php');
 	?>
-	<div class="parallax-container">
-		<div class="parallax"><img src="../img/static/rodo.jpg"></div>
+	<div class="parallax-container ">
+		<div class="parallax parallxZNapisem"><img src="../img/static/rodo.jpg"></div>
 		<div class="naglowek">
 			<h1 class=" white-text overlay">
 				KLAUZULA RODO

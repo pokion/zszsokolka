@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="PL">
 <head>
-	<title>strona</title>
+	<title>Historia</title>
 
 	<?php
 		include_once('includes/header.php');

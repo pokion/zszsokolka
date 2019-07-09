@@ -17,7 +17,7 @@ let allImages = [];
 					remove: true,
 					id: imageId
 				},(data)=>{
-					
+
 				})
 	})
 
@@ -34,7 +34,7 @@ let allImages = [];
 							},(data,status)=>{
 								console.log(data)
 								let imageJSON = JSON.parse(data);
-								
+
 								let $imageCard = $(`
 									<div class="card">
 										<img src="../images/${imageJSON.name}">
@@ -106,7 +106,7 @@ let allImages = [];
 				body.append(divLightbox)
 			}
 		})
-		
+
 	}
 
 	function sendToPhp(){
@@ -115,7 +115,7 @@ let allImages = [];
 		$('.chip').each((index,element)=>{
 			if($(element).attr('val')==1){
 				let tag = $(element).attr('tagId')
-				
+
 				tags.push({tg:tag});
 			}
 		});
@@ -140,7 +140,8 @@ let allImages = [];
 				},(data)=>{
 					console.log(data)
 				})
-
+				$("#dodajPost").prop('disabled', true);
+				window.location.replace = "http://localhost/html/index.php";
 	}
 
 

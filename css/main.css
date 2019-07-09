@@ -288,7 +288,32 @@ footer {
 .brand-logo img{
 	padding: 5px;
 }
-
+/* Founders additional styles */
+.osoba img{
+	height: 200px;
+	border-radius: 100px;
+}
+.osoba{
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+.name{
+	grid-area: name;
+}
+.opis{
+	grid-area: opis;
+	padding-top: 40px;
+	text-align: left;
+}
+.founder-img{
+	grid-area: founder-img;
+}
+.osoba{
+	grid-template-areas:
+	'founder-img opis'
+	'name opis';
+	margin: 20px ;
+}
 /* Mobilki Mobilki jak mnie widzicie? */
 @media only screen and (max-width: 500px) {
 	.brand-logo img{

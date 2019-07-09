@@ -52,7 +52,7 @@ if(!isset($_SESSION['login'])){
 		<p class="formP">Tag</p>
 
 		<div id="tags">
-			
+
 		</div>
 
 
@@ -62,7 +62,7 @@ if(!isset($_SESSION['login'])){
   			<br>
   			<textarea name="body"></textarea>
         <br>
-			<button class="btn waves-effect waves-light" type="submit" name="action">wyślij
+			<button class="btn waves-effect waves-light" id="dodajPost" type="submit" name="action">wyślij
 		    	<i class="material-icons right">send</i>
 			</button>
 			<div class="actionButtons">
@@ -137,7 +137,7 @@ if(!isset($_SESSION['login'])){
 
 		$.post(tagLoad,
 			{
-				load:true	
+				load:true
 			},function(data,status){
 				/*console.log(data)*/
 				let tagJSON = JSON.parse(data);
@@ -155,7 +155,7 @@ if(!isset($_SESSION['login'])){
 				})
 
 			})
-		
+
 	</script>
 </body>
 </html>

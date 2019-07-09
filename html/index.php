@@ -2,7 +2,7 @@
 <html lang="PL">
 <head>
 	<title>strona</title>
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<?php
 		include_once('includes/header.php');
 		$inc = 'index';
@@ -52,13 +52,12 @@
 	<div class="container">
 
 		<div class="row" id="main">
-			
+
 
 		</div>
 
 
 	</div>
-</div>
 	<!-- end container -->
 	<?php
 		include_once('includes/footer.php');
@@ -98,7 +97,7 @@
 
 				})
 			})
-		}		
+		}
 
 
 		function phpConnection(dataposta){
@@ -129,9 +128,9 @@
 									<div class="tagi aval">${JSONpar[i].tagsId}</div>
 								</div>
 									<div class="card-content">
-										
+
 											<a class="title card-title activator grey-text text-darken-4" href="szukaj.php?hide=true&id=${JSONpar[i].postId}">${JSONpar[i].tit}</a>
-										
+
 										<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
 										<div  class="body">
 											<p>${body}</p>
@@ -149,7 +148,7 @@
 				send = true;
 				$(window).scroll(function(e){
 					let distanceFromBottom = $(document).height() - $(window).height() - $(document).scrollTop();
-					
+
 					if(distanceFromBottom<=200&&send==true){
 						send = false;
 						phpConnection({date:dataPost})
