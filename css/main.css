@@ -1,7 +1,7 @@
 *{
 	font-size: 17px;
 	font-family: 'Roboto', sans-serif;
-	z-index: 1
+	z-index: 1;
 }
 html, body {
     height: 100%;
@@ -130,6 +130,32 @@ ul{
 	line-height: 200px;
 	text-align: center;
 	background: #cfd8dc;
+}
+.arrow{
+	font-size: 100px;
+	position: absolute;
+	z-index: 100;
+	line-height: 200px;
+	opacity: 1;
+}
+.arrow:hover{
+	cursor: pointer;
+	background: #ddd;
+	/* RGBa with 0.6 opacity */
+	background-color: rgba(255, 255, 255, 0.6);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	<!--[if IE]>
+	background: transparent;
+	<![endif]-->
+}
+.prev{
+	left: 0;
+}
+.next{
+	right: 0;
 }
 .error{
 	background-color: #fff59d;
@@ -302,8 +328,10 @@ footer {
 }
 .opis{
 	grid-area: opis;
-	padding-top: 40px;
+	padding-top: 10px;
+	padding-bottom: 30px;
 	text-align: left;
+		margin-left: 20px;
 }
 .founder-img{
 	grid-area: founder-img;
@@ -312,7 +340,7 @@ footer {
 	grid-template-areas:
 	'founder-img opis'
 	'name opis';
-	margin: 20px ;
+	margin: 20px;
 }
 /* Mobilki Mobilki jak mnie widzicie? */
 @media only screen and (max-width: 500px) {
@@ -334,10 +362,21 @@ footer {
 		min-height: 400px;
 	}
 }
+@media only screen and (max-width: 500px) {
+	.osoba{
+		grid-template-areas:
+		'founder-img founder-img'
+		'name name'
+		'opis opis';
+	}
+}
 @media only screen and (min-width: 1000px) {
 .klasy-carousel{
 		min-height: 480px;
 	}
+	.klasy-carousel{
+			min-height: 480px;
+		}
 }
 @media only screen and (min-width: 1300px) {
 .klasy-carousel{

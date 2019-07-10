@@ -7,7 +7,9 @@ $(document).ready(function(){
 	$('.slider').slider();
 	$('.slider').slider();
 	$('.parallax').parallax();
-	$('.materialboxed').materialbox();
+	$('.materialboxed').materialbox({
+		overlayActive: false
+	});
 	$(".dropdown-trigger").dropdown();
 	$('.sidenav').sidenav();
 	$('.carousel-slider').carousel({
@@ -61,6 +63,5 @@ function addDot(){
 	//     $('.carousel-slider').carousel('next');
 	//     setTimeout(autoplay, 6000);
 	// }
-
-//// nastepny element karuzeli
-	//do napisania arrow
+	//// nastepny element karuzeli
+		//do napisania arrow

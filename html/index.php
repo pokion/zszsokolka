@@ -38,14 +38,17 @@
 	<div class="slider">
 		<ul class="slides">
 			<div class="caption">
-				<h3 class="tytul">This is our big Tagline!</h3>
-				<h5 class="light grey-text text-lighten-3 tresc">Here's our small slogan.</h5>
+				<h3 class="tytul">ZSZ Sokółka</h3>
+				<h5 class="light grey-text text-lighten-3 tresc">Zmieniamy się na lepsze!</h5>
 			</div>
 			<li>
 				<img src="http://artbrut.lublin.pl/img/bydlinska/otwarteserce.jpg">
 			</li>
 			<li>
-				<!-- czeba img wstawić -->
+				<img src="http://zszsokolka.pl/zdj_klasowe2016_2017/ZSZ_all.jpg">
+			</li>
+			<li>
+				<img src="http://zszsokolka.pl/zdj_klasowe2016_2017/ZSZ_all.jpg">
 			</li>
 		</ul>
 	</div>

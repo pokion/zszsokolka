@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="PL">
 <head>
-	<title>Rekrutacja</title>
+	<title>Samorząd</title>
 
 	<?php
 		include_once('includes/header.php');

@@ -16,7 +16,7 @@
   	?>
 		<div class="container">
 			<h3>Wybierz rok szkolny:</h3>
-		<select name="year" class="years">
+		<select name="year" class="years browser-default">
 			<?php
 					include_once('../php/klasy_years.php');
 			?>

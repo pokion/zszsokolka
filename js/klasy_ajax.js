@@ -32,7 +32,9 @@ function loadCarousel(){
 
 				$.each(data, function(index, element){
 					content +=  `<a class="carousel-item valign-wrapper">
-					<img src="${data[index].photo_path}" class="tooltipped" alt="Brak zdjęcia :'(" data-position="right" data-tooltip="XDDD"></a>`
+					<div class="arrow prev"><</div>
+					<img src="${data[index].photo_path}" alt="Brak zdjęcia :'(">
+					<div class="arrow next">></div></a>`
 				})
 				content += "</div>";
 				placeholder.html(content);
@@ -41,13 +43,16 @@ function loadCarousel(){
 					fullWidth: true,
 					indicators: true
 				});
+				$(".arrow").click(function(){
+					alert("MySZKO SE PRZESUŃ")
+				});
 					$('.klasy-carousel').hide().fadeIn("slow")
 						firstTime = false;
 				})
 
 			//Jeśli nie zadziała
 			.fail(function() {
-					alert("Wystąpił błąd w połączeniu");
+					alert("Wystąpił błąd w połączeniu. Spróbuj ponownie później");
 			})
 	}
 })
