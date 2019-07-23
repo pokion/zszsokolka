@@ -188,7 +188,35 @@ footer {
 						</div>
 						<div class="col s12">
 							<h3>Wybierz tag:</h3>
-							<div class="tagiMain center-align"></div>
+							<div class="tagiMain center-align">
+								<?php
+
+									$sql = "SELECT * FROM tags";
+
+									if ($conn->connect_error) {
+											echo "Error: " . $sql . "<br>" . $conn->error;
+										}
+										$result = mysqli_query($conn, $sql);
+
+										$data = array();
+										if (mysqli_num_rows($result) > 0) {
+											while($row = mysqli_fetch_assoc($result)) {
+											    
+											    ?>
+											    	<label>
+											    		<input name="tag[]" value="<?php echo $row['tag_id']; ?>" type="checkbox" />
+											    		<span>
+											    			<?php
+											    				echo $row['tag_name'];
+											    			?>
+											    		</span>
+											   		</label>
+											    <?php
+											}
+										}
+
+								?>
+							</div>
 						</div>
 					</div>
 					
@@ -206,6 +234,15 @@ footer {
 									array_push($arr, "year(post_data)=".$_GET['year']);
 								}if(isset($_GET['month'])){
 									array_push($arr, "month(post_data)=".$_GET['month']);
+								}if(isset($_GET['tag'])){
+									$tags = 'FIND_IN_SET("'.$_GET['tag'][0].'", `tags_id`)';
+									
+									if(sizeof($_GET['tag'])>=2){
+										for ($i=0; $i < sizeof($_GET['tag']); $i++) { 
+											$tags = $tags.' '.'OR FIND_IN_SET("'.$_GET['tag'][$i].'", `tags_id`)';
+										}
+									}
+									array_push($arr, $tags);
 								}
 								if(sizeof($arr)==1){
 									$sql = $sql.$arr[0];
@@ -235,7 +272,7 @@ footer {
 									$div = $div.'</span>';
 									$div = $div.'<p class="data z-depth-1">'.$row['post_data'].'</p>';
 									$div = $div.'<div  id="body">';
-									$div = $div.'<p>'.substr($row['body'],0,267).'</p>';
+									$div = $div.'<p>'.$row['body'].'</p>';
 									$div = $div.'</div>';
 									$div = $div.'</div>';
 									$div = $div.'<div class="card-action">';
@@ -254,6 +291,7 @@ footer {
 
 							function searchTagInPost(){
 								$.post('/strona/php/searchTag.php',{},function(data){
+									console.log(data)
 									let JSONtags = JSON.parse(data);
 									$('.tagi').each(function(index,elem){
 										let tags = $(elem).html();
@@ -262,7 +300,7 @@ footer {
 										for(let i=1;i<arrTags.length;i++){
 											let tagId = arrTags[i]
 
-											$(elem).append(`<div class="babyTag chip z-depth-2"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
+											$(elem).append(`<div id="${JSONtags[tagId-1].id}" class="babyTag chip z-depth-2"><a href="#" >${JSONtags[tagId-1].name}</a></div>`)
 										}
 
 									})
@@ -292,16 +330,6 @@ footer {
 	?>
 	
 	<script type="text/javascript">
-		function searchTag(){
-			$.post(searchTags,{},function(data){
-				let JSONtags = JSON.parse(data);
-
-				for(let i=0;i<JSONtags.length;i++){
-					$('.tagiMain').append(`<div class="mianTag clickable chip z-depth-1 waves-teal waves-effect" val="0">${JSONtags[i].name}</div>`)
-				}
-			})
-		}	
-		searchTag()
 		$(document).on('click','.clickable',function(){
 			/*$(this).css('background-color','#4db6ac')*/
 			let press = $(this).attr('val');
@@ -339,21 +367,7 @@ footer {
 	</script>
 
 	<script type="text/javascript">
-		/*$(document).on('click','#send',function(e){
-			e.preventDefault();
-			let year,month,tag;
-			let link = '/strona/html/szukaj.php?';
 
-
-			if($('#years').val() != null) link = link+ 'year=' + $('#years').val()+'&';
-			if($('#months').val() != null) link = link+ 'month='+$('#months').val()+'&';
-
-			$('#sendForm').attr('action',link)
-
-			e.stopPropagation();
-			$('#sendForm').submit()
-
-		})*/
 	</script>
 </body>
 </html>

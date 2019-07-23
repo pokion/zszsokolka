@@ -93,8 +93,8 @@
 					$(elem).html("");
 					for(let i=1;i<arrTags.length;i++){
 						let tagId = arrTags[i]
-
-						$(elem).append(`<div class="babyTag chip z-depth-2"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
+						console.log(JSONtags)
+						$(elem).append(`<div class="babyTag chip z-depth-2"><a href="szukaj.php?tag%5B%5D=${JSONtags[tagId-1].id}">${JSONtags[tagId-1].name}</a></div>`)
 					}
 					$(this).removeClass('aval')
 
@@ -136,7 +136,7 @@
 
 										<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
 										<div  class="body">
-											<p>${body}</p>
+											<p>${JSONpar[i].bod}</p>
 										</div>
 									</div>
 									<div class="card-action">

@@ -342,6 +342,11 @@ footer {
 	'name opis';
 	margin: 20px;
 }
+.card-content{
+	min-height: 238px;
+	max-height: 239px;
+	overflow: hidden;
+}
 /* Mobilki Mobilki jak mnie widzicie? */
 @media only screen and (max-width: 500px) {
 	.brand-logo img{
