@@ -105,9 +105,12 @@
 
 		function phpConnection(dataposta){
 				$.post(loadPosts,dataposta,function(data){
+					/*console.log('dzala')*/
+					if(data == "[]"){
+						send = false;
+					}
 				let months = ["stycznia",'lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
 
-				/*console.log(data)*/
 				let JSONpar = JSON.parse(data);
 				let body;
 				let img = 'brakZdj.jpg';
@@ -117,7 +120,7 @@
 					}else{
 						body = JSONpar[i].bod;
 					}
-					/*console.log(JSONpar)*/
+					console.log(data)
 					dataPost = JSONpar[i].data;
 					let date = JSONpar[i].data.split(" ")
 					let dateWitchoutHour = date[0].split("-")
@@ -148,7 +151,7 @@
 				}
 				searchImg()
 				searchTag()
-				send = true;
+				
 				$(window).scroll(function(e){
 					let distanceFromBottom = $(document).height() - $(window).height() - $(document).scrollTop();
 
