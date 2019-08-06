@@ -43,9 +43,7 @@ function loadCarousel(){
 					fullWidth: true,
 					indicators: true
 				});
-				$(".arrow").click(function(){
-					alert("MySZKO SE PRZESUŃ")
-				});
+				
 					$('.klasy-carousel').hide().fadeIn("slow")
 						firstTime = false;
 				})
@@ -55,4 +53,10 @@ function loadCarousel(){
 					alert("Wystąpił błąd w połączeniu. Spróbuj ponownie później");
 			})
 	}
+	$(document).on('click','.next',function(){
+		$('.carousel').carousel('next');
+	})
+	$(document).on('click','.prev',function(){
+		$('.carousel').carousel('prev');
+	})
 })

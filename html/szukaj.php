@@ -70,7 +70,7 @@ footer {
 						?>
 							<div class="parallax-container">
 								<div class="parallax">
-									<img src="">
+									<img src="../images/brakZdj.jpg">
 								</div>
 								<div class="tagi"></div>
 							</div>
@@ -267,7 +267,7 @@ footer {
 									$div = $div.'<div class="tagi">'.$row['tags_id'].'</div>';
 									$div = $div.'</div>';
 									$div = $div.'<div class="card-content">';
-									$div = $div.'<span id="title" class="truncate card-title activator grey-text text-darken-4">';
+									$div = $div.'<span class="card-title activator grey-text text-darken-4">';
 									$div = $div.$row['title'];
 									$div = $div.'</span>';
 									$div = $div.'<p class="data z-depth-1">'.$row['post_data'].'</p>';

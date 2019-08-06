@@ -243,7 +243,7 @@ nav{
 	font-style: italic;
 }
 .parallax-container{
-	height: 300px;
+	height: 500px;
 	position: relative;
 	background-color: black;
 }
@@ -290,8 +290,9 @@ footer {
 	min-height: 32px;
 }
 .body{
-	max-height: 150px;
-	min-height: 150px;
+	max-height: 130px;
+	min-height: 130px;
+	position: absolute;
 	overflow: hidden;
 }
 .minInput{

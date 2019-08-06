@@ -35,8 +35,12 @@ function loadCarousel(){
 											<p class="samoImie">${data[index].imie}<br>
 											${data[index].klasa}</p>
 										</div>`
-				$('.tutajWstaw').html(content);
+									
+						let withoutUnd = content.split('undefined');
+						
+				$('.tutajWstaw').html(withoutUnd[1]);
 				})
+
 				 $('.tooltipped').tooltip();
 				})
 

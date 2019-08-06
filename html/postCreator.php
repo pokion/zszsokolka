@@ -23,6 +23,7 @@ if(!isset($_SESSION['login'])){
 		}
 		.body{
 			max-height: 100%;
+			position: unset;
 		}
 	</style>
 
@@ -43,7 +44,7 @@ if(!isset($_SESSION['login'])){
       <a class="btn-floating btn-large waves-effect waves-light slideAdd"><i class="material-icons">add</i></a>
       <input name="file[]" type="file" multiple class="hide" id="slideadd" accept='image/*' />
        <li>
-         <img class="sliderCreator" image="false" src="../img/gos.jpg"> <!-- random image -->
+         <img class="sliderCreator" image="false" src="../images/brakZdj.jpg"> <!-- random image -->
        </li>
      </ul>
    </div>

@@ -1,0 +1,3 @@
+16 kwietnia 2019 roku na hali przy Zespole Szkół w Sokółce odbyły się <b>XX Mistrzostwa Szkół Ponadgimnazjalnych Powiatu Sokólskiego w Ortografii.</b>W konkursie wzięło udział czworo uczniów <b>Zespołu Szkół Zawodowych w Sokółce: Kamila Borys, Amelia Doroszkiewicz (obie I T), Klaudia Łysik i Marcin Strzałkowski (oboje II Tfi)</b>. Jak pozostałych 23 uczestników zmagali się z bardzo trudnym dyktandem pt. "Sportowe igrzyska", a na koniec wszyscy otrzymali dyplomy uczestnictwa.
+<br><br>
+Opiekę nad uczniami sprawowała pani <b>Jolanta Siemieniako.</b><br><br>

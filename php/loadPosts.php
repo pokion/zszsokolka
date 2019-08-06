@@ -37,7 +37,8 @@
 
 
 		}elseif (!empty($_POST['date'])){
-			$sql = 'SELECT * FROM `posts` WHERE `post_data` < "'.$_POST['date'].'" ORDER BY `post_data` DESC LIMIT 4 ';
+			/*print_r($_POST['date']);*/
+			$sql = 'SELECT * FROM `posts` ORDER BY `post_data` DESC LIMIT '.$_POST['date'];
 			if ($conn->connect_error) {
 					echo "Error: " . $sql . "<br>" . $conn->error;
 				}

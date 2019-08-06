@@ -25,7 +25,8 @@
 		Zespole Szkół Zawodowych w Sokółce
 		w roku szkolnym <span class="rok"></span></h3>
 			<div class="col s12 placeholder klasy">
-
+				<div class="arrow prev"><</div>
+				<div class="arrow next">></div>
 		 </div>
 </div>
   <?php
