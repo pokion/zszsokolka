@@ -68,6 +68,11 @@ footer {
 				if($_GET['hide'] == true){
 					if(!empty($_GET['id'])){
 						?>
+						<style type="text/css">
+							.indet{
+								text-indent: 3em;
+							}
+						</style>
 							<div class="parallax-container">
 								<div class="parallax">
 									<img src="../images/brakZdj.jpg">
@@ -77,7 +82,7 @@ footer {
 							<div class="section white">
 								<div class="row container">
 									<h3 class="header"></h3>
-									<p class="grey-text text-darken-3 lighten-3"></p>
+									<p class="indet grey-text text-darken-3 lighten-3"></p>
 								</div>
 							</div>
 							<script type="text/javascript" src="../js/jquery.min.js"></script>
