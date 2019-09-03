@@ -12,6 +12,9 @@
 			bottom: 0px;
 			left: 0px;
 		}
+		.tag{
+			margin: 30px;
+		}
 		.mianTag{
 			display: inline-block;
 			margin-top: 10px;
@@ -31,7 +34,7 @@
 			padding: 10px;
 			border-radius: 0 0 0 5px;
 			background-color: white;
-			
+
 		}
 		.container > p{
 			text-align: justify;
@@ -129,7 +132,7 @@ footer {
 
 										})
 								})
-								
+
 							</script>
 						<?php
 					}else{
@@ -142,14 +145,14 @@ footer {
 				?>
 				<div class="container">
 					<form action="szukaj.php" id="sendForm" method="get">
-					<h2>Wyszukaj posty</h2>
+					<h2 class="center-align">Archiwum</h2>
 					<br>
 					<div class="row">
-						<div class="col s6">
-							<h3>Wybierz rok:</h3> 
+						<div class="col s12 m6">
+							<h3>Wybierz rok:</h3>
 							<div class="input-field col s12">
 							    <select id="years" name="year">
-							      <option value="" disabled selected>Choose your option</option>
+							      <option value="" disabled selected>Rok</option>
 							      <?php
 							      		include '../php/config.php';
 										$conn = new mysqli($server,$login,$password,$database);
@@ -171,11 +174,11 @@ footer {
 							    </select>
 							  </div>
 						</div>
-						<div class="col s6">
+						<div class="col s12 m6">
 							<h3>Wybierz miesiąc:</h3>
 							<div class="input-field col s12">
 							    <select id="months" name="month">
-							      <option value="" disabled selected>Choose your option</option>
+							      <option value="" disabled selected>Miesiąc</option>
 							      <option value="01">01</option>
 							      <option value="02">02</option>
 							      <option value="03">03</option>
@@ -191,7 +194,7 @@ footer {
 							    </select>
 							  </div>
 						</div>
-						<div class="col s12">
+						<div class="col s12 center-align">
 							<h3>Wybierz tag:</h3>
 							<div class="tagiMain center-align">
 								<?php
@@ -206,11 +209,11 @@ footer {
 										$data = array();
 										if (mysqli_num_rows($result) > 0) {
 											while($row = mysqli_fetch_assoc($result)) {
-											    
+
 											    ?>
 											    	<label>
 											    		<input name="tag[]" value="<?php echo $row['tag_id']; ?>" type="checkbox" />
-											    		<span>
+											    		<span class="tag">
 											    			<?php
 											    				echo $row['tag_name'];
 											    			?>
@@ -224,9 +227,9 @@ footer {
 							</div>
 						</div>
 					</div>
-					
 
-					
+
+
 					<button id="send" class="waves-effect waves-light btn right">Szukaj</button>
 				</form>
 					<div class="row">
@@ -241,9 +244,9 @@ footer {
 									array_push($arr, "month(post_data)=".$_GET['month']);
 								}if(isset($_GET['tag'])){
 									$tags = 'FIND_IN_SET("'.$_GET['tag'][0].'", `tags_id`)';
-									
+
 									if(sizeof($_GET['tag'])>=2){
-										for ($i=0; $i < sizeof($_GET['tag']); $i++) { 
+										for ($i=0; $i < sizeof($_GET['tag']); $i++) {
 											$tags = $tags.' '.'OR FIND_IN_SET("'.$_GET['tag'][$i].'", `tags_id`)';
 										}
 									}
@@ -262,7 +265,7 @@ footer {
 
 							if (mysqli_num_rows($result) > 0) {
 						    // output data of each row
-								
+
 							    while($row = mysqli_fetch_assoc($result)) {
 							        $div = '<div class="col s12 m12 6 l12 xl6">';
 									$div = $div.'<div class="card">';
@@ -289,7 +292,7 @@ footer {
 						    	}
 						    }
 						}
-							
+
 						?>
 						<script type="text/javascript" src="../js/jquery.min.js"></script>
 						<script type="text/javascript">
@@ -328,12 +331,12 @@ footer {
 			}
 		?>
 
-	
+
 
 	<?php
 		include_once('includes/footer.php');
 	?>
-	
+
 	<script type="text/javascript">
 		$(document).on('click','.clickable',function(){
 			/*$(this).css('background-color','#4db6ac')*/
