@@ -151,7 +151,7 @@ footer {
 						<div class="col s12 m6">
 							<h3>Wybierz rok:</h3>
 							<div class="input-field col s12">
-							    <select id="years" name="year">
+							    <select id="years" name="year" class="browser-default z-depth-4">
 							      <option value="" disabled selected>Rok</option>
 							      <?php
 							      		include '../php/config.php';
@@ -177,7 +177,7 @@ footer {
 						<div class="col s12 m6">
 							<h3>Wybierz miesiąc:</h3>
 							<div class="input-field col s12">
-							    <select id="months" name="month">
+							    <select id="months" name="month" class="browser-default z-depth-4">
 							      <option value="" disabled selected>Miesiąc</option>
 							      <option value="01">01</option>
 							      <option value="02">02</option>

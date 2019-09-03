@@ -258,6 +258,16 @@ nav{
 .browser-default li {
 	list-style-type: square;
 }
+select.browser-default{
+	text-align: center;
+	border: 1px #26a69a solid;
+	z-index: 10;
+}
+.select-wrapper{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .dropdown-content li > a {
 	background-color: #008000;
 	color: #fff;
