@@ -63,7 +63,7 @@
 		</ul>
 	</div> -->
 	<br><br>
-	<div class="container">
+	<div class="container main">
 
 		<div class="row" id="main">
 
@@ -81,6 +81,9 @@
 	<script type="text/javascript">
 		let limit  = [0,4];
 		let dataPost;
+		let send = 0;
+		let bnt = false;
+		let sendCount = 1;
 		function searchImg(){
 			$('div[postid]').each(function(index,elem){
 				let id = $(elem).attr('postid');
@@ -164,10 +167,27 @@
 		}
 		phpConnection()
 
+		$(document).on('click','.phpload', function(){
+			phpConnection({date:dataPost})
+			$('.phpload').remove()
+			$(window).scrollTop($(window).scrollTop()-2)
+			send = 0
+			bnt = false
+		})
+
+
 		$(window).scroll(function(){
-			console.log($(window).scrollTop(),$(document).height()- $('#helperForMobile').height())
-		    if($(window).scrollTop() == $(document).height() - $('#helperForMobile').height()){
+
+		    if($(window).scrollTop() == $(document).height() - $('#helperForMobile').height() && send<sendCount){
+		    	console.log(limit)
 		       	phpConnection({date:dataPost})
+		       	console.log(limit,bnt)
+		       	send++
+		       	console.log(send,bnt)
+		    }else if(send === sendCount && bnt === false){
+		    	let button = '<a class="waves-effect waves-light btn-large phpload">Zaladuj posty</a>';
+		    	$('.main').append($(button))
+		    	bnt = true
 		    }
 		});
 	</script>
