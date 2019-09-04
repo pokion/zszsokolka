@@ -192,7 +192,7 @@ h3{
 	bottom: 0;
 }
 nav{
-	z-index: 999;
+	z-index: 998;
 }
 .post{
 	position: absolute;
@@ -328,6 +328,9 @@ footer {
 }
 .brand-logo img{
 	padding: 5px;
+}
+.brand-logo{
+	z-index: 999;
 }
 /* Founders additional styles */
 .osoba img{
