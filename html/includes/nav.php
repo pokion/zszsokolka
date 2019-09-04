@@ -56,7 +56,7 @@
 
 			    	<ul id="nav-mobile" class="right hide-on-med-and-down">
 			    		<li<?php if($inc==='index'){ ?> class="active" <?php } ?> ><a href="index.php">Strona główna</a></li>
-			    		<li<?php if($inc==='szukaj'){ ?> class="active" <?php } ?> ><a href="szukaj.php">Wyszukiwarka</a></li>
+			    		<li<?php if($inc==='szukaj'){ ?> class="active" <?php } ?> ><a href="szukaj.php">Archiwum</a></li>
 						<li><a href="https://uonetplus.vulcan.net.pl/powiatsokolski" target="_blank">E-dziennik</a></li>
 						<li<?php if($inc==='rekrutacja'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger nav" data-target="drop-rekrutacja">Rekrutacja<i class="material-icons right">arrow_drop_down</i></a></li>
 						<li<?php if($inc==='drop-szkola'){ ?> class="active" <?php }  ?> ><a class="dropdown-trigger nav" data-target="drop-szkola">O szkole<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -69,7 +69,7 @@
 	<!-- sidenav -->
 	<ul id="slide-out" class="sidenav">
 		<li><a href="index.php">Strona główna</a></li>
-		<li><a href="szukaj.php">Wyszukiwarka</a></li>
+		<li><a href="szukaj.php">Archiwum</a></li>
 
 		<li><a href="https://uonetplus.vulcan.net.pl/powiatsokolski">E-dziennik</a></li>
 		 <li class="no-padding">

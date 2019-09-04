@@ -34,7 +34,6 @@
 			padding: 10px;
 			border-radius: 0 0 0 5px;
 			background-color: white;
-
 		}
 		.container > p{
 			text-align: justify;
@@ -52,7 +51,6 @@
     /*display: initial;*/
     display: table;
 }
-
 footer {
     display: table-row;   /*nie usuwać, trzyma footer na dole strony gdy za malo contentu */
     height: 0;
@@ -64,7 +62,6 @@ footer {
 <body>
 	<?php
 		include_once('includes/nav.php');
-
 	?>
 		<?php
 			if(isset($_GET['hide'])){
@@ -85,19 +82,29 @@ footer {
 							<div class="section white">
 								<div class="row container">
 									<h3 class="header"></h3>
-									<p class="indet grey-text text-darken-3 lighten-3"></p>
+									<p class="indet grey-text text-darken-3 lighten-3">
+											
+											
+
+									</p>
+									<div class="docs-galley">
+										<ul id="images">
+													
+										</ul>
+									</div>
 								</div>
 							</div>
+							
 							<script type="text/javascript" src="../js/jquery.min.js"></script>
 							<script type="text/javascript">
 								let postid = '<?php echo $_GET['id']; ?>'
 								$.post('/strona/php/loadPosts.php',{id:postid},function(data){
 									let JSONpar = JSON.parse(data);
+									console.log('czemu')
 									$('.header').html(JSONpar[0].tit);
 									$('.container>p').html(JSONpar[0].bod);
-									console.log(JSONpar[0]);
 									$('.tagi').html(JSONpar[0].tagsId);
-									//tutaj jest skrypt który szyka tagi
+									//tutaj jest skrypt który szuka tagi
 										$.post('/strona/php/searchTag.php',{},function(data){
 											let JSONtags = JSON.parse(data);
 											$('.tagi').each(function(index,elem){
@@ -106,34 +113,26 @@ footer {
 												$(elem).html("");
 												for(let i=1;i<arrTags.length;i++){
 													let tagId = arrTags[i]
-
 													$(elem).append(`<div class="babyTag chip"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
 												}
-
 											})
 										})
-
 										$.post('/strona/php/searchImage.php',{postId:postid,main:1},function(data){
 											let JSONImg = JSON.parse(data);
 											JSONImg.forEach(function(elem){
 												if(elem.main == 0){
-													let div = `<a href="../images/${elem.name}" data-lightbox="roadtrip" class="imageStyle">
-														<img src="../images/${elem.name}"
-													</a>`;
-													$('.container>p').append($(div))
+													let div = `<li><img class="imageStyle" src="../images/${elem.name}"></li>`;
+													$('#images').append($(div))
 												}if(elem.main == 1){
-													let div = `<a href="../images/${elem.name}" data-lightbox="roadtrip" class="imageStyle">
-														<img src="../images/${elem.name}"
-													</a>`;
-													$('.container>p').append($(div))
+													let div = `<li><img class="imageStyle" src="../images/${elem.name}"></li>`;
+													$('#images').append($(div))
 													$('.parallax>img').attr('src','../images/'+elem.name)
 												}
 											})
-
 										})
 								})
-
 							</script>
+							
 						<?php
 					}else{
 						?>
@@ -160,11 +159,8 @@ footer {
 										if ($conn->connect_error) {
 											die("Connection failed: " . $conn->connect_error);
 										}
-
 										$sql = "SELECT DISTINCT year(post_data) FROM `posts` where year(post_data)>2017 ORDER BY `posts`.`post_data` DESC LIMIT 18446744073709551610";
-
 										$result = mysqli_query($conn, $sql);
-
 										if (mysqli_num_rows($result) > 0) {
 											while($row = mysqli_fetch_assoc($result)) {
 											    echo "<option value=".$row['year(post_data)'].">".$row['year(post_data)']."</option>";
@@ -198,18 +194,14 @@ footer {
 							<h3>Wybierz tag:</h3>
 							<div class="tagiMain center-align">
 								<?php
-
 									$sql = "SELECT * FROM tags";
-
 									if ($conn->connect_error) {
 											echo "Error: " . $sql . "<br>" . $conn->error;
 										}
 										$result = mysqli_query($conn, $sql);
-
 										$data = array();
 										if (mysqli_num_rows($result) > 0) {
 											while($row = mysqli_fetch_assoc($result)) {
-
 											    ?>
 											    	<label>
 											    		<input name="tag[]" value="<?php echo $row['tag_id']; ?>" type="checkbox" />
@@ -222,7 +214,6 @@ footer {
 											    <?php
 											}
 										}
-
 								?>
 							</div>
 						</div>
@@ -234,7 +225,6 @@ footer {
 				</form>
 					<div class="row">
 						<?php
-
 						if(isset($_GET['year'])||isset($_GET['month'])||isset($_GET['tag'])){
 							$sql = "SELECT * FROM `posts` where ";
 							$arr = [];
@@ -244,7 +234,6 @@ footer {
 									array_push($arr, "month(post_data)=".$_GET['month']);
 								}if(isset($_GET['tag'])){
 									$tags = 'FIND_IN_SET("'.$_GET['tag'][0].'", `tags_id`)';
-
 									if(sizeof($_GET['tag'])>=2){
 										for ($i=0; $i < sizeof($_GET['tag']); $i++) {
 											$tags = $tags.' '.'OR FIND_IN_SET("'.$_GET['tag'][$i].'", `tags_id`)';
@@ -260,24 +249,23 @@ footer {
 									$sql = $sql.$arr[0]." and ".$arr[1]." and ".$arr[2];
 								}
 							$sql = $sql . " ORDER BY `post_data` DESC";
-
 							$result = mysqli_query($conn, $sql);
-
 							if (mysqli_num_rows($result) > 0) {
 						    // output data of each row
-
 							    while($row = mysqli_fetch_assoc($result)) {
 							        $div = '<div class="col s12 m12 6 l12 xl6">';
 									$div = $div.'<div class="card">';
 									$div = $div.'<div class="card-image waves-effect waves-block waves-light">';
+									$div = $div.'<a href="szukaj.php?hide=true&id='.$row['post_id'].'">';
 									$div = $div.'<div postid="'.$row['post_id'].'" style="background-image: url(../images/brakZdj.jpg);height: 250px;';
 									$div = $div.'background-position: center;background-size: cover;"></div>';
+									$div = $div.'</a>';
 									$div = $div.'<div class="tagi">'.$row['tags_id'].'</div>';
 									$div = $div.'</div>';
 									$div = $div.'<div class="card-content">';
-									$div = $div.'<span class="card-title activator grey-text text-darken-4">';
+									$div = $div.'<a class="title card-title activator grey-text text-darken-4" href="szukaj.php?hide=true&id='.$row['post_id'].'">';
 									$div = $div.$row['title'];
-									$div = $div.'</span>';
+									$div = $div.'</a>';
 									$div = $div.'<p class="data z-depth-1">'.$row['post_data'].'</p>';
 									$div = $div.'<div  id="body">';
 									$div = $div.'<p>'.$row['body'].'</p>';
@@ -292,11 +280,9 @@ footer {
 						    	}
 						    }
 						}
-
 						?>
 						<script type="text/javascript" src="../js/jquery.min.js"></script>
 						<script type="text/javascript">
-
 							function searchTagInPost(){
 								$.post('/strona/php/searchTag.php',{},function(data){
 									console.log(data)
@@ -307,10 +293,8 @@ footer {
 										$(elem).html("");
 										for(let i=1;i<arrTags.length;i++){
 											let tagId = arrTags[i]
-
 											$(elem).append(`<div id="${JSONtags[tagId-1].id}" class="babyTag chip z-depth-2"><a href="#" >${JSONtags[tagId-1].name}</a></div>`)
 										}
-
 									})
 								})
 							}
@@ -319,7 +303,6 @@ footer {
 								let date = $(element).html().split(" ")
 								let dateWitchoutHour = date[0].split("-")
 								let day = dateWitchoutHour[1]
-
 								$(element).html(dateWitchoutHour[2]+' '+months[day-1]+' '+dateWitchoutHour[0]+' r.')
 							}
 							$('.data').each(dataChange);
@@ -342,7 +325,6 @@ footer {
 			/*$(this).css('background-color','#4db6ac')*/
 			let press = $(this).attr('val');
 			console.log(press)
-
 			if(press == 0){
 				$(this).css('background-color','#4db6ac');
 				$(this).attr({val: 1});
@@ -374,8 +356,7 @@ footer {
 		searchImg()
 	</script>
 
-	<script type="text/javascript">
-
-	</script>
+	<script type="text/javascript" src="../js/viewer.min.js"></script>
+	<script type="text/javascript" src="../js/gallery.js"></script>
 </body>
 </html>

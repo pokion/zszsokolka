@@ -88,14 +88,18 @@ ul{
 .bg5{
 	background: green ;
 }
-.imageStyle img{
+#images>li{
+	float: left;
+}
+#images>li>img{
 	height: 100px;
 	border-radius: 5px;
 	border: transparent 2px solid;
     box-sizing:border-box;
     transition:border 0.2s;
 }
-.imageStyle img:hover{
+#images>li>img:hover{
+	cursor: zoom-in;
 	transition:border 0.5s;
 	box-sizing:border-box;
 	border: 2px #02CCBA solid

@@ -66,5 +66,3 @@ function addDot(){
 	//// nastepny element karuzeli
 		//do napisania arrow
 
-
-
