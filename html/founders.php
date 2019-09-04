@@ -36,6 +36,7 @@
 						Robił szalone rzeczy i irytował Czarka "Ej Czarek, strona"...
 					</div>
 				</div>
+
 				<div class="osoba">
 					<div class="founder-img">
 						<img class="responsive-img" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/12107878_770224386442755_6513286088708863712_n.jpg?_nc_cat=102&_nc_oc=AQnf5fQEIjkrRxg_gd-N4Xcg52Uz97wXL43_CBx18XjM8-KFw7eklBnpApDeUiZxlOU&_nc_ht=scontent-frx5-1.xx&oh=be4d2022ec6c7208ba09f1ca515de114&oe=5DAD9829">
@@ -102,7 +103,7 @@
 						Wychowawca. Wychował tych nieuków i mówił czy ładnie. "Moi najlepsi uczniowie"...(oby nikt nie weryfikował tych słów)
 					</div>
 				</div>
-				<h2>Technologie</h2>
+				<h2>Wykorzystane technologie</h2>
 				<div class="osoba">
 					<div class="founder-img">
 						<img class="responsive-img" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fseeklogo.com%2Fimages%2FM%2Fmaterialize-logo-0FCAD8A6F8-seeklogo.com.png&f=1">
@@ -110,10 +111,7 @@
 					<div class="name">
 					Maaterialize
 					</div>
-					<div class="opis">
-						Framework
-					</div>
-					</div>
+				</div>
 				</div>
 			</div>
 		</div>

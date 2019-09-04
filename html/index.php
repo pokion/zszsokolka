@@ -39,6 +39,12 @@
 			visibility: hidden;
 			z-index: -99999;
 		}
+		.phpload{
+			position: relative;
+			left: -88.82px;
+			margin-left:50%;
+			margin-bottom: 50px;
+		}
 	</style>
 </head>
 <body>

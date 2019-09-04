@@ -3,8 +3,8 @@
 			<div class="container">
 				<div class="row marginClear">
 					<div class="col l8 s6">
-						<h5>Lorem ipsum</h5>
-						<p>doloro sit amet, consectetur adipiscing elit.</p>
+						<h6>Wykorzystane biblioteki</h6>
+						<p><a href="https://materializecss.com/">Materializecss</a> | <a href="http://fengyuanchen.github.io/viewer/">Viewer</a> | <a href="https://jquery.com/">jQuery</a></p>
 					</div>
 					<div class="col l4 offset-12 s6 left-align">
 						<h6 class="white-text">Przydatne linki:</h6>
@@ -24,7 +24,7 @@
 		<!-- end footer -->
 	<script type="text/javascript" src="../js/config.js"></script>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../js/materialize.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 	
 
