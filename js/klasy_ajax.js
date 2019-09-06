@@ -5,7 +5,6 @@ $(document).ready(function()	{
 
 function loadCarousel(){
 	let rok
-
 			if(firstTime===true){
 				rok = $('select[name=year]').find('option:selected').text();
 				$('.rok').text(rok);
@@ -27,25 +26,26 @@ function loadCarousel(){
 
 			//Jeśli zadziała:
 			.done(function(data){
-				let placeholder = $('.placeholder');
-				let content = "<div class=\"carousel carousel-slider klasy-carousel center-align\">";
+				let placeholder = $('#placeholder');
+				let content = "<div id='images'>";
 
 				$.each(data, function(index, element){
-					content +=  `<a class="carousel-item valign-wrapper">
-					<div class="arrow prev"><</div>
-					<img src="${data[index].photo_path}" alt="Brak zdjęcia :'(">
-					<div class="arrow next">></div></a>`
+					if (!element.photo_path) {
+						content +=  `<img class="klasa_img" src="../img/static/default.png"
+														alt="Brak zdjęcia" data-tooltip="I am a tooltip">`
+					} else {
+						content +=  `<img class="klasa_img tooltipped" src="../images/${data[index].photo_path}"
+														alt="">`
+					}
 				})
 				content += "</div>";
 				placeholder.html(content);
-
-				$('.klasy-carousel').carousel({
-					fullWidth: true,
-					indicators: true
-				});
-				
-					$('.klasy-carousel').hide().fadeIn("slow")
-						firstTime = false;
+				const viewer = new Viewer(document.getElementById('images'), {
+				inline: true,
+				viewed() {
+					viewer.zoomTo(1);
+				},
+			});
 				})
 
 			//Jeśli nie zadziała
@@ -53,10 +53,9 @@ function loadCarousel(){
 					alert("Wystąpił błąd w połączeniu. Spróbuj ponownie później");
 			})
 	}
-	$(document).on('click','.next',function(){
-		$('.carousel').carousel('next');
-	})
-	$(document).on('click','.prev',function(){
-		$('.carousel').carousel('prev');
-	})
 })
+// info do wypisania
+// Kierunek: ${data[index].kierunek} |
+// Klasa: ${data[index].nazwa} |
+// Wychowawca: ${data[index].wychowawca} |
+// Rok: ${data[index].rok}

@@ -76,6 +76,22 @@ ul{
 .glass{
 	background-color: rgb(255,255,255,0.5);
 }
+.info{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#images{
+	line-height: 0;
+	column-count: 5;
+	column-gap: 0px;
+	min-height: 900px;
+	margin-bottom: 50px;
+}
+.klasa_img{
+	width: 100% !important;
+	height: auto !important;
+}
 .bg2{
 	background-color: #E1F9F7;
 }
@@ -86,10 +102,17 @@ ul{
 	background-color: #53DCD0;
 }
 .bg5{
-	background: green ;
+	background: green;
+}
+.klasa_img:nth-child(odd){
+	height: 250px;
+}
+.klasa_img:nth-child(even){
+	height: 150px;
 }
 #images>li{
 	float: left;
+	list-style-type: none;
 }
 #images>li>img{
 	height: 100px;
