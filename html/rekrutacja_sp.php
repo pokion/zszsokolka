@@ -70,11 +70,16 @@
 		<!-- plakat -->
 		<p><h3 class="center-align hide-on-small-only">Plakat i ulotka reklamowa</h3></p>
 		<div class="row hide-on-small-only">
-			<div class="col s12 valign-wrapper">
-				<img class="materialboxed center-align" width="100%" src="../img/ulotka2.jpg">
-				<img class="materialboxed center-align" width="100%" src="../img/ulotka1.jpg">
-				<img class="materialboxed center-align" width="100%" src="../img/ulotka3.jpg">
+			<div class="col s12 hide-on-small-only">
+				<img data="1" class="popup center-align" width="100%" src="../img/ulotka2.jpg">
+				<img data="2" class="popup center-align" width="100%" src="../img/ulotka1.jpg">
+				<img data="3" class="popup center-align" width="100%" src="../img/ulotka3.jpg">
 			</div>
+		</div>
+		<div class="visiblePopup hide">
+			<img data="1" class="popUp hide center-align" src="../img/ulotka2.jpg">
+			<img data="2" class="popUp hide center-align" src="../img/ulotka1.jpg">
+			<img data="3" class="popUp hide center-align" src="../img/ulotka3.jpg">
 		</div>
 		<!-- end plakat -->
 		<!-- filmiki -->
@@ -240,5 +245,17 @@
 	<?php
 		include_once('includes/footer.php');
 	?>
+	<script type="text/javascript">
+		$('.popup').click(function(e){
+			let data = $(this).attr('data');
+			$('.visiblePopup').removeClass('hide');
+			$('.visiblePopup>.popUp[data="'+data+'"').removeClass('hide');
+		})
+		$('.visiblePopup').click(function(e){
+			let data = $(this).attr('data');
+			$('.visiblePopup').addClass('hide');
+			$('.visiblePopup>.popUp[data="'+data+'"').addClass('hide');
+		})
+	</script>
 </body>
 </html>
