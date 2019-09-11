@@ -31,17 +31,17 @@ function loadCarousel(){
 
 				$.each(data, function(index, element){
 					if (!element.photo_path || element.photo_path == 'NIE MA') {
-						content +=  `<img class="klasa_img imageStyle tooltipped" src="../img/static/default.png"
-														alt="Brak zdjęcia" data-position="left" data-tooltip="Kierunek: ${data[index].kierunek} <br>
-																						Klasa: ${data[index].nazwa} <br>
-																						Wychowawca: ${data[index].wychowawca} <br>
-																						Rok: ${data[index].rok}">`
+						content +=  '<img class="klasa_img imageStyle tooltipped" src="../img/static/default.png"'
+						content +=								'alt="Brak zdjęcia" data-position="left" data-tooltip="Kierunek:'+data[index].kierunek+'<br>'
+						content +=																'Klasa:'+data[index].nazwa+'<br>'
+						content +=																'Wychowawca:'+data[index].wychowawca+'<br>'
+						content +=																'Rok:'+data[index].rok+'">';
 					} else {
-						content +=  `<img class="klasa_img imageStyle tooltipped" src="../images/${data[index].photo_path}"
-														alt="" data-position="left" data-tooltip="Kierunek: ${data[index].kierunek} <br>
-																						Klasa: ${data[index].nazwa} <br>
-																						Wychowawca: ${data[index].wychowawca} <br>
-																						Rok: ${data[index].rok}">`
+						content +=  '<img class="klasa_img imageStyle tooltipped" src="'+data[index].photo_path+'"'
+						content +=								'alt="Brak zdjęcia" data-position="left" data-tooltip="Kierunek:'+data[index].kierunek+'<br>'
+						content +=																'Klasa:'+data[index].nazwa+'<br>'
+						content +=																'Wychowawca:'+data[index].wychowawca+'<br>'
+						content +=																'Rok:'+data[index].rok+'">';
 					}
 				})
 				content += "</div>";

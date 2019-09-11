@@ -30,11 +30,11 @@ function loadCarousel(){
 				let content;
 
 				$.each(data, function(index, element){
-						content += `<div class="samoOsoba">
-											<img class="tooltipped samoPhoto" data-position="top" data-tooltip="${data[index].nazwa}" src="${data[index].img}">
-											<p class="samoImie">${data[index].imie}<br>
-											${data[index].klasa}</p>
-										</div>`
+						content += '<div class="samoOsoba">'
+						content += '		<img class="tooltipped samoPhoto" data-position="top" data-tooltip="'+data[index].nazwa+'" src="'+data[index].img+'">'
+						content += '		<p class="samoImie">'+data[index].imie+'<br>'
+						content += '		'+data[index].klasa+'</p>'
+						content += '</div>'
 									
 						let withoutUnd = content.split('undefined');
 						

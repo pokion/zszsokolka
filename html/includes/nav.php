@@ -22,8 +22,6 @@
 					<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 						<ul id="drop-rekrutacja" class="dropdown-content dropdown-nested">
-						  <li class="collection-item"><a href="rekrutacja_gim.php">Po gimnazjum</a></li>
-							<li class="divider"></li>
 						  <li class="collection-item"><a href="rekrutacja_sp.php">Po szkole podstawowej</a></li>
 							<li class="divider"></li>
 							<li class="collection-item"><a class="dropdown-trigger nav" data-target="drop-kierunki">Kierunki<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -78,7 +76,6 @@
 					 <a class="collapsible-header">Rekrutacja<i class="material-icons">arrow_drop_down</i></a>
 					 <div class="collapsible-body">
 						 <ul>
-							 <li><a href="rekrutacja_gim.php">Po gimnazjum</a></li>
 							 <li><a href="rekrutacja_sp.php">Po szkole podstawowej</a></li>
 						 </ul>
 					 </div>

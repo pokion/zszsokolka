@@ -89,7 +89,7 @@
 		let dataPost;
 		let send = 0;
 		let bnt = false;
-		let sendCount = 1;
+		let sendCount = 2;
 		function searchImg(){
 			$('div[postid]').each(function(index,elem){
 				let id = $(elem).attr('postid');
@@ -98,7 +98,7 @@
 				},function(data){
 					let JSONpar = JSON.parse(data)
 					if(JSONpar.length>0){
-						$('div[postid="'+JSONpar[0].id+'"]').css('background-image',`url(../images/${JSONpar[0].name})`);
+						$('div[postid="'+JSONpar[0].id+'"]').css('background-image','url(../images/'+JSONpar[0].name+')');
 						$('div[postid="'+JSONpar[0].id+'"]').removeAttr('postid')
 					}
 				})
@@ -117,7 +117,7 @@
 						let tagId = arrTags[i]
 						/*console.log(tagId,JSONtags[tagId-1])*/
 						/*console.log(JSONtags)*/
-						$(elem).append(`<div class="babyTag chip z-depth-2"><a href="szukaj.php?tag%5B%5D=${JSONtags[tagId-1].id}">${JSONtags[tagId-1].name}</a></div>`)
+						$(elem).append('<div class="babyTag chip z-depth-2"><a href="szukaj.php?tag%5B%5D='+JSONtags[tagId-1].id+'">'+JSONtags[tagId-1].name+'</a></div>')
 					}
 					$(this).removeClass('aval')
 
@@ -144,27 +144,24 @@
 						let dateWitchoutHour = date[0].split("-")
 						let day = dateWitchoutHour[1]
 						/*console.log(dateWitchoutHour)*/
-						let div = `
-							<div class="col s12 m12 l12 xl6">
-								<div class="card">
-									<div class="card-image waves-effect waves-block waves-light">
-										<a href="szukaj.php?hide=true&id=${JSONpar[i].postId}"><div postid="${JSONpar[i].postId}" style="background-image: url(../images/${img}); height: 250px; background-position: center;background-size: cover;"></div></a>
-										<div class="tagi aval">${JSONpar[i].tagsId}</div>
-									</div>
-										<div class="card-content">
-
-												<a class="title card-title activator grey-text text-darken-4" href="szukaj.php?hide=true&id=${JSONpar[i].postId}">${JSONpar[i].tit}</a>
-
-											<p class="data z-depth-1">${dateWitchoutHour[2]} ${months[day-1]} ${dateWitchoutHour[0]} r.</p>
-											<div  class="body">
-												<div>${JSONpar[i].bod}</div>
-											</div>
-										</div>
-										<div class="card-action">
-											<a href="szukaj.php?hide=true&id=${JSONpar[i].postId}">Czytaj dalej</a>
-										</div>
-								</div>
-							</div>`;
+						let div = '<div class="col s12 m12 l12 xl6">'
+							div += '	<div class="card">'
+							div +=		'<div class="card-image waves-effect waves-block waves-light">'
+							div +=			'<a href="szukaj.php?hide=true&id='+JSONpar[i].postId+'"><div postid="'+JSONpar[i].postId+'" style="background-image: url(../images/'+img+'); height: 250px; background-position: center;background-size: cover;"></div></a>'
+							div +=			'<div class="tagi aval">'+JSONpar[i].tagsId+'</div>'
+							div +=		'</div>'
+							div +=			'<div class="card-content">'
+							div +=					'<a class="title card-title activator grey-text text-darken-4" href="szukaj.php?hide=true&id='+JSONpar[i].postId+'">'+JSONpar[i].tit+'</a>'
+							div +=				'<p class="data z-depth-1">'+dateWitchoutHour[2]+' '+months[day-1]+' '+dateWitchoutHour[0]+' r.</p>'
+							div +=				'<div  class="body">'
+							div +=					'<div>'+JSONpar[i].bod+'</div>'
+							div +=				'</div>'
+							div +=			'</div>'
+							div +=			'<div class="card-action">'
+							div +=				'<a href="szukaj.php?hide=true&id='+JSONpar[i].postId+'">Czytaj dalej</a>'
+							div +=			'</div>'
+							div +=	'</div>'
+							div +=	'</div>';
 							$('#main').append($(div));
 				}
 				searchImg()
@@ -191,7 +188,7 @@
 		       	send++
 		       	console.log(send,bnt)
 		    }else if(send === sendCount && bnt === false){
-		    	let button = '<a class="waves-effect waves-light btn-large phpload">Zaladuj posty</a>';
+		    	let button = '<a class="waves-effect waves-light btn-large phpload">Załaduj posty</a>';
 		    	$('.main').append($(button))
 		    	bnt = true
 		    }

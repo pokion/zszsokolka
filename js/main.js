@@ -54,7 +54,7 @@ $(document).ready(function(){
 });
 
 function addDot(){
-		let ul = jQuery('.card ul').addClass(()=>{
+		let ul = jQuery('.card ul').addClass(function(){
 			return 'browser-default';
 		});
 	}

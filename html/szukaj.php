@@ -113,7 +113,7 @@ footer {
 												$(elem).html("");
 												for(let i=1;i<arrTags.length;i++){
 													let tagId = arrTags[i]
-													$(elem).append(`<div class="babyTag chip"><a href="#">${JSONtags[tagId-1].name}</a></div>`)
+													$(elem).append('<div class="babyTag chip"><a href="#">'+JSONtags[tagId-1].name+'</a></div>')
 												}
 											})
 										})
@@ -121,10 +121,10 @@ footer {
 											let JSONImg = JSON.parse(data);
 											JSONImg.forEach(function(elem){
 												if(elem.main == 0){
-													let div = `<li><img class="imageStyle" src="../images/${elem.name}"></li>`;
+													let div = '<li><img class="imageStyle" src="../images/'+elem.name+'"></li>';
 													$('#images').append($(div))
 												}if(elem.main == 1){
-													let div = `<li><img class="imageStyle" src="../images/${elem.name}"></li>`;
+													let div = '<li><img class="imageStyle" src="../images/'+elem.name+'"></li>';
 													$('#images').append($(div))
 													$('.parallax>img').attr('src','../images/'+elem.name)
 												}
@@ -144,7 +144,7 @@ footer {
 				?>
 				<div class="container">
 					<form action="szukaj.php" id="sendForm" method="get">
-					<h2 class="center-align">Archiwum</h2>=
+					<h2 class="center-align">Archiwum</h2>
 					<br>
 					<div class="row">
 						<div class="col s12 m6">
@@ -175,18 +175,18 @@ footer {
 							<div class="input-field col s12">
 							    <select id="months" name="month" class="browser-default z-depth-4">
 							      <option value="" disabled selected>Miesiąc</option>
-							      <option value="01">01</option>
-							      <option value="02">02</option>
-							      <option value="03">03</option>
-							      <option value="04">04</option>
-							      <option value="05">05</option>
-							      <option value="06">06</option>
-							      <option value="07">07</option>
-							      <option value="08">08</option>
-							      <option value="09">09</option>
-							      <option value="10">10</option>
-							      <option value="11">11</option>
-							      <option value="12">12</option>
+							      <option value="01">Styczeń</option>
+							      <option value="02">Luty</option>
+							      <option value="03">Marzec</option>
+							      <option value="04">Kwiecień</option>
+							      <option value="05">Maj</option>
+							      <option value="06">Czerwiec</option>
+							      <option value="07">Lipiec</option>
+							      <option value="08">Sierpień</option>
+							      <option value="09">Wrzesień</option>
+							      <option value="10">Październik</option>
+							      <option value="11">Listopad</option>
+							      <option value="12">Grudzień</option>
 							    </select>
 							  </div>
 						</div>
@@ -295,7 +295,7 @@ footer {
 										$(elem).html("");
 										for(let i=1;i<arrTags.length;i++){
 											let tagId = arrTags[i]
-											$(elem).append(`<div id="${JSONtags[tagId-1].id}" class="babyTag chip z-depth-2"><a href="#" >${JSONtags[tagId-1].name}</a></div>`)
+											$(elem).append('<div id="'+JSONtags[tagId-1].id+'" class="babyTag chip z-depth-2"><a href="#" >'+JSONtags[tagId-1].name+'</a></div>')
 										}
 									})
 								})
@@ -349,7 +349,7 @@ footer {
 				},function(data){
 					let JSONpar = JSON.parse(data)
 					if(JSONpar.length>0){
-						$('div[postid="'+JSONpar[0].id+'"]').css('background-image',`url(../images/${JSONpar[0].name})`);
+						$('div[postid="'+JSONpar[0].id+'"]').css('background-image','url(../images/'+JSONpar[0].name+')');
 						$('div[postid="'+JSONpar[0].id+'"]').removeAttr('postid')
 					}
 				})
