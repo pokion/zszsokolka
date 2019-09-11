@@ -144,7 +144,7 @@ footer {
 				?>
 				<div class="container">
 					<form action="szukaj.php" id="sendForm" method="get">
-					<h2 class="center-align">Archiwum</h2>
+					<h2 class="center-align">Archiwum</h2>=
 					<br>
 					<div class="row">
 						<div class="col s12 m6">
@@ -222,7 +222,9 @@ footer {
 
 
 					<button id="send" class="waves-effect waves-light btn right">Szukaj</button>
+					<h5 style="text-decoration: underline;"><a href="http://zszsokolka.pl/" target="_blank">Posty z poprzedniej wersji strony</a></h5>
 				</form>
+
 					<div class="row">
 						<?php
 						if(isset($_GET['year'])||isset($_GET['month'])||isset($_GET['tag'])){

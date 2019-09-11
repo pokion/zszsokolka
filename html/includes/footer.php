@@ -4,7 +4,7 @@
 				<div class="row marginClear">
 					<div class="col l8 s6">
 						<h6>Wykorzystane biblioteki</h6>
-						<p><a href="https://materializecss.com/">Materializecss</a> | <a href="http://fengyuanchen.github.io/viewer/">Viewer</a> | <a href="https://jquery.com/">jQuery</a></p>
+						<p><a href="https://materializecss.com/" target="_blank">Materializecss</a> | <a href="http://fengyuanchen.github.io/viewer/" target="_blank">Viewer</a> | <a href="https://jquery.com/" target="_blank">jQuery</a></p>
 					</div>
 					<div class="col l4 offset-12 s6 left-align">
 						<h6 class="white-text">Przydatne linki:</h6>
