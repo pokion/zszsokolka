@@ -30,22 +30,24 @@ function loadCarousel(){
 				let content = "<div id='images'>";
 
 				$.each(data, function(index, element){
-					if (!element.photo_path) {
-						content +=  `<img class="klasa_img" src="../img/static/default.png"
-														alt="Brak zdjęcia" data-tooltip="I am a tooltip">`
+					if (!element.photo_path || element.photo_path == 'NIE MA') {
+						content +=  `<img class="klasa_img imageStyle tooltipped" src="../img/static/default.png"
+														alt="Brak zdjęcia" data-position="left" data-tooltip="Kierunek: ${data[index].kierunek} <br>
+																						Klasa: ${data[index].nazwa} <br>
+																						Wychowawca: ${data[index].wychowawca} <br>
+																						Rok: ${data[index].rok}">`
 					} else {
-						content +=  `<img class="klasa_img tooltipped" src="../images/${data[index].photo_path}"
-														alt="">`
+						content +=  `<img class="klasa_img imageStyle tooltipped" src="../images/${data[index].photo_path}"
+														alt="" data-position="left" data-tooltip="Kierunek: ${data[index].kierunek} <br>
+																						Klasa: ${data[index].nazwa} <br>
+																						Wychowawca: ${data[index].wychowawca} <br>
+																						Rok: ${data[index].rok}">`
 					}
 				})
 				content += "</div>";
 				placeholder.html(content);
-				const viewer = new Viewer(document.getElementById('images'), {
-				inline: true,
-				viewed() {
-					viewer.zoomTo(1);
-				},
-			});
+				const viewer = new Viewer(document.getElementById('images'));
+				$('.tooltipped').tooltip();
 				})
 
 			//Jeśli nie zadziała
@@ -54,8 +56,3 @@ function loadCarousel(){
 			})
 	}
 })
-// info do wypisania
-// Kierunek: ${data[index].kierunek} |
-// Klasa: ${data[index].nazwa} |
-// Wychowawca: ${data[index].wychowawca} |
-// Rok: ${data[index].rok}

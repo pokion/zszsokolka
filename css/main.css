@@ -111,17 +111,6 @@ ul{
 	top: 10px;
 	left: 10px;
 }
-#images{
-	line-height: 0;
-	column-count: 5;
-	column-gap: 0px;
-	min-height: 900px;
-	margin-bottom: 50px;
-}
-.klasa_img{
-	width: 100% !important;
-	height: auto !important;
-}
 .bg2{
 	background-color: #E1F9F7;
 }
@@ -134,24 +123,25 @@ ul{
 .bg5{
 	background: green;
 }
-.klasa_img:nth-child(odd){
-	height: 250px;
+.klasa_img{
+	height: 150px !important;
 }
-.klasa_img:nth-child(even){
-	height: 150px;
+#images{
+	text-align: center !important;
 }
 #images>li{
-	float: left;
+	display: inline-block;
+	text-align: center;
 	list-style-type: none;
 }
-#images>li>img{
+.imageStyle{
 	height: 100px;
 	border-radius: 5px;
 	border: transparent 2px solid;
     box-sizing:border-box;
     transition:border 0.2s;
 }
-#images>li>img:hover{
+.imageStyle:hover{
 	cursor: zoom-in;
 	transition:border 0.5s;
 	box-sizing:border-box;
