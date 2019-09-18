@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once('../php/baza.php');
+	include_once('../php/baza_users.php');
 	if(isset($_SESSION['login'])){
 	   header("Location: http://localhost/html/postCreator.php");
 	}

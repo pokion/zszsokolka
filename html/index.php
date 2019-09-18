@@ -78,7 +78,7 @@
 
 
 	</div>
-	<div id="helperForMobile">asd</div>
+	<div id="helperForMobile"></div>
 	<!-- end container -->
 	<?php
 		include_once('includes/footer.php');
