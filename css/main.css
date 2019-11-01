@@ -144,7 +144,7 @@ ul{
     transition:border 0.2s;
 }
 .imageStyle:hover{
-	
+
 	transition:border 0.5s;
 	box-sizing:border-box;
 	border: 2px #02CCBA solid
@@ -377,34 +377,15 @@ footer {
 .brand-logo{
 	z-index: 999;
 }
+/* facebook */
+.fb{
+	position: fixed;
+	left: 0;
+	top: 200px;
+	z-index: 999;
+}
 /* Founders additional styles */
-.osoba img{
-	height: 200px;
-	border-radius: 100px;
-}
-.osoba{
-	display: grid;
-	grid-template-columns: 30% 70%;
-}
-.name{
-	grid-area: name;
-}
-.opis{
-	grid-area: opis;
-	padding-top: 10px;
-	padding-bottom: 30px;
-	text-align: left;
-		margin-left: 20px;
-}
-.founder-img{
-	grid-area: founder-img;
-}
-.osoba{
-	grid-template-areas:
-	'founder-img opis'
-	'name opis';
-	margin: 20px;
-}
+
 .card-content{
 	min-height: 238px;
 	max-height: 239px;
@@ -439,11 +420,8 @@ footer {
 	}
 }
 @media only screen and (max-width: 500px) {
-	.osoba{
-		grid-template-areas:
-		'founder-img founder-img'
-		'name name'
-		'opis opis';
+	.fb{
+		display: none;
 	}
 }
 @media only screen and (min-width: 1000px) {

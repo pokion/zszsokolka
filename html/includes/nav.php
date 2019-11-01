@@ -63,6 +63,9 @@
 				</div>
 			</nav>
 		</div>
+		<div class="fb">
+		<a href="https://pl-pl.facebook.com/pages/Zesp%C3%B3%C5%82-Szk%C3%B3%C5%82-Zawodowych-im-Elizy-Orzeszkowej/274422585964615?hc_location=timeline" target="_blank" title="Odwiedź nas na FB"><img style="height: 54px" src="../img/static/facebook.png"></a>
+		</div>
 	<!-- end nav -->
 	<!-- sidenav -->
 	<ul id="slide-out" class="sidenav">
